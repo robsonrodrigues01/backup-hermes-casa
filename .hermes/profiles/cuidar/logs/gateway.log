@@ -737,3 +737,5 @@ telegram.error.RetryAfter: Flood control exceeded. Retry in 238 seconds
 2026-09-14 22:27:43,256 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=83.3s api_calls=2 response=1463 chars
 2026-09-14 22:35:05,034 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (9 chars)
 2026-09-14 22:35:05,034 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='cria os 3'
+2026-09-14 22:38:18,160 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=193.1s api_calls=4 response=60 chars
+2026-09-14 22:38:18,174 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892

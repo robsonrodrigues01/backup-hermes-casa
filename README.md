@@ -1,30 +1,33 @@
-# Backup da casa Hermes (Rob)
+# Cofre da Casa Hermes
 
-Cofre PRIVADO. Atualizado automaticamente todo dia às 17h (horário de Brasília)
-pelo Claudinho. Última foto completa em anexo: tag `migracao-2026-09-12`.
+Backup do **nosso Hermes** — perfis, agentes, subagentes, skills, memórias, cron e configs — nada de outros repositórios.
 
-## O que tem aqui
+## O que tem dentro
+- `.hermes/` completa do `default` + perfis **cuidar, era4, lab, cmo, cto** (agents, subagents, skills, memories, cron, PENDENTES.md, MAPA.md, SOUL)
+- `scripts/`, `tools/` (código próprio de casa), configs de casa (`.bashrc`, headroom, etc.)
 
-- `.hermes/` — o cérebro dos 6 agentes (Claudinho, Claudete, Claudemir, cmo, cto, lab):
-  memórias, skills, SOUL, cron, histórico, tokens dos bots do Telegram (`.env`)
-- `cuidarvc/` — projetos do cuidar.vc (artes, marca, dashboard etc.)
-- `tools/`, `headroom-test/`, `scrape-demo/` — ferramentas e experimentos
-- `.config/`, `.local/` — configurações pessoais da máquina
+## O que NÃO tem (e por quê)
+- **Tokens / .env / secrets** — segredo não vai pro git (Rob: "tokens de fora")
+- **Logs de conversa (state.db)** — pesados (113MB+); vão no zip mensal (Release dia 1)
+- **Plugins de terceiros** (gbrain, postiz, agent-vision) — reinstaláveis, são "outros repositórios"
+- **Binários** (tirith 38MB×5, lsp) e node_modules/caches — reinstaláveis
 
-O código de produção do cuidar.vc NÃO está aqui: ele já mora no repo
-`robsoncoffy/cuidarvc` (é o mesmo, com histórico).
+## Como restaurar a casa (máquina nova)
+```bash
+git clone https://github.com/robsoncoffy/backup-hermes-casa.git /home/hermes
+# baixar o zip completo do último Release (tem os logs de conversa) e extrair por cima
+# reinstalar dependências:
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash   # hermes
+bun install -g github:garrytan/gbrain                                # plugin gbrain
+git clone https://github.com/imhechul/postiz-app .hermes/plugins/postiz-app  # postiz
+```
+Tokens voltam do cofre de senhas / telemetria do Rob (não estão aqui).
 
-## Como restaurar num servidor novo
+## Rotina automática
+- **Todos os dias 17h (Brasília)**: git push do que mudou
+- **Dia 1 de cada mês**: zip completo da casa (com logs) anexado no Release `cofre-YYYY-MM`
 
-1. Instalar Python 3.12 + uv, o resto vem daqui.
-2. `hermes import` com o zip da tag `migracao-2026-09-12` (contém tudo, inclusive plugins).
-3. Como alternativa sem `hermes import`: clonar ESTE repo dentro de `/home/hermes`
-   e copiar `.hermes/` sobrescrevendo, depois religar os gateways por perfil.
-4. Religação dos bots: gateway por perfil (ver MAPA). Headroom: skill `local-proxy-headroom`.
-5. ATENÇÃO: ligar os gateways da máquina velha ANTES de desligar — 1 token = 1 poller,
-   se os dois estiverem no ar dá conflito.
-
-## AVISO: contém segredos
-
-Este repo tem tokens de bots e chaves de API (arquivos `.env`). Regra:
-**repo permanece PRIVADO sempre.** Ative 2FA na conta GitHub.
+## Recompensa em 3 passos (se algo quebrar)
+1. `git clone` este repo em `/home/hermes`
+2. Extrair o zip do último Release por cima
+3. Rodar `hermes gateway start` em cada perfil

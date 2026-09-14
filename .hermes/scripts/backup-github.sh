@@ -2,6 +2,7 @@
 # backup diario casa Hermes -> GitHub cofre privado
 # silencio quando nada mudou | avisa quando envia | erro se falhar
 cd /home/hermes || { echo "ERRO: casa sumiu"; exit 1; }
+git config http.postBuffer 524288000
 git add -A
 MUDOU=$(git status --porcelain | wc -l)
 if [ "$MUDOU" -eq 0 ] && [ "$(date +%d)" != "01" ]; then
@@ -30,11 +31,11 @@ if [ "$(date +%d)" = "01" ]; then
   TOK=$(cat "$HOME/secrets/gh-token")
   RH="Authorization: token $TOK"
   cd /tmp && rm -f rel_new.json
-  CREAT=$(curl -s -o rel_new.json -w '%{http_code}' -X POST -H "$RH" https://api.github.com/repos/robsoncoffy/backup-live-hermes/releases \
+  CREAT=$(curl -s -o rel_new.json -w '%{http_code}' -X POST -H "$RH" https://api.github.com/repos/robsoncoffy/backup-hermes-casa/releases \
     -d "{\"tag_name\":\"$TAG\",\"name\":\"Cofre completo $TAG\",\"body\":\"Zip casa inteira incluindo historicos (state.db). Gerado dia 1 - substitui o anterior como foto completa.\"}")
   if [ "$CREAT" = "422" ]; then
     rel_new.json=""
-    curl -s -H "$RH" -o rel_tag.json "https://api.github.com/repos/robsoncoffy/backup-live-hermes/releases/tags/$TAG"
+    curl -s -H "$RH" -o rel_tag.json "https://api.github.com/repos/robsoncoffy/backup-hermes-casa/releases/tags/$TAG"
     mv rel_tag.json rel_new.json
   fi
   UPLOAD=$(python3 -c "import json;print(json.load(open('/tmp/rel_new.json'))['upload_url'].split('{')[0])" 2>/dev/null)

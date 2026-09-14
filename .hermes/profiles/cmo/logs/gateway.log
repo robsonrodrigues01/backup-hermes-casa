@@ -339,3 +339,5 @@ telegram.error.NetworkError: Bad Gateway
 2026-09-14 22:21:38,863 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (180 chars)
 2026-09-14 22:30:54,853 INFO [20260914_220834_e6cb04] gateway.run: Session split detected: 20260914_220834_e6cb04 → 20260914_222936_d599bd (compression)
 2026-09-14 22:30:55,936 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-14 22:38:32,651 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=1461.0s api_calls=36 response=60 chars
+2026-09-14 22:38:32,656 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892

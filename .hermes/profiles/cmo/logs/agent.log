@@ -23064,3 +23064,6 @@ task: <Task pending name='Task-19' coro=<<async_generator_athrow without __name_
 2026-09-14 22:37:58,364 INFO [20260914_222936_d599bd] agent.conversation_loop: API call #164: model=glm-5.3 provider=custom in=102746 out=6859 total=109605 latency=57.4s
 2026-09-14 22:38:01,642 INFO [20260914_222936_d599bd] agent.tool_executor: tool execute_code completed (3.27s, 2115 chars)
 2026-09-14 22:38:01,673 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-13330 (_call):140691210499776 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-14 22:38:32,485 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-13330 (_call):140691210499776 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-14 22:38:32,651 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=1461.0s api_calls=36 response=60 chars
+2026-09-14 22:38:32,656 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892

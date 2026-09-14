@@ -5409,3 +5409,4 @@ keep an umbrella stable: hermes curator pin hermes-profiles
 2026-09-14 22:31:23,559 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
 2026-09-14 22:32:30,868 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (127 chars)
 2026-09-14 22:35:45,263 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-14 22:38:23,012 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (52 chars)

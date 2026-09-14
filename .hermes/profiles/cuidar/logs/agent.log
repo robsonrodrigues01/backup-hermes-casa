@@ -12723,3 +12723,6 @@ RuntimeError: The current task is not holding this lock
 2026-09-14 22:36:25,445 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5979 (_call):135717678216896 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
 2026-09-14 22:36:52,913 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-5979 (_call):135717678216896 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
 2026-09-14 22:36:52,936 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5980 (_call):135717678216896 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-14 22:38:18,101 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-5980 (_call):135717678216896 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-14 22:38:18,160 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=193.1s api_calls=4 response=60 chars
+2026-09-14 22:38:18,174 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892
