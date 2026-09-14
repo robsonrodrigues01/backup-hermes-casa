@@ -47,3 +47,9 @@
 - [x] 2026-09-09 Headroom (compressor) ligado nos 4 bots, verificado
 - [x] 2026-09-09 marketingskills nos 3 perfis; last30days + agent-reach instalados
 - [x] 2026-09-09 PENDENTES.md + MAPA.md criados (ideias do print Amora, aprovadas pelo Rob)
+
+## Feito (14/09) — cofre GitHub refeito igual Rob pediu
+Repo NOVO único: robsoncoffy/backup-hermes-casa (privado) — só casa Hermes (perfis c/ agents+subagents, skills, memórias, cron, PENDENTES/MAPA), 7384 arq, 260MB.
+Fora por regra do Rob: tokens/.env (va via zip? NÃO - nada), logs de conversa (state.db -> zip mensal no Release), plugins de terceiros (gbrain/postiz/agent-vision -> reinstaláveis), binários.
+Envio diário 17h Bsb (script backup-github.sh apontado pro repo novo) + zip completo dia 1.
+ Pendente p/ Rob decidir: aposentar backup-live-hermes (repo antigo cheio de terceiros) e apagar backup-cuidarvc-repo (vazio, criado por engano)?
