@@ -14,6 +14,16 @@ arquivo de verdade; lixo que se reinstala/baixa sozinho em minutos fica fora.
 - Caso irmão: repo de CÉREBRO por perfil → ver a skill agent-second-brain.
   Um token clássico com escopo `repo` serve pros dois repos.
 
+## Escopo (regra do Rob, 14/09 — vale pra toda rodada de backup)
+- **Repo novo limpo só com a casa Hermes** (perfis, agents, subagents,
+  skills, memórias, cron, PENDENTES/MAPA, configs da casa). Rob desautorizou
+  o cofre-mistura: NÃO agrupar projetos de terceiros (ex.: cuidarvc, plugins
+  gbrain/postiz/agent-vision) nem "mexer em nenhum outro repositório" dele.
+- Terceiro instalável = fora (reinstala em 1 comando). Repos do Rob mesmo
+  vazio/errado = intocados; remoção só com OK explícito dele.
+- Nome canônico atual: `backup-hermes-casa`. Legado `backup-live-hermes` e
+  `backup-cuidarvc-repo` ficam congelados à espera da decisão do Rob.
+
 ## Fluxo (a auditoria de blobs vem ANTES do push — ordem importa)
 1. Definir a RAIZ. A raiz do git define o escopo: casa toda = `git init`
    em /home/hermes. (14/09: comecei dentro de ~/.hermes e ficou raso;
@@ -70,16 +80,37 @@ arquivo de verdade; lixo que se reinstala/baixa sozinho em minutos fica fora.
 - **Escopo `repo` do token NÃO deleta repo via API** (403; precisaria
   `delete_repo`). Repo vazio sobrando → limpeza manual pelo Rob:
   Settings → Danger Zone; não gastar turno nisso.
+- **.gitignore editado após `git add` não solta nada — nem com
+  `git rm -r --cached .`**: reindexação confiável = `rm -f .git/index &&
+  git add -A`, conferindo `git ls-files | grep -c <padrão>` = 0. Prova
+  14/09: index-cache e binários dos perfis só saíram com o index zerado
+  (7394→7384 arq, 645→260MB).
+- **Push grande (~260MB) morre com HTTP 408 / "unexpected disconnect"**:
+  antes do 1º push, `git config http.postBuffer 524288000` (+
+  `http.lowSpeedLimit 0`, `http.lowSpeedTime 999999`); o retry no mesmo
+  comando sobe. Depois trocar o remote p/ URL sem token e deixar o auth no
+  credential.helper `store` — o push diário do cron autentica sozinho.
+- **Scan de token dá falso positivo em binário** (ELF com `ghp_...` por
+  coincidência — caso `tirith`, 38MB×5 perfis): usar `grep -lI` (pula
+  binário) + `file <arq>` pra confirmar antes de apagar; binário
+  reinstalável = fora do git (`profiles/*/bin/`).
+- **Trocou o repo-alvo?** Atualizar TODAS as URLs dentro de
+  `~/.hermes/scripts/backup-github.sh` (release mensal também aponta pro
+  repo novo). O cron (no_agent) chama o script por nome, então só o
+  conteúdo do .sh muda — não recriar o job.
 
 ## Referências
 - templates/gitignore-casa.txt — starter do .gitignore da casa
 - scripts/auditar-blobs.sh — auditoria de blobs (limiar MB como $1)
 - references/submodulos-observados.md — 12 gitlinks + decisão
 
-## Exemplo real (14/09, prova final)
-/home/hermes → repo privado `robsoncoffy/backup-live-hermes`, branch `main`:
-commit `7ba835e`, 16.318 arquivos rastreados, size-pack ~254MB, residuo 0.
-state.db/*.db-wal/*.db-shm fora do git (recusa real a 113MB no push inicial);
-zip da migração 351MB subiu como asset do Release `migracao-2026-09-12`
-(create+upload via API, 201/201). Cron de push diário 17h Bsb, no_agent,
-script relativo `backup-github.sh`; não mudou nada → silêncio.
+## Exemplo real (14/09, cofre definitivo)
+/home/hermes → repo privado `robsoncoffy/backup-hermes-casa`, branch `main`:
+7.384 arquivos rastreados (~260MB), escopo casa-only conforme a regra acima
+(sem cuidarvc, plugins de terceiros, binários `tirith`, index-cache, logs
+.headroom). Zero token no git (scan `grep -lI` / token real: vazio). 1º push
+408 → postBuffer 500MB → subiu; 2 pushes de teste ok com remote limpo.
+state.db/logs fora do git (zip mensal no Release do repo novo). Cron 17h Bsb
+no_agent chama `backup-github.sh`; README do repo traz o passo-a-passo de
+restauração. Legado `backup-live-hermes` (16.318 arq, cofre-mistura) ficou
+congelado — histórico do caso anterior, CVE de escopo resolvida pelo Rob.

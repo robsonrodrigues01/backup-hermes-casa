@@ -1,6 +1,6 @@
 cuidar.vc (set/2026): em preparação para lançamento público (prazo: o quanto antes). Site no ar, código no GitHub, hospedado no Lovable, codado com Claude Code. Instagram @cuidarvc.br. Público-alvo: cuidadores e idosos + demais profissionais do hall (babás, enfermeiros). Atuação: BRASIL TODO (11/09), sem praça regional. Tom acolhedor e emocional. Claudete produz conteúdo para Rob publicar.
 §
-TECH (11/09): CTO bot t.me/CTOcuidarvcbot profile "cto" NO AR (gateway+avatar ok desde 11/09; timer tick off); jobs profile cto: Dev 12h UTC, QA 18h, DevOps 20h (health check site), status 07h15 BSB máx 12 linhas (IDs no PENDENTES.md); quadro squad-tech/TAREFAS.md; skill dev-cuidarvc; repo GitHub PRIVADO pendente (URL + GITHUB_TOKEN com Rob).
+TECH (11/09): CTO bot t.me/CTOcuidarvcbot profile "cto" NO AR; jobs cto: Dev 12h UTC, QA 18h, DevOps 20h, status 07h15 BSB (IDs no PENDENTES.md); quadro squad-tech/TAREFAS.md; repo robsoncoffy/cuidarvc conectado 14/09 (token push ok). CRON (14/09): jobs do bot CMO vivem no scheduler do profile cmo (mesmo Profile: cuidar); rodar `hermes -p cmo cron list` antes de declarar job sumido.
 §
 Piapi auth (10/09): chave 64 hex exige prefixo sk- (sem ele: 401). Base https://api.piapi.ai; só /v1/chat/completions confirmado OpenAI-compat; /v1/task/* = 404.
 §

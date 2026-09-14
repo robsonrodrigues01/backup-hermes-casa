@@ -1,0 +1,8 @@
+{
+  "access_token": "integration_api_token_YFrmZZ4PujSG2gE4gujsqPe2GwloEq1lpIum",
+  "token_type": "Bearer",
+  "expires_in": 3599,
+  "scope": "full_api_access",
+  "refresh_token": "UrhYeNtMV8zWbMMDk",
+  "expires_at": 1789423085.2929785
+}

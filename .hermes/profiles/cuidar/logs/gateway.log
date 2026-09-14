@@ -739,3 +739,11 @@ telegram.error.RetryAfter: Flood control exceeded. Retry in 238 seconds
 2026-09-14 22:35:05,034 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='cria os 3'
 2026-09-14 22:38:18,160 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=193.1s api_calls=4 response=60 chars
 2026-09-14 22:38:18,174 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892
+2026-09-14 22:49:53,761 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1 chars)
+2026-09-14 22:49:53,762 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='?'
+2026-09-14 22:53:26,763 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=213.0s api_calls=4 response=60 chars
+2026-09-14 22:53:26,767 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892
+2026-09-14 22:55:52,657 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1 chars)
+2026-09-14 22:55:52,658 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='?'
+2026-09-14 22:59:29,202 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 22:59:29,203 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=216.5s api_calls=11 response=1182 chars

@@ -1,0 +1,13 @@
+{
+  "client_id": "88c9692499484132b910682ce6911be9",
+  "redirect_uris": [
+    "http://127.0.0.1:53123/callback"
+  ],
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "token_endpoint_auth_method": "none",
+  "client_name": "Hermes Agent CTO cuidar.vc",
+  "scope": "offline openid email profile projects:create projects:read projects:write workspaces:create workspaces:read workspaces:write"
+}

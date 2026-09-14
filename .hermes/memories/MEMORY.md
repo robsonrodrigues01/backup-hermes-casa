@@ -6,4 +6,4 @@ Fluxo prints ACHADOS (Rob): clonar repo → inventariar SKILL.md → confirmar r
 §
 Régua respostas (09/09): dia-a-dia curto; print/decisões detalhado — token custa, recado tem que virar resultado/decisão.
 §
-Cofre GitHub: robsoncoffy/backup-live-hermes (privado) — push git diário 17h Bsb (cron no_agent, script backup-github.sh), zip mensal dia 1 (tag cofre-AAAA-MM); state.db fora do git; token ~/secrets/gh-token.
+Cofre GitHub (14/09): repo único backup-hermes-casa = só casa Hermes (perfis/agents/subagents/skills/cron). Fora: tokens, logs, repos de terceiros, binários. Push diário 17h Bsb + zip dia 1 no Release. Token ~/secrets/gh-token.

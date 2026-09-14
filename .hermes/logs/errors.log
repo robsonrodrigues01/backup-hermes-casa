@@ -12523,3 +12523,19 @@ telegram.error.TimedOut: Timed out
 2026-09-14 22:37:47,584 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool terminal returned error (6.20s): {"output": "== todos os gitignores casa adentro ==\n./.gitignore\ntools/agent-reach/.gitignore\ntools/last30days-skill/.gitignore\ntools/last30days-skill/mcp/.gitignore\ntools/scan-okjpg/agent-context
 2026-09-14 22:37:55,111 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool terminal returned error (1.16s): {"output": "== arquivos ==\n7384\n== tamanho bruto ==\n259 MB\n== sobrou index-cache? ==\n0\n== sobrou bin? ==\n0\n== .env vazou? ==\n0", "exit_code": 1, "error": null}
 2026-09-14 22:38:32,158 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool read_file returned error (0.05s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /home/hermes/.hermes/cron/scripts/backup-github.sh"}
+2026-09-14 22:38:54,828 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool memory returned error (0.00s): {"error": "content is required for 'replace' action.", "success": false}
+2026-09-14 22:38:56,188 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,537/2,200 chars. Shorten the new content or remove other entries first."}
+2026-09-14 22:38:57,361 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,322/2,200 chars. Shorten the new content or remove other entries first."}
+
+[Tool loop warning: same_tool_failure_warning; count=3; memory
+2026-09-14 22:38:59,411 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,205/2,200 chars. Shorten the new content or remove other entries first."}
+
+[Tool loop warning: same_tool_failure_warning; count=4; memory
+2026-09-14 22:39:03,777 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:39:05,084 WARNING [20260914_152119_8f5d651e] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:31:42,813 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:31:42,814 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:31:44,717 WARNING [20260912_204207_889e50a8] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:32:53,100 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:32:53,101 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:32:54,135 WARNING [20260914_223605_8297df] hermes_cli.config: providers.vultr: unknown config keys ignored: auth

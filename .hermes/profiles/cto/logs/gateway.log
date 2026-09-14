@@ -95,3 +95,26 @@
 2026-09-14 21:55:30,296 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Faça um painel estilo escritorio para eu ver todos os agentes trabalhando e cami'
 2026-09-14 21:59:05,567 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=215.3s api_calls=3 response=60 chars
 2026-09-14 21:59:05,581 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892
+2026-09-14 22:49:55,533 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1 chars)
+2026-09-14 22:49:55,534 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='?'
+2026-09-14 22:57:13,690 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 22:57:13,690 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=438.2s api_calls=20 response=1174 chars
+2026-09-14 23:09:17,288 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (31 chars)
+2026-09-14 23:09:17,289 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='em qual endereço esta o painel?'
+2026-09-14 23:09:45,338 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-14 23:10:07,466 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-14 23:10:41,054 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 23:10:41,054 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=83.8s api_calls=9 response=501 chars
+2026-09-14 23:11:37,505 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (176 chars)
+2026-09-14 23:11:37,506 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='coloque em uma seção junto com o painel de postagens que o cmo fez: https://ac83'
+2026-09-14 23:14:35,836 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 23:14:35,837 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=178.3s api_calls=21 response=881 chars
+2026-09-14 23:15:03,095 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (159 chars)
+2026-09-14 23:15:03,096 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Não é possível acessar esse site 66.42.78.129 demorou muito para responder. Tent'
+2026-09-14 23:17:42,750 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 23:17:42,751 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=159.7s api_calls=17 response=239 chars
+2026-09-14 23:18:47,696 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (50 chars)
+2026-09-14 23:18:47,697 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Ta muito arcaico ainda, deixe animacoes mais reais'
+2026-09-14 23:19:56,615 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (331 chars)
+2026-09-14 23:31:08,037 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=740.3s api_calls=18 response=60 chars
+2026-09-14 23:31:08,041 INFO gateway.platforms.base: [Telegram] Sending response (60 chars) to 8944451892

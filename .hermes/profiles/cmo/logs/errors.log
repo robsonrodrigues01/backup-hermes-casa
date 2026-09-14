@@ -1820,3 +1820,36 @@ task: <Task pending name='Task-20' coro=<<async_generator_athrow without __name_
 2026-09-14 22:33:18,617 WARNING [20260914_222936_d599bd] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,215/2,200 chars. Shorten the new content or remove other entries first."}
 2026-09-14 22:35:03,561 ERROR asyncio: Task was destroyed but it is pending!
 task: <Task pending name='Task-19' coro=<<async_generator_athrow without __name__>()>>
+2026-09-14 22:46:59,338 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:46:59,339 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:47:01,353 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:47:01,393 WARNING [20260914_214637_94b87c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:47:01,463 WARNING [20260914_214637_94b87c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:47:01,499 WARNING [20260914_214637_94b87c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:47:01,603 WARNING [20260914_214637_94b87c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:48:22,336 WARNING [20260914_222936_d599bd] agent.tool_executor: Tool skill_view returned error (0.05s): {"success": false, "error": "Skill 'hermes-agent' not found.", "available_skills": ["caddy-exposicao-publica", "delegar-codigo-grande", "gatilho-instantaneo-cron", "gatilho-webhook-agentes", "mcp-serv
+2026-09-14 22:49:48,626 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-14 22:49:48,688 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:49:54,190 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:49:59,367 WARNING [20260914_222936_d599bd] agent.tool_executor: Tool execute_code returned error (0.00s): {"status": "error", "error": "BLOCKED: execute_code runs arbitrary local Python (including subprocess calls that bypass shell-string approval checks). Cron jobs run without a user present to approve i
+2026-09-14 22:50:10,389 WARNING [cron_b1c27fe585a1_20260914_224948] agent.tool_executor: Tool terminal returned error (1.58s): {"output": "CONTAS:\nCONVS IG: 2\nTraceback (most recent call last):\n  File \"<stdin>\", line 14, in <module>\nAttributeError: 'str' object has no attribute 'get'", "exit_code": 1, "error": null}
+2026-09-14 22:50:23,145 WARNING [cron_b1c27fe585a1_20260914_224948] agent.tool_executor: Tool terminal returned error (1.96s): {"output": "POSTS IG: 4\nTraceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\nAttributeError: 'str' object has no attribute 'get'", "exit_code": 1, "error": null}
+2026-09-14 22:50:45,791 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "# Calendário oficial de datas: feriados + comemorativas (cuidar.vc))
+2026-09-14 22:51:44,183 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "# Calendário oficial de datas — feriados + comemorativas (cuidar.vc)
+2026-09-14 23:06:48,508 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-14 23:06:48,547 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:06:48,590 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:22:48,558 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-14 23:22:48,600 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:22:48,652 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:23:00,461 WARNING [20260914_222936_d599bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:24:17,158 WARNING [cron_b1c27fe585a1_20260914_232248] agent.tool_executor: Tool terminal returned error (0.19s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "echo \"== DETALHE POSTS IG ==\"; curl -s -H @zernio.hdr \"https://api.zernio.com/v1/inb
+2026-09-14 23:24:21,959 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:24:21,996 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:24:22,025 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:24:23,160 WARNING [20260914_214637_94b87c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:24:23,213 WARNING [20260914_214637_94b87c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:25:58,255 WARNING [20260914_222936_d599bd] agent.tool_executor: Tool terminal returned error (0.14s): {"output": "Traceback (most recent call last):\n  File \"/home/hermes/cuidarvc/squad/le_qc_job.py\", line 5, in <module>\n    if j.get(\"id\") == \"9e68702df006\":\n       ^^^^^\nAttributeError: 'str'
+2026-09-14 23:30:29,469 WARNING [20260914_222936_d599bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:32:20,008 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:32:33,940 WARNING [20260914_233204_32f013] tools.skills_tool: Skill security warning for 'squad-postagens-cuidarvc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/squad-postagens-cuidarvc/SKILL.md

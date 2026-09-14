@@ -1,1 +1,21 @@
-{"version": 1, "installed": {}}
+{
+  "version": 1,
+  "installed": {
+    "graphic-design": {
+      "source": "clawhub",
+      "identifier": "graphic-design",
+      "trust_level": "community",
+      "scan_verdict": "caution",
+      "content_hash": "sha256:dbfbebdb49b5cc17",
+      "install_path": "graphic-design",
+      "files": [
+        "skill-card.md",
+        "SKILL.md",
+        "_meta.json"
+      ],
+      "metadata": {},
+      "installed_at": "2026-09-14T22:49:11.723316+00:00",
+      "updated_at": "2026-09-14T22:49:11.723321+00:00"
+    }
+  }
+}

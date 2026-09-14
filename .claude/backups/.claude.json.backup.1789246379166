@@ -1,0 +1,14 @@
+{
+  "installMethod": "native",
+  "autoUpdates": false,
+  "firstStartTime": "2026-09-12T20:42:15.318Z",
+  "firstStartVersion": "2.1.270",
+  "machineID": "d4ef2bb41f4a519b09b99f975822cf9cc0cb9b799dcd63e603d56e39c3579e24",
+  "opusProMigrationComplete": true,
+  "sonnet1m45MigrationComplete": true,
+  "seenNotifications": {},
+  "hasResetAutoModeOptInForDefaultOffer": true,
+  "migrationVersion": 14,
+  "userID": "5d81cb7179014dd2801c41bbeb9e23053826fe356e8cf5e99252e7a23b3ce622",
+  "autoUpdatesProtectedForNative": true
+}

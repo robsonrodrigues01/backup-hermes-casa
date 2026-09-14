@@ -49,6 +49,10 @@
       1789381105671944802,
       6752
     ],
+    "devops/internal-tools-cuidarvc/SKILL.md": [
+      1789427942683098777,
+      3894
+    ],
     "devops/lovable-mcp/SKILL.md": [
       1789245210863818757,
       5698
@@ -275,6 +279,19 @@
       "category": "devops",
       "frontmatter_name": "dev-cuidarvc",
       "description": "Playbook técnico do cuidar.vc para a squad tech (CTO, Dev...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "internal-tools-cuidarvc",
+      "category": "devops",
+      "frontmatter_name": "internal-tools-cuidarvc",
+      "description": "Construir, estender e verificar artefatos internos do cui...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

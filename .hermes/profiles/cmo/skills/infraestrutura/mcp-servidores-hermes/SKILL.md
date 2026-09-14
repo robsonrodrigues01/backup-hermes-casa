@@ -22,6 +22,12 @@ Fatos do ambiente que mudam como se instala (verificar antes de improvisar):
 - Pegadinha de add sem TTY: em falha ele pergunta "Save config anyway? [y/N]" e o default N NÃO salva. Após qualquer add com erro, conferir com `hermes -p <perfil> mcp list` antes de presumir que salvou.
 - Manter a URL exatamente como o fornecedor manda (query params selecionam tools/actors; ex. Apify: `https://mcp.apify.com/`).
 
+## Servidor com API key estática (sem OAuth)
+- Caso feriadosapi.com (validado 14/09): `hermes -p <perfil> mcp add <nome>` pergunta a chave no pty (responder via `process submit`), grava no .env do perfil como `MCP_<NOME>_API_KEY` e registra o servidor no config.yaml.
+- **Provedor que rejeita header Bearer**: sintoma "API Key não fornecida" (ou 401) mesmo com a chave no .env: o cliente manda Authorization header e o servidor só lê `apiKey` como query param. Fix validado: incorporar a chave NA URL do servidor (`...?apiKey=<chave>`) no config.yaml do perfil (rota validada: script python via terminal; os file tools do agente são barrados para config.yaml) e subir timeout (`hermes -p <perfil> config set mcp_servers.<nome>.timeout 300`).
+- Perfil duplo segue valendo: servidor usado por CMO e pela squad = `mcp add` em cmo E cuidar.
+- Provar com `hermes -p <perfil> mcp test <nome>` (feriados: ~5-7s, 9 tools) e, quando o endpoint permitir, uma chamada real via curl (`tools/list` e `tools/call`) antes de plugar agente.
+
 ## OAuth headless (paste-back), o fluxo completo
 A VM não tem navegador; o dono (Rob) autoriza no navegador DELE e cola o resultado de volta no chat.
 0. **ANTES de iniciar qualquer OAuth, dois fixes de timeout DIFERENTES**:
@@ -59,3 +65,4 @@ A VM não tem navegador; o dono (Rob) autoriza no navegador DELE e cola o result
 
 ## Referências
 - `references/apify-instalacao-14-09.md`: episódio completo do Apify MCP (erros, comandos, OAuth paste-back em 4 rodadas, add no 2º perfil e validação no Radar com a 1ª coleta real).
+- `references/feriados-instalacao-14-09.md`: episódio do feriadosapi.com (API key estática sem OAuth, rejeição de Bearer com apiKey na query string, timeout, perfis cmo+cuidar, coleta real 2026-2027 e padrão drop/raw).

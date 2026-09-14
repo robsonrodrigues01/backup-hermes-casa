@@ -94,14 +94,14 @@
     "archived_at": null,
     "created_at": "2026-09-14T20:48:16.090117+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-09-14T21:28:56.342041+00:00",
-    "last_used_at": "2026-09-14T22:31:10.970044+00:00",
-    "last_viewed_at": "2026-09-14T22:31:10.967217+00:00",
-    "patch_count": 13,
+    "last_patched_at": "2026-09-14T23:27:00.729405+00:00",
+    "last_used_at": "2026-09-14T23:25:48.734913+00:00",
+    "last_viewed_at": "2026-09-14T23:25:48.732175+00:00",
+    "patch_count": 16,
     "pinned": false,
     "state": "active",
-    "use_count": 8,
-    "view_count": 8
+    "use_count": 9,
+    "view_count": 9
   },
   "radar-cuidarvc": {
     "archived_at": null,
@@ -134,12 +134,12 @@
     "created_at": "2026-09-10T08:00:34.639841+00:00",
     "created_by": null,
     "last_patched_at": "2026-09-11T17:05:10.325300+00:00",
-    "last_used_at": "2026-09-14T22:31:24.651091+00:00",
-    "last_viewed_at": "2026-09-14T22:31:24.647905+00:00",
+    "last_used_at": "2026-09-14T23:32:33.947723+00:00",
+    "last_viewed_at": "2026-09-14T23:32:33.946227+00:00",
     "patch_count": 60,
     "pinned": false,
     "state": "active",
-    "use_count": 78,
-    "view_count": 55
+    "use_count": 79,
+    "view_count": 56
   }
 }

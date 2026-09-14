@@ -1,6 +1,10 @@
 {
   "version": 1,
   "manifest": {
+    "graphic-design/SKILL.md": [
+      1789426151690346119,
+      6669
+    ],
     "infraestrutura/caddy-exposicao-publica/SKILL.md": [
       1789262788418967657,
       14036
@@ -18,8 +22,8 @@
       4834
     ],
     "infraestrutura/mcp-servidores-hermes/SKILL.md": [
-      1789421336339678979,
-      8899
+      1789428420726244718,
+      10154
     ],
     "infraestrutura/radar-cuidarvc/SKILL.md": [
       1789423888690631585,
@@ -122,11 +126,24 @@
       14936
     ],
     "marketing/squad-postagens-cuidarvc/SKILL.md": [
-      1789387880848639041,
-      26647
+      1789426916460747100,
+      27985
     ]
   },
   "skills": [
+    {
+      "skill_name": "graphic-design",
+      "category": "graphic-design",
+      "frontmatter_name": "Graphic Design",
+      "description": "Support design understanding from basic visuals to profes...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
     {
       "skill_name": "caddy-exposicao-publica",
       "category": "infraestrutura",

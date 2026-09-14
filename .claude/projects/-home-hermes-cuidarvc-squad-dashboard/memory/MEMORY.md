@@ -1,0 +1,1 @@
+- [Cron cuidar em UTC e ids de jobs](cron-cuidar-utc-e-jobs.md) — cron em UTC, CMO ativo 8c20e6866ceb, Community sem job, decisões em squad/aprovacoes/

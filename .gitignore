@@ -10,19 +10,7 @@ scrape-demo/
 headroom-test/
 nested-git-stash/
 
-# --- segredos e tokens: NUNCA sobem ---
-secrets/
-.git-credentials
-.config/gh/
-.env*
-**/.env*
-**/mcp-tokens/
-.claude/
-.claude.json
-**/credentials*.json
-**/*token*.json
-**/*.pem
-**/*.key
+# --- segredos e tokens: SOBEM (pedido do Rob em 14/09 — cofre completo) ---
 
 # --- logs de conversa / bancos pesados ---
 **/state.db

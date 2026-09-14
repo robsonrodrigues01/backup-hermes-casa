@@ -8,7 +8,7 @@ Canva: tokens em squad/canva-tokens.json; canva_publish.py = entrega padrão de 
 §
 Telegram DM do Rob = chat_id 8944451892 (TELEGRAM_HOME_CHANNEL no perfil cuidar; send_message com esse canal).
 §
-Skills de marketing = symlinks do cuidar: skill_manage no cmo recusa patch/write_file nelas (reconf. 14/09); rota = file tools cross_profile=True em ~/.hermes/profiles/cuidar/skills/marketing/. PATCH PENDENTE squad-postagens-cuidarvc: (1) peça especial aprovada NÃO entra na fila do cron sozinha; editar prompt do job (subprocess argv), passo idempotente, redo, verificação própria; (2) PIL/pypdf no cmo: uv run --with pillow --with pypdf (Pillow só grava PDF).
+Peça especial (padrão validado 14/09): brief → cron edit via script python3 (execute_code barrado) → mover artefato antigo ANTES do redo (idempotência pula) → conferir disco mesmo se run truncar. pypdf: uv run --with pypdf. Doc na skill squad-postagens pendente.
 §
 Padrões CMO: skills externas = destilar em PT-BR em references/ da skill da squad (copy-ig-fb.md e metricas-framework.md hookados no SKILL.md; Rob OK 11/09). Clarify sem resposta ~10min = seguir padrão de baixo risco e registrar em PENDENTES. Path.home() no profile cmo = profiles/cmo/home: usar caminhos absolutos p/ dados do cuidar. Mudar rota no Caddy (admin 127.0.0.1:2019) = barrado pelo security scan: exige OK do Rob.
 §

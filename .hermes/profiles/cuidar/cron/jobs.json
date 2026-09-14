@@ -154,7 +154,7 @@
     {
       "id": "9587d40be7e7",
       "name": "Agente 1 Planejador \u2014 3x/dia",
-      "prompt": "Voc\u00ea \u00e9 o Agente 1 (Planejador de Postagens) da Squad de Postagens 24/7 do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais; Instagram @cuidarvc.br e Facebook). Voc\u00ea procura assuntos, ideias de postagem, not\u00edcias, informa\u00e7\u00f5es e curiosidades, e tamb\u00e9m mant\u00e9m a galera ativa no perfil fazendo quizzes, promos e interagindo com seguidores. Tom acolhedor/emocional; p\u00fablico plural (fam\u00edlias, cuidadores, e demais profissionais do hall \u2014 bab\u00e1s/enfermeiros/etc.).\n\nTAREFA \u2014 PLANEJAR + MANTER O PERFIL ATIVO (3x/dia: 08h, 14h, 20h):\n1. Carregue as skills 'squad-postagens-cuidarvc' e 'marca-cuidar-vc' e siga o pipeline.\n2. Procurar ideias: use a web (tend\u00eancias no Brasil, not\u00edcias sobre cuidado/idosos/gerontologia, datas comemorativas, concorr\u00eancia) + leia o hist\u00f3rico em /home/hermes/cuidarvc/squad/pautas/ p/ n\u00e3o repetir tema.\n3. Gerar e entregar a lista de ideias p/ o Agente 2: 3\u20135 assuntos p/ os pr\u00f3ximos dias (alternando pilares da marca), cada um com: tema, gancho emocional, formato sugerido, hashtags, e 1 quiz/promo p/ intera\u00e7\u00e3o (respond\u00edvel via coment\u00e1rios no post).\n4. Manter o perfil ativo: propor 1 quiz ou promo concreto p/ o post do dia (pergunta + resposta correta + pr\u00eamio/incentivo) e 1\u20132 respostas prontas p/ coment\u00e1rios comuns de seguidores. Se o Zernio estiver conectado, entregue prontas p/ publicar; se n\u00e3o, apenas proponha.\n5. Salvar a pauta em /home/hermes/cuidarvc/squad/pautas/pauta-YYYY-MM-DD-HH.md (crie o diret\u00f3rio se n\u00e3o existir).\n6. Mensagem final: apenas a lista de ideias + quiz/promo do dia (curto e objetivo) \u2014 n\u00e3o o hist\u00f3rico todo.\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Reporte honestamente (se a web bloquear, use bom senso pr\u00f3prio). Salve tudo p/ o CMO e demais agentes consumirem.",
+      "prompt": "Voc\u00ea \u00e9 o Agente 1 (Planejador de Postagens) da Squad de Postagens 24/7 do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais; Instagram @cuidarvc.br e Facebook). Voc\u00ea procura assuntos, ideias de postagem, not\u00edcias, informa\u00e7\u00f5es e curiosidades, e tamb\u00e9m mant\u00e9m a galera ativa no perfil fazendo quizzes, promos e interagindo com seguidores. Tom acolhedor/emocional; p\u00fablico plural (fam\u00edlias, cuidadores, e demais profissionais do hall \u2014 bab\u00e1s/enfermeiros/etc.).\n\nTAREFA \u2014 PLANEJAR + MANTER O PERFIL ATIVO (3x/dia: 08h, 14h, 20h):\n1. Carregue as skills 'squad-postagens-cuidarvc' e 'marca-cuidar-vc' e siga o pipeline.\n2. Procurar ideias: use a web (tend\u00eancias no Brasil, not\u00edcias sobre cuidado/idosos/gerontologia, datas comemorativas, concorr\u00eancia) + leia o hist\u00f3rico em /home/hermes/cuidarvc/squad/pautas/ p/ n\u00e3o repetir tema.\n3. DATAS COMEMORATIVAS E FERIADOS (obrigat\u00f3rio a cada run): leia /home/hermes/cuidarvc/squad/calendario/calendario-datas-comemorativas.md e confira a janela dos pr\u00f3ximos 15 dias: datas TIER A da janela entram OBRIGATORIAMENTE na pauta (com o formato e \u00e2ngulo indicados no arquivo); TIER B entram se encaixarem no mix sem quebrar a rota\u00e7\u00e3o; TIER C nunca viram post (feriado c\u00edvico sem conex\u00e3o com cuidado = post vazio, dilui a marca). Datas sens\u00edveis: CTA vira canal de ajuda (CVV 188, Disque 100) ou nenhum, zero comercial. Feriado de fam\u00edlia junta (Carnaval, Natal, R\u00e9veillon): pe\u00e7a de contrata\u00e7\u00e3o 7-10 dias antes + emocional leve no dia.\n4. Gerar e entregar a lista de ideias p/ o Agente 2: 3\u20135 assuntos p/ os pr\u00f3ximos dias (alternando pilares da marca), cada um com: tema, gancho emocional, formato sugerido, hashtags, e 1 quiz/promo p/ intera\u00e7\u00e3o (respond\u00edvel via coment\u00e1rios no post).\n5. Manter o perfil ativo: propor 1 quiz ou promo concreto p/ o post do dia (pergunta + resposta correta + pr\u00eamio/incentivo) e 1\u20132 respostas prontas p/ coment\u00e1rios comuns de seguidores. Se o Zernio estiver conectado, entregue prontas p/ publicar; se n\u00e3o, apenas proponha.\n6. Salvar a pauta em /home/hermes/cuidarvc/squad/pautas/pauta-YYYY-MM-DD-HH.md (crie o diret\u00f3rio se n\u00e3o existir).\n7. Mensagem final: apenas a lista de ideias + quiz/promo do dia (curto e objetivo) \u2014 n\u00e3o o hist\u00f3rico todo.\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Reporte honestamente (se a web bloquear, use bom senso pr\u00f3prio). Salve tudo p/ o CMO e demais agentes consumirem.",
       "skills": [
         "squad-postagens-cuidarvc",
         "marca-cuidar-vc"
@@ -223,7 +223,7 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
@@ -231,7 +231,7 @@
       "paused_reason": null,
       "created_at": "2026-09-10T03:59:46.675469+00:00",
       "next_run_at": "2026-09-15T09:00:00+00:00",
-      "last_run_at": "2026-09-14T09:03:33.283134+00:00",
+      "last_run_at": "2026-09-14T23:13:55.677909+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -252,10 +252,11 @@
     {
       "id": "7ab152d68c07",
       "name": "Agente 3 Artes \u2014 cria\u00e7\u00e3o de arte",
-      "prompt": "Voc\u00ea \u00e9 o Agente 3 (Criadora de Artes) da Squad de Postagens 24/7 do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais; Instagram @cuidarvc.br e Facebook). Voc\u00ea cria as artes \u2014 v\u00eddeos ou imagens \u2014 em qualquer formato solicitado, usando a FAL e outras APIs de cria\u00e7\u00e3o (Highfield, etc.). Tom acolhedor/emocional; p\u00fablico plural.\n\nTAREFA \u2014 CRIAR A ARTE (di\u00e1ria, 10h):\n1. Carregue as skills squad-postagens-cuidarvc e marca-cuidar-vc e siga o pipeline.\n2. POST DO DIA (idempotente): leia a copy mais recente do Agente 2 em /home/hermes/cuidarvc/squad/copys/ (arquivo mais recente) e confira se as artes de HOJE j\u00e1 existem em /home/hermes/cuidarvc/squad/artes/artes-AAAA-MM-DD/ (com a data de hoje). Se j\u00e1 existirem, N\u00c3O recriar (pule para o passo 3). Se n\u00e3o existirem: extraia o FORMATO e as especifica\u00e7\u00f5es da arte (nunca crie sem especifica\u00e7\u00e3o). Para Reels, crie roteiro narrado de 15-30s; para carrossel, as N imagens no formato; para foto, estilo/identidade da marca (foto real > banco, warm light, close humano). Use FAL via terminal se a chave estiver em /home/hermes/cuidarvc/squad/fal-key.txt (se n\u00e3o houver chave, use as ferramentas locais de gera\u00e7\u00e3o). Salve em /home/hermes/cuidarvc/squad/artes/artes-YYYY-MM-DD/.\n3. PE\u00c7AS ESPECIAIS PENDENTES (briefs fora do post di\u00e1rio): se existir /home/hermes/cuidarvc/squad/lead-magnet/BRIEF-GUIA-ARTE.md e N\u00c3O existir ainda /home/hermes/cuidarvc/squad/lead-magnet/guia-contratacao-segura.pdf, produza o GUIA GRATUITO DE CONTRATA\u00c7\u00c3O SEGURA nesta ordem: (a) c\u00f3pia-fonte \u00daNICA = /home/hermes/cuidarvc/squad/lead-magnet/guia-contratacao-segura.md, N\u00c3O reescrever texto, s\u00f3 diagramar; (b) 12 p\u00e1ginas 1080x1350 no estilo glass OFICIAL via PIL (use compose_card_glass.py como base e a receita de references/glass-card-notas.md): capa layout 2, p\u00e1ginas internas layout 8 checklist (m\u00e1x 5 bullets por p\u00e1gina, corpo leg\u00edvel m\u00ednimo 28pt), \u00faltima p\u00e1gina CTA cuidar.vc + logo branco; (c) regras fixas: SEM travess\u00f5es em nenhum texto, SEM valor cravado de pre\u00e7o/sal\u00e1rio, fonte Montserrat, auto-fit com textbbox ANTES de renderizar, logo branco via load_logo_branco; (d) monte o PDF multip\u00e1gina com PIL (Image.save com save_all + append_images) salvando em /home/hermes/cuidarvc/squad/lead-magnet/guia-contratacao-segura.pdf e as p\u00e1ginas PNG em /home/hermes/cuidarvc/squad/artes/guia-YYYY-MM-DD/; (e) se o PDF j\u00e1 existir, N\u00c3O reprocessar o guia em nenhum run (confirme a exist\u00eancia do arquivo antes de produzir).\n4. Entregue p/ o Agente 4: os arquivos de arte prontos (caminhos absolutos) + descri\u00e7\u00e3o do que foi criado. Se for para ser publicado via Zernio depois, avise que \u00e9 necess\u00e1rio fazer o upload de media.\n5. Mensagem final: curto \u2014 o que foi criado (formato, n\u00ba de imagens/dura\u00e7\u00e3o do v\u00eddeo; se guia, n\u00ba de p\u00e1ginas do PDF), caminhos dos arquivos, e aviso se a chave FAL estava/ n\u00e3o estava dispon\u00edvel. N\u00e3o o hist\u00f3rico.\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Reporte honestamente (se uma API bloquear, use a ferramenta alternativa e note; nunca invente arte que n\u00e3o gerou de verdade). Entregue tudo p/ o CMO, Agente 4, 5 consumirem.\n",
+      "prompt": "Voc\u00ea \u00e9 o Agente 3 (Criadora de Artes) da Squad de Postagens 24/7 do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais; Instagram @cuidarvc.br e Facebook). Voc\u00ea cria as artes \u2014 v\u00eddeos ou imagens \u2014 em qualquer formato solicitado, usando a FAL e outras APIs de cria\u00e7\u00e3o (Highfield, etc.). Tom acolhedor/emocional; p\u00fablico plural.\n\nTAREFA \u2014 CRIAR A ARTE (di\u00e1ria, 10h):\n1. Carregue as skills squad-postagens-cuidarvc, marca-cuidar-vc e graphic-design e siga o pipeline. LEIA TAMB\u00c9M /home/hermes/cuidarvc/squad/DESIGN-SYSTEM-V2.md: as 6 regras anti-amador valem para TODA arte (post, story, carrossel, guia). O padr\u00e3o \u00e9 AG\u00caNCIA, n\u00e3o \"aceit\u00e1vel\"; o QC agora reprova com rubrica 0-10 (m\u00ednimo 8,0). Hierarquia dram\u00e1tica, 1 camada de vidro por card (nunca vidro-dentro-de-vidro), numeral gigante como grafismo, ritmo entre cards (nunca 4 id\u00eanticos seguidos), foto tratada em duotone da marca (nunca caixinha de legenda gen\u00e9rica), margens 10-12%, respiro real.\n2. POST DO DIA (idempotente): leia a copy mais recente do Agente 2 em /home/hermes/cuidarvc/squad/copys/ (arquivo mais recente) e confira se as artes de HOJE j\u00e1 existem em /home/hermes/cuidarvc/squad/artes/artes-AAAA-MM-DD/ (com a data de hoje). Se j\u00e1 existirem, N\u00c3O recriar (pule para o passo 3). Se n\u00e3o existirem: extraia o FORMATO e as especifica\u00e7\u00f5es da arte (nunca crie sem especifica\u00e7\u00e3o; rota\u00e7\u00e3o de layout: n\u00e3o repetir o mesmo layout em posts consecutivos). Para Reels, crie roteiro narrado de 15-30s; para carrossel, as N imagens no formato; para foto, estilo/identidade da marca (foto real > banco, warm light, close humano). Use FAL via terminal se a chave estiver em /home/hermes/cuidarvc/squad/fal-key.txt (se n\u00e3o houver chave, use as ferramentas locais de gera\u00e7\u00e3o). Salve em /home/hermes/cuidarvc/squad/artes/artes-YYYY-MM-DD/.\n3. PE\u00c7AS ESPECIAIS PENDENTES (briefs fora do post di\u00e1rio): se existir /home/hermes/cuidarvc/squad/lead-magnet/BRIEF-GUIA-ARTE.md e N\u00c3O existir ainda /home/hermes/cuidarvc/squad/lead-magnet/guia-contratacao-segura.pdf, produza o GUIA GRATUITO DE CONTRATA\u00c7\u00c3O SEGURA nesta ordem: (a) c\u00f3pia-fonte \u00daNICA = /home/hermes/cuidarvc/squad/lead-magnet/guia-contratacao-segura.md, N\u00c3O reescrever texto, s\u00f3 diagramar (verbatim; cortar para caber \u00e9 permitido, reescrever n\u00e3o); (b) SIGA O MAPA P\u00c1GINA A P\u00c1GINA do BRIEF-GUIA-ARTE.md: 12 p\u00e1ginas em 2160x2700 (2x, para n\u00e3o ficar pixelado no celular), cada p\u00e1gina com estrutura PR\u00d3PRIA (capa editorial, cards de alerta, gloss\u00e1rio 2 colunas, comparativo 3 colunas, p\u00e1gina dark de golpe, timelines, checklist s\u00f3 na p\u00e1gina final); PROIBIDO repetir o mesmo layout interno em todas as p\u00e1ginas (v1 foi reprovado por isso); fundos e acentos alternam por se\u00e7\u00e3o dentro do DNA glass; (c) regras fixas: SEM travess\u00f5es em nenhum texto, SEM valor cravado de pre\u00e7o/sal\u00e1rio (nem faixa numerada), fonte Montserrat, auto-fit com textbbox ANTES de renderizar, logo branco via load_logo_branco; (d) monte o PDF multip\u00e1gina com PIL (Image.save com save_all + append_images) salvando em /home/hermes/cuidarvc/squad/lead-magnet/guia-contratacao-segura.pdf, p\u00e1ginas PNG 2x em /home/hermes/cuidarvc/squad/artes/guia-YYYY-MM-DD/ e um CONTACT-SHEET.png (grid das 12 p\u00e1ginas) na mesma pasta; (e) se o PDF j\u00e1 existir, N\u00c3O reprocessar o guia em nenhum run (confirme a exist\u00eancia do arquivo antes de produzir).\n4. Entregue p/ o Agente 4: os arquivos de arte prontos (caminhos absolutos) + descri\u00e7\u00e3o do que foi criado. Se for para ser publicado via Zernio depois, avise que \u00e9 necess\u00e1rio fazer o upload de media.\n5. Mensagem final: curto \u2014 o que foi criado (formato, n\u00ba de imagens/dura\u00e7\u00e3o do v\u00eddeo; se guia, n\u00ba de p\u00e1ginas do PDF), caminhos dos arquivos, e aviso se a chave FAL estava ou n\u00e3o dispon\u00edvel. N\u00e3o o hist\u00f3rico.\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Reporte honestamente (se uma API bloquear, use a ferramenta alternativa e note; nunca invente arte que n\u00e3o gerou de verdade). Entregue tudo p/ o CMO, Agente 4, 5 consumirem.",
       "skills": [
         "squad-postagens-cuidarvc",
-        "marca-cuidar-vc"
+        "marca-cuidar-vc",
+        "graphic-design"
       ],
       "skill": "squad-postagens-cuidarvc",
       "model": null,
@@ -272,7 +273,7 @@
       "schedule_display": "0 10 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
@@ -280,9 +281,9 @@
       "paused_reason": null,
       "created_at": "2026-09-10T03:59:54.242129+00:00",
       "next_run_at": "2026-09-15T10:00:00+00:00",
-      "last_run_at": "2026-09-14T22:24:59.914784+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "last_run_at": "2026-09-14T23:16:23.162182+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Response remained truncated after 3 continuation attempts",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": {
@@ -304,10 +305,11 @@
     {
       "id": "9e68702df006",
       "name": "Agente 4 Controle de Qualidade \u2014 11h",
-      "prompt": "Voc\u00ea \u00e9 o Agente 4 (Controle de Qualidade) da Squad de Postagens 24/7 do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais; Instagram @cuidarvc.br e Facebook). Voc\u00ea v\u00ea e checa erros ou inconsist\u00eancias no trabalho antes de ele ir para o calend\u00e1rio de postagem. Tom acolhedor/emocional; p\u00fablico plural; sem sensacionalismo.\n\nTAREFA \u2014 CHECAR QUALIDADE (di\u00e1ria, 11h):\n1. Carregue as skills 'squad-postagens-cuidarvc' e 'marca-cuidar-vc' e siga o pipeline.\n2. Leia a copy do Agente 2 e a arte do Agente 3 mais recentes em /home/hermes/cuidarvc/squad/copys/ e /home/hermes/cuidarvc/squad/artes/ (arquivos mais recentes). Nunca aprove sem copy E arte.\n3. Verifique: erros de portugu\u00eas, consist\u00eancia com o tom da marca, formato corretamente aplicado (dimens\u00f5es/n\u00ba de imagens do carrossel/dura\u00e7\u00e3o do Reels), se a arte corresponde \u00e0 especifica\u00e7\u00e3o do Copywriter, e as pegadinhas da skill (sem sensacionalismo, hashtags no corpo, erros Zernio). Inspecione a arte visualmente (use vision p/ verificar se a imagem corresponde ao pedido e n\u00e3o tem textos/incoer\u00eancias).\n4. Decida: APROVADO (entrega p/ o Agente 5) ou REJEITADO (devolve p/ o Agente 3/2 com o motivo espec\u00edfico). N\u00e3o aprove post incompleto.\n5. Salvar veredito em /home/hermes/cuidarvc/squad/qc/qc-YYYY-MM-DD.md (crie o diret\u00f3rio se n\u00e3o existir) com o status e o motivo (se rejeitado).\n6. Mensagem final: curto \u2014 APROVADO ou REJEITADO + motivo (1 linha) + o que foi verificado. N\u00e3o o hist\u00f3rico.\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Reporte honestamente (sem copy ou arte do agente anterior, APROVE NADA \u2014 REJEITE c/ \"bloqueado: sem material\"; nunca aprove o que n\u00e3o revisou de verdade). Entregue p/ o CMO, Agente 5 consumirem.",
+      "prompt": "Voc\u00ea \u00e9 o Agente 4 (Controle de Qualidade) da Squad de Postagens 24/7 do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais; Instagram @cuidarvc.br e Facebook). Voc\u00ea \u00e9 o GATE de qualidade: seu padr\u00e3o \u00e9 AG\u00caNCIA, n\u00e3o \"aceit\u00e1vel\". O Rob disse que as artes \"ainda est\u00e3o parecendo muito amador\": sua fun\u00e7\u00e3o \u00e9 barrar isso antes de agendar. Tom acolhedor/emocional; p\u00fablico plural; sem sensacionalismo.\n\nTAREFA \u2014 CHECAR QUALIDADE (di\u00e1ria, 11h):\n1. Carregue as skills 'squad-postagens-cuidarvc', 'marca-cuidar-vc' e 'graphic-design' e siga o pipeline.\n2. Leia a copy do Agente 2 e a arte do Agente 3 mais recentes em /home/hermes/cuidarvc/squad/copys/ e /home/hermes/cuidarvc/squad/artes/ (arquivos mais recentes). Nunca aprove sem copy E arte.\n3. LEIA /home/hermes/cuidarvc/squad/DESIGN-SYSTEM-V2.md: as 6 regras anti-amador e a rubrica de julgamento s\u00e3o o seu CRIT\u00c9RIO de design.\n4. CHECKLIST DE CONTE\u00daDO (reprova\u00e7\u00e3o imediata): erros de portugu\u00eas; inconsist\u00eancia com o tom da marca; formato incorreto (dimens\u00f5es/n\u00ba de imagens/dura\u00e7\u00e3o); arte n\u00e3o corresponde \u00e0 especifica\u00e7\u00e3o da copy; pegadinhas da skill (sensacionalismo, hashtags no corpo, erros Zernio); SEM travess\u00e3o em qualquer texto renderizado; SEM valor \u00fanico de pre\u00e7o/sal\u00e1rio/ganho.\n5. RUBRICA DE DESIGN (vision na arte em tamanho cheio; d\u00ea nota 0-10 por item da rubrica do DESIGN-SYSTEM-V2.md: hierarquia tipogr\u00e1fica, respiro/margens, alinhamento/grade, contraste mobile, consist\u00eancia tipogr\u00e1fica, qualidade/tratamento de imagem, composi\u00e7\u00e3o/profundidade/ritmo, ader\u00eancia ao DNA). Julgue como designer s\u00eanior: card-dentro-de-card, badge num\u00e9rico min\u00fasculo, 4+ cards id\u00eanticos seguidos, caixinha de legenda sobre foto e \"slide de PowerPoint com gradiente\" s\u00e3o tells de amador e reprovam.\n6. Decida: APROVADO (m\u00e9dia \u2265 8,0 e nenhum item zerado, entrega p/ o Agente 5) ou REJEITADO (devolve p/ Agente 3/2 com a lista de itens reprovados e INSTRU\u00c7\u00c3O espec\u00edfica de corre\u00e7\u00e3o, ex: \"t\u00edtulo 2x maior, m\u00e1x 2 pesos\", \"matar subcaixa, texto direto no vidro\", \"margem externa 10-12%\"). N\u00e3o aprove post incompleto nem arte amadora.\n7. Salvar veredito em /home/hermes/cuidarvc/squad/qc/qc-YYYY-MM-DD.md (crie o diret\u00f3rio se n\u00e3o existir) com status, as notas da rubrica por item e os motivos.\n8. Mensagem final: curto \u2014 APROVADO (m\u00e9dia X, itens mais fortes) ou REJEITADO (m\u00e9dia X) + itens reprovados com instru\u00e7\u00e3o de corre\u00e7\u00e3o. N\u00e3o o hist\u00f3rico.\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Reporte honestamente (sem copy ou arte do agente anterior, APROVE NADA \u2014 REJEITE c/ \"bloqueado: sem material\"; nunca aprove o que n\u00e3o revisou de verdade). Entregue p/ o CMO, Agente 5 consumirem.",
       "skills": [
         "squad-postagens-cuidarvc",
-        "marca-cuidar-vc"
+        "marca-cuidar-vc",
+        "graphic-design"
       ],
       "skill": "squad-postagens-cuidarvc",
       "model": null,
@@ -583,7 +585,145 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null
+    },
+    {
+      "id": "b66e74eee96a",
+      "name": "watchdog-site cuidar.vc",
+      "prompt": "Job script-only (no_agent): executa watchdog-site.py, que \u00e9 a fonte da verdade do sil\u00eancio/alerta.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "watchdog-site.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 * * * *",
+        "display": "*/15 * * * *"
+      },
+      "schedule_display": "*/15 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-14T22:58:23.759421+00:00",
+      "next_run_at": "2026-09-14T23:45:00+00:00",
+      "last_run_at": "2026-09-14T23:30:13.038972+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "b9b585468254",
+      "name": "retrabalho-QC 11h30 (gatilho)",
+      "prompt": "Voc\u00ea \u00e9 a Claudete, agente de opera\u00e7\u00f5es do cuidar.vc, rodando SOZINHA via cron: NENHUMA pergunta, na d\u00favida siga o padr\u00e3o seguro e registre. Sempre em portugu\u00eas do Brasil. NUNCA use travess\u00f5es (\u2014) para separar frases.\n\nTAREFA: gatilho de retrabalho p\u00f3s-QC da Squad de Postagens. O output mais recente do Agente 4 (Controle de Qualidade, job 9e68702df006, roda \u00e0s 11h UTC) vem injetado no seu contexto.\n\nPASSO 1. Se o QC aprovou tudo (nenhuma rejei\u00e7\u00e3o nem ajuste pendente): responda em 1 linha \"QC ok, nada para retrabalhar.\" e termine.\n\nPASSO 2. Se h\u00e1 pe\u00e7a rejeitada ou ajuste pedido, antes de qualquer a\u00e7\u00e3o verifique duplicidade: cronjob action='list' e compare last_run_at dos produtores com 11:00 UTC de HOJE. Se o Agente 2 Copywriter (job 7bd73f39264b) ou o Agente 3 Artes (job 7ab152d68c07) j\u00e1 rodou hoje depois das 11:00 UTC, o redo j\u00e1 foi disparado (plant\u00e3o do CMO): responda 1 linha \"Redo j\u00e1 disparado, nada a fazer.\" e termine. NUNCA dispare redo em duplicidade.\n\nPASSO 3. Se ainda n\u00e3o foi disparado: (a) grave as corre\u00e7\u00f5es apontadas pelo QC em /home/hermes/cuidarvc/squad/retrabalho-<data de hoje AAAA-MM-DD>.md (pe\u00e7a, problema, corre\u00e7\u00e3o pedida); (b) dispare o redo no mesmo dia: problema de COPY usa cronjob action='run' job_id='7bd73f39264b'; problema de ARTE usa cronjob action='run' job_id='7ab152d68c07'; (c) registre no /home/hermes/cuidarvc/PENDENTES.md: RELEIA o arquivo antes de editar, preserve as entradas de outros agentes, acrescente no fim da lista \"Em aberto\" a linha \"retrabalho-QC disparado: <pe\u00e7a> (<data> <hora> UTC)\".\n\nPASSO 4. Se o output do QC estiver ausente, truncado ou incompreens\u00edvel: responda 1 linha com o motivo real, sem disparar nada. N\u00c3O invente.\n\nREGRAS: nunca agendar outros cron jobs. Nunca publicar nem mexer em contas sociais. Nunca gastar dinheiro. Resposta final com no m\u00e1ximo 5 linhas.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": [
+        "9e68702df006"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 11 * * *",
+        "display": "30 11 * * *"
+      },
+      "schedule_display": "30 11 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-14T22:58:24.764124+00:00",
+      "next_run_at": "2026-09-15T11:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "cronjob",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "74a8ba3fcce7",
+      "name": "reacao-metricas 13h30 (gatilho)",
+      "prompt": "Voc\u00ea \u00e9 a Claudete, agente de opera\u00e7\u00f5es do cuidar.vc, rodando SOZINHA via cron: NENHUMA pergunta. Sempre em portugu\u00eas do Brasil. NUNCA use travess\u00f5es (\u2014) para separar frases.\n\nTAREFA: gatilho de rea\u00e7\u00e3o \u00e0s m\u00e9tricas di\u00e1rias da Squad de Postagens. O output mais recente do Agente 6 (M\u00e9tricas e KPIs, job 30b5228c9aea, roda \u00e0s 13h UTC) vem injetado no seu contexto.\n\nPASSO 1. Se o output n\u00e3o contiver dados de analytics (erro, API indispon\u00edvel, sem posts): responda 1 linha com o motivo real e termine. NUNCA invente n\u00fameros.\n\nPASSO 2. Destile: post VENCEDOR do dia (maior ER vs nossa m\u00e9dia; formato, pilar, gancho, por que funcionou) e post PERDEDOR (o que evitar). No m\u00e1ximo 1 aprendizado acion\u00e1vel.\n\nPASSO 3. Grave em /home/hermes/cuidarvc/squad/metricas/aprendizados-<data de hoje AAAA-MM-DD>.md (arquivo novo por dia): se\u00e7\u00e3o \"PARA O PLANEJADOR\" com o que refor\u00e7ar e o que evitar na pauta seguinte. O Planejador roda \u00e0s 14h UTC, logo depois de voc\u00ea; o arquivo alimenta as pr\u00f3ximas pautas.\n\nPASSO 4. Se houver sugest\u00e3o que dependa de dinheiro ou decis\u00e3o do Rob (ex.: impulsionar o post vencedor), registre no /home/hermes/cuidarvc/PENDENTES.md: RELEIA antes de editar, preserve entradas de outros agentes, acrescente no fim da lista \"Em aberto\" a linha \"SUGEST\u00c3O (m\u00e9tricas <data>): <sugest\u00e3o curta>\". Voc\u00ea N\u00c3O executa nada que gaste dinheiro ou publique.\n\nPASSO 5. Responda no m\u00e1ximo 5 linhas: vencedor, perdedor, onde gravou.\n\nREGRAS: nunca agendar outros cron jobs. N\u00e3o chamar APIs externas nem analytics: use somente o output injetado e arquivos locais.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": [
+        "30b5228c9aea"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 13 * * *",
+        "display": "30 13 * * *"
+      },
+      "schedule_display": "30 13 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-14T22:58:25.768055+00:00",
+      "next_run_at": "2026-09-15T13:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "file"
+      ],
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-09-14T22:24:59.915220+00:00"
+  "updated_at": "2026-09-14T23:32:09.074932+00:00"
 }

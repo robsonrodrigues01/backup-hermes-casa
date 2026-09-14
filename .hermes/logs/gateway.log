@@ -5410,3 +5410,14 @@ keep an umbrella stable: hermes curator pin hermes-profiles
 2026-09-14 22:32:30,868 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (127 chars)
 2026-09-14 22:35:45,263 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
 2026-09-14 22:38:23,012 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (52 chars)
+2026-09-14 22:39:03,723 INFO [20260914_152119_8f5d651e] gateway.run: Session split detected: 20260914_152119_8f5d651e → 20260914_223605_8297df (compression)
+2026-09-14 22:39:04,738 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-14 22:39:17,888 INFO [20260914_223605_8297df] gateway.run: Session split detected: 20260914_152119_8f5d651e → 20260914_223605_8297df (compression)
+2026-09-14 22:39:19,043 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 22:39:19,044 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=673.7s api_calls=4 response=395 chars
+2026-09-14 23:31:42,804 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (189 chars)
+2026-09-14 23:31:42,805 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='me tira uma duvida, este backup do github ele é de todo o hermes né? todos os pe'
+2026-09-14 23:32:00,979 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 23:32:00,979 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=18.2s api_calls=3 response=1185 chars
+2026-09-14 23:32:53,091 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (17 chars)
+2026-09-14 23:32:53,091 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sobe os tokens tb'
