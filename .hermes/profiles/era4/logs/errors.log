@@ -1,0 +1,609 @@
+2026-09-09 12:34:12,205 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:34:12,207 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:34:12,209 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:34:12,902 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:34:12,904 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:34:12,905 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:34:13,020 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:38:37,087 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:38:37,088 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:38:37,090 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 12:38:37,130 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:40,477 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:40,479 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:40,481 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:40,483 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:41,236 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:41,237 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:41,239 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:23:41,279 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:24:10,235 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:24:37,549 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.22 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 17:26:44,694 WARNING [20260909_123410_78254721] agent.tool_executor: Tool delegate_task returned error (154.57s): {"results": [{"task_index": 0, "status": "failed", "summary": "", "api_calls": 5, "duration_seconds": 154.21, "model": "zai-org/GLM-5.1-FP8", "exit_reason": "max_iterations", "tokens": {"input": 27783
+2026-09-09 17:26:45,743 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:26:49,785 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:38,208 WARNING gateway.run: Gateway drain timed out after 180.0s with 1 active agent(s); interrupting remaining work.
+2026-09-09 17:27:46,450 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:46,458 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:49,570 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:50,068 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:50,295 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:50,393 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:55,569 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:55,633 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:56,598 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:56,652 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:27:56,742 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:33:20,176 WARNING [20260909_123410_78254721] agent.tool_executor: Tool execute_code returned error (300.57s): {"status": "error", "error": "BLOCKED: execute_code script timed out without user response. The user has NOT consented to running this code. Do NOT retry, do NOT rephrase the script, and do NOT attemp
+2026-09-09 17:33:24,843 WARNING [20260909_123410_78254721] agent.tool_executor: Tool terminal returned error (0.17s): {"output": "ls: cannot access '/tmp/era4_pfp_c1.png': No such file or directory\nfonts: ['/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf']\nTraceback (most recent call last):\n  File \"<string>\
+2026-09-09 17:38:38,991 WARNING [20260909_123410_78254721] agent.tool_executor: Tool terminal returned error (301.15s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+2026-09-09 17:39:24,268 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "\"\"\"Claudemir @Claudemirera4bot — gerador de candidatos a foto de)
+2026-09-09 17:41:19,803 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "#!/usr/bin/env python3\n\"\"\"Gera 3 candidatos de foto de perfil ()
+2026-09-09 17:42:03,330 WARNING [20260909_123410_78254721] agent.tool_executor: Tool terminal returned error (0.66s): {"output": "Traceback (most recent call last):\n  File \"/tmp/gen_pwfs.py\", line 226, in <module>\n    p1, p2, p3 = c1(), c2(), c3()\n                 ^^^^\n  File \"/tmp/gen_pwfs.py\", line 89, in c
+2026-09-09 17:42:15,616 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:42:58,325 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:43:17,645 WARNING [20260909_123410_78254721] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:47:04,434 WARNING [20260909_123410_78254721] agent.tool_executor: Tool terminal returned error (178.04s): {"output": "/usr/bin/bash: line 3: /home/hermes/profiles/era4/.env: No such file or directory", "exit_code": 1, "error": null, "approval": "Command required approval (Security scan — [HIGH] Could not 
+2026-09-09 17:47:11,337 WARNING [20260909_123410_78254721] agent.tool_executor: Tool terminal returned error (0.18s): {"output": "c1_robo_amigavel.png\nc2_logo_e4.png\nc3_chibi_headset.png\n/usr/bin/bash: line 3: /home/hermes/hermes/profiles/era4/.env: No such file or directory", "exit_code": 1, "error": null}
+2026-09-09 17:48:52,192 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:48:52,231 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:48:52,254 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:50:19,190 WARNING agent.message_sanitization: Unrepairable tool_call arguments for skill_manage — replaced with empty object (was: {"action": "write_file", "file_content": "#!/usr/bin/env python3\n\"\"\"Gerador )
+2026-09-09 17:54:14,624 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:54:14,625 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 17:54:15,997 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-09 18:32:26,107 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.10 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-10 05:31:35,582 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 05:31:35,980 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 05:31:36,222 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 05:31:36,392 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:35:41,336 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:35:41,399 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:35:41,429 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:35:41,516 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:35:47,931 WARNING [20260910_213540_34a6ad8c] agent.tool_executor: Tool search_files returned error (0.07s): {"total_count": 0, "error": "Path not found: /home/hermes/.hermes/profiles/era4/home/.hermes/profiles/era4"}
+2026-09-10 21:42:03,461 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:42:03,462 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:42:05,218 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:42:05,259 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-10 21:42:17,828 WARNING [20260910_213540_34a6ad8c] agent.tool_executor: Tool memory returned error (0.00s): {"error": "old_text is required for 'replace' action.", "success": false}
+2026-09-11 19:15:14,493 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:15:14,534 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:20:20,207 WARNING [20260911_191513_c609b1cf] agent.tool_executor: Tool terminal returned error (300.54s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+2026-09-11 19:20:59,308 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:21:36,515 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:21:36,516 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:21:40,281 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:21:40,323 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:21:51,600 WARNING [20260911_191513_c609b1cf] agent.tool_executor: Tool session_search returned error (0.00s): {"error": "around_message_id 137 not in session_id 20260910_213540_34a6ad8c", "success": false}
+2026-09-11 19:22:33,678 WARNING [20260911_191513_c609b1cf] agent.tool_executor: Tool read_file returned error (0.04s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /home/hermes/profiles/era4/SQUADS.md"}
+2026-09-11 19:22:33,679 WARNING [20260911_191513_c609b1cf] agent.tool_executor: Tool read_file returned error (0.05s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /home/hermes/profiles/era4/PENDENTES.md"}
+2026-09-11 19:23:22,339 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "# SQUADS DA ERA 4.0 — construção sob demanda (squad por squad)\n\n>)
+2026-09-11 19:24:12,171 WARNING [20260911_191513_c609b1cf] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-11 19:24:27,996 WARNING [20260911_192412_8c67db] agent.tool_executor: Tool terminal returned error (0.17s): {"output": "File \"<stdin>\", line 10\n    print \"-\", url[:120], \"|\", txt[:100]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: Missing parentheses in call to 'print'. Did you mean print(.
+2026-09-11 19:26:43,391 WARNING [20260911_192412_8c67db] agent.tool_executor: Tool terminal returned error (0.55s): {"output": "Traceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\n  File \"/usr/lib/python3.12/urllib/request.py\", line 215, in urlopen\n    return opener.open(url, data, timeo
+2026-09-11 19:28:51,845 WARNING [20260911_192412_8c67db] agent.tool_executor: Tool patch returned error (0.04s): {"success": false, "error": "Could not find a match for old_string in the file\n\nDid you mean one of these sections?\n  19| def main():\n  20|     query = sys.argv[1]\n  21|     idx = json.loads(get(
+2026-09-11 19:29:11,846 WARNING [20260911_192412_8c67db] agent.conversation_loop: Turn ended with pending tool result (agent may appear stuck). Turn ended: reason=unknown model=zai-org/GLM-5.1-FP8 api_calls=50/50 budget=50/50 tool_turns=49 last_msg_role=tool response_len=0 session=20260911_192412_8c67db last_tool=terminal
+2026-09-11 19:29:11,852 WARNING [20260911_191513_c609b1cf] agent.tool_executor: Tool delegate_task returned error (299.74s): {"results": [{"task_index": 0, "status": "failed", "summary": "", "api_calls": 50, "duration_seconds": 297.73, "model": "zai-org/GLM-5.1-FP8", "exit_reason": "max_iterations", "tokens": {"input": 8772
+2026-09-11 19:34:40,191 WARNING [20260911_191513_c609b1cf] agent.tool_executor: Tool execute_code returned error (300.35s): {"status": "error", "error": "BLOCKED: execute_code script timed out without user response. The user has NOT consented to running this code. Do NOT retry, do NOT rephrase the script, and do NOT attemp
+2026-09-12 00:17:45,911 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 00:17:45,914 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 00:17:47,922 WARNING [20260910_213540_34a6ad8c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 00:17:47,978 WARNING [20260910_213540_34a6ad8c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 00:17:48,013 WARNING [20260910_213540_34a6ad8c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 00:17:48,114 WARNING [20260910_213540_34a6ad8c] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 00:32:19,572 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 00:32:19,614 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 01:10:41,294 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-12 01:10:41,295 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-12 01:11:09,877 ERROR telegram.ext.Updater: Error while calling `get_updates` one more time to mark all fetched updates. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_request` of `Bot`.
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/gateway/platforms/telegram_network.py", line 90, in handle_async_request
+    response = await transport.handle_async_request(candidate)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_updater.py", line 400, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 4860, in get_updates
+    await self._post(
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 296, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-09-12 01:11:30,208 ERROR telegram.ext: Network Retry Loop (Bootstrap delete Webhook): Timed out: Timed out. Failed run number 0 of 0. Aborting.
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/gateway/platforms/telegram_network.py", line 90, in handle_async_request
+    response = await transport.handle_async_request(candidate)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 136, in do_action
+    await action_cb()
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_updater.py", line 686, in bootstrap_del_webhook
+    await self.bot.delete_webhook(drop_pending_updates=drop_pending_updates)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 1489, in delete_webhook
+    return await super().delete_webhook(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 5032, in delete_webhook
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 296, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-09-12 01:11:30,213 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-12 01:11:30,214 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Timed out
+2026-09-12 12:00:42,379 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 12:00:42,433 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 12:00:42,464 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 12:00:42,559 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-12 12:00:47,480 WARNING [cron_30d763c56a1b_20260912_120042] agent.tool_executor: Tool execute_code returned error (0.00s): {"status": "error", "error": "BLOCKED: execute_code runs arbitrary local Python (including subprocess calls that bypass shell-string approval checks). Cron jobs run without a user present to approve i
+2026-09-13 01:10:39,592 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-13 01:10:39,592 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-13 01:11:08,167 ERROR telegram.ext.Updater: Error while calling `get_updates` one more time to mark all fetched updates. Suppressing error to ensure graceful shutdown. When polling for updates is restarted, updates may be fetched again. Please adjust timeouts via `ApplicationBuilder` or the parameter `get_updates_request` of `Bot`.
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/gateway/platforms/telegram_network.py", line 90, in handle_async_request
+    response = await transport.handle_async_request(candidate)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_updater.py", line 400, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 671, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 4860, in get_updates
+    await self._post(
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 296, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-09-13 01:11:28,464 ERROR telegram.ext: Network Retry Loop (Bootstrap delete Webhook): Timed out: Timed out. Failed run number 0 of 0. Aborting.
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/gateway/platforms/telegram_network.py", line 90, in handle_async_request
+    response = await transport.handle_async_request(candidate)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 136, in do_action
+    await action_cb()
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_updater.py", line 686, in bootstrap_del_webhook
+    await self.bot.delete_webhook(drop_pending_updates=drop_pending_updates)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 1489, in delete_webhook
+    return await super().delete_webhook(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 5032, in delete_webhook
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 296, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-09-13 01:11:28,469 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-13 01:11:28,469 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Timed out
+2026-09-13 01:11:58,783 ERROR telegram.ext: Network Retry Loop (Bootstrap delete Webhook): Timed out: Timed out. Failed run number 0 of 0. Aborting.
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/gateway/platforms/telegram_network.py", line 90, in handle_async_request
+    response = await transport.handle_async_request(candidate)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 136, in do_action
+    await action_cb()
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_updater.py", line 686, in bootstrap_del_webhook
+    await self.bot.delete_webhook(drop_pending_updates=drop_pending_updates)
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 1489, in delete_webhook
+    return await super().delete_webhook(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 5032, in delete_webhook
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 296, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-09-13 01:11:58,790 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-13 01:11:58,791 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
+2026-09-13 12:00:45,359 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-13 12:00:45,408 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-13 12:00:49,909 WARNING [cron_30d763c56a1b_20260913_120045] agent.tool_executor: Tool execute_code returned error (0.00s): {"status": "error", "error": "BLOCKED: execute_code runs arbitrary local Python (including subprocess calls that bypass shell-string approval checks). Cron jobs run without a user present to approve i
+2026-09-13 12:00:50,911 WARNING [cron_30d763c56a1b_20260913_120045] agent.tool_executor: Tool execute_code returned error (0.00s): {"status": "error", "error": "BLOCKED: execute_code runs arbitrary local Python (including subprocess calls that bypass shell-string approval checks). Cron jobs run without a user present to approve i
+2026-09-13 12:01:13,408 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-13 12:02:11,412 WARNING [cron_30d763c56a1b_20260913_120045] agent.tool_executor: Tool memory returned error (0.00s): {"error": "Memory is not available. It may be disabled in config or this environment.", "success": false}
+2026-09-14 09:00:48,010 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 09:00:48,120 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 09:01:07,171 WARNING [cron_894915797be6_20260914_090047] agent.tool_executor: Tool terminal returned error (0.14s): {"output": "ls: cannot access '/home/hermes/.hermes/profiles/era4/home/.hermes/profiles/era4/comercial/': No such file or directory", "exit_code": 2, "error": null}
+2026-09-14 09:03:19,384 WARNING [cron_894915797be6_20260914_090047] agent.tool_executor: Tool terminal returned error (0.30s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "cd /home/hermes/.hermes/profiles/era4/comercial && timeout 280 python3 -c \"\nimport hu
+2026-09-14 09:05:38,060 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "#!/usr/bin/env python3\n\"\"\"Append curado leads.csv — lote 1 (25 )
+2026-09-14 12:00:48,373 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 12:00:48,515 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth

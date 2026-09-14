@@ -1,0 +1,535 @@
+{
+  "version": 1,
+  "manifest": {
+    "branding/brand-assets/SKILL.md": [
+      1788976188201324137,
+      3216
+    ],
+    "comercial/lead-hunting/SKILL.md": [
+      1789155329367828008,
+      3688
+    ],
+    "comercial/outreach-writer/SKILL.md": [
+      1789154629289280532,
+      2560
+    ],
+    "comercial/proposal-architect/SKILL.md": [
+      1789154630295295570,
+      2520
+    ],
+    "cron-autonomous-runs/SKILL.md": [
+      1789300927176632581,
+      2587
+    ],
+    "i-have-adhd/SKILL.md": [
+      1789151398310170533,
+      7207
+    ],
+    "marketing/ad-creative/SKILL.md": [
+      1788967788005945393,
+      23022
+    ],
+    "marketing/ads/SKILL.md": [
+      1788967788007945425,
+      28544
+    ],
+    "marketing/ai-seo/SKILL.md": [
+      1788967788008945440,
+      29455
+    ],
+    "marketing/analytics/SKILL.md": [
+      1788967788009945456,
+      8635
+    ],
+    "marketing/aso/SKILL.md": [
+      1788967788009945456,
+      15777
+    ],
+    "marketing/co-marketing/SKILL.md": [
+      1788967788011945487,
+      11822
+    ],
+    "marketing/cold-email/SKILL.md": [
+      1788967788011945487,
+      7350
+    ],
+    "marketing/content-strategy/SKILL.md": [
+      1788967788012945503,
+      18711
+    ],
+    "marketing/copywriting/SKILL.md": [
+      1788967788013945518,
+      8401
+    ],
+    "marketing/cro/SKILL.md": [
+      1788967788013945518,
+      6101
+    ],
+    "marketing/emails/SKILL.md": [
+      1788967788015945550,
+      8562
+    ],
+    "marketing/launch/SKILL.md": [
+      1788967788016945565,
+      15179
+    ],
+    "marketing/marketing-ideas/SKILL.md": [
+      1788967788018945596,
+      5789
+    ],
+    "marketing/marketing-plan/SKILL.md": [
+      1788967788019945612,
+      24521
+    ],
+    "marketing/programmatic-seo/SKILL.md": [
+      1788967788023945675,
+      7098
+    ],
+    "marketing/prospecting/SKILL.md": [
+      1788967788023945675,
+      17022
+    ],
+    "marketing/public-relations/SKILL.md": [
+      1788967788024945690,
+      8831
+    ],
+    "marketing/revops/SKILL.md": [
+      1788967788025945706,
+      15341
+    ],
+    "marketing/sales-enablement/SKILL.md": [
+      1788967788025945706,
+      14721
+    ],
+    "marketing/schema/SKILL.md": [
+      1788967788026945721,
+      5248
+    ],
+    "marketing/seo-audit/SKILL.md": [
+      1788967788026945721,
+      16610
+    ],
+    "marketing/site-architecture/SKILL.md": [
+      1788967788027945737,
+      13668
+    ],
+    "marketing/social/SKILL.md": [
+      1788967788027945737,
+      14936
+    ],
+    "marketing/video/SKILL.md": [
+      1788967788028945753,
+      14392
+    ],
+    "research/repo-analysis/SKILL.md": [
+      1789154493192245821,
+      4104
+    ]
+  },
+  "skills": [
+    {
+      "skill_name": "brand-assets",
+      "category": "branding",
+      "frontmatter_name": "brand-assets",
+      "description": "Cria, avalia e aplica assets de marca (foto de perfil/ava...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "lead-hunting",
+      "category": "comercial",
+      "frontmatter_name": "lead-hunting",
+      "description": "SOP do Caçador de Leads da ERA 4.0 — prospecção de PMEs c...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "outreach-writer",
+      "category": "comercial",
+      "frontmatter_name": "outreach-writer",
+      "description": "SOP do Redator de Outreach da ERA 4.0 — sequência de cont...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "proposal-architect",
+      "category": "comercial",
+      "frontmatter_name": "proposal-architect",
+      "description": "SOP do Arquiteto de Propostas da ERA 4.0 — traduz discove...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "cron-autonomous-runs",
+      "category": "cron-autonomous-runs",
+      "frontmatter_name": "cron-autonomous-runs",
+      "description": "Turnos autônomos agendados (cron) da ERA 4.0 — checagem d...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "i-have-adhd",
+      "category": "i-have-adhd",
+      "frontmatter_name": "i-have-adhd",
+      "description": "Shape output for a reader with ADHD: lead with the next a...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ad-creative",
+      "category": "marketing",
+      "frontmatter_name": "ad-creative",
+      "description": "When the user wants to generate, iterate, or scale ad cre...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ads",
+      "category": "marketing",
+      "frontmatter_name": "ads",
+      "description": "When the user wants help with paid advertising campaigns ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ai-seo",
+      "category": "marketing",
+      "frontmatter_name": "ai-seo",
+      "description": "When the user wants to optimize content for AI search eng...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "analytics",
+      "category": "marketing",
+      "frontmatter_name": "analytics",
+      "description": "When the user wants to set up, improve, or audit analytic...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "aso",
+      "category": "marketing",
+      "frontmatter_name": "aso",
+      "description": "When the user wants to audit or optimize an App Store or ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "co-marketing",
+      "category": "marketing",
+      "frontmatter_name": "co-marketing",
+      "description": "When the user wants to find co-marketing partners, plan j...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "cold-email",
+      "category": "marketing",
+      "frontmatter_name": "cold-email",
+      "description": "Write B2B cold emails and follow-up sequences that get re...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "content-strategy",
+      "category": "marketing",
+      "frontmatter_name": "content-strategy",
+      "description": "When the user wants to plan a content strategy, decide wh...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "copywriting",
+      "category": "marketing",
+      "frontmatter_name": "copywriting",
+      "description": "When the user wants to write, rewrite, or improve marketi...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "cro",
+      "category": "marketing",
+      "frontmatter_name": "cro",
+      "description": "When the user wants to optimize, improve, or increase con...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "emails",
+      "category": "marketing",
+      "frontmatter_name": "emails",
+      "description": "When the user wants to create or optimize an email sequen...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "launch",
+      "category": "marketing",
+      "frontmatter_name": "launch",
+      "description": "When the user wants to plan a product launch, feature ann...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "marketing-ideas",
+      "category": "marketing",
+      "frontmatter_name": "marketing-ideas",
+      "description": "When the user needs marketing ideas, inspiration, or stra...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "marketing-plan",
+      "category": "marketing",
+      "frontmatter_name": "marketing-plan",
+      "description": "When the user needs a comprehensive marketing plan for a ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "programmatic-seo",
+      "category": "marketing",
+      "frontmatter_name": "programmatic-seo",
+      "description": "When the user wants to create SEO-driven pages at scale u...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "prospecting",
+      "category": "marketing",
+      "frontmatter_name": "prospecting",
+      "description": "When the user wants to find, qualify, and build a list of...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "public-relations",
+      "category": "marketing",
+      "frontmatter_name": "public-relations",
+      "description": "When the user wants help with public relations, earned me...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "revops",
+      "category": "marketing",
+      "frontmatter_name": "revops",
+      "description": "When the user wants help with revenue operations, lead li...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "sales-enablement",
+      "category": "marketing",
+      "frontmatter_name": "sales-enablement",
+      "description": "When the user wants to create sales collateral, pitch dec...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "schema",
+      "category": "marketing",
+      "frontmatter_name": "schema",
+      "description": "When the user wants to add, fix, or optimize schema marku...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "seo-audit",
+      "category": "marketing",
+      "frontmatter_name": "seo-audit",
+      "description": "When the user wants to audit, review, or diagnose SEO iss...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "site-architecture",
+      "category": "marketing",
+      "frontmatter_name": "site-architecture",
+      "description": "When the user wants to plan, map, or restructure their we...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "social",
+      "category": "marketing",
+      "frontmatter_name": "social",
+      "description": "When the user wants help creating, scheduling, or optimiz...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "video",
+      "category": "marketing",
+      "frontmatter_name": "video",
+      "description": "When the user wants to create, generate, or produce video...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "repo-analysis",
+      "category": "research",
+      "frontmatter_name": "repo-analysis",
+      "description": "Analisa repos externos (GitHub, libs, SDKs, MCP servers) ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    }
+  ],
+  "category_descriptions": {}
+}

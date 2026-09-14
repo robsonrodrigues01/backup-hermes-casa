@@ -1,0 +1,17 @@
+cuidar.vc (set/2026): pré-lançamento público; site no ar no Lovable, código no GitHub.
+§
+CTO código grande (12/09): NUNCA subagente (estoura ~20 calls, trunca). Receita completa na skill cmo "delegar-codigo-grande" (nativa): brief .md no projeto → claude -p bg+notify (HOME=/home/hermes, caminho absoluto, --add-dir p/ árvores fora do cwd) → verificação própria total (autorrelato não vale; texto de UI = DOM, não screenshot). Episódio dashboard-novo em references/dashboard-novo-12-09.md.
+§
+Piapi: chave 64 hex exige prefixo sk- (senão 401); base api.piapi.ai, só /v1/chat/completions confirmado.
+§
+Canva: tokens em squad/canva-tokens.json; canva_publish.py = entrega padrão de artes (detalhes na skill squad-postagens).
+§
+Telegram DM do Rob = chat_id 8944451892 (TELEGRAM_HOME_CHANNEL no perfil cuidar; send_message com esse canal).
+§
+Skills de marketing = symlinks do cuidar: skill_manage no cmo recusa patch/write_file nelas (reconf. 14/09); rota = file tools cross_profile=True em ~/.hermes/profiles/cuidar/skills/marketing/. PATCH PENDENTE squad-postagens-cuidarvc: (1) peça especial aprovada NÃO entra na fila do cron sozinha; editar prompt do job (subprocess argv), passo idempotente, redo, verificação própria; (2) PIL/pypdf no cmo: uv run --with pillow --with pypdf (Pillow só grava PDF).
+§
+Padrões CMO: skills externas = destilar em PT-BR em references/ da skill da squad (copy-ig-fb.md e metricas-framework.md hookados no SKILL.md; Rob OK 11/09). Clarify sem resposta ~10min = seguir padrão de baixo risco e registrar em PENDENTES. Path.home() no profile cmo = profiles/cmo/home: usar caminhos absolutos p/ dados do cuidar. Mudar rota no Caddy (admin 127.0.0.1:2019) = barrado pelo security scan: exige OK do Rob.
+§
+Agente 7 Community = job b1c27fe585a1 (every 15m, scheduler cmo com profile=cuidar; playbook e escalacoes em squad/community/). Gatilho webhook: receiver hook-zernio.py na 8805 + retrigger 150s (13/09, cobre msg que chega durante run); vigia d58dd88fe8d5; latencia medida 1-3 min; detalhes no playbook.
+§
+Agente 8 Radar (diário 13h UTC, cuidar, job a15db537de2d): fonte = Apify MCP; painel = squad/radar/perfis.json; receita e padrões cross na skill radar-cuidarvc.

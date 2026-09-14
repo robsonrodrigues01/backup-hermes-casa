@@ -1,0 +1,12 @@
+[Unit]
+Description=Headroom optimization proxy (cuidar/Claudete) - port 8789
+After=network.target
+
+[Service]
+Environment=HEADROOM_WORKSPACE_DIR=/home/hermes/.headroom-cuidar
+ExecStart=/home/hermes/headroom-test/venv/bin/headroom proxy --port 8789 --openai-api-url https://api.vultrinference.com/v1 --no-telemetry --lossless
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

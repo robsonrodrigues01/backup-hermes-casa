@@ -1,0 +1,143 @@
+{
+  "started_at": "2026-09-10T04:55:01.610378+00:00",
+  "duration_seconds": 126.56,
+  "model": "zai-org/GLM-5.1-FP8",
+  "provider": "custom",
+  "auto_transitions": {
+    "marked_stale": 0,
+    "archived": 0,
+    "reactivated": 0,
+    "checked": 4,
+    "seeded": 0
+  },
+  "counts": {
+    "before": 4,
+    "after": 3,
+    "delta": -1,
+    "archived_this_run": 1,
+    "added_this_run": 0,
+    "consolidated_this_run": 1,
+    "pruned_this_run": 0,
+    "state_transitions": 0,
+    "cron_jobs_rewritten": 0,
+    "tool_calls_total": 21
+  },
+  "tool_call_counts": {
+    "skills_list": 2,
+    "skill_view": 5,
+    "terminal": 6,
+    "read_file": 2,
+    "skill_manage": 2,
+    "patch": 3,
+    "memory": 1
+  },
+  "archived": [
+    "headroom-proxy-rollout"
+  ],
+  "consolidated": [
+    {
+      "name": "headroom-proxy-rollout",
+      "into": "hermes-profiles",
+      "source": "absorbed_into (model-declared at delete)",
+      "reason": "Per-profile local-proxy runbook serving the same profile-infrastructure class, already citing hermes-profiles pitfalls — absorbed as a labeled SKILL.md section plus references/local-proxy-headroom.md."
+    }
+  ],
+  "pruned": [],
+  "pruned_names": [],
+  "added": [],
+  "state_transitions": [],
+  "cron_rewrites": {
+    "rewrites": [],
+    "jobs_updated": 0,
+    "jobs_scanned": 1
+  },
+  "llm_final": "Memory store is disabled in this environment — noted, carrying the quirk into the report instead.\n\n---\n\n# Curation pass — umbrella consolidation report (2026-09-10)\n\n## Scan\n\nCandidate set contained exactly **4** agent-created skills (everything else in the 55-skill registry is hub/bundled — the design/marketing/product/research packs plus `achados-toolkit-setup`, `full-output-enforcement`, `conselho-de-ia`, `criar-skill`, `agent-context-kit` — all off-limits). Cluster scan found one cluster with 2+ members:\n\n| Cluster basis | Members | Umbrella class | Verdict |\n|---|---|---|---|\n| Hermes profile infrastructure (`hermes-*`, gateway/port/token family) | `hermes-profiles`, `headroom-proxy-rollout` | \"Operating per-profile agent homes + background services\" | **MERGE INTO EXISTING UMBRELLA** |\n| ACHADOS / third-party pack ingestion | `agent-skill-curation` (singleton in scope) | Pack-verification/curation class | KEEP (already class-level, 1 reference attached) |\n| Owner communication prefs | `rob-comms-style` (singleton) | \"How to speak with Rob\" class | KEEP (distinct class; merging into infra ops would damage discoverability) |\n\n## Consolidation executed: `headroom-proxy-rollout` → `hermes-profiles`\n\nThe Headroom runbook is a **per-profile service sibling**, not a sibling-with-a-better-runbook: it exposes no `hermes` CLI surface, defines fixed ports (8787–8790) for the same four profiles the umbrella manages, and already deferentially cited `hermes-profiles` for restart pitfalls in its own step 5 (\"veja pitfalls de drain/restart em `hermes-profiles`\") — a maintainer would write this as a *section*, not a separate skill.\n\n1. **Re-homed body verbatim** → `agent-admin/hermes-profiles/references/local-proxy-headroom.md` (2600 B; port table, unit template, hookup steps, diagnostics), with an absorption provenance header. Package integrity: source skill had zero support files and zero relative links, so wholesale re-homing was safe; reference discovery verified via `skill_view(name, file_path)`.\n2. **Added labeled subsection** to the umbrella SKILL.md: *\"Per-profile local proxy: Headroom (economizador de memória)\"* — compressed runbook + pointer to the reference, plus pattern-generalization note (valid for any per-profile local proxy).\n3. **Umbrella description updated** to advertise the new coverage (discoverability for \"ligar o economizador\").\n4. **Archived the source package** → `~/.hermes/skills/.archive/dev/headroom-proxy-rollout/SKILL.md` with an `ARCHIVED-README.md` pointing at the absorption targets.\n\n**Incident during archival, fully remediated:** `skill_manage(delete)` **hard-deleted** the directory rather than archiving it (no `.archive/` was created). Recovered the verbatim package from the pre-run snapshot `~/.curator_backups/2026-09-10T04-55-01Z/skills.tar.gz` and re-created the archive manually. Since deletion is forbidden by policy, future passes should use `terminal mv` into `.archive/` instead of `skill_manage(delete)`. ⚠️ This environment also has the `memory` tool disabled.\n\n## Post-round scan & next-pass notes\n\n- Registry: 55 skills (headroom entry gone from the active list; only live mention of the old name is the intentional provenance line inside the absorbed reference). No cron job or live SKILL.md references it — no reference migration needed.\n- Second-round opportunities within scope: none viable. The two remaining keeps are already class-level; their only logical future sibling, `achados-toolkit-setup` (ACHADO tool-install sibling, natural umbrella `rob-toolkit-ops` with curation + toolkit as chapters), is **hub-installed and out of bounds** — flagging it for a pass with explicit operator authorization.\n- Structural note: 1 archive total is the ceiling for a 4-skill candidate set where 2 members are already umbrellas — every candidate was checked against every other; the low count is scope, not stopping early.\n\n## Structured summary (required)\n\n```yaml\nconsolidations:\n  - from: headroom-proxy-rollout\n    into: hermes-profiles\n    reason: Per-profile local-proxy runbook serving the same profile-infrastructure class, already citing hermes-profiles pitfalls — absorbed as a labeled SKILL.md section plus references/local-proxy-headroom.md.\nprunings: []\n```",
+  "llm_summary": "Memory store is disabled in this environment — noted, carrying the quirk into the report instead.\n\n---\n\n# Curation pass — umbrella consolidation report (2026-09-10)\n\n## Scan\n\nCandidate set contained exactly **4** agent-created skills (every…",
+  "llm_error": null,
+  "tool_calls": [
+    {
+      "name": "skills_list",
+      "arguments": "{}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"agent-skill-curation\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"headroom-proxy-rollout\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-profiles\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"rob-comms-style\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la /home/hermes/.hermes/skills/ 2>/dev/null; echo \\\"---ARCHIVE---\\\"; ls -la /home/hermes/.hermes/skills/.archive/ 2>/dev/null || echo \\\"NO_ARCHIVE_DIR\\\"\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"/home/hermes/.hermes/skills/agent-admin/hermes-profiles/references/multi-profile-gateways.md\", \"limit\": 40}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"/home/hermes/.hermes/skills/agent-admin/hermes-profiles/references/telegram-token-swap-example.md\", \"limit\": 40}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"write_file\", \"file_content\": \"# Per-profile local proxy runbook — Headroom (context compressor)\\n\\n> Absorbed 2026-09-10 from the archived standalone skill `headroom-proxy-rollout`\\n> into the `hermes-profiles` umbrella. Keep as the canonical per-proxy-unit\\n> runbook for this machine; the same systemd-unit + localhost-base_url +\\n> smoke-chat pattern applies to ANY per-profile local p…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"default home = `~/.hermes`, its gateway unit is named `hermes-gateway.service` (NO `-default` suffix — the only one without).\\n\\n## Per-profile local proxy: Headroom (\\\"economizador de memória\\\") — added 2026-09-10\\n- One proxy per profile as systemd user unit `hermes-headroom-<profile>.service`, all on 127.0.0.1, fixed ports: **lab 8787 / default 8788 / cuidar 8…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"with a `config.yaml.bak-headroom` backup first; gateway restart follows the drain/restart pitfalls above.\", \"old_string\": \"with a `config.yaml.bak-headroom` backup first; gateway restart follows the drain/restart pitfalls above and reacts via scanner debate.\", \"path\": \"/home/hermes/.hermes/skills/agent-admin/hermes-profiles/SKILL.md\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"absorbed_into\": \"hermes-profiles\", \"action\": \"delete\", \"name\": \"headroom-proxy-rollout\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"=== ARCHIVE ===\\\"; ls -la ~/.hermes/skills/.archive/ 2>/dev/null || echo NO_ARCHIVE; echo; echo \\\"=== ARCHIVED PKG (unchanged top-level) ===\\\"; ls -laR ~/.hermes/skills/.archive/headroom-proxy-rollout/ 2>/dev/null | head -20; echo; echo \\\"=== UMBRELLA PKG ===\\\"; ls -laR ~/.hermes/skills/agent-admin/ 2>/dev/null; echo; echo \\\"=== SKILLS DIRS TOP LEVEL (confirm 3 remain, minus he…"
+    },
+    {
+      "name": "skills_list",
+      "arguments": "{}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"file_path\": \"references/local-proxy-headroom.md\", \"name\": \"hermes-profiles\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"=== curator_backups ===\\\"; ls -la ~/.hermes/skills/.curator_backups/ 2>/dev/null; find ~/.hermes/skills/.curator_backups -maxdepth 3 2>/dev/null | head -30; echo; echo \\\"=== any headroom dirs on disk ===\\\"; find ~/.hermes -name \\\"*headroom-proxy*\\\" -maxdepth 6 2>/dev/null; echo; echo \\\"=== trash candidates ===\\\"; ls -la ~/.hermes/ | grep -iE \\\"trash|archive|backup\\\"; echo; echo…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cd ~/.hermes/skills/.curator_backups/2026-09-10T04-55-01Z && echo \\\"=== HEADROOM IN SNAPSHOT? ===\\\" && tar -tzf skills.tar.gz | grep -i headroom | head -10; echo \\\"=== manifest names it? ===\\\"; python3 -c \\\"json.loads(open('manifest.json').read())\\\" 2>/dev/null && grep -o \\\"headroom[^\\\\\\\"]*\\\" manifest.json | head -5\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cd ~/.hermes/skills && mkdir -p .archive/dev && tar -xzf .curator_backups/2026-09-10T04-55-01Z/skills.tar.gz -C .archive/ dev/headroom-proxy-rollout && cat > .archive/dev/headroom-proxy-rollout/ARCHIVED-README.md <<'EOF'\\nArchived 2026-09-10 by curator consolidation pass. Absorbed into skill hermes-profiles.\\n- Labeled section: \\\"Per-profile local proxy: Headroom (economizador de memo…"
+    },
+    {
+      "name": "patch",
+      "arguments": "{\"mode\": \"replace\", \"new_string\": \"  or persona) on a single machine, each with isolated memory/skills/cron and\\n  its own Telegram bot. Covers the --clone workflow, the cloned\\n  TELEGRAM_BOT_TOKEN pitfall, gateway services, per-profile local proxies\\n  (Headroom context compressor), multiplexing mode, and verification.\\n  Authoritative docs at\", \"old_string\": \"  or persona) on a single machine, …"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"grep -rl \\\"headroom-proxy-rollout\\\" ~/.hermes/cron* 2>/dev/null && echo \\\"CRON_REFS_FOUND\\\" || echo \\\"no cron references\\\"; grep -rl \\\"headroom-proxy-rollout\\\" ~/.hermes/skills --include=\\\"*.md\\\" 2>/dev/null | grep -v \\\".archive\\\" | grep -v \\\"curator_backups\\\" || echo \\\"no live SKILL.md references\\\"\"}"
+    },
+    {
+      "name": "memory",
+      "arguments": "{\"action\": \"add\", \"content\": \"skill_manage(action='delete') hard-deletes the skill dir — it does NOT create ~/.hermes/skills/.archive/. For curator passes needing archives: after delete, restore an archived copy from the pre-run snapshot ~/.hermes/skills/.curator_backups/<timestamp>/skills.tar.gz (contains full skills tree), or use terminal `mv` instead of delete. Also: parallel tool calls to term…"
+    }
+  ]
+}

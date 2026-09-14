@@ -1,0 +1,12 @@
+[Unit]
+Description=Headroom optimization proxy (era4/Claudemir) - port 8790
+After=network.target
+
+[Service]
+Environment=HEADROOM_WORKSPACE_DIR=/home/hermes/.headroom-era4
+ExecStart=/home/hermes/headroom-test/venv/bin/headroom proxy --port 8790 --openai-api-url https://api.vultrinference.com/v1 --no-telemetry --lossless
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

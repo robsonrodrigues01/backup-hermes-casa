@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/hermes/.hermes/profiles/cuidar/logs/curator/20260910-053134",
+  "last_run_at": "2026-09-10T05:31:34.222020+00:00",
+  "last_run_duration_seconds": 0.093053,
+  "last_run_summary": "auto: no changes; llm: skipped (no candidates)",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 1
+}

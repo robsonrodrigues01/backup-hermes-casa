@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer: tick do cron do profile cto a cada minuto
+
+[Timer]
+OnBootSec=90
+OnUnitActiveSec=60
+Unit=hermes-cto-cron-tick.service
+
+[Install]
+WantedBy=timers.target

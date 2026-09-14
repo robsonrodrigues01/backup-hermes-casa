@@ -1,0 +1,203 @@
+{
+  "started_at": "2026-09-10T05:31:33.190039+00:00",
+  "duration_seconds": 231.05,
+  "model": "zai-org/GLM-5.1-FP8",
+  "provider": "custom",
+  "auto_transitions": {
+    "marked_stale": 0,
+    "archived": 0,
+    "reactivated": 0,
+    "checked": 2,
+    "seeded": 0
+  },
+  "counts": {
+    "before": 2,
+    "after": 2,
+    "delta": 0,
+    "archived_this_run": 0,
+    "added_this_run": 0,
+    "consolidated_this_run": 0,
+    "pruned_this_run": 0,
+    "state_transitions": 0,
+    "cron_jobs_rewritten": 0,
+    "tool_calls_total": 38
+  },
+  "tool_call_counts": {
+    "skills_list": 1,
+    "terminal": 20,
+    "skill_view": 5,
+    "cronjob": 1,
+    "session_search": 2,
+    "read_file": 1,
+    "skill_manage": 7,
+    "memory": 1
+  },
+  "archived": [],
+  "consolidated": [],
+  "pruned": [],
+  "pruned_names": [],
+  "added": [],
+  "state_transitions": [],
+  "cron_rewrites": {
+    "rewrites": [],
+    "jobs_updated": 0,
+    "jobs_scanned": 0
+  },
+  "llm_final": "# Consolidation pass — umbrella-building report (lab profile, 2026-09-10)\n\n## Scope determination ran first, not assumed\n\nThe brief anticipated 10–25 prefix clusters across a large agent-created pool. The actual landscape required a provenance audit before any merge decision:\n\n| Provenance | Count | Evidence |\n|---|---|---|\n| Agent-created (candidate pool) | **2** | `.usage.json` `created_by: agent` → `agent-skill-curation`, `hermes-profiles` |\n| Third-party pack content (local) | 49 | Bulk-copied Sep 9 14:47–15:38 from verified repos (`references/achados-batch-1.md`: taste-skill/leonxlnx 5, phuryn/pm-skills 27, marketing pack 14, research tools 2) |\n| Bundled built-ins | **0** | `hermes skills list`: \"0 hub-installed, 0 builtin\" |\n| Hub-installed | **0** | `.hub/lock.json` `installed: {}` |\n\nSo PRUNE-BUILTINS mode has no targets in this profile, and the third-party clusters (`design/`×4, `dev/full-output-enforcement`, `marketing/`×14, `product/`×26, `research/`×2) are outside the candidate filter *and* outside the bundled-only PRUNE-BUILTINS authorization. Documented, not touched (rationale below).\n\n## Cluster 1 — ACHADOS third-party intake: MERGE+DEMOTE (the real consolidation)\n\n`achados-toolkit-setup` surfaced as a **literal rule-#4 hit**: a session-artifact-named skill (`*-toolkit-setup`) holding machine-state content (durable `~/tools/*` paths, per-tool pitfalls like the Agent-Reach web-Jina 401 and the SIGTRAP chromium trap, proof commands, per-profile distribution state). The upstream pack provenance is absent — it was agent-authored output of the ACHADOS flow, which the auto-filter missed because it was bulk-copied, not created via `skill_manage` (confirmed: authorship by content, no upstream repo).\n\nConsolidated into the already-existing umbrella `agent-skill-curation`:\n- **Demote** → `references/verified-tools.md`, verbatim body (diff-verified against the pre-run backup: only frontmatter→provenance-comment differs) — correct support-dir choice: condensed knowledge bank, not a copy-and-modify template.\n- **Patch umbrella SKILL.md**: description now carries the absorbed triggers (\"verified tool missing/broken\", \"reuse a pilot — video render, scraping CSV\"); new labeled section **\"Operating the verified toolkit (machine state)\"** with corrected facts (my first patch had two transcription slips — `~/.agent-reach-venv`, SIGTRAP pitfall — caught and fixed in-place); References list updated with provenance note.\n- **Archive** the original with `absorbed_into='agent-skill-curation'`.\n- ✅ Verified: `linked_files` = 2 healthy references; listing dropped 51→50 local; no dangling relative links from active instructions.\n\n## Cluster 2 — platform administration pair: KEEP, cross-linked\n\n`hermes-profiles` (profile topology, gateways, credential-swap pitfalls; 2 references) and `agent-skill-curation` (content pipeline: verify→subset→install→distribute; 2 references) are **each already the class-level umbrella of its own class**. The maintainer test says a mega-`hermes-admin` umbrella containing both would *worsen* discoverability — precise trigger-rich descriptions collapsed into one, two large bodies with zero shared mechanics. Negligible count win, real discoverability loss.\n\nInstead I added the missing consolidation artifact a maintainer would write: **bidirectional hand-off links** — `hermes-profiles` step 7 (new) hands off to `agent-skill-curation` for library distribution; `agent-skill-curation` step 7 hands back for profile creation/gateway bootstrapping. Frontmatter of both verified intact after patching.\n\n## Second pass\n\nRemaining agent-created pool = exactly the two umbrellas above. No further absorption improves discoverability. The only other archive on disk (`/home/hermes/.hermes/skills/.archive/dev/headroom-proxy-rollout → hermes-profiles`) belongs to the **default profile's** separate curator pass (04:55) and was left untouched.\n\n## Recoverability\n\nThe original `achados-toolkit-setup` package is preserved in the auto pre-run backup (`.curator_backups/2026-09-10T05-31-33Z/skills.tar.gz`, verified present) *and* its full content is live in the umbrella. Zero cron dependencies existed to migrate.\n\nTwo environment quirks, carried into this report since the memory store is disabled here: (1) the `.usage.json`-based candidate filter misses bulk-copied agent-authored skills — verify by content before classifying; (2) `skill_manage delete` records `absorbed_into` for tooling but physical `.archive` materialization is not guaranteed per-profile — always diff against the pre-run tar.\n\n## Structured summary (required)\n\n```yaml\nconsolidations:\n  - from: achados-toolkit-setup\n    into: agent-skill-curation\n    reason: Session-artifact machine-state runbook (verified-toolkit paths/pitfalls/proofs) demoted to the ACHADOS umbrella as references/verified-tools.md with its triggers folded into the umbrella description.\nprunings: []\n```\n\nDecision left alone, intentionally not listed above: the 49 third-party pack skills — out of the agent-created candidate pool by provenance-filter design; rewriting them would break upstream provenance, the packs' internal cross-reference graph (`see copywriting`, `see social`), their evals/references packages, and the pending era4/cuidar distribution subsets that are waiting on exactly these files.",
+  "llm_summary": "# Consolidation pass — umbrella-building report (lab profile, 2026-09-10)\n\n## Scope determination ran first, not assumed\n\nThe brief anticipated 10–25 prefix clusters across a large agent-created pool. The actual landscape required a provena…",
+  "llm_error": null,
+  "tool_calls": [
+    {
+      "name": "skills_list",
+      "arguments": "{}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la ~/.hermes/profiles/lab/skills/ 2>/dev/null; echo '---ARCHIVE---'; ls -la ~/.hermes/profiles/lab/skills/.archive/ 2>/dev/null; echo '---ROOT-SKILLS---'; ls -la ~/.hermes/skills/ 2>/dev/null; echo '---ROOT-ARCHIVE---'; ls -la ~/.hermes/skills/.archive/ 2>/dev/null\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo \\\"HOME=$HOME\\\"; echo \\\"HERMES_HOME=$HERMES_HOME\\\"; ls -la ~/.hermes/ 2>&1; echo '---'; which hermes; hermes config get 2>&1 | head -30\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls -la /home/hermes/.hermes/profiles/lab/ 2>&1; echo '---SKILLS---'; ls -la /home/hermes/.hermes/profiles/lab/skills/ 2>&1; echo '---ARCHIVE---'; ls -la /home/hermes/.hermes/profiles/lab/skills/.archive/ 2>&1\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cd /home/hermes/.hermes/profiles/lab/skills && cat .curator_state 2>&1; echo '==='; cat .usage.json 2>&1; echo '==='; ls -la .hub/ 2>&1; echo '==='; find . -path ./.hub -prune -o -path ./.curator_backups -prune -o -type d -print | sort\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cd /home/hermes/.hermes/profiles/lab/skills/.hub && cat taps.json; echo '==='; cat lock.json; echo '==='; cat audit.log; echo '==='; ls index-cache/ quarantine/ 2>&1; echo '===curator_backups==='; find /home/hermes/.hermes/profiles/lab/skills/.curator_backups -maxdepth 3 | head -40\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cat /home/hermes/.hermes/profiles/lab/skills/.curator_backups/2026-09-10T05-31-33Z/manifest.json 2>&1; echo '==='; find /home/hermes/.local/share/uv/tools/hermes-agent -maxdepth 6 -type d \\\\( -name marketing -o -name product -o -name design -o -name research -o -name skills -o -name tools -o -name foundations -o -name 5.0.0 \\\\) 2>/dev/null | head -20\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cd /home/hermes/.hermes/profiles/lab/skills && find . -path ./.hub -prune -o -path ./.curator_backups -prune -o -type f -name '*.json' -print -o -type f -name '.*' -print | sort | head -40; echo '===sample skill dir==='; ls -la dev/achados-toolkit-setup/ design/minimalist-ui/ product/sql-queries/ 2>&1; echo '===install manifest search==='; grep -ril \\\"bundled\\\" --include=\\\"*.json\\\" . …"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills --help 2>&1 | head -40; python3 -c \\\"\\nimport sqlite3\\ncon=sqlite3.connect('/home/hermes/.hermes/profiles/lab/state.db')\\nprint([r[0] for r in con.execute(\\\\\\\"select name from sqlite_master where type='table'\\\\\\\")])\\n\\\"\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills list 2>&1 | head -80\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find /home/hermes/.local/share/uv/tools/hermes-agent -maxdepth 8 -iname 'SKILL.md' -path '*minimal*' 2>/dev/null; find /home/hermes/.local/share/uv/tools/hermes-agent -maxdepth 7 -type d -iname '*skill*' 2>/dev/null | grep -iv 'openai\\\\|tokenizers\\\\|onnx' | head; echo '===hermes-agent skill dir==='; ls /home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/ | hea…"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"agent-skill-curation\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-profiles\"}"
+    },
+    {
+      "name": "cronjob",
+      "arguments": "{\"action\": \"list\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"file_path\": \"references/achados-batch-1.md\", \"name\": \"agent-skill-curation\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"python3 -c \\\"\\nimport json\\nd=json.load(open('/home/hermes/.hermes/profiles/lab/skills/.skills_prompt_snapshot.json'))\\nprint(type(d), len(d) if hasattr(d,'__len__') else '')\\nif isinstance(d,dict):\\n    for k,v in list(d.items())[:3]: print(k, '->', str(v)[:200])\\nelif isinstance(d,list):\\n    for e in d[:3]: print(str(e)[:300])\\n\\\"\"}"
+    },
+    {
+      "name": "session_search",
+      "arguments": "{\"limit\": 5, \"query\": \"achados-toolkit-setup\"}"
+    },
+    {
+      "name": "session_search",
+      "arguments": "{\"limit\": 5, \"query\": \"analytics cro copywriting marketing pack install\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cd /home/hermes/.hermes/profiles/lab/sessions && ls -la | head; echo '==='; head -50 /home/hermes/.hermes/profiles/lab/skills/dev/achados-toolkit-setup/SKILL.md\"}"
+    },
+    {
+      "name": "read_file",
+      "arguments": "{\"path\": \"/home/hermes/.hermes/profiles/lab/skills/dev/achados-toolkit-setup/SKILL.md\", \"offset\": 50}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"write_file\", \"file_content\": \"<!-- Demoted from dev/achados-toolkit-setup (archived 2026-09-10; absorbed into agent-skill-curation) — machine-state runbook, kept verbatim. -->\\n\\n# Achados: toolkit de agentes nesta máquina\\n\\nContexto da máquina (SEMPRE assume): Linux, user `hermes`, **sem sudo**,\\nPython 3.12 com **PEP 668** (usar `uv`), npm global bloqueado (prefix `/usr`,\\nsem root)…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"patch\", \"name\": \"agent-skill-curation\", \"new_string\": \"description: >-\\n  Verify, inventory, selectively install and distribute third-party agent skills\\n  (SKILL.md-format packs shared as \\\"ACHADOS\\\" screenshots, GitHub links, or posts\\n  for Claude Code / Codex / Cursor / Gemini CLI) into a Hermes profile's library.\\n  Also covers operating and re-verifying the agent-tools already in…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"patch\", \"name\": \"agent-skill-curation\", \"new_string\": \"## Operating the verified toolkit (machine state)\\nPrior batches seeded actual agent-tools on this machine — that's part of the\\nsame ACHADOS pipeline (evaluate → install subset → operate). When Rob reports a\\nverified tool missing/broken, or asks to reuse a pilot (video render, scraping\\nCSV, token compression), don't re-research …"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"patch\", \"name\": \"agent-skill-curation\", \"new_string\": \"(`~/tools/agent-reach`, `~/.agent-reach-venv`, `~/remotion-demo`,\\n`~/scrape-demo`, `~/headroom-test`), per-tool pitfalls (Agent-Reach web-Jina 401\\n→ `JINA_API_KEY`; container chromium dies with SIGTRAP unless launched with\\n`--no-sandbox --disable-gpu`), one-line proof\", \"old_string\": \"(`~/tools/agent-reach`, `~/.handler-reach-ve…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"delete\", \"absorbed_into\": \"agent-skill-curation\", \"name\": \"achados-toolkit-setup\"}"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"patch\", \"name\": \"hermes-profiles\", \"new_string\": \"6. **Verify** — `hermes profile list` shows gateway `running`; `hermes -p <name> doctor` is clean; user sends a test message (\\\"oi\\\") to the new bot and gets a reply in the right chat.\\n7. **Handoff — skill/content libraries.** A new profile starts with cloned skills only. For curating third-party skill packs into another profile's libr…"
+    },
+    {
+      "name": "skill_manage",
+      "arguments": "{\"action\": \"patch\", \"name\": \"agent-skill-curation\", \"new_string\": \"7. **Distribute to other profiles** (only after explicit OK): same copy logic\\n   into `~/.hermes/profiles/<profile>/skills/<category>/...`. Each profile has\\n   its own library, even when credentials/config are shared. The target profile\\n   must exist and be reachable first — for creating/operating profiles (clone,\\n   cloned-tok…"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"agent-skill-curation\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ls ~/.hermes/profiles/lab/skills/.archive/ 2>&1; echo '===archived pkg integrity==='; find ~/.hermes/profiles/lab/skills/.archive/ -type f | sort; echo '===umbrella references==='; ls -la ~/.hermes/profiles/lab/skills/agent-skill-curation/references/; echo '===dangling refs==='; grep -rn \\\"achados-toolkit-setup\\\" ~/.hermes/profiles/lab/skills/ --exclude-dir=.archive --exclude-dir=.cur…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"ARCH=/home/hermes/.hermes/profiles/lab/skills/.archive; ls -la \\\"$ARCH\\\" 2>&1; echo '===archived pkg integrity==='; find \\\"$ARCH\\\" -type f 2>/dev/null | sort; echo '===umbrella references==='; ls -la /home/hermes/.hermes/profiles/lab/skills/agent-skill-curation/references/ /home/hermes/.hermes/profiles/lab/skills/dev/ 2>&1; echo '===hermes list==='; hermes skills list 2>&1 | tail -8\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find /home/hermes/.hermes -type d -name 'achados-toolkit-setup*' 2>/dev/null; echo '==='; find /home/hermes/.hermes -maxdepth 6 -type d -name '.archive' 2>/dev/null; echo '===state db registry==='; python3 -c \\\"\\nimport sqlite3\\ncon=sqlite3.connect('/home/hermes/.hermes/profiles/lab/state.db')\\nfor r in con.execute(\\\\\\\"select name from sqlite_master where type='table' and name like '%…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"find /home/hermes/.hermes/skills/.archive -type f | sort; echo '==='; head -12 /home/hermes/.hermes/skills/.archive/dev/achados-toolkit-setup/SKILL.md 2>/dev/null || head -12 /home/hermes/.hermes/skills/.archive/achados-toolkit-setup/SKILL.md 2>/dev/null; echo '===no stray references inside archive==='; grep -rn \\\"references/\\\" /home/hermes/.hermes/skills/.archive/dev/achados-toolkit-…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"echo '=== root skills tree (default profile) ==='; find /home/hermes/.hermes/skills -maxdepth 3 | sort | head -40; echo '=== root curator state ==='; cat /home/hermes/.hermes/skills/.curator_state 2>/dev/null; echo; echo '=== where did the deleted lab copy go? search recent achados dirs ==='; find /home/hermes/.hermes -type f -name 'SKILL.md' -newermt '2026-09-10 05:33' 2>/dev/null | …"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"tar -tzf /home/hermes/.hermes/profiles/lab/skills/.curator_backups/2026-09-10T05-31-33Z/skills.tar.gz | grep -i \\\"achados\\\\|dev/\\\" ; echo \\\"tar-exit=$?\\\"; echo '=== any achados dirs anywhere under /home/hermes ==='; find /home/hermes -type d -name 'achados-toolkit-setup' 2>/dev/null; echo '=== trash/tmp locations ==='; ls -la /home/hermes/.hermes/profiles/lab/skills/.trash /home/herme…"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"cd /tmp && mkdir -p curator-check && tar -xzf /home/hermes/.hermes/profiles/lab/skills/.curator_backups/2026-09-10T05-31-33Z/skills.tar.gz -C curator-check dev/achados-toolkit-setup/SKILL.md && diff /tmp/curator-check/dev/achados-toolkit-setup/SKILL.md /home/hermes/.hermes/profiles/lab/skills/agent-skill-curation/references/verified-tools.md; echo \\\"diff-exit=$?\\\"\"}"
+    },
+    {
+      "name": "skill_view",
+      "arguments": "{\"name\": \"hermes-profiles\"}"
+    },
+    {
+      "name": "terminal",
+      "arguments": "{\"command\": \"hermes skills list 2>&1 | grep -i \\\"achados\\\\|curation\\\\|collections\\\\|— \\\\|^0 \\\" ; echo '===frontmatter of patched profiles skill==='; head -12 /home/hermes/.hermes/profiles/lab/skills/agent-admin/hermes-profiles/SKILL.md\"}"
+    },
+    {
+      "name": "memory",
+      "arguments": "{\"action\": \"add\", \"content\": \"Curator passes (hermes background auto-runs): the candidate filter is .usage.json `created_by: agent`, which misses agent-authored skills installed by bulk file copy — verify authorship from session content/commissioning before treating a machine-specific skill as third-party pack content. Each profile has an independent skills library; lab pass must not touch /home/h…"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# starter .gitignore para backup de casa Hermes no GitHub
+# regra geral (prova 14/09): ignorar tudo que é CACHE ou que se reinstala/
+#   baixa sozinho em minutos. Antes do primeiro `git add`.
+# Na session real isso tirou ~4,5GB de /home/hermes e reduziu o repo para
+#   2.462 arquivos / ~254MB — legal de manter e de rebaixar.
+
+# --- cache / pacotes (reinstalam sozinhos em minutos) ---
+.cache/
+.npm/
+.local/share/uv/
+.local/share/claude/      # binário do CLI Claude (tinha 224MB na casa)
+.agent-reach-venv/
+agent-reach-venv/
+.venv-avatar/
+.venv-pillow/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- índice gerado por skill hub (recria sozinho) ---
+index-cache/
+
+# --- a própria foto de migração (vai como asset de Release, não no git) ---
+hermes-mudanca.zip
+
+# --- metadados de tooling Python ---
+*.egg-info/
+.ruff_cache/
+
+# REVISAR depois de gravar: em 14/09 saiu uma linha embaralhada e faltou
+# filtrar o binário de 224MB até a auditoria de blobs pegar.
+# Segredo NUNCA versionado: .env de credenciais fica fora (token vai em
+# arquivo fora do backup ou credential store do git).

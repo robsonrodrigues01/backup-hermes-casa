@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/hermes/.hermes/profiles/lab/logs/curator/20260910-053133",
+  "last_run_at": "2026-09-10T05:31:33.190039+00:00",
+  "last_run_duration_seconds": 231.049586,
+  "last_run_summary": "auto: no changes; llm: # Consolidation pass — umbrella-building report (lab profile, 2026-09-10)\n\n## Scope determination ran first, not assumed\n\nThe brief anticipated 10–25 prefix clusters across a large agent-created pool. The actual landscape required a provena…",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 1
+}

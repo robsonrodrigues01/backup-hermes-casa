@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-09-09T18:17:42Z",
+  "item": {
+    "account": "demo",
+    "id": "ctx_96f5372327b3ca94b547277c89cb5fc701d736f85b9bb767f596b3ddaec3a33e",
+    "occurred_at": "2026-09-09T18:17:42Z",
+    "provenance": "demo:fathom:demo-meeting-001",
+    "source": "fathom",
+    "source_item_id": "demo-meeting-001",
+    "text": "Reunião sintética de demonstração. A pessoa responsável prometeu enviar a proposta revisada até sexta-feira.",
+    "thread_id": null,
+    "title": "Demo — reunião com promessa",
+    "who": "Fathom: Demo — reunião com promessa",
+    "who_kind": "ferramenta"
+  },
+  "raw": {
+    "fixture": "demo-meeting-001",
+    "synthetic": true
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,6 @@
+[Unit]
+Description=Hermes: tick do cron do profile cto (squad tech; roda ate o gateway do cto existir com token)
+
+[Service]
+Type=oneshot
+ExecStart=/home/hermes/.local/share/uv/tools/hermes-agent/bin/hermes -p cto cron tick

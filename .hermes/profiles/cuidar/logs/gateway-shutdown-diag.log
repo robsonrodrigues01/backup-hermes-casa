@@ -1,0 +1,198 @@
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-09-08T23:01:49Z
+--- ps auxf (top 60 by cpu) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    Sep03   0:00 [kthreadd]
+root      108609  0.0  0.0      0     0 ?        I    22:20   0:00  \_ [kworker/u4:5-events_power_efficient]
+root      108600  0.0  0.0      0     0 ?        I    22:19   0:00  \_ [kworker/u4:4-events_unbound]
+root           1  0.0  0.0  22560 14060 ?        Ss   Sep03   0:28 /usr/lib/systemd/systemd --system --deserialize=75 vultr
+hermes     36320  0.1  1.4 1286232 236120 ?      Ssl  Sep04   9:55 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+hermes     52454  0.0  0.0      0     0 ?        Zs   Sep05   0:00  \_ [hermes] <defunct>
+hermes     52624  0.1  3.8 1929036 630804 ?      Ssl  Sep05   7:33 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+hermes    109288 25.0  0.0   7340  3768 ?        Ss   23:01   0:00  \_ /usr/bin/bash -c source /tmp/hermes-snap-6bcbccb8e6e1.sh >/dev/null 2>&1 || true builtin cd -- /home/hermes || exit 126 eval 'export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"; systemctl --user restart hermes-gateway-cuidar.service 2>&1 && echo "restart via systemctl OK" || { echo "systemctl falhou, usando kill+autorestart:"; PID=$(pgrep -f "profile cuidar gateway run" | head -1); kill -TERM $PID 2>/dev/null && echo "SIGTERM enviado para $PID (systemd vai reiniciar)"; }; sleep 8; echo "=== novo processo:"; pgrep -f "profile cuidar gateway run" | head -1; echo "=== logs recentes:"; journalctl --user -u hermes-gateway-cuidar --no-pager --since "-30 sec" 2>/dev/null | tail -10' __hermes_ec=$? export -p > /tmp/hermes-snap-6bcbccb8e6e1.sh 2>/dev/null || true pwd -P > /tmp/hermes-cwd-6bcbccb8e6e1.txt 2>/dev/null || true printf '\n__HERMES_CWD_6bcbccb8e6e1__%s__HERMES_CWD_6bcbccb8e6e1__\n' "$(pwd -P)" exit $__hermes_ec
+hermes    109291  0.0  0.0  17208  6176 ?        S    23:01   0:00      \_ systemctl --user restart hermes-gateway-cuidar.service
+hermes    109079  0.0  0.0  20392 11540 ?        Ss   22:55   0:00 /usr/lib/systemd/systemd --user
+hermes    109141  0.7  0.8 447880 136908 ?       Ssl  22:55   0:02  \_ /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile cuidar gateway run --replace
+hermes    109293  0.0  0.0   5692  2128 ?        Ss   23:01   0:00      \_ timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109141 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes    109294  0.0  0.0   7340  3704 ?        S    23:01   0:00          \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109141 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes    109296  0.0  0.0  10888  4640 ?        R    23:01   0:00              \_ ps auxf --sort=-pcpu
+hermes    109297  0.0  0.0   5696  2080 ?        S    23:01   0:00              \_ head -60
+root       36134  0.0  0.1  83224 31816 ?        S<s  Sep04   0:45 /usr/lib/systemd/systemd-journald
+--- pstree of self ---
+hermes,109141,hermes -m hermes_cli.main --profile cuidar gateway run --replace
+  |-timeout,109293 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109141 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |   `-bash,109294 -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109141 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |       |-head,109299 -40
+  |       `-pstree,109298 -plau 109141
+  |-{hermes},109144
+  |-{hermes},109145
+  |-{hermes},109147
+  `-{hermes},109149
+--- /proc/loadavg ---
+0.00 0.02 0.00 1/221 109300
+--- recent dmesg (oom/killed) ---
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-09-08T23:03:11Z
+--- ps auxf (top 60 by cpu) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    Sep03   0:00 [kthreadd]
+root      108609  0.0  0.0      0     0 ?        I    22:20   0:00  \_ [kworker/u4:5-events_power_efficient]
+root      108789  0.0  0.0      0     0 ?        I    22:46   0:00  \_ [kworker/u4:0-events_unbound]
+root      108600  0.0  0.0      0     0 ?        I    22:19   0:00  \_ [kworker/u4:4-flush-253:0]
+root           1  0.0  0.0  22560 14060 ?        Ss   Sep03   0:28 /usr/lib/systemd/systemd --system --deserialize=75 vultr
+hermes     36320  0.1  1.4 1286232 236120 ?      Ssl  Sep04   9:55 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+hermes     52454  0.0  0.0      0     0 ?        Zs   Sep05   0:00  \_ [hermes] <defunct>
+hermes     52624  0.1  3.8 1929036 631460 ?      Ssl  Sep05   7:34 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+hermes    109370 40.0  0.0   7340  3736 ?        Ss   23:03   0:00  \_ /usr/bin/bash -c source /tmp/hermes-snap-6bcbccb8e6e1.sh >/dev/null 2>&1 || true builtin cd -- /home/hermes || exit 126 eval 'python3 - <<'\''EOF'\'' for name in ('\''era4'\'', '\''cuidar'\''):     p = f'\''/home/hermes/.hermes/profiles/{name}/.env'\''     out = [ln for ln in open(p).read().splitlines() if not ln.startswith('\''API_SERVER_'\'')]     open(p, '\''w'\'').write('\''\n'\''.join(out) + '\''\n'\'')     print(f'\''{name}: removidas as chaves API_SERVER_* ({len(out)} linhas restantes)'\'') EOF export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"; systemctl --user restart hermes-gateway-cuidar.service && echo "restart OK"; sleep 8; echo "=== logs do novo processo:"; journalctl --user -u hermes-gateway-cuidar --no-pager --since "-30 sec" 2>/dev/null | grep -iE '\''api_server|telegram|gateway|started|error|warning'\'' | tail -8; echo "=== status geral:"; hermes profile list' __hermes_ec=$? export -p > /tmp/hermes-snap-6bcbccb8e6e1.sh 2>/dev/null || true pwd -P > /tmp/hermes-cwd-6bcbccb8e6e1.txt 2>/dev/null || true printf '\n__HERMES_CWD_6bcbccb8e6e1__%s__HERMES_CWD_6bcbccb8e6e1__\n' "$(pwd -P)" exit $__hermes_ec
+hermes    109374  0.0  0.0  17208  6264 ?        S    23:03   0:00      \_ systemctl --user restart hermes-gateway-cuidar.service
+hermes    109079  0.0  0.0  20408 11640 ?        Ss   22:55   0:00 /usr/lib/systemd/systemd --user
+hermes    109305  1.9  0.8 446808 135616 ?       Ssl  23:01   0:01  \_ /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile cuidar gateway run --replace
+hermes    109375  0.0  0.0   5692  2128 ?        Ss   23:03   0:00      \_ timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109305 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes    109376  0.0  0.0   7340  3744 ?        S    23:03   0:00          \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109305 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes    109378  0.0  0.0  10888  4636 ?        R    23:03   0:00              \_ ps auxf --sort=-pcpu
+hermes    109379  0.0  0.0   5696  2076 ?        S    23:03   0:00              \_ head -60
+root       36134  0.0  0.1  83224 31832 ?        S<s  Sep04   0:45 /usr/lib/systemd/systemd-journald
+--- pstree of self ---
+hermes,109305,hermes -m hermes_cli.main --profile cuidar gateway run --replace
+  |-timeout,109375 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109305 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |   `-bash,109376 -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109305 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |       |-head,109381 -40
+  |       `-pstree,109380 -plau 109305
+  |-{hermes},109307
+  |-{hermes},109308
+  |-{hermes},109310
+  `-{hermes},109312
+--- /proc/loadavg ---
+0.02 0.03 0.00 1/221 109382
+--- recent dmesg (oom/killed) ---
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-09-09T17:24:37Z
+--- ps auxf (top 60 by cpu) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    Sep03   0:00 [kthreadd]
+root      119664  0.0  0.0      0     0 ?        I    16:43   0:00  \_ [kworker/u4:1-flush-253:0]
+root      119452  0.0  0.0      0     0 ?        I    15:40   0:00  \_ [kworker/0:3-events]
+root           1  0.0  0.0  22560 14064 ?        Ss   Sep03   0:30 /usr/lib/systemd/systemd --system --deserialize=75 vultr
+hermes     52624  0.1  4.0 1940016 656560 ?      Ssl  Sep05  10:11 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+hermes    120584 50.0  0.0   7340  3704 ?        Ss   17:24   0:00  \_ /usr/bin/bash -c source /tmp/hermes-snap-4a978b31b3f9.sh >/dev/null 2>&1 || true builtin cd -- /home/hermes || exit 126 eval 'export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"; systemctl --user restart hermes-gateway-cuidar.service hermes-gateway-era4.service; sleep 6; systemctl --user is-active hermes-gateway-cuidar.service hermes-gateway-era4.service' __hermes_ec=$? export -p > /tmp/hermes-snap-4a978b31b3f9.sh 2>/dev/null || true pwd -P > /tmp/hermes-cwd-4a978b31b3f9.txt 2>/dev/null || true printf '\n__HERMES_CWD_4a978b31b3f9__%s__HERMES_CWD_4a978b31b3f9__\n' "$(pwd -P)" exit $__hermes_ec
+hermes    120587  0.0  0.0  17208  6272 ?        S    17:24   0:00      \_ systemctl --user restart hermes-gateway-cuidar.service hermes-gateway-era4.service
+hermes     36320  0.1  1.4 1286232 236120 ?      Ssl  Sep04  11:24 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+hermes     52454  0.0  0.0      0     0 ?        Zs   Sep05   0:00  \_ [hermes] <defunct>
+--- pstree of self ---
+hermes,109387,hermes -m hermes_cli.main --profile cuidar gateway run --replace
+  |-timeout,120588 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109387 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |   `-bash,120589 -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 109387 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |       |-head,120599 -40
+  |       `-pstree,120598 -plau 109387
+  |-{hermes},109389
+  |-{hermes},109390
+  |-{hermes},109392
+  |-{hermes},109393
+  |-{hermes},109394
+  |-{hermes},109455
+  |-{hermes},109470
+  |-{hermes},110516
+  `-{hermes},111681
+--- /proc/loadavg ---
+0.22 0.07 0.02 2/272 120602
+--- recent dmesg (oom/killed) ---
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-09-09T18:32:26Z
+--- ps auxf (top 60 by cpu) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    Sep03   0:00 [kthreadd]
+root      122383  0.0  0.0      0     0 ?        I    17:59   0:00  \_ [kworker/u4:0-events_unbound]
+root      123818  0.0  0.0      0     0 ?        I    18:23   0:00  \_ [kworker/u4:2-events_unbound]
+root           1  0.0  0.0  22560 14064 ?        Ss   Sep03   0:30 /usr/lib/systemd/systemd --system --deserialize=75 vultr
+hermes    122719  0.1  0.7 229484 114904 ?       Ssl  18:04   0:03 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+--- pstree of self ---
+hermes,120626,hermes -m hermes_cli.main --profile cuidar gateway run --replace
+  |-timeout,124377 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 120626 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |   `-bash,124379 -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 120626 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |       |-head,124393 -40
+  |       `-pstree,124392 -plau 120626
+  |-{hermes},120628
+  |-{hermes},120629
+  |-{hermes},120631
+  |-{hermes},120632
+  |-{hermes},120633
+  |-{hermes},120815
+  |-{hermes},121973
+  `-{hermes},123258
+--- /proc/loadavg ---
+0.10 0.05 0.01 2/264 124401
+--- recent dmesg (oom/killed) ---
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-09-10T21:22:50Z
+--- ps auxf (top 60 by cpu) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    Sep03   0:00 [kthreadd]
+root      157198  0.0  0.0      0     0 ?        I    20:34   0:00  \_ [kworker/u4:1-events_unbound]
+root      156273  0.0  0.0      0     0 ?        I    19:20   0:00  \_ [kworker/1:3-events]
+root      157350  0.0  0.0      0     0 ?        I    21:10   0:00  \_ [kworker/0:0-events]
+root      157235  0.0  0.0      0     0 ?        I    20:43   0:00  \_ [kworker/u4:4-events_power_efficient]
+root      155614  0.0  0.0      0     0 ?        I    18:44   0:00  \_ [kworker/u4:2-flush-253:0]
+root           1  0.0  0.0  22692 14076 ?        Ss   Sep03   0:39 /usr/lib/systemd/systemd --system --deserialize=75 vultr
+root       36134  0.0  0.5 140512 88452 ?        S<s  Sep04   1:03 /usr/lib/systemd/systemd-journald
+--- pstree of self ---
+hermes,124413,hermes -m hermes_cli.main --profile cuidar gateway run
+  |-timeout,158909 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 124413 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |   `-bash,158910 -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 124413 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |       |-head,158915 -40
+  |       `-pstree,158914 -plau 124413
+  |-{hermes},124429
+  |-{hermes},124431
+  |-{hermes},124441
+  |-{hermes},124451
+  |-{hermes},124596
+  |-{hermes},125016
+  |-{hermes},125017
+  |-{hermes},125167
+  |-{hermes},141953
+  |-{hermes},147225
+  |-{hermes},147333
+  |-{hermes},148317
+  |-{hermes},158902
+  `-{hermes},158904
+--- /proc/loadavg ---
+0.01 0.05 0.02 1/287 158916
+--- recent dmesg (oom/killed) ---
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-09-10T21:42:50Z
+--- ps auxf (top 60 by cpu) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           2  0.0  0.0      0     0 ?        S    Sep03   0:00 [kthreadd]
+root      159108  0.0  0.0      0     0 ?        I    21:32   0:00  \_ [kworker/u4:0-events_freezable_power_]
+root      157350  0.0  0.0      0     0 ?        I    21:10   0:00  \_ [kworker/0:0-events]
+root           1  0.0  0.0  22692 14076 ?        Ss   Sep03   0:39 /usr/lib/systemd/systemd --system --deserialize=75 vultr
+root       36134  0.0  0.5 140512 88636 ?        S<s  Sep04   1:03 /usr/lib/systemd/systemd-journald
+--- pstree of self ---
+hermes,158921,hermes -m hermes_cli.main --profile cuidar gateway run --replace
+  |-timeout,160098 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 158921 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |   `-bash,160099 -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 158921 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+  |       |-head,160104 -40
+  |       `-pstree,160103 -plau 158921
+  |-{hermes},158923
+  |-{hermes},158924
+  |-{hermes},158926
+  |-{hermes},158927
+  |-{hermes},158928
+  |-{hermes},158934
+  |-{hermes},159107
+  |-{hermes},160087
+  `-{hermes},160088
+--- /proc/loadavg ---
+0.03 0.06 0.02 2/283 160105
+--- recent dmesg (oom/killed) ---
+=== end ===

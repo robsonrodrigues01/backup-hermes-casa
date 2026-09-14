@@ -1,0 +1,4 @@
+# Config do Leonardo (aplicado no install; o dono pode ajustar depois —
+# o `hermes profile update` preserva este arquivo, a menos que use --force-config)
+terminal:
+  cwd: /root/cerebro-da-empresa

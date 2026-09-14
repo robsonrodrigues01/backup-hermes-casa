@@ -1,0 +1,246 @@
+2026-09-14 22:31:53,777 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #5: model=zai-org/GLM-5.1-FP8 provider=custom in=52206 out=1197 total=53403 latency=5.3s
+2026-09-14 22:31:53,843 INFO agent.lsp.install: [install] npm install --prefix /home/hermes/.hermes/lsp bash-language-server
+2026-09-14 22:31:56,720 WARNING agent.lsp.servers: bash-language-server: shellcheck not found on PATH — diagnostics will be empty until shellcheck is installed (apt: shellcheck, brew: shellcheck, scoop: shellcheck).
+2026-09-14 22:31:56,999 INFO hermes.lint.lsp: lsp[bash-language-server] active for /home/hermes
+2026-09-14 22:31:57,637 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool write_file completed (3.86s, 231 chars)
+2026-09-14 22:31:59,570 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.93s, 182 chars)
+2026-09-14 22:31:59,594 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-829 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:01,900 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-829 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:01,901 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #6: model=zai-org/GLM-5.1-FP8 provider=custom in=53544 out=309 total=53853 latency=2.3s
+2026-09-14 22:32:02,004 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.10s, 149 chars)
+2026-09-14 22:32:03,445 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.44s, 53 chars)
+2026-09-14 22:32:03,471 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-831 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:08,580 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-831 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:08,581 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #7: model=zai-org/GLM-5.1-FP8 provider=custom in=53931 out=1020 total=54951 latency=5.1s
+2026-09-14 22:32:08,732 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool write_file completed (0.14s, 248 chars)
+2026-09-14 22:32:09,734 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool process completed (0.00s, 170 chars)
+2026-09-14 22:32:09,759 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-839 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:11,983 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-839 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:11,985 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #8: model=zai-org/GLM-5.1-FP8 provider=custom in=55090 out=279 total=55369 latency=2.2s
+2026-09-14 22:32:12,207 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool patch completed (0.20s, 662 chars)
+2026-09-14 22:32:12,234 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-847 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:13,268 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-847 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:13,270 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #9: model=zai-org/GLM-5.1-FP8 provider=custom in=55601 out=34 total=55635 latency=1.1s
+2026-09-14 22:32:13,274 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool process completed (0.00s, 466 chars)
+2026-09-14 22:32:13,297 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-848 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:18,638 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-848 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:18,639 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #10: model=zai-org/GLM-5.1-FP8 provider=custom in=55777 out=922 total=56699 latency=5.4s
+2026-09-14 22:32:18,820 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool write_file completed (0.18s, 220 chars)
+2026-09-14 22:32:18,851 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-856 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:19,984 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-856 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:19,985 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #11: model=zai-org/GLM-5.1-FP8 provider=custom in=56770 out=42 total=56812 latency=1.2s
+2026-09-14 22:32:20,093 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.10s, 149 chars)
+2026-09-14 22:32:20,136 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-857 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:21,393 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-857 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:32:21,393 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #12: model=zai-org/GLM-5.1-FP8 provider=custom in=56867 out=33 total=56900 latency=1.3s
+2026-09-14 22:32:30,868 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (127 chars)
+2026-09-14 22:33:12,407 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool process completed (51.01s, 1131 chars)
+2026-09-14 22:33:12,431 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-858 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:33:29,214 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-858 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:33:29,216 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #13: model=zai-org/GLM-5.1-FP8 provider=custom in=57280 out=2898 total=60178 latency=16.8s
+2026-09-14 22:33:29,969 INFO agent.tool_executor: tool write_file completed (0.20s, 246 chars)
+2026-09-14 22:33:30,011 INFO agent.tool_executor: tool patch completed (0.24s, 641 chars)
+2026-09-14 22:33:30,038 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-874 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:33:31,315 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-874 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:33:31,315 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #14: model=zai-org/GLM-5.1-FP8 provider=custom in=60467 out=47 total=60514 latency=1.3s
+2026-09-14 22:33:31,422 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.10s, 149 chars)
+2026-09-14 22:33:31,450 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-875 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:33:32,679 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-875 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:33:32,681 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #15: model=zai-org/GLM-5.1-FP8 provider=custom in=60568 out=31 total=60599 latency=1.3s
+2026-09-14 22:34:32,697 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool process completed (60.01s, 2091 chars)
+2026-09-14 22:34:32,721 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-876 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:34:45,170 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-876 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:34:45,170 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #16: model=zai-org/GLM-5.1-FP8 provider=custom in=61393 out=2378 total=63771 latency=12.5s
+2026-09-14 22:34:45,278 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool write_file completed (0.10s, 249 chars)
+2026-09-14 22:34:47,155 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.88s, 201 chars)
+2026-09-14 22:34:47,182 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-883 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:34:53,404 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-883 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:34:53,405 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #17: model=zai-org/GLM-5.1-FP8 provider=custom in=63960 out=1210 total=65170 latency=6.2s
+2026-09-14 22:34:53,409 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool cronjob returned error (0.00s): {"error": "Script path must be relative to ~/.hermes/scripts/. Got absolute or home-relative path: '/home/hermes/.hermes/scripts/backup-github.sh'. Place scripts in ~/.hermes/scripts/ and use just the
+2026-09-14 22:34:54,576 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool write_file completed (0.17s, 239 chars)
+2026-09-14 22:34:54,603 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-891 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:34:55,894 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-891 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:34:55,895 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #18: model=zai-org/GLM-5.1-FP8 provider=custom in=65298 out=91 total=65389 latency=1.3s
+2026-09-14 22:34:55,905 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool cronjob completed (0.01s, 882 chars)
+2026-09-14 22:34:57,016 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.11s, 149 chars)
+2026-09-14 22:34:57,043 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-892 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:00,974 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-892 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:00,975 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #19: model=zai-org/GLM-5.1-FP8 provider=custom in=65751 out=572 total=66323 latency=4.0s
+2026-09-14 22:35:11,979 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool process completed (11.00s, 265 chars)
+2026-09-14 22:35:12,004 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-893 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:25,192 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-893 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:25,193 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #20: model=zai-org/GLM-5.1-FP8 provider=custom in=66413 out=2584 total=68997 latency=13.2s
+2026-09-14 22:35:25,764 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.57s, 141 chars)
+2026-09-14 22:35:26,767 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Replacement would put memory at 2,377/2,200 chars. Shorten the new content or remove other entries first."}
+2026-09-14 22:35:26,800 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-895 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:30,677 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-895 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:30,678 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #21: model=zai-org/GLM-5.1-FP8 provider=custom in=69090 out=785 total=69875 latency=3.9s
+2026-09-14 22:35:30,680 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool memory completed (0.00s, 2303 chars)
+2026-09-14 22:35:31,821 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool patch completed (0.14s, 1896 chars)
+2026-09-14 22:35:31,849 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-904 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:34,007 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-904 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:34,008 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #22: model=zai-org/GLM-5.1-FP8 provider=custom in=71203 out=269 total=71472 latency=2.2s
+2026-09-14 22:35:34,152 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool patch completed (0.14s, 1386 chars)
+2026-09-14 22:35:34,180 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-913 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:39,251 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-913 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:39,278 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-914 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:43,831 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-914 (_call):128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:43,832 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #23: model=zai-org/GLM-5.1-FP8 provider=custom in=52114 out=557 total=52671 latency=4.6s
+2026-09-14 22:35:43,986 INFO [20260914_152119_8f5d651e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=zai-org/GLM-5.1-FP8 api_calls=25/90 budget=25/90 tool_turns=44 last_msg_role=assistant response_len=2043 session=20260914_152119_8f5d651e
+2026-09-14 22:35:44,027 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=bg-review:128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:35:44,029 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:35:44,792 INFO agent.model_metadata: Could not detect context length for model 'zai-org/GLM-5.1-FP8' at http://127.0.0.1:8788/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-14 22:35:45,263 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-14 22:35:45,274 INFO [20260914_152119_8f5d651e] agent.conversation_loop: conversation turn: session=20260914_152119_8f5d651e model=zai-org/GLM-5.1-FP8 provider=custom platform=telegram history=109 msg='Review the conversation above and update the skill library. Be ACTIVE — most ses...'
+2026-09-14 22:35:45,283 INFO [20260914_152119_8f5d651e] agent.conversation_loop: Preflight compression: ~156,473 tokens >= 128,000 threshold (model zai-org/GLM-5.1-FP8, ctx 256,000)
+2026-09-14 22:35:45,625 WARNING [20260912_204207_889e50a8] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 22:35:45,628 INFO [20260914_152119_8f5d651e] agent.conversation_loop: conversation turn: session=20260914_152119_8f5d651e model=zai-org/GLM-5.1-FP8 provider=custom platform=telegram history=108 msg='nao mexa em nenhum outro repositorio, eu só quero um backup do nosso hermes e do...'
+2026-09-14 22:35:45,632 INFO [20260914_152119_8f5d651e] agent.conversation_loop: Preflight compression: ~146,899 tokens >= 128,000 threshold (model zai-org/GLM-5.1-FP8, ctx 256,000)
+2026-09-14 22:35:45,854 INFO [20260914_152119_8f5d651e] agent.model_metadata: Could not detect context length for model 'nvidia/DeepSeek-V3.2-NVFP4' at https://api.vultrinference.com/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-14 22:35:45,855 INFO [20260914_152119_8f5d651e] agent.conversation_compression: context compression started: session=20260914_152119_8f5d651e messages=110 tokens=~156,473 model=zai-org/GLM-5.1-FP8 focus=None
+2026-09-14 22:35:45,873 INFO [20260914_152119_8f5d651e] agent.auxiliary_client: Auxiliary compression: using custom (nvidia/DeepSeek-V3.2-NVFP4) at https://api.vultrinference.com/v1/
+2026-09-14 22:35:45,905 INFO [20260914_152119_8f5d651e] agent.model_metadata: Could not detect context length for model 'nvidia/DeepSeek-V3.2-NVFP4' at https://api.vultrinference.com/v1/ — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-14 22:35:45,906 INFO [20260914_152119_8f5d651e] agent.conversation_compression: context compression started: session=20260914_152119_8f5d651e messages=109 tokens=~146,899 model=zai-org/GLM-5.1-FP8 focus=None
+2026-09-14 22:35:45,930 INFO [20260914_152119_8f5d651e] agent.auxiliary_client: Auxiliary compression: using custom (nvidia/DeepSeek-V3.2-NVFP4) at https://api.vultrinference.com/v1/
+2026-09-14 22:36:05,060 INFO [20260914_152119_8f5d651e] agent.conversation_compression: context compression done: session=20260914_223605_8297df messages=109->8 rough_tokens=~28,694 awaiting_real_usage=true
+2026-09-14 22:36:05,079 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-915 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:14,039 INFO [20260914_152119_8f5d651e] agent.conversation_compression: context compression done: session=20260914_152119_8f5d651e messages=110->8 rough_tokens=~31,598 awaiting_real_usage=true
+2026-09-14 22:36:14,058 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-916 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:22,945 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-916 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:22,947 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #1: model=zai-org/GLM-5.1-FP8 provider=custom in=23211 out=1694 total=24905 latency=8.9s
+2026-09-14 22:36:22,962 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_view completed (0.01s, 5111 chars)
+2026-09-14 22:36:22,984 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-917 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:23,903 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-915 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:23,922 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-918 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:29,624 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-918 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:29,625 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #24: model=zai-org/GLM-5.1-FP8 provider=custom in=20490 out=1371 total=21861 latency=5.7s
+2026-09-14 22:36:29,899 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-917 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:29,900 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #2: model=zai-org/GLM-5.1-FP8 provider=custom in=26460 out=1274 total=27734 latency=6.9s
+2026-09-14 22:36:29,913 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_view completed (0.01s, 1709 chars)
+2026-09-14 22:36:29,933 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-920 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:30,591 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.96s, 1294 chars)
+2026-09-14 22:36:30,612 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-921 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:35,858 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-920 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:35,859 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #3: model=zai-org/GLM-5.1-FP8 provider=custom in=28324 out=1199 total=29523 latency=5.9s
+2026-09-14 22:36:35,866 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.01s, 95 chars)
+2026-09-14 22:36:35,884 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-922 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:37,314 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-922 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:37,314 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #4: model=zai-org/GLM-5.1-FP8 provider=custom in=29555 out=152 total=29707 latency=1.4s
+2026-09-14 22:36:37,321 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.01s, 95 chars)
+2026-09-14 22:36:37,342 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-923 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:41,532 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-923 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:41,533 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #5: model=zai-org/GLM-5.1-FP8 provider=custom in=29739 out=502 total=30241 latency=4.2s
+2026-09-14 22:36:41,547 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_view completed (0.01s, 5610 chars)
+2026-09-14 22:36:41,567 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-924 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:43,226 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-921 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:43,226 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #25: model=zai-org/GLM-5.1-FP8 provider=custom in=22287 out=2196 total=24483 latency=12.6s
+2026-09-14 22:36:43,766 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool terminal returned error (0.54s): {"output": "== top-level ==\n.agent-reach-venv\n.bash_logout\n.bashrc\n.cache\n.claude\n.claude.json\n.config\n.context-kit\ncuidarvc\ngenerate-config.py\n.git\n.gitconfig\n.git-credentials\n.gitignor
+2026-09-14 22:36:43,789 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-926 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:46,251 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-924 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:46,252 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #6: model=zai-org/GLM-5.1-FP8 provider=custom in=31943 out=786 total=32729 latency=4.7s
+2026-09-14 22:36:46,262 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.01s, 95 chars)
+2026-09-14 22:36:46,282 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-927 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:47,821 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-927 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:47,821 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #7: model=zai-org/GLM-5.1-FP8 provider=custom in=32761 out=295 total=33056 latency=1.6s
+2026-09-14 22:36:47,828 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.01s, 95 chars)
+2026-09-14 22:36:47,838 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-926 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:47,838 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #26: model=zai-org/GLM-5.1-FP8 provider=custom in=24677 out=859 total=25536 latency=4.1s
+2026-09-14 22:36:47,848 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-928 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:48,384 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.54s, 1642 chars)
+2026-09-14 22:36:48,405 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-930 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:51,712 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-928 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:51,713 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #8: model=zai-org/GLM-5.1-FP8 provider=custom in=33088 out=1046 total=34134 latency=3.9s
+2026-09-14 22:36:51,722 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.01s, 197 chars)
+2026-09-14 22:36:51,744 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-931 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:55,741 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-930 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:55,742 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #27: model=zai-org/GLM-5.1-FP8 provider=custom in=26130 out=1184 total=27314 latency=7.4s
+2026-09-14 22:36:56,083 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-931 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:56,087 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #9: model=zai-org/GLM-5.1-FP8 provider=custom in=34186 out=1171 total=35357 latency=4.4s
+2026-09-14 22:36:56,099 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.01s, 197 chars)
+2026-09-14 22:36:56,120 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-933 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:56,152 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.41s, 917 chars)
+2026-09-14 22:36:56,174 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-934 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:59,285 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-934 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:36:59,286 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #28: model=zai-org/GLM-5.1-FP8 provider=custom in=27654 out=497 total=28151 latency=3.1s
+2026-09-14 22:36:59,508 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.22s, 851 chars)
+2026-09-14 22:36:59,536 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-936 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:01,738 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-933 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:01,739 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #10: model=zai-org/GLM-5.1-FP8 provider=custom in=35406 out=1480 total=36886 latency=5.6s
+2026-09-14 22:37:01,748 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.01s, 197 chars)
+2026-09-14 22:37:01,768 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-937 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:03,354 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-937 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:03,354 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #11: model=zai-org/GLM-5.1-FP8 provider=custom in=36946 out=150 total=37096 latency=1.6s
+2026-09-14 22:37:03,366 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_view completed (0.01s, 3284 chars)
+2026-09-14 22:37:03,386 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-938 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:07,631 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-938 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:07,631 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #12: model=zai-org/GLM-5.1-FP8 provider=custom in=38217 out=600 total=38817 latency=4.3s
+2026-09-14 22:37:07,644 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_view completed (0.01s, 22248 chars)
+2026-09-14 22:37:07,665 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-939 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:09,417 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-936 (_call):128257504564928 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:09,418 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #29: model=zai-org/GLM-5.1-FP8 provider=custom in=31864 out=1681 total=33545 latency=9.9s
+2026-09-14 22:37:09,549 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool write_file completed (0.13s, 202 chars)
+2026-09-14 22:37:09,570 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-946 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:11,269 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-946 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:11,269 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #30: model=zai-org/GLM-5.1-FP8 provider=custom in=33609 out=176 total=33785 latency=1.7s
+2026-09-14 22:37:16,761 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-939 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:16,764 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #13: model=zai-org/GLM-5.1-FP8 provider=custom in=44588 out=1420 total=46008 latency=9.1s
+2026-09-14 22:37:16,782 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.02s, 92 chars)
+2026-09-14 22:37:16,808 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-948 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:18,217 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (6.95s, 325 chars)
+2026-09-14 22:37:18,241 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-949 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:20,456 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-948 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:20,457 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #14: model=zai-org/GLM-5.1-FP8 provider=custom in=46036 out=491 total=46527 latency=3.7s
+2026-09-14 22:37:20,475 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_view completed (0.02s, 21519 chars)
+2026-09-14 22:37:20,504 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-950 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:22,904 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-949 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:22,904 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #31: model=zai-org/GLM-5.1-FP8 provider=custom in=33898 out=358 total=34256 latency=4.7s
+2026-09-14 22:37:23,051 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool patch completed (0.14s, 487 chars)
+2026-09-14 22:37:25,918 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-950 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:25,920 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #15: model=zai-org/GLM-5.1-FP8 provider=custom in=52162 out=889 total=53051 latency=5.4s
+2026-09-14 22:37:25,938 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool skill_manage completed (0.02s, 92 chars)
+2026-09-14 22:37:25,963 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-960 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:28,792 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (4.74s, 255 chars)
+2026-09-14 22:37:28,814 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-961 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:30,207 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-960 (_call):128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:30,208 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #16: model=zai-org/GLM-5.1-FP8 provider=custom in=53082 out=791 total=53873 latency=4.3s
+2026-09-14 22:37:30,209 INFO [20260914_152119_8f5d651e] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=zai-org/GLM-5.1-FP8 api_calls=16/16 budget=16/16 tool_turns=16 last_msg_role=assistant response_len=1556 session=20260914_152119_8f5d651e
+2026-09-14 22:37:30,210 INFO [20260914_152119_8f5d651e] run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=bg-review:128257521350336 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:31,863 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-961 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:31,864 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #32: model=zai-org/GLM-5.1-FP8 provider=custom in=34507 out=263 total=34770 latency=3.1s
+2026-09-14 22:37:32,087 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.22s, 531 chars)
+2026-09-14 22:37:32,111 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-963 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:34,908 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-963 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:34,909 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #33: model=zai-org/GLM-5.1-FP8 provider=custom in=34969 out=530 total=35499 latency=2.8s
+2026-09-14 22:37:35,086 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool patch completed (0.17s, 383 chars)
+2026-09-14 22:37:36,771 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.68s, 381 chars)
+2026-09-14 22:37:36,798 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-973 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:38,210 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-973 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:38,210 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #34: model=zai-org/GLM-5.1-FP8 provider=custom in=35763 out=237 total=36000 latency=1.4s
+2026-09-14 22:37:38,628 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.41s, 316 chars)
+2026-09-14 22:37:38,651 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-975 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:40,071 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-975 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:40,072 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #35: model=zai-org/GLM-5.1-FP8 provider=custom in=36110 out=193 total=36303 latency=1.4s
+2026-09-14 22:37:40,187 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.11s, 644 chars)
+2026-09-14 22:37:40,216 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-977 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:41,381 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-977 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:41,381 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #36: model=zai-org/GLM-5.1-FP8 provider=custom in=36554 out=154 total=36708 latency=1.2s
+2026-09-14 22:37:47,584 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool terminal returned error (6.20s): {"output": "== todos os gitignores casa adentro ==\n./.gitignore\ntools/agent-reach/.gitignore\ntools/last30days-skill/.gitignore\ntools/last30days-skill/mcp/.gitignore\ntools/scan-okjpg/agent-context
+2026-09-14 22:37:47,608 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-979 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:49,101 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-979 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:49,101 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #37: model=zai-org/GLM-5.1-FP8 provider=custom in=36852 out=181 total=37033 latency=1.5s
+2026-09-14 22:37:49,203 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.10s, 128 chars)
+2026-09-14 22:37:49,227 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-981 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:50,739 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-981 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:50,740 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #38: model=zai-org/GLM-5.1-FP8 provider=custom in=37078 out=211 total=37289 latency=1.5s
+2026-09-14 22:37:50,854 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (0.11s, 142 chars)
+2026-09-14 22:37:50,877 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-983 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:53,949 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-983 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:53,950 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #39: model=zai-org/GLM-5.1-FP8 provider=custom in=37338 out=452 total=37790 latency=3.1s
+2026-09-14 22:37:55,111 WARNING [20260914_152119_8f5d651e] agent.tool_executor: Tool terminal returned error (1.16s): {"output": "== arquivos ==\n7384\n== tamanho bruto ==\n259 MB\n== sobrou index-cache? ==\n0\n== sobrou bin? ==\n0\n== .env vazou? ==\n0", "exit_code": 1, "error": null}
+2026-09-14 22:37:55,143 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-985 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:56,857 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-985 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:37:56,857 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #40: model=zai-org/GLM-5.1-FP8 provider=custom in=37862 out=282 total=38144 latency=1.7s
+2026-09-14 22:38:00,308 INFO [20260914_152119_8f5d651e] agent.tool_executor: tool terminal completed (3.44s, 330 chars)
+2026-09-14 22:38:00,331 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-987 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:38:02,114 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-987 (_call):128257512957632 provider=custom base_url=http://127.0.0.1:8788/v1 model=zai-org/GLM-5.1-FP8
+2026-09-14 22:38:02,116 INFO [20260914_152119_8f5d651e] agent.conversation_loop: API call #41: model=zai-org/GLM-5.1-FP8 provider=custom in=38271 out=291 total=38562 latency=1.8s

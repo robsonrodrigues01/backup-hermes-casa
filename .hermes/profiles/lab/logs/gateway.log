@@ -1,0 +1,162 @@
+2026-09-09 17:05:33,521 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 17:05:33,521 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/lab/sessions
+2026-09-09 17:05:33,532 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 17:05:33,532 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 17:05:33,533 INFO gateway.run: Active profile: lab
+2026-09-09 17:05:33,648 INFO gateway.run: Connecting to telegram...
+2026-09-09 17:05:33,729 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 17:05:33,730 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 17:05:35,410 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 17:05:35,708 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 17:05:36,660 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 17:05:36,660 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 66 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 17:05:36,662 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 17:05:36,665 INFO gateway.run: ✓ telegram connected
+2026-09-09 17:05:36,666 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 17:05:36,670 INFO gateway.run: Channel directory built: 0 target(s)
+2026-09-09 17:05:37,672 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 17:05:37,702 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 17:05:42,683 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-09 17:06:48,127 INFO gateway.run: Ignoring /start platform ping for session agent:main:telegram:dm:8944451892
+2026-09-09 17:06:49,581 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (2 chars)
+2026-09-09 17:06:49,581 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='oi'
+2026-09-09 17:06:58,392 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-09 17:06:58,392 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=8.8s api_calls=1 response=136 chars
+2026-09-09 17:07:11,981 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-09 17:07:11,981 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.35 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 17:07:11,982 INFO gateway.run: Stopping gateway...
+2026-09-09 17:07:11,982 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-09 17:07:11,984 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-09 17:07:15,411 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-09 17:07:15,411 INFO gateway.run: ✓ telegram disconnected (3.43s)
+2026-09-09 17:07:15,411 INFO gateway.run: Shutdown phase: all adapters disconnected at +3.43s
+2026-09-09 17:07:15,412 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +3.43s
+2026-09-09 17:07:15,413 INFO gateway.run: Shutdown phase: SessionDB close done at +3.43s
+2026-09-09 17:07:15,415 INFO gateway.run: Gateway stopped (total teardown 3.43s)
+2026-09-09 17:07:15,415 INFO gateway.run: Cron ticker stopped
+2026-09-09 17:07:15,415 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-09 17:07:16,899 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 17:07:16,899 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/lab/sessions
+2026-09-09 17:07:16,908 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 17:07:16,908 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 17:07:16,909 INFO gateway.run: Active profile: lab
+2026-09-09 17:07:16,914 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-09 17:07:17,013 INFO gateway.run: Connecting to telegram...
+2026-09-09 17:07:17,082 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 17:07:17,082 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 17:07:18,308 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 17:07:18,586 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 17:07:18,862 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 17:07:18,862 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 66 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 17:07:18,863 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 17:07:18,865 INFO gateway.run: ✓ telegram connected
+2026-09-09 17:07:18,866 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 17:07:18,870 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-09 17:07:19,872 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 17:07:19,901 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 17:07:24,880 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-09 17:11:14,789 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (3 chars)
+2026-09-09 17:11:14,806 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='oi]'
+2026-09-09 17:11:22,205 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-09 17:11:22,206 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=7.4s api_calls=1 response=61 chars
+2026-09-09 18:13:23,982 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3723s)
+2026-09-09 18:13:23,983 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-09 18:31:52,237 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-09 18:31:52,237 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.00 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 18:31:52,238 INFO gateway.run: Stopping gateway...
+2026-09-09 18:31:52,238 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-09 18:31:52,240 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-09 18:31:54,434 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-09 18:31:54,434 INFO gateway.run: ✓ telegram disconnected (2.19s)
+2026-09-09 18:31:54,434 INFO gateway.run: Shutdown phase: all adapters disconnected at +2.20s
+2026-09-09 18:31:54,434 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +2.20s
+2026-09-09 18:31:54,436 INFO gateway.run: Shutdown phase: SessionDB close done at +2.20s
+2026-09-09 18:31:54,437 INFO gateway.run: Gateway stopped (total teardown 2.20s)
+2026-09-09 18:31:54,437 INFO gateway.run: Cron ticker stopped
+2026-09-09 18:31:54,437 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-09 18:31:56,023 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 18:31:56,023 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/lab/sessions
+2026-09-09 18:31:56,032 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 18:31:56,032 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 18:31:56,033 INFO gateway.run: Active profile: lab
+2026-09-09 18:31:56,038 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-09 18:31:56,140 INFO gateway.run: Connecting to telegram...
+2026-09-09 18:31:56,211 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 18:31:56,211 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 18:31:58,447 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 18:31:59,388 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 18:31:59,716 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 18:31:59,717 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 66 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 18:31:59,718 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 18:31:59,720 INFO gateway.run: ✓ telegram connected
+2026-09-09 18:31:59,721 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 18:31:59,725 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-09 18:32:00,727 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 18:32:00,757 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 18:32:05,736 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-09 18:32:26,103 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-09 18:32:26,104 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.10 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 18:32:26,109 INFO gateway.run: Stopping gateway...
+2026-09-09 18:32:26,109 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-09 18:32:26,115 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.01s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-09 18:32:26,570 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-09 18:32:26,570 INFO gateway.run: ✓ telegram disconnected (0.45s)
+2026-09-09 18:32:26,570 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.46s
+2026-09-09 18:32:26,701 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.59s
+2026-09-09 18:32:26,702 INFO gateway.run: Shutdown phase: SessionDB close done at +0.59s
+2026-09-09 18:32:26,703 INFO gateway.run: Gateway stopped (total teardown 0.59s)
+2026-09-09 18:32:26,703 INFO gateway.run: Cron ticker stopped
+2026-09-09 18:32:26,704 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-09 18:32:28,664 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 18:32:28,665 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/lab/sessions
+2026-09-09 18:32:28,679 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 18:32:28,679 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 18:32:28,680 INFO gateway.run: Active profile: lab
+2026-09-09 18:32:28,693 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-09 18:32:28,863 INFO gateway.run: Connecting to telegram...
+2026-09-09 18:32:28,958 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 18:32:28,958 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 18:32:30,280 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 18:32:30,577 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 18:32:30,872 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 18:32:30,872 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 66 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 18:32:30,874 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 18:32:30,875 INFO gateway.run: ✓ telegram connected
+2026-09-09 18:32:30,876 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 18:32:30,881 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-09 18:32:31,882 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 18:32:31,913 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 18:32:36,888 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-10 01:11:14,698 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-10 01:11:14,699 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-10 01:11:20,404 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Bad Gateway
+2026-09-10 01:11:20,404 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
+2026-09-10 01:11:43,399 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 2)
+2026-09-10 04:04:04,673 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-10 04:04:04,674 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-10 05:31:33,759 INFO gateway.run: curator: curator: snapshot created (2026-09-10T05-31-33Z)
+2026-09-10 05:35:24,249 INFO [20260910_053135_1c534a] gateway.run: curator: curator: auto: no changes; llm: # Consolidation pass — umbrella-building report (lab profile, 2026-09-10)
+
+## Scope determination ran first, not assumed
+
+The brief anticipated 10–25 prefix clusters across a large agent-created pool. The actual landscape required a provena…
+2026-09-11 01:11:14,646 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-11 01:11:14,647 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-11 01:11:20,449 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Bad Gateway
+2026-09-11 01:11:20,449 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
+2026-09-11 01:11:50,782 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-11 01:11:50,782 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
+2026-09-11 01:12:11,278 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 3)
+2026-09-12 01:11:18,935 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-12 01:11:18,936 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-12 01:11:54,535 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 1)
+2026-09-13 01:11:15,476 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-13 01:11:15,476 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-13 01:11:21,229 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Bad Gateway
+2026-09-13 01:11:21,229 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
+2026-09-13 01:11:41,943 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 2)
+2026-09-14 01:11:13,165 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-14 01:11:13,165 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-14 01:11:18,928 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Bad Gateway
+2026-09-14 01:11:18,928 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
+2026-09-14 01:11:45,211 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 2)

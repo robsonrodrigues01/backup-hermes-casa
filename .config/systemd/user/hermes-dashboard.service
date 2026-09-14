@@ -1,0 +1,12 @@
+[Unit]
+Description=Hermes Dashboard (backend do app Desktop no Mac) — com autenticacao
+After=network.target
+
+[Service]
+ExecStart=/home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+Environment=PYTHONUNBUFFERED=1
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

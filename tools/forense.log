@@ -1,0 +1,25 @@
+cam-start 2026-09-10T00:20:50Z
+NEW 2026-09-10T00:20:50.037 pid=124411 ppid=109079
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile lab gateway run
+    pai-cmd: /usr/lib/systemd/systemd --user
+NEW 2026-09-10T00:20:50.037 pid=124413 ppid=109079
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile cuidar gateway run
+    pai-cmd: /usr/lib/systemd/systemd --user
+NEW 2026-09-10T00:20:50.037 pid=124421 ppid=109079
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile era4 gateway run
+    pai-cmd: /usr/lib/systemd/systemd --user
+NEW 2026-09-10T00:20:50.037 pid=126362 ppid=109079
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+    pai-cmd: /usr/lib/systemd/systemd --user
+NEW 2026-09-10T00:20:50.037 pid=134733 ppid=109079
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+    pai-cmd: /usr/lib/systemd/systemd --user
+NEW 2026-09-10T00:23:51.161 pid=136270 ppid=1
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+    pai-cmd: /usr/lib/systemd/systemd --system --deserialize=75 vultr
+NEW 2026-09-10T00:23:51.161 pid=136271 ppid=1
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+    pai-cmd: /usr/lib/systemd/systemd --system --deserialize=75 vultr
+NEW 2026-09-10T00:23:58.811 pid=136290 ppid=1
+    pid-cmd: /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+    pai-cmd: /usr/lib/systemd/systemd --system --deserialize=75 vultr

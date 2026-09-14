@@ -1,0 +1,98 @@
+{
+  "jobs": [
+    {
+      "id": "894915797be6",
+      "name": "Ca\u00e7ada de leads semanal \u2014 ERA 4.0",
+      "prompt": "Ca\u00e7ada de leads da ERA 4.0. Siga a skill lead-hunting (carregada). Meta: ~20 NOVOS leads do ICP \u2014 PMEs brasileiras, foco nas cidades da RM de Porto Alegre e Vale dos Sinos (POA, Canoas, Gravata\u00ed, Cachoeirinha, Alvorada, Viam\u00e3o, S\u00e3o Leopoldo, Novo Hamburgo, Campo Bom, Sapiranga, Esteio, Sapucaia). Foco de segmentos da semana \u00e0 sua escolha conforme ICP da skill. Use Google Maps, sites de associa\u00e7\u00f5es/diret\u00f3rios regionais e Instagram. Colete SOMENTE contatos publicados (e-mail no site, @insta, wa.me p\u00fablico); NUNCA invente contato. Anote sinal_de_dor observ\u00e1vel + fonte (URL). Dedupe contra ~/.hermes/profiles/era4/comercial/leads.csv antes de append (n\u00e3o reca\u00e7ar quem j\u00e1 est\u00e1 no arquivo). Anexe no leads.csv com status=novo. Ao final, responda ao Rob em PT-BR com: total de novos, 5 destaques (dor mais forte + canal recomendado), e o que ficou sem contato nenhum. Directory de trabalho: ~/.hermes/profiles/era4/comercial/.",
+      "skills": [
+        "lead-hunting"
+      ],
+      "skill": "lead-hunting",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1",
+        "display": "0 9 * * 1"
+      },
+      "schedule_display": "0 9 * * 1",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-11T19:24:06.408570+00:00",
+      "next_run_at": "2026-09-21T09:00:00+00:00",
+      "last_run_at": "2026-09-14T09:06:23.660589+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal",
+        "file",
+        "search"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "30d763c56a1b",
+      "name": "briefing-matinal",
+      "prompt": "Voce e o Claudemir rodando SOZINHO fora de conversa (Rob nao esta no ar: NENHUMA pergunta; na duvida padrao seguro e ANOTE no relatorio; nada destrutivo \u2014 escreva PRECISA DO ROB e nao execute). 1) Saude: rode export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus e depois systemctl --user is-active hermes-gateway-era4.service; teste http://127.0.0.1:8790/readyz (Headroom; esperado 200). Headroom morto \u2192 systemctl --user restart hermes-headroom-era4.service e re-teste; gateway morto \u2192 NAO reinicie sozinho, registre PRECISA DO ROB; reparo falhar \u2192 journalctl --user -u <unidade> -n 20 e anote a causa. 2) Fila: leia PENDENTES.md e MAPA.md do seu home era4; anote prazos de hoje/amanha (fuso America/Sao_Paulo); se algo mudou de estado, atualize PENDENTES.md. 3) Relatorio max 12 linhas PT-BR: Maquina (status ou causa+acao), Prazos, Fila (max 3), Precisa do Rob (ou nada), ultima linha Proximo: 1 acao de hoje. Sem preambulo nem despedida.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-12T00:18:11.723246+00:00",
+      "next_run_at": "2026-09-15T12:00:00+00:00",
+      "last_run_at": "2026-09-14T12:01:09.900417+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-09-14T12:01:09.900930+00:00"
+}

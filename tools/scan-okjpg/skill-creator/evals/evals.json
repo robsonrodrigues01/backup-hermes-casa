@@ -1,0 +1,25 @@
+{
+  "skill_name": "criar-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/criar-skill",
+      "expected_output": "Detecta Modo 1 (Captura de Sessão) se há histórico de tarefa na sessão. Extrai fluxo principal, decision points e edge cases do histórico. Apresenta rascunho para confirmação antes de gerar. Roda QA 10/10. Gera SKILL.md + evals/evals.json no deploy."
+    },
+    {
+      "id": 2,
+      "prompt": "quero criar uma skill que me ajuda a responder comentários no Instagram",
+      "expected_output": "Detecta Modo 3 (Entrevista). Inicia Fase 1 perguntando input/output concreto. Avança por 4 fases: definição, triggers, padrão de qualidade, confirmação de brief. Só gera após confirmação explícita. Roda QA 10/10."
+    },
+    {
+      "id": 3,
+      "prompt": "toda semana eu: 1) acesso o notion, 2) pego os cards marcados como publicar, 3) exporto o texto, 4) formato pra linkedin, 5) agendo no buffer",
+      "expected_output": "Detecta Modo 2 (Análise de Workflow). Identifica 5 etapas sequenciais. Faz no máximo 2 perguntas de esclarecimento sobre passos ambíguos (ex: formato do LinkedIn, agendamento manual vs API). Gera SKILL.md após esclarecimento."
+    },
+    {
+      "id": 4,
+      "prompt": "/criar-skill (skill com API key hardcoded no workflow)",
+      "expected_output": "QA check 9 falha (credencial detectada). Verifica se 1Password CLI está disponível. Se sim, armazena no vault. Se não, salva em .env e substitui por variável de ambiente. Alerta o usuário sobre o arquivo .env."
+    }
+  ]
+}

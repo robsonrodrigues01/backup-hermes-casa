@@ -1,0 +1,445 @@
+{
+  "schema_version": 5,
+  "lifetime": {
+    "requests": 32,
+    "tokens_saved": 3325,
+    "compression_savings_usd": 0.009975,
+    "cache_read_tokens": 0,
+    "cache_savings_usd": 0.0,
+    "total_input_tokens": 942807,
+    "total_input_cost_usd": 2.82855,
+    "output_tokens_saved": 0,
+    "output_savings_usd": 0.0
+  },
+  "display_session": {
+    "requests": 25,
+    "tokens_saved": 3059,
+    "compression_savings_usd": 0.009177,
+    "cache_read_tokens": 0,
+    "cache_savings_usd": 0.0,
+    "total_input_tokens": 910129,
+    "total_input_cost_usd": 2.730387,
+    "savings_percent": 0.33,
+    "started_at": "2026-09-10T05:31:35Z",
+    "last_activity_at": "2026-09-10T05:34:16Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-09-09T17:07:35Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 133,
+      "compression_savings_usd": 0.000399,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 16115,
+      "total_input_cost_usd": 0.048474,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-09T17:11:20Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 266,
+      "compression_savings_usd": 0.000798,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 32678,
+      "total_input_cost_usd": 0.098163,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:31:47Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 399,
+      "compression_savings_usd": 0.001197,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 49629,
+      "total_input_cost_usd": 0.149016,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:31:51Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 532,
+      "compression_savings_usd": 0.001596,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 73569,
+      "total_input_cost_usd": 0.220836,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:31:53Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 665,
+      "compression_savings_usd": 0.001995,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 97911,
+      "total_input_cost_usd": 0.293862,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:31:56Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 798,
+      "compression_savings_usd": 0.002394,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 123708,
+      "total_input_cost_usd": 0.371253,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:00Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 931,
+      "compression_savings_usd": 0.002793,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 151289,
+      "total_input_cost_usd": 0.453996,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:06Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1064,
+      "compression_savings_usd": 0.003192,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 179484,
+      "total_input_cost_usd": 0.538581,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:09Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1197,
+      "compression_savings_usd": 0.003591,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 208645,
+      "total_input_cost_usd": 0.626064,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:17Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1330,
+      "compression_savings_usd": 0.00399,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 238719,
+      "total_input_cost_usd": 0.716286,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:20Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1463,
+      "compression_savings_usd": 0.004389,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 270546,
+      "total_input_cost_usd": 0.811767,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:24Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1596,
+      "compression_savings_usd": 0.004788,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 303595,
+      "total_input_cost_usd": 0.910914,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:43Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1729,
+      "compression_savings_usd": 0.005187,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 337562,
+      "total_input_cost_usd": 1.012815,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:32:57Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1862,
+      "compression_savings_usd": 0.005586,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 378472,
+      "total_input_cost_usd": 1.135545,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:33:10Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 1995,
+      "compression_savings_usd": 0.005985,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 422493,
+      "total_input_cost_usd": 1.267608,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:33:12Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 2128,
+      "compression_savings_usd": 0.006384,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 468252,
+      "total_input_cost_usd": 1.404885,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:33:35Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 2261,
+      "compression_savings_usd": 0.006783,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 515431,
+      "total_input_cost_usd": 1.546422,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:33:46Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 2394,
+      "compression_savings_usd": 0.007182,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 566106,
+      "total_input_cost_usd": 1.698447,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:33:52Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 2527,
+      "compression_savings_usd": 0.007581,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 618419,
+      "total_input_cost_usd": 1.855386,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:33:56Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 2660,
+      "compression_savings_usd": 0.00798,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 671496,
+      "total_input_cost_usd": 2.014617,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:33:59Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 2793,
+      "compression_savings_usd": 0.008379,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 725061,
+      "total_input_cost_usd": 2.175312,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:34:01Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 2926,
+      "compression_savings_usd": 0.008778,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 779061,
+      "total_input_cost_usd": 2.337312,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:34:11Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 3059,
+      "compression_savings_usd": 0.009177,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 833168,
+      "total_input_cost_usd": 2.499633,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:34:13Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 3192,
+      "compression_savings_usd": 0.009576,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 887878,
+      "total_input_cost_usd": 2.663763,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    },
+    {
+      "timestamp": "2026-09-10T05:34:16Z",
+      "provider": "openai",
+      "model": "zai-org/GLM-5.1-FP8",
+      "total_tokens_saved": 3325,
+      "compression_savings_usd": 0.009975,
+      "cache_read_tokens": 0,
+      "cache_savings_usd": 0.0,
+      "total_input_tokens": 942807,
+      "total_input_cost_usd": 2.82855,
+      "output_tokens_saved": 0,
+      "output_savings_usd": 0.0
+    }
+  ],
+  "projects": {},
+  "by_model": {
+    "zai-org/GLM-5.1-FP8": {
+      "requests": 26,
+      "tokens_saved": 3325,
+      "tool_tokens_saved": 0,
+      "compression_savings_usd": 0.009975,
+      "total_input_tokens": 942807,
+      "total_input_cost_usd": 2.82855
+    },
+    "passthrough:models": {
+      "requests": 6,
+      "tokens_saved": 0,
+      "tool_tokens_saved": 0,
+      "compression_savings_usd": 0.0,
+      "total_input_tokens": 0,
+      "total_input_cost_usd": 0.0
+    }
+  },
+  "lifetime_metrics": {
+    "started_at": "2026-09-09T17:06:59Z",
+    "last_activity_at": "2026-09-10T05:34:16Z",
+    "full_fidelity_started_at": "2026-09-09T17:06:59Z",
+    "requests": {
+      "total": 32,
+      "cached": 0,
+      "failed": 0,
+      "rate_limited": 0,
+      "by_provider": {
+        "openai": 32
+      },
+      "by_stack": {}
+    },
+    "tokens": {
+      "input": 942807,
+      "output": 20028,
+      "attempted_input": 946127,
+      "saved": 3325
+    },
+    "prefix_cache": {
+      "requests": 32,
+      "hit_requests": 0,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 43,
+      "cache_write_5m_tokens": 0,
+      "cache_write_1h_tokens": 0,
+      "uncached_input_tokens": 942807,
+      "bust_count": 0,
+      "bust_tokens": 0,
+      "misses_by_reason": {},
+      "by_provider": {
+        "openai": 32
+      }
+    },
+    "cost": {
+      "input_usd": 2.82855,
+      "compression_savings_usd": 0.009975,
+      "cache_savings_usd": 0.0
+    },
+    "waste_signals": {},
+    "models": {
+      "tracked": {
+        "zai-org/GLM-5.1-FP8": {
+          "requests": 26,
+          "input_tokens": 942807,
+          "output_tokens": 20028,
+          "attempted_input_tokens": 946127,
+          "tokens_saved": 3325,
+          "last_activity_at": "2026-09-10T05:34:16Z"
+        },
+        "passthrough:models": {
+          "requests": 6,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "attempted_input_tokens": 0,
+          "tokens_saved": 0,
+          "last_activity_at": "2026-09-10T05:31:36Z"
+        }
+      },
+      "other": {
+        "requests": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "attempted_input_tokens": 0,
+        "tokens_saved": 0,
+        "last_activity_at": null
+      }
+    },
+    "persistence": {
+      "last_saved_at": "2026-09-10T05:34:16Z"
+    }
+  }
+}

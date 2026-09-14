@@ -1,0 +1,5 @@
+name: leonardo
+version: 1.0.0
+description: "Leonardo Da Vinci — o agente orquestrador da sua empresa (Pixel AI Hub · Trilha 4)"
+hermes_requires: ">=0.17.0"
+author: "Pixel Educacao"

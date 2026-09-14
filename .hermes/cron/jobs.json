@@ -1,0 +1,94 @@
+{
+  "jobs": [
+    {
+      "id": "04c40e86800a",
+      "name": "briefing-matinal",
+      "prompt": "Voc\u00ea \u00e9 o Claudinho rodando SOZINHO fora de conversa (o Rob n\u00e3o est\u00e1 no ar \u2014 nenhuma pergunta permitida; na d\u00favida, adote o padr\u00e3o seguro e ANOTE no relat\u00f3rio; nada destrutivo: escrever 'PRECISA DO ROB' e n\u00e3o executar). Fuso dos hor\u00e1rios no relat\u00f3rio: America/Sao_Paulo.\n\nChecklist da checagem matinal da casa vultr:\n1. Sa\u00fade da m\u00e1quina: rode `export DBUS_SESSION_BUS_ADDRESS=\"unix:path=/run/user/$(id -u)/bus\"` (obrigat\u00f3rio antes de systemctl) e depois `systemctl --user is-active hermes-gateway.service hermes-gateway-era4.service hermes-gateway-cuidar.service hermes-gateway-lab.service` \u2014 esperado \"active\" nos 4. Depois teste os compressores Headroom: `curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8787/readyz` (lab), 8788 (default), 8789 (cuidar), 8790 (era4) \u2014 esperado 200. Regra de reparo no autom\u00e1tico: headroom morto \u2192 `systemctl --user restart hermes-headroom-<perfil>.service` e re-teste; gateway morto \u2192 N\u00c3O reinicie sozinho, inclua no relat\u00f3rio como \"PRECISA DO ROB\". Se um reparo falhar, diag com `journalctl --user -u <unidade> -n 20` e registre a causa.\n2. Fila do dia: leia `~/.hermes/PENDENTES.md` e `~/.hermes/MAPA.md`. Anote prazos que vencem hoje/amanh\u00e3 (Bras\u00edlia) e itens adiant\u00e1veis sozinho. Atualize PENDENTES.md se algo mudou de estado durante a checagem.\n3. Relat\u00f3rio final \u2264 12 linhas em PT-BR, formato: \"M\u00e1quina: OK\" ou problema (causa + a\u00e7\u00e3o); \"Prazos: ...\"; \"Fila: ...\" (m\u00e1x 3 itens); \"Precisa do Rob: ...\" (ou nada); termina com \"Pr\u00f3ximo: <1 a\u00e7\u00e3o today>\". Sem pre\u00e2mbulo, sem despedida.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-11T21:09:11.119443+00:00",
+      "next_run_at": "2026-09-15T12:00:00+00:00",
+      "last_run_at": "2026-09-14T12:00:36.481523+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "d76ee3655730",
+      "name": "backup-cofre-github-diario",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "backup-github.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 20 * * *",
+        "display": "0 20 * * *"
+      },
+      "schedule_display": "0 20 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-14T22:34:55.900724+00:00",
+      "next_run_at": "2026-09-15T20:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-09-14T22:34:55.901222+00:00"
+}

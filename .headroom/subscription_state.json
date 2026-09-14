@@ -1,0 +1,540 @@
+{
+  "latest": {
+    "five_hour": {
+      "used": 0,
+      "limit": 0,
+      "utilization_pct": 0.0,
+      "resets_at": null,
+      "seconds_to_reset": null
+    },
+    "seven_day": {
+      "used": 0,
+      "limit": 0,
+      "utilization_pct": 21.0,
+      "resets_at": "2026-09-19T07:00:00Z",
+      "seconds_to_reset": 526159.942175
+    },
+    "extra_usage": {
+      "is_enabled": false,
+      "monthly_limit_usd": null,
+      "used_credits_usd": null,
+      "utilization_pct": null
+    },
+    "polled_at": "2026-09-13T04:50:40Z",
+    "token_prefix": "sk-ant-o"
+  },
+  "window_tokens": {
+    "input": 0,
+    "output": 0,
+    "cache_reads": 0,
+    "cache_writes_5m": 0,
+    "cache_writes_1h": 0,
+    "cache_writes_total": 0,
+    "total_raw": 0,
+    "weighted_token_equivalent": 0.0,
+    "by_model": {}
+  },
+  "contribution": {
+    "tokens_submitted": 0,
+    "tokens_saved": {
+      "compression": 0,
+      "proxy_compression": 0,
+      "cache_reads": 0,
+      "total": 0
+    },
+    "raw_without_headroom": 0,
+    "efficiency_pct": 0.0,
+    "savings_usd": {
+      "compression": 0.0,
+      "cache": 0.0,
+      "total": 0.0
+    }
+  },
+  "discrepancies": [],
+  "poll_count": 60,
+  "poll_errors": 36,
+  "last_error": null,
+  "last_active_at": null,
+  "history": [
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526159.967652
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T02:10:34Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.287444
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T02:20:34Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.5956
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T02:25:34Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.876975
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T02:35:35Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.178225
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T02:45:35Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.478005
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T02:50:35Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.763047
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T03:00:35Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.047406
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T03:05:36Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.343674
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T03:15:36Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.653785
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T03:25:36Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.218103
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T03:30:37Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.540947
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T03:45:37Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.859396
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T03:55:38Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.12264
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T04:00:38Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.442519
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T04:10:38Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.759098
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T04:20:38Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.05702
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T04:25:39Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526160.370199
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T04:35:39Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T06:59:59Z",
+        "seconds_to_reset": 526159.620397
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T04:40:39Z",
+      "token_prefix": "sk-ant-o"
+    },
+    {
+      "five_hour": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 0.0,
+        "resets_at": null,
+        "seconds_to_reset": null
+      },
+      "seven_day": {
+        "used": 0,
+        "limit": 0,
+        "utilization_pct": 21.0,
+        "resets_at": "2026-09-19T07:00:00Z",
+        "seconds_to_reset": 526159.941976
+      },
+      "extra_usage": {
+        "is_enabled": false,
+        "monthly_limit_usd": null,
+        "used_credits_usd": null,
+        "utilization_pct": null
+      },
+      "polled_at": "2026-09-13T04:50:40Z",
+      "token_prefix": "sk-ant-o"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "installed": {
+    "i-have-adhd": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/ayghri/i-have-adhd/skills/i-have-adhd",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:113ca2fa233277cd",
+      "install_path": "i-have-adhd",
+      "files": [
+        "SKILL.md",
+        "agents/gemini.toml",
+        "agents/openai.yaml"
+      ],
+      "metadata": {
+        "detail_url": "https://skills.sh/ayghri/i-have-adhd/skills/i-have-adhd",
+        "repo_url": "https://github.com/ayghri/i-have-adhd"
+      },
+      "installed_at": "2026-09-11T18:29:59.957156+00:00",
+      "updated_at": "2026-09-11T18:29:59.957161+00:00"
+    }
+  }
+}

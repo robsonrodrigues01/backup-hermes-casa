@@ -1,0 +1,12 @@
+{
+  "added": 0,
+  "cursor_advanced": false,
+  "deduplicated": 1,
+  "ignored": 0,
+  "kit_version": "0.1.0",
+  "operation": "sync-files",
+  "schema_version": 1,
+  "source": "files",
+  "status": "no_change",
+  "timestamp": "2026-09-09T18:18:48Z"
+}

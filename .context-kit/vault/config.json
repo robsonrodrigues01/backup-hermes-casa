@@ -1,0 +1,10 @@
+{
+  "fathom": {
+    "enabled": false
+  },
+  "files": {
+    "inbox": "/home/hermes/.context-kit/vault/inbox",
+    "max_file_bytes": 1000000
+  },
+  "schema_version": 1
+}

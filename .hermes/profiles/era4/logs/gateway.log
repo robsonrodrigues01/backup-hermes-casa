@@ -1,0 +1,171 @@
+2026-09-09 00:15:48,006 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 00:15:48,006 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/era4/sessions
+2026-09-09 00:15:48,015 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 00:15:48,015 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 00:15:48,016 INFO gateway.run: Active profile: era4
+2026-09-09 00:15:48,123 INFO gateway.run: Connecting to telegram...
+2026-09-09 00:15:48,209 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 00:15:48,209 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 00:15:49,374 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 00:15:49,653 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 00:15:49,935 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 00:15:49,935 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 15 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 00:15:49,936 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 00:15:49,938 INFO gateway.run: ✓ telegram connected
+2026-09-09 00:15:49,939 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 00:15:49,943 INFO gateway.run: Channel directory built: 0 target(s)
+2026-09-09 00:15:50,944 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 00:15:50,973 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 00:15:55,953 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-09 12:34:10,658 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (2 chars)
+2026-09-09 12:34:10,674 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='oi'
+2026-09-09 12:34:22,548 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-09 12:34:22,548 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=11.9s api_calls=1 response=223 chars
+2026-09-09 12:38:37,056 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (62 chars)
+2026-09-09 12:38:37,057 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Me sugira subagentes e squads que devriamos ter para a agencia'
+2026-09-09 12:49:31,063 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-09 12:49:31,063 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=654.0s api_calls=3 response=305 chars
+2026-09-09 13:52:38,150 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3788s)
+2026-09-09 13:52:38,150 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-09 17:23:40,470 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (71 chars)
+2026-09-09 17:23:40,471 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='primeiro de tudo, eu quero que voce escolha uma foto de perfil pra voce'
+2026-09-09 17:24:37,549 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-09 17:24:37,549 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.22 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 17:24:37,552 INFO gateway.run: Stopping gateway...
+2026-09-09 17:24:38,203 INFO gateway.run: Sent shutdown notification to active chat telegram:8944451892
+2026-09-09 17:24:38,203 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.65s
+2026-09-09 17:27:38,208 INFO gateway.run: Shutdown phase: drain done at +180.66s (drain took 180.00s, timed_out=True, active_at_start=1, active_now=1)
+2026-09-09 17:27:38,208 WARNING gateway.run: Gateway drain timed out after 180.0s with 1 active agent(s); interrupting remaining work.
+2026-09-09 17:27:38,286 INFO gateway.run: Ignoring control interrupt message for session agent:main:telegram:dm:8944451892: Gateway shutting down
+2026-09-09 17:27:38,313 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=237.8s api_calls=4 response=0 chars
+2026-09-09 17:27:38,413 INFO gateway.run: Shutdown phase: post-interrupt tool kill done at +180.86s
+2026-09-09 17:27:39,095 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-09 17:27:39,095 INFO gateway.run: ✓ telegram disconnected (0.68s)
+2026-09-09 17:27:39,095 INFO gateway.run: Shutdown phase: all adapters disconnected at +181.54s
+2026-09-09 17:27:39,096 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +181.54s
+2026-09-09 17:27:39,098 INFO gateway.run: Shutdown phase: SessionDB close done at +181.55s
+2026-09-09 17:27:39,099 INFO gateway.run: Skipping .clean_shutdown marker — drain timed out with interrupted agents; next startup will suspend recently active sessions.
+2026-09-09 17:27:39,100 INFO gateway.run: Gateway stopped (total teardown 181.55s)
+2026-09-09 17:27:39,100 INFO gateway.run: Cron ticker stopped
+2026-09-09 17:27:39,100 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-09 17:27:41,155 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 17:27:41,155 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/era4/sessions
+2026-09-09 17:27:41,163 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 17:27:41,164 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 17:27:41,165 INFO gateway.run: Active profile: era4
+2026-09-09 17:27:41,273 INFO gateway.run: Connecting to telegram...
+2026-09-09 17:27:41,346 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 17:27:41,346 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 17:27:44,779 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 17:27:45,069 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 17:27:45,365 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 17:27:45,365 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 39 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 17:27:45,366 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 17:27:45,368 INFO gateway.run: ✓ telegram connected
+2026-09-09 17:27:45,369 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 17:27:45,373 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-09 17:27:46,375 INFO gateway.run: Scheduled auto-resume for 1 restart-interrupted session(s)
+2026-09-09 17:27:46,375 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 17:27:46,408 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg=''
+2026-09-09 17:27:46,434 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 17:27:51,381 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-09 17:40:18,743 INFO gateway.platforms.telegram: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-09 17:40:27,736 INFO gateway.platforms.telegram: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-09 17:40:40,499 INFO gateway.platforms.telegram: Telegram clarify button resolved (id=16218b7182, choice='✅ Aprovar: criar venv em /tmp + instalar Pillow e seguir', user=Rob)
+2026-09-09 17:47:04,395 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-09 17:48:53,840 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-09 17:48:53,840 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=1267.4s api_calls=29 response=1278 chars
+2026-09-09 17:54:14,610 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (22 chars)
+2026-09-09 17:54:14,611 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Tá legal, eu gostei kk'
+2026-09-09 17:54:21,609 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-09 17:54:21,610 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=7.0s api_calls=1 response=402 chars
+2026-09-09 18:32:26,107 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-09 18:32:26,107 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.10 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 18:32:26,111 INFO gateway.run: Stopping gateway...
+2026-09-09 18:32:26,113 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-09 18:32:26,119 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.01s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-09 18:32:26,623 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-09 18:32:26,624 INFO gateway.run: ✓ telegram disconnected (0.50s)
+2026-09-09 18:32:26,624 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.51s
+2026-09-09 18:32:26,626 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.51s
+2026-09-09 18:32:26,629 INFO gateway.run: Shutdown phase: SessionDB close done at +0.52s
+2026-09-09 18:32:26,632 INFO gateway.run: Gateway stopped (total teardown 0.52s)
+2026-09-09 18:32:26,633 INFO gateway.run: Cron ticker stopped
+2026-09-09 18:32:26,633 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-09 18:32:29,460 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 18:32:29,460 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/era4/sessions
+2026-09-09 18:32:29,468 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 18:32:29,469 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 18:32:29,469 INFO gateway.run: Active profile: era4
+2026-09-09 18:32:29,474 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-09 18:32:29,575 INFO gateway.run: Connecting to telegram...
+2026-09-09 18:32:29,643 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 18:32:29,643 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 18:32:30,897 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 18:32:31,755 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 18:32:32,591 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 18:32:32,591 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 40 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 18:32:32,593 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 18:32:32,594 INFO gateway.run: ✓ telegram connected
+2026-09-09 18:32:32,595 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 18:32:32,600 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-09 18:32:33,602 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 18:32:33,634 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 18:32:38,610 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-10 04:04:05,925 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-10 04:04:05,926 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-10 05:31:34,998 INFO gateway.run: curator: curator: snapshot created (2026-09-10T05-31-34Z)
+2026-09-10 05:32:18,141 INFO [20260910_053136_7b00e0] gateway.run: curator: curator: auto: no changes; llm: Scan complete. Here is the verdict.
+
+## Curator pass — 2026-09-10 (era4 profile)
+
+### What I scanned
+
+| Stage | Result |
+|---|---|
+| Candidate list vs. filesystem | Match. Exactly **1 agent-created skill**: `brand-assets` (branding). The 24…
+2026-09-10 21:35:40,343 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (67 chars)
+2026-09-10 21:35:40,347 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Vamos adicionar mais agentes nestes squads, achei muito pouco ainda'
+2026-09-10 21:36:53,587 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:36:53,587 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=73.2s api_calls=9 response=1603 chars
+2026-09-10 21:42:03,454 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (207 chars)
+2026-09-10 21:42:03,455 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Não esta bom. apague tudo e vamos gerar squad por squad, o certo é voce ir me pe'
+2026-09-10 21:42:32,409 INFO gateway.platforms.telegram: Telegram clarify button resolved (id=af347bed88, choice='🏹 Comercial — prospecção, outreach e propostas', user=Rob)
+2026-09-10 21:52:47,645 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:52:47,646 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=644.2s api_calls=7 response=1076 chars
+2026-09-10 22:55:12,320 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3746s)
+2026-09-10 22:55:12,321 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-11 04:00:37,006 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-11 04:00:37,007 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-11 19:15:13,560 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (65 chars)
+2026-09-11 19:15:13,561 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='analise este repo: https://github.com/VoltAgent/awesome-design-md'
+2026-09-11 19:21:00,377 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 19:21:00,377 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=346.8s api_calls=10 response=2102 chars
+2026-09-11 19:21:36,503 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (123 chars)
+2026-09-11 19:21:36,504 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg="1. PME's no brasil e principalmente na regiao metropolitana de POA e dos sinos 2"
+2026-09-11 19:25:15,428 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-11 19:25:42,109 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-11 19:27:48,581 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[188237]
+2026-09-11 19:35:40,161 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 19:35:40,161 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=843.7s api_calls=26 response=1256 chars
+2026-09-11 20:36:48,200 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3669s)
+2026-09-11 20:36:48,202 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-12 00:17:45,899 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (33 chars)
+2026-09-12 00:17:45,900 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='como te dou acesso ao meu guthub?'
+2026-09-12 00:17:57,033 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-12 00:17:57,033 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=11.1s api_calls=1 response=928 chars
+2026-09-12 00:32:38,193 INFO gateway.platforms.base: [Telegram] Sending response (189 chars) to 8944451892
+2026-09-12 01:10:41,294 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-12 01:10:41,295 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-12 01:11:30,213 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-12 01:11:30,214 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Timed out
+2026-09-12 01:11:58,561 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 2)
+2026-09-12 04:02:16,793 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-12 04:02:16,794 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-13 01:10:39,592 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-13 01:10:39,592 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-13 01:11:28,469 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-13 01:11:28,469 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Timed out
+2026-09-13 01:11:58,790 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-13 01:11:58,791 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
+2026-09-13 01:12:19,274 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 3)

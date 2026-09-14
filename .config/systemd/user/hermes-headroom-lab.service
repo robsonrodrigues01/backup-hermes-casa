@@ -1,0 +1,11 @@
+[Unit]
+Description=Headroom optimization proxy (lab cobaia) - port 8787
+After=network.target
+
+[Service]
+ExecStart=/home/hermes/headroom-test/venv/bin/headroom proxy --port 8787 --openai-api-url https://api.vultrinference.com/v1 --no-telemetry --lossless
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

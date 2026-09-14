@@ -1,0 +1,739 @@
+2026-09-08 22:55:52,714 INFO gateway.run: Starting Hermes Gateway...
+2026-09-08 22:55:52,714 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/cuidar/sessions
+2026-09-08 22:55:52,725 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-08 22:55:52,726 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-08 22:55:52,727 INFO gateway.run: Active profile: cuidar
+2026-09-08 22:55:52,853 INFO gateway.run: Connecting to telegram...
+2026-09-08 22:55:52,936 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-08 22:55:52,936 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-08 22:55:54,088 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-08 22:55:54,354 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-08 22:55:54,623 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-08 22:55:54,623 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 15 hidden (over 30 limit). Use /commands for full list.
+2026-09-08 22:55:54,624 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-08 22:55:54,626 INFO gateway.run: ✓ telegram connected
+2026-09-08 22:55:54,653 INFO gateway.run: Connecting to api_server...
+2026-09-08 22:55:54,656 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-09-08 22:55:54,656 WARNING gateway.run: ✗ api_server failed to connect
+2026-09-08 22:55:54,658 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-09-08 22:55:54,659 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-08 22:55:54,663 INFO gateway.run: Channel directory built: 0 target(s)
+2026-09-08 22:55:55,664 INFO gateway.run: Starting reconnection watcher for 1 failed platform(s): api_server
+2026-09-08 22:55:55,665 INFO gateway.run: Press Ctrl+C to stop
+2026-09-08 22:55:55,670 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-08 22:56:00,691 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-08 22:56:14,363 INFO gateway.run: Ignoring /start platform ping for session agent:main:telegram:dm:8944451892
+2026-09-08 22:56:25,708 INFO gateway.run: Reconnecting api_server (attempt 2)...
+2026-09-08 22:56:25,710 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-09-08 22:56:25,712 INFO gateway.run: Reconnect api_server failed, next retry in 60s
+2026-09-08 22:56:25,751 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-09-08 22:57:25,796 INFO gateway.run: Reconnecting api_server (attempt 3)...
+2026-09-08 22:57:25,798 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-09-08 22:57:25,800 INFO gateway.run: Reconnect api_server failed, next retry in 120s
+2026-09-08 22:57:25,800 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-09-08 22:59:25,905 INFO gateway.run: Reconnecting api_server (attempt 4)...
+2026-09-08 22:59:25,907 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-09-08 22:59:25,908 INFO gateway.run: Reconnect api_server failed, next retry in 240s
+2026-09-08 22:59:25,909 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-09-08 23:01:49,829 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-08 23:01:49,829 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.00 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-08 23:01:49,830 INFO gateway.run: Stopping gateway...
+2026-09-08 23:01:49,830 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-08 23:01:49,831 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-08 23:01:50,288 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-08 23:01:50,288 INFO gateway.run: ✓ telegram disconnected (0.46s)
+2026-09-08 23:01:50,288 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.46s
+2026-09-08 23:01:50,360 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.53s
+2026-09-08 23:01:50,361 INFO gateway.run: Shutdown phase: SessionDB close done at +0.53s
+2026-09-08 23:01:50,363 INFO gateway.run: Gateway stopped (total teardown 0.53s)
+2026-09-08 23:01:50,363 INFO gateway.run: Cron ticker stopped
+2026-09-08 23:01:50,363 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-08 23:01:51,658 INFO gateway.run: Starting Hermes Gateway...
+2026-09-08 23:01:51,658 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/cuidar/sessions
+2026-09-08 23:01:51,666 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-08 23:01:51,667 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-08 23:01:51,667 INFO gateway.run: Active profile: cuidar
+2026-09-08 23:01:51,673 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-08 23:01:51,770 INFO gateway.run: Connecting to telegram...
+2026-09-08 23:01:51,839 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-08 23:01:51,839 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-08 23:01:53,023 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-08 23:01:53,308 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-08 23:01:53,962 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-08 23:01:53,962 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 15 hidden (over 30 limit). Use /commands for full list.
+2026-09-08 23:01:53,963 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-08 23:01:53,965 INFO gateway.run: ✓ telegram connected
+2026-09-08 23:01:53,990 INFO gateway.run: Connecting to api_server...
+2026-09-08 23:01:53,993 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-09-08 23:01:53,993 WARNING gateway.run: ✗ api_server failed to connect
+2026-09-08 23:01:53,994 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-09-08 23:01:53,996 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-08 23:01:53,999 INFO gateway.run: Channel directory built: 0 target(s)
+2026-09-08 23:01:55,001 INFO gateway.run: Starting reconnection watcher for 1 failed platform(s): api_server
+2026-09-08 23:01:55,001 INFO gateway.run: Press Ctrl+C to stop
+2026-09-08 23:01:55,007 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-08 23:02:00,030 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-08 23:02:23,952 WARNING gateway.platforms.telegram: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-09-08 23:02:25,046 INFO gateway.run: Reconnecting api_server (attempt 2)...
+2026-09-08 23:02:25,048 ERROR gateway.platforms.api_server: [Api_Server] Port 8642 already in use. Set a different port in config.yaml: platforms.api_server.port
+2026-09-08 23:02:25,050 INFO gateway.run: Reconnect api_server failed, next retry in 60s
+2026-09-08 23:02:25,051 INFO gateway.platforms.api_server: [Api_Server] API server stopped
+2026-09-08 23:02:48,602 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after conflict retry 1/5
+2026-09-08 23:03:11,116 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-08 23:03:11,117 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.02 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-08 23:03:11,118 INFO gateway.run: Stopping gateway...
+2026-09-08 23:03:11,118 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-08 23:03:11,120 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-08 23:03:14,632 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-08 23:03:14,632 INFO gateway.run: ✓ telegram disconnected (3.51s)
+2026-09-08 23:03:14,632 INFO gateway.run: Shutdown phase: all adapters disconnected at +3.51s
+2026-09-08 23:03:14,760 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +3.64s
+2026-09-08 23:03:14,761 INFO gateway.run: Shutdown phase: SessionDB close done at +3.64s
+2026-09-08 23:03:14,762 INFO gateway.run: Gateway stopped (total teardown 3.64s)
+2026-09-08 23:03:14,762 INFO gateway.run: Cron ticker stopped
+2026-09-08 23:03:14,762 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-08 23:03:15,997 INFO gateway.run: Starting Hermes Gateway...
+2026-09-08 23:03:15,997 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/cuidar/sessions
+2026-09-08 23:03:16,005 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-08 23:03:16,005 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-08 23:03:16,006 INFO gateway.run: Active profile: cuidar
+2026-09-08 23:03:16,011 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-08 23:03:16,111 INFO gateway.run: Connecting to telegram...
+2026-09-08 23:03:16,181 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-08 23:03:16,182 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-08 23:03:17,400 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-08 23:03:17,687 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-08 23:03:17,976 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-08 23:03:17,976 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 15 hidden (over 30 limit). Use /commands for full list.
+2026-09-08 23:03:17,978 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-08 23:03:17,981 INFO gateway.run: ✓ telegram connected
+2026-09-08 23:03:17,982 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-08 23:03:17,986 INFO gateway.run: Channel directory built: 0 target(s)
+2026-09-08 23:03:18,988 INFO gateway.run: Press Ctrl+C to stop
+2026-09-08 23:03:19,018 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-08 23:03:23,993 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-08 23:04:58,414 INFO gateway.run: Ignoring /start platform ping for session agent:main:telegram:dm:8944451892
+2026-09-08 23:05:05,905 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (2 chars)
+2026-09-08 23:05:05,905 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Oi'
+2026-09-08 23:05:17,999 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-08 23:05:17,999 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=12.1s api_calls=1 response=264 chars
+2026-09-08 23:05:34,125 INFO gateway.platforms.base: [Telegram] Sending response (3225 chars) to 8944451892
+2026-09-08 23:06:47,538 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (227 chars)
+2026-09-08 23:06:47,539 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Certo Claudete, estou me preparando para lançar o cuidar.vc a público e preciso '
+2026-09-08 23:10:39,037 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (50 chars)
+2026-09-08 23:19:25,262 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-08 23:20:04,351 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-08 23:20:04,352 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=796.8s api_calls=2 response=2212 chars
+2026-09-09 00:24:25,237 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3862s)
+2026-09-09 00:24:25,237 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-09 04:04:41,331 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-09 04:04:41,332 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-09 15:35:39,374 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (356 chars)
+2026-09-09 15:35:39,375 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='1. O site está no ar, o código está no github e hospedado no lovable, tenho coda'
+2026-09-09 15:40:06,161 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-09 15:40:06,161 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=266.8s api_calls=9 response=1272 chars
+2026-09-09 16:40:23,427 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3618s)
+2026-09-09 16:40:23,427 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-09 17:24:37,546 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-09 17:24:37,546 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.22 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 17:24:37,547 INFO gateway.run: Stopping gateway...
+2026-09-09 17:24:37,547 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-09 17:24:37,550 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-09 17:24:38,049 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-09 17:24:38,049 INFO gateway.run: ✓ telegram disconnected (0.50s)
+2026-09-09 17:24:38,049 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.50s
+2026-09-09 17:24:38,050 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.50s
+2026-09-09 17:24:38,056 INFO gateway.run: Shutdown phase: SessionDB close done at +0.51s
+2026-09-09 17:24:38,057 INFO gateway.run: Gateway stopped (total teardown 0.51s)
+2026-09-09 17:24:38,057 INFO gateway.run: Cron ticker stopped
+2026-09-09 17:24:38,058 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-09 17:24:40,528 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 17:24:40,529 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/cuidar/sessions
+2026-09-09 17:24:40,538 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 17:24:40,538 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 17:24:40,539 INFO gateway.run: Active profile: cuidar
+2026-09-09 17:24:40,544 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-09 17:24:40,645 INFO gateway.run: Connecting to telegram...
+2026-09-09 17:24:40,718 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 17:24:40,719 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 17:24:42,427 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 17:24:42,703 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 17:24:42,979 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 17:24:42,979 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 38 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 17:24:42,980 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 17:24:42,982 INFO gateway.run: ✓ telegram connected
+2026-09-09 17:24:42,982 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 17:24:42,987 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-09 17:24:43,989 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 17:24:44,020 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 17:24:48,997 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-09 18:32:26,104 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-09 18:32:26,104 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.10 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-09 18:32:26,106 INFO gateway.run: Stopping gateway...
+2026-09-09 18:32:26,108 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-09 18:32:26,114 INFO gateway.run: Shutdown phase: drain done at +0.01s (drain took 0.01s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-09 18:32:26,607 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-09 18:32:26,607 INFO gateway.run: ✓ telegram disconnected (0.49s)
+2026-09-09 18:32:26,608 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.50s
+2026-09-09 18:32:26,702 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.60s
+2026-09-09 18:32:26,704 INFO gateway.run: Shutdown phase: SessionDB close done at +0.60s
+2026-09-09 18:32:26,705 INFO gateway.run: Gateway stopped (total teardown 0.60s)
+2026-09-09 18:32:26,706 INFO gateway.run: Cron ticker stopped
+2026-09-09 18:32:26,708 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-09 18:32:28,657 INFO gateway.run: Starting Hermes Gateway...
+2026-09-09 18:32:28,657 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/cuidar/sessions
+2026-09-09 18:32:28,676 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-09 18:32:28,676 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-09 18:32:28,678 INFO gateway.run: Active profile: cuidar
+2026-09-09 18:32:28,688 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-09 18:32:28,889 INFO gateway.run: Connecting to telegram...
+2026-09-09 18:32:29,030 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-09 18:32:29,030 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-09 18:32:30,315 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-09 18:32:31,462 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-09 18:32:31,757 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-09 18:32:31,758 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 38 hidden (over 30 limit). Use /commands for full list.
+2026-09-09 18:32:31,759 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-09 18:32:31,761 INFO gateway.run: ✓ telegram connected
+2026-09-09 18:32:31,762 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-09 18:32:31,769 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-09 18:32:32,771 INFO gateway.run: Press Ctrl+C to stop
+2026-09-09 18:32:32,802 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-09 18:32:37,779 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-10 01:10:41,691 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-10 01:10:41,691 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-10 01:10:47,439 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Bad Gateway
+2026-09-10 01:10:47,440 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
+2026-09-10 01:11:17,740 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-10 01:11:17,740 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
+2026-09-10 01:11:38,185 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 3)
+2026-09-10 03:46:56,336 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (27 chars)
+2026-09-10 03:46:56,354 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Switch to DeepSeek-V4-Flash'
+2026-09-10 03:47:11,057 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[141989]
+2026-09-10 03:47:26,231 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 03:47:34,958 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 03:47:34,958 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=38.6s api_calls=9 response=647 chars
+2026-09-10 03:47:38,986 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (207 chars)
+2026-09-10 03:47:38,987 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sudo systemctl disable --now hermes-gateway.service hermes-dashboard.service && '
+2026-09-10 03:48:13,355 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1592 chars)
+2026-09-10 03:58:10,095 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-10 04:00:11,769 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 04:00:11,769 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=752.8s api_calls=18 response=180 chars
+2026-09-10 05:04:13,082 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3842s)
+2026-09-10 05:04:13,083 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-10 05:31:34,291 INFO gateway.run: curator: curator: snapshot created (2026-09-10T05-31-34Z)
+2026-09-10 05:31:34,320 INFO gateway.run: curator: curator: auto: no changes; llm: skipped (no candidates)
+2026-09-10 13:11:56,730 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (101 chars)
+2026-09-10 13:11:56,731 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sk_de2...ddec   aqui esta '
+2026-09-10 13:13:50,680 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 13:15:07,821 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 13:15:07,821 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=191.1s api_calls=9 response=16601 chars
+2026-09-10 13:35:45,610 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (118 chars)
+2026-09-10 13:35:45,611 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Você não precisa escrever tudo o que está fazendo pra mim, isso bagunça tudo a c'
+2026-09-10 13:35:52,892 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 13:35:52,892 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=7.3s api_calls=1 response=160 chars
+2026-09-10 13:40:41,885 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (48 chars)
+2026-09-10 13:40:41,886 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Quem da squad das redes sociais cuida das artes?'
+2026-09-10 13:40:52,581 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 13:40:52,581 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=10.7s api_calls=2 response=815 chars
+2026-09-10 13:41:39,307 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (113 chars)
+2026-09-10 13:41:39,308 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Como está setado a paleta de cores e kit de marca dela? Ela sabe os tipos de art'
+2026-09-10 13:42:03,796 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 13:42:03,796 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=24.5s api_calls=5 response=310 chars
+2026-09-10 13:43:05,154 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (34 chars)
+2026-09-10 13:43:05,155 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Exatamente esse, https://cuidar.vc'
+2026-09-10 13:43:44,714 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 13:43:44,714 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=39.6s api_calls=4 response=7860 chars
+2026-09-10 13:45:13,645 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (23 chars)
+2026-09-10 13:45:13,646 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='#0ea5e9 e branco também'
+2026-09-10 13:46:53,924 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 239.0s
+2026-09-10 13:46:54,469 ERROR gateway.platforms.telegram: [Telegram] Overflow split: first-chunk edit failed: Flood control exceeded. Retry in 238 seconds
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/gateway/platforms/telegram.py", line 2342, in _edit_overflow_split
+    await self._bot.edit_message_text(
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 1732, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 4543, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 629, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 819, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 369, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 351, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 238 seconds
+2026-09-10 13:46:55,602 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 237.0s
+2026-09-10 13:46:56,058 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 237.0s
+2026-09-10 13:47:47,440 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 185.0s: Flood control exceeded. Retry in 185 seconds
+2026-09-10 13:47:51,878 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=158.2s api_calls=3 response=67174 chars
+2026-09-10 13:47:51,902 INFO gateway.platforms.base: [Telegram] Sending response (67174 chars) to 8944451892
+2026-09-10 13:47:52,187 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 180.0s: Flood control exceeded. Retry in 180 seconds
+2026-09-10 13:50:54,227 WARNING gateway.platforms.telegram: [Telegram] MarkdownV2 parse failed, falling back to plain text: Can't parse entities: can't find end of code entity at byte offset 3700
+2026-09-10 13:50:57,483 WARNING gateway.platforms.telegram: [Telegram] MarkdownV2 parse failed, falling back to plain text: Can't parse entities: character '#' is reserved and must be escaped with the preceding '\'
+2026-09-10 13:50:58,201 WARNING gateway.platforms.telegram: [Telegram] MarkdownV2 parse failed, falling back to plain text: Can't parse entities: can't find end of code entity at byte offset 0
+2026-09-10 14:15:13,076 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_c53241a465f6.jpg
+2026-09-10 14:15:13,718 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_afdd26c27421.jpg
+2026-09-10 14:15:14,520 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Vc está enlouquecendo? O que que eu te disse para escrever aqui só o necessário?'
+2026-09-10 14:15:16,262 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 2 image(s) via vision_analyze.
+2026-09-10 14:17:14,287 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 14:17:14,287 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=119.8s api_calls=2 response=232 chars
+2026-09-10 14:21:18,325 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_b471297c64f7.jpg
+2026-09-10 14:21:19,108 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_1b514209ddf3.jpg
+2026-09-10 14:21:19,789 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_a66a31f60a40.jpg
+2026-09-10 14:21:19,911 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg=''
+2026-09-10 14:21:22,002 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 3 image(s) via vision_analyze.
+2026-09-10 14:21:22,675 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_8a293bc282f6.jpg
+2026-09-10 14:21:23,332 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_62f038bccc4a.jpg
+2026-09-10 14:23:26,157 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (23 chars)
+2026-09-10 14:25:12,521 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 160.0s
+2026-09-10 14:25:13,418 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 159.0s
+2026-09-10 14:25:14,372 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 158.0s
+2026-09-10 14:25:48,541 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 124.0s: Flood control exceeded. Retry in 124 seconds
+2026-09-10 14:25:52,858 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: final stream delivery not confirmed; sending first response before continuing.
+2026-09-10 14:25:53,460 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 119.0s: Flood control exceeded. Retry in 119 seconds
+2026-09-10 14:28:04,496 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 2 image(s) via vision_analyze.
+2026-09-10 14:29:40,333 INFO [20260909_153539_11d3a3e6] gateway.run: Session split detected: 20260909_153539_11d3a3e6 → 20260910_142916_3ce024 (compression)
+2026-09-10 14:29:41,519 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 14:29:41,520 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=501.6s api_calls=2 response=382 chars
+2026-09-10 14:34:16,908 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_e9cd33381416.jpg
+2026-09-10 14:34:17,696 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_1a42a7710b89.jpg
+2026-09-10 14:34:18,281 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_3677d2f1c3bf.jpg
+2026-09-10 14:34:18,498 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Da uma analisada no conteúdo destas imagens'
+2026-09-10 14:34:19,687 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 3 image(s) via vision_analyze.
+2026-09-10 14:34:20,266 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_0742720e83e8.jpg
+2026-09-10 14:34:21,015 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_9278ab41f828.jpg
+2026-09-10 14:34:21,727 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_a1455b5fb0a7.jpg
+2026-09-10 14:34:22,448 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_e1973dbbf4ae.jpg
+2026-09-10 14:34:23,194 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_7ce7cc1774b0.jpg
+2026-09-10 14:34:23,912 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_79c06c88ae7a.jpg
+2026-09-10 14:34:24,448 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_d28d5a9ed885.jpg
+2026-09-10 14:34:25,003 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_dbcd9cff774f.jpg
+2026-09-10 14:34:25,542 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_e27d9da0f933.jpg
+2026-09-10 14:34:26,084 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_faa9560bb74d.jpg
+2026-09-10 14:34:26,629 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_761c12fa78a7.jpg
+2026-09-10 14:36:19,141 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (21 chars)
+2026-09-10 14:36:43,845 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 220.0s
+2026-09-10 14:36:44,220 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 219.0s
+2026-09-10 14:36:44,916 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 219.0s
+2026-09-10 14:36:45,241 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 218.0s
+2026-09-10 14:37:49,387 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 154.0s: Flood control exceeded. Retry in 154 seconds
+2026-09-10 14:37:54,017 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: final stream delivery not confirmed; sending first response before continuing.
+2026-09-10 14:37:54,368 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 149.0s: Flood control exceeded. Retry in 149 seconds
+2026-09-10 14:40:31,836 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 11 image(s) via vision_analyze.
+2026-09-10 14:45:04,362 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 14:45:04,363 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=645.9s api_calls=3 response=15827 chars
+2026-09-10 15:07:33,993 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (198 chars)
+2026-09-10 15:07:33,994 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Vamos utilizar a API da Piapi como geração de imagens por enquanto, segue chave '
+2026-09-10 15:09:41,836 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 15:10:26,603 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 15:12:34,726 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 15:12:34,726 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=300.7s api_calls=29 response=935 chars
+2026-09-10 15:21:35,043 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (49 chars)
+2026-09-10 15:21:35,044 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='A chave de API é sem sk mesmo, você está viajando'
+2026-09-10 15:24:28,148 INFO [20260910_142916_3ce024] gateway.run: Session split detected: 20260910_142916_3ce024 → 20260910_152320_19963d (compression)
+2026-09-10 15:24:29,114 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 15:24:29,115 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=174.1s api_calls=25 response=818 chars
+2026-09-10 15:38:51,257 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_264e0525be54.jpg
+2026-09-10 15:38:52,058 INFO gateway.platforms.telegram: [Telegram] Flushing photo batch agent:main:telegram:dm:8944451892:photo-burst with 1 image(s)
+2026-09-10 15:38:52,059 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg=''
+2026-09-10 15:38:54,066 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 1 image(s) via vision_analyze.
+2026-09-10 15:39:14,328 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 15:39:14,328 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=22.3s api_calls=1 response=1377 chars
+2026-09-10 16:40:12,560 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3659s)
+2026-09-10 16:40:12,561 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-10 21:11:08,579 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (60 chars)
+2026-09-10 21:11:08,580 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='por que o zernio nao esta conectado? eu ja te enviei a chave'
+2026-09-10 21:14:52,559 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 110.0s
+2026-09-10 21:14:52,887 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 110.0s
+2026-09-10 21:14:53,218 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 109.0s
+2026-09-10 21:14:53,522 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 109.0s
+2026-09-10 21:15:01,948 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 101.0s: Flood control exceeded. Retry in 101 seconds
+2026-09-10 21:15:26,284 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 76.0s
+2026-09-10 21:15:26,285 INFO gateway.run: [Telegram] Progress edit flood control, backing off
+2026-09-10 21:15:31,328 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 71.0s
+2026-09-10 21:15:31,328 INFO gateway.run: [Telegram] Progress edit flood control, backing off
+2026-09-10 21:15:35,138 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 68.0s
+2026-09-10 21:15:35,138 INFO gateway.run: [Telegram] Progress edit flood control, backing off
+2026-09-10 21:16:07,248 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 35.0s
+2026-09-10 21:16:07,249 INFO gateway.run: [Telegram] Progress edit flood control, backing off
+2026-09-10 21:16:11,389 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 31.0s
+2026-09-10 21:16:11,389 INFO gateway.run: [Telegram] Progress edit flood control, backing off
+2026-09-10 21:16:17,047 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 26.0s
+2026-09-10 21:16:17,048 INFO gateway.run: [Telegram] Progress edit flood control, backing off
+2026-09-10 21:16:19,784 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control, waiting 23.0s
+2026-09-10 21:16:19,785 INFO gateway.run: [Telegram] Progress edit flood control, backing off
+2026-09-10 21:16:33,575 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=325.0s api_calls=73 response=894 chars
+2026-09-10 21:16:33,580 INFO gateway.platforms.base: [Telegram] Sending response (894 chars) to 8944451892
+2026-09-10 21:16:33,857 WARNING gateway.platforms.telegram: [Telegram] Telegram flood control on send (attempt 1/3), retrying in 9.0s: Flood control exceeded. Retry in 9 seconds
+2026-09-10 21:18:12,852 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (22 chars)
+2026-09-10 21:18:12,853 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='"Switch to GLM-5.1-FP8'
+2026-09-10 21:18:25,742 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:18:25,743 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=12.9s api_calls=2 response=898 chars
+2026-09-10 21:18:55,246 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (8 chars)
+2026-09-10 21:18:55,247 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='tglm-5.3'
+2026-09-10 21:19:04,388 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:19:04,389 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=9.1s api_calls=2 response=190 chars
+2026-09-10 21:19:14,057 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (12 chars)
+2026-09-10 21:19:14,058 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='troque agora'
+2026-09-10 21:20:42,832 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 21:22:26,964 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:22:26,965 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=192.9s api_calls=7 response=287 chars
+2026-09-10 21:22:50,852 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-10 21:22:50,852 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.01 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-10 21:22:50,853 INFO gateway.run: Stopping gateway...
+2026-09-10 21:22:50,853 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-10 21:22:50,854 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-10 21:22:51,379 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-10 21:22:51,379 INFO gateway.run: ✓ telegram disconnected (0.52s)
+2026-09-10 21:22:51,379 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.53s
+2026-09-10 21:22:51,380 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.53s
+2026-09-10 21:22:51,383 INFO gateway.run: Shutdown phase: SessionDB close done at +0.53s
+2026-09-10 21:22:51,385 INFO gateway.run: Gateway stopped (total teardown 0.53s)
+2026-09-10 21:22:51,385 INFO gateway.run: Cron ticker stopped
+2026-09-10 21:22:51,385 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-10 21:22:53,410 INFO gateway.run: Starting Hermes Gateway...
+2026-09-10 21:22:53,410 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/cuidar/sessions
+2026-09-10 21:22:53,419 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-10 21:22:53,419 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-10 21:22:53,420 INFO gateway.run: Active profile: cuidar
+2026-09-10 21:22:53,425 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-10 21:22:53,528 INFO gateway.run: Connecting to telegram...
+2026-09-10 21:22:53,596 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-10 21:22:53,596 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-10 21:22:54,902 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-10 21:22:55,207 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-10 21:22:55,508 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-10 21:22:55,508 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 39 hidden (over 30 limit). Use /commands for full list.
+2026-09-10 21:22:55,509 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-10 21:22:55,511 INFO gateway.run: ✓ telegram connected
+2026-09-10 21:22:55,512 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-10 21:22:55,516 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-10 21:22:56,518 INFO gateway.run: Press Ctrl+C to stop
+2026-09-10 21:22:56,549 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-10 21:23:01,527 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-10 21:24:09,106 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (6 chars)
+2026-09-10 21:24:09,123 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='mudou?'
+2026-09-10 21:24:37,086 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:24:37,087 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=28.0s api_calls=5 response=246 chars
+2026-09-10 21:25:09,410 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (77 chars)
+2026-09-10 21:25:09,411 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Há postagens prontas para o instagram? quero ver as imagens que foram criadas'
+2026-09-10 21:26:46,892 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:26:46,893 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=97.5s api_calls=4 response=1179 chars
+2026-09-10 21:26:46,912 INFO gateway.platforms.telegram: [Telegram] Sending media group of 6 photo(s) (chunk 1/1)
+2026-09-10 21:32:02,376 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (58 chars)
+2026-09-10 21:32:02,377 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='mcp_servers:   krea-ai:     url: "https://api.krea.ai/mcp"'
+2026-09-10 21:32:46,767 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 21:35:30,041 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:35:30,042 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=207.7s api_calls=15 response=474 chars
+2026-09-10 21:37:18,960 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (69 chars)
+2026-09-10 21:37:18,961 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='e6c6722c-36a9-4cdc-b663-cfd4f3397031:HbGuzNTiPpTNla7x0lSy5iTWj51mlx_j'
+2026-09-10 21:42:27,506 INFO [20260910_152320_19963d] gateway.run: Session split detected: 20260910_152320_19963d → 20260910_213745_fa07f9 (compression)
+2026-09-10 21:42:28,399 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:42:28,399 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=309.4s api_calls=26 response=1252 chars
+2026-09-10 21:42:50,855 INFO gateway.run: Received SIGTERM — initiating shutdown
+2026-09-10 21:42:50,855 WARNING gateway.run: Shutdown context: signal=SIGTERM under_systemd=yes parent_pid=109079 parent_name=systemd loadavg_1m=0.03 parent_cmdline='/usr/lib/systemd/systemd --user'
+2026-09-10 21:42:50,856 INFO gateway.run: Stopping gateway...
+2026-09-10 21:42:50,856 INFO gateway.run: Shutdown phase: notify_active_sessions done at +0.00s
+2026-09-10 21:42:50,858 INFO gateway.run: Shutdown phase: drain done at +0.00s (drain took 0.00s, timed_out=False, active_at_start=0, active_now=0)
+2026-09-10 21:42:51,318 INFO gateway.platforms.telegram: [Telegram] Disconnected from Telegram
+2026-09-10 21:42:51,318 INFO gateway.run: ✓ telegram disconnected (0.46s)
+2026-09-10 21:42:51,318 INFO gateway.run: Shutdown phase: all adapters disconnected at +0.46s
+2026-09-10 21:42:51,319 INFO gateway.run: Shutdown phase: final-cleanup tool kill done at +0.46s
+2026-09-10 21:42:51,324 INFO gateway.run: Shutdown phase: SessionDB close done at +0.47s
+2026-09-10 21:42:51,325 INFO gateway.run: Gateway stopped (total teardown 0.47s)
+2026-09-10 21:42:51,326 INFO gateway.run: Cron ticker stopped
+2026-09-10 21:42:51,326 INFO gateway.run: Exiting with code 1 (signal-initiated shutdown without restart request) so systemd Restart=on-failure can revive the gateway.
+2026-09-10 21:42:54,303 INFO gateway.run: Starting Hermes Gateway...
+2026-09-10 21:42:54,303 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/cuidar/sessions
+2026-09-10 21:42:54,312 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-10 21:42:54,312 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-10 21:42:54,313 INFO gateway.run: Active profile: cuidar
+2026-09-10 21:42:54,318 INFO gateway.run: Previous gateway exited cleanly — skipping session suspension
+2026-09-10 21:42:54,484 INFO gateway.run: Connecting to telegram...
+2026-09-10 21:42:54,523 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-10 21:42:54,524 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-10 21:42:55,825 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-10 21:42:56,126 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-10 21:42:56,424 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-10 21:42:56,424 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 39 hidden (over 30 limit). Use /commands for full list.
+2026-09-10 21:42:56,426 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-10 21:42:56,427 INFO gateway.run: ✓ telegram connected
+2026-09-10 21:42:56,428 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-10 21:42:56,433 INFO gateway.run: Channel directory built: 1 target(s)
+2026-09-10 21:42:57,435 INFO gateway.run: Press Ctrl+C to stop
+2026-09-10 21:42:57,466 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-10 21:43:02,443 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-10 21:48:04,964 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (76 chars)
+2026-09-10 21:48:04,981 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Sim, mas antes me diga qual postagem vai para a produçao que iremos validar?'
+2026-09-10 21:52:11,443 INFO [20260910_213745_fa07f9] gateway.run: Session split detected: 20260910_213745_fa07f9 → 20260910_214839_3492d0 (compression)
+2026-09-10 21:52:12,432 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 21:52:12,433 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=247.5s api_calls=9 response=912 chars
+2026-09-10 21:52:12,441 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-10 21:53:29,065 INFO gateway.platforms.telegram: [Telegram] Unsupported document type: .ai
+2026-09-10 21:53:29,066 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg="Unsupported document type '.ai'. Supported types: .cfg, .csv, .docx, .ini, .json"
+2026-09-10 21:53:31,722 INFO gateway.platforms.telegram: [Telegram] Cached user image-document at /home/hermes/.hermes/profiles/cuidar/image_cache/img_1290ec010755.png
+2026-09-10 21:53:32,464 INFO gateway.platforms.telegram: [Telegram] Cached user image-document at /home/hermes/.hermes/profiles/cuidar/image_cache/img_a50daa60e212.png
+2026-09-10 21:53:33,063 INFO gateway.platforms.telegram: [Telegram] Cached user image-document at /home/hermes/.hermes/profiles/cuidar/image_cache/img_38c8b633e619.png
+2026-09-10 21:53:33,642 INFO gateway.platforms.telegram: [Telegram] Cached user image-document at /home/hermes/.hermes/profiles/cuidar/image_cache/img_5cc53f1b30ee.png
+2026-09-10 21:54:01,521 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 4 image(s) via vision_analyze.
+2026-09-10 21:54:33,423 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (28 chars)
+2026-09-10 21:57:36,765 INFO gateway.platforms.telegram: Telegram clarify button resolved (id=92cd1bcea6, choice='Logo 1: squircle azul + coração branco + wordmark azul (lockup principal)', user=Rob)
+2026-09-10 22:01:29,614 INFO [20260910_215401_99c69f] gateway.run: Session split detected: 20260910_214839_3492d0 → 20260910_215521_42a21c (compression)
+2026-09-10 22:01:30,680 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-10 22:04:58,481 INFO [20260910_215521_42a21c] gateway.run: Session split detected: 20260910_214839_3492d0 → 20260910_220215_7d986b (compression)
+2026-09-10 22:04:59,773 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 22:04:59,774 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=690.7s api_calls=8 response=972 chars
+2026-09-10 22:19:01,744 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (104 chars)
+2026-09-10 22:19:01,745 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='investigue se há o Z-Image Turbo nos seus modelos disponiveis, do seu mesmo, que'
+2026-09-10 22:21:05,883 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 22:24:48,217 INFO [20260910_220215_7d986b] gateway.run: Session split detected: 20260910_220215_7d986b → 20260910_222045_541e39 (compression)
+2026-09-10 22:24:49,160 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 22:24:49,160 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=347.4s api_calls=11 response=1182 chars
+2026-09-10 22:24:49,168 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-10 22:25:24,780 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (85 chars)
+2026-09-10 22:25:24,781 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sim, mas vc continua nao consgeuindo colocar o logo que enviei e tem palavras er'
+2026-09-10 22:31:42,631 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 22:34:55,638 INFO [20260910_222045_541e39] gateway.run: Session split detected: 20260910_222045_541e39 → 20260910_222615_15b9ba (compression)
+2026-09-10 22:34:56,527 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 22:34:56,527 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=571.7s api_calls=8 response=838 chars
+2026-09-10 22:34:56,533 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-10 22:38:19,089 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (165 chars)
+2026-09-10 22:38:19,089 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='vamos conectar no canva para voce mexer e testar por lá: CANVA_CLIENT_ID=OC-AaCN'
+2026-09-10 22:38:36,540 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (35 chars)
+2026-09-10 22:40:08,844 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 22:40:43,942 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-10 22:51:44,418 INFO [20260910_222615_15b9ba] gateway.run: Session split detected: 20260910_222615_15b9ba → 20260910_223841_9e8dcf (compression)
+2026-09-10 22:51:45,390 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-10 22:55:02,627 INFO [20260910_223841_9e8dcf] gateway.run: Session split detected: 20260910_222615_15b9ba → 20260910_225239_6d6231 (compression)
+2026-09-10 22:55:03,635 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 22:55:03,635 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=1004.5s api_calls=7 response=1357 chars
+2026-09-10 22:59:05,182 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_8bcfa4adb602.jpg
+2026-09-10 22:59:05,983 INFO gateway.platforms.telegram: [Telegram] Flushing photo batch agent:main:telegram:dm:8944451892:photo-burst with 1 image(s)
+2026-09-10 22:59:05,984 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='deu isso'
+2026-09-10 22:59:07,340 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 1 image(s) via vision_analyze.
+2026-09-10 23:00:28,631 INFO [20260910_225239_6d6231] gateway.run: Session split detected: 20260910_225239_6d6231 → 20260910_230010_2468e6 (compression)
+2026-09-10 23:00:29,981 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:00:29,982 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=84.0s api_calls=1 response=723 chars
+2026-09-10 23:03:19,174 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (152 chars)
+2026-09-10 23:03:19,175 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Não é possível acessar esse site A conexão com 127.0.0.1 foi recusada. Tente:  V'
+2026-09-10 23:03:35,605 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:03:35,605 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=16.4s api_calls=1 response=635 chars
+2026-09-10 23:04:13,207 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1208 chars)
+2026-09-10 23:04:13,208 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='http://127.0.0.1:3001/oauth-redirect?code=eyJraW...YtOT'
+2026-09-10 23:06:02,684 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:06:02,684 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=109.5s api_calls=4 response=688 chars
+2026-09-10 23:07:01,344 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (138 chars)
+2026-09-10 23:07:01,345 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='http://127.0.0.1:3001/oauth-redirect?error=invalid_scope&error_description=Reque'
+2026-09-10 23:08:06,130 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:08:06,131 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=64.8s api_calls=2 response=796 chars
+2026-09-10 23:10:49,171 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (286 chars)
+2026-09-10 23:10:49,172 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='http://127.0.0.1:3001/oauth-redirect?error=invalid_scope&error_description=Reque'
+2026-09-10 23:11:21,000 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:11:21,001 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=31.8s api_calls=2 response=719 chars
+2026-09-10 23:13:19,012 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1268 chars)
+2026-09-10 23:13:19,013 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='apertei em permitir e deu erro: http://127.0.0.1:3001/oauth-redirect?code=eyJraW'
+2026-09-10 23:15:01,932 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (48 chars)
+2026-09-10 23:16:04,240 INFO [20260910_230010_2468e6] gateway.run: Session split detected: 20260910_230010_2468e6 → 20260910_231422_1ea612 (compression)
+2026-09-10 23:16:05,238 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-10 23:17:25,383 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (6 chars)
+2026-09-10 23:17:47,371 INFO [20260910_231422_1ea612] gateway.run: Session split detected: 20260910_230010_2468e6 → 20260910_231712_59e577 (compression)
+2026-09-10 23:17:48,273 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-10 23:18:04,190 INFO [20260910_231712_59e577] gateway.run: Session split detected: 20260910_230010_2468e6 → 20260910_231712_59e577 (compression)
+2026-09-10 23:18:05,521 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:18:05,522 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=286.5s api_calls=2 response=564 chars
+2026-09-10 23:18:56,089 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_5aad4e11e859.jpg
+2026-09-10 23:18:56,890 INFO gateway.platforms.telegram: [Telegram] Flushing photo batch agent:main:telegram:dm:8944451892:photo-burst with 1 image(s)
+2026-09-10 23:18:56,891 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='ja fiz'
+2026-09-10 23:18:58,002 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 1 image(s) via vision_analyze.
+2026-09-10 23:20:30,869 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:20:30,869 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=94.0s api_calls=3 response=718 chars
+2026-09-10 23:23:22,153 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (7 chars)
+2026-09-10 23:23:22,154 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg="pronto'"
+2026-09-10 23:23:30,460 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:23:30,461 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=8.3s api_calls=1 response=348 chars
+2026-09-10 23:23:36,691 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1433 chars)
+2026-09-10 23:23:36,692 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='http://127.0.0.1:3001/oauth-redirect?code=eyJraW...YtOT'
+2026-09-10 23:25:37,000 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:25:37,000 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=120.3s api_calls=3 response=875 chars
+2026-09-10 23:26:14,511 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (1433 chars)
+2026-09-10 23:26:14,512 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='http://127.0.0.1:3001/oauth-redirect?code=eyJraW...YtOT'
+2026-09-10 23:30:24,200 INFO [20260910_231712_59e577] gateway.run: Session split detected: 20260910_231712_59e577 → 20260910_233004_cc0934 (compression)
+2026-09-10 23:30:25,365 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:30:25,366 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=250.9s api_calls=6 response=841 chars
+2026-09-10 23:32:09,507 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (3 chars)
+2026-09-10 23:32:09,508 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sim'
+2026-09-10 23:38:07,256 INFO [20260910_233004_cc0934] gateway.run: Session split detected: 20260910_233004_cc0934 → 20260910_233326_c98ef8 (compression)
+2026-09-10 23:38:08,162 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:38:08,163 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=358.7s api_calls=23 response=906 chars
+2026-09-10 23:38:08,170 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-10 23:39:05,029 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (71 chars)
+2026-09-10 23:39:05,030 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='voce fez pelo canva? todos? ou só esta imagem? as letras estao cortadas'
+2026-09-10 23:42:37,840 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:42:37,840 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=212.8s api_calls=10 response=1092 chars
+2026-09-10 23:42:37,848 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-10 23:46:26,547 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (31 chars)
+2026-09-10 23:46:26,548 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='gere tudo novamente com o canva'
+2026-09-10 23:50:04,184 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-10 23:50:04,184 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=217.6s api_calls=4 response=1413 chars
+2026-09-10 23:50:04,214 INFO gateway.platforms.telegram: [Telegram] Sending media group of 6 photo(s) (chunk 1/1)
+2026-09-10 23:52:49,122 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (128 chars)
+2026-09-10 23:52:49,122 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='algumas legendas estao ficando abaixo do logo. alem disso, em um fundo azul, nao'
+2026-09-11 00:12:28,055 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 00:12:28,055 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=1178.9s api_calls=33 response=1319 chars
+2026-09-11 00:12:28,076 INFO gateway.platforms.telegram: [Telegram] Sending media group of 6 photo(s) (chunk 1/1)
+2026-09-11 00:24:52,624 INFO gateway.platforms.telegram: [Telegram] Cached user photo at /home/hermes/.hermes/profiles/cuidar/image_cache/img_82122d0eca37.jpg
+2026-09-11 00:24:53,425 INFO gateway.platforms.telegram: [Telegram] Flushing photo batch agent:main:telegram:dm:8944451892:photo-burst with 1 image(s)
+2026-09-11 00:24:53,426 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Não gostei deste layout, além disso, o coração do logo cuidar.vc esta com uma bo'
+2026-09-11 00:24:55,686 INFO gateway.run: Image routing: text (mode=text). Pre-analyzing 1 image(s) via vision_analyze.
+2026-09-11 00:30:59,655 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 00:30:59,655 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=366.2s api_calls=13 response=553 chars
+2026-09-11 00:50:57,408 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (60 chars)
+2026-09-11 00:50:57,409 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Qual primeiro post? Quem está fazendo isso, você ou a squad?'
+2026-09-11 00:50:59,399 INFO gateway.run: Session hygiene: 421 messages, ~220,566 tokens (actual) — auto-compressing (threshold: 85% of 256,000 = 217,600 tokens)
+2026-09-11 00:51:26,680 INFO gateway.run: Session hygiene: compressed 421 → 12 msgs, ~220,566 → ~9,087 tokens
+2026-09-11 00:52:20,476 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 00:52:20,476 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=83.1s api_calls=2 response=1269 chars
+2026-09-11 00:52:59,401 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (89 chars)
+2026-09-11 00:52:59,402 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Mas qual post de apresentação? Você não me mandou nada, nenhuma imagem nenhuma l'
+2026-09-11 00:53:09,727 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (27 chars)
+2026-09-11 00:54:23,236 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-11 00:55:35,161 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 00:55:35,161 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=155.8s api_calls=3 response=1342 chars
+2026-09-11 00:55:35,167 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-11 01:02:15,337 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (121 chars)
+2026-09-11 01:02:15,338 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Jamais utilize travessões - para separar frases, isso soa muito IA. Também retir'
+2026-09-11 01:04:49,694 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 01:04:49,694 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=154.4s api_calls=6 response=1091 chars
+2026-09-11 01:04:49,700 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-11 01:09:10,088 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (32 chars)
+2026-09-11 01:09:10,089 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Agenda para amanhã às 7 da manhã'
+2026-09-11 01:22:50,725 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 01:22:50,726 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=820.6s api_calls=25 response=562 chars
+2026-09-11 01:49:11,459 INFO gateway.platforms.telegram: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-11 01:56:06,691 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (127 chars)
+2026-09-11 01:56:06,691 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='precisamos de pelo menos uns 10 layouts diferentes de templates, para as nossas '
+2026-09-11 02:04:54,736 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 02:04:54,736 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=528.0s api_calls=11 response=1253 chars
+2026-09-11 02:04:54,743 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-11 02:13:59,827 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (4554 chars)
+2026-09-11 02:13:59,828 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Carrossel de checklist ou "como fazer" Melhor formato para salvamento e para pos'
+2026-09-11 02:18:09,481 INFO [20260910_233326_c98ef8] gateway.run: Session split detected: 20260910_233326_c98ef8 → 20260911_021430_6f80ec (compression)
+2026-09-11 02:18:10,734 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 02:18:10,734 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=250.9s api_calls=8 response=1536 chars
+2026-09-11 02:19:18,505 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (3243 chars)
+2026-09-11 02:19:18,506 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Custo real da não contratação Fisioterapia após queda, internação, dia de trabal'
+2026-09-11 02:24:30,691 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 02:24:30,692 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=312.2s api_calls=5 response=1102 chars
+2026-09-11 02:36:25,992 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (77 chars)
+2026-09-11 02:36:25,993 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='esqueça Porto Alegre, Canoas, Novo Hamburgo e São Leopoldo, é no brasil todo.'
+2026-09-11 02:37:25,130 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 02:37:25,131 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=59.1s api_calls=5 response=344 chars
+2026-09-11 02:45:46,508 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (58 chars)
+2026-09-11 02:45:46,509 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='gere mais modelos para eu analisar, pelo menos uns 10 mais'
+2026-09-11 03:07:08,218 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 03:07:08,219 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=1281.7s api_calls=16 response=1733 chars
+2026-09-11 03:07:08,225 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-11 04:04:53,940 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-11 04:04:53,942 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-11 12:59:41,406 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (218 chars)
+2026-09-11 12:59:41,407 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='eu estou achando muita coisa pra eu ler, como podemos melhorar isso? afinal, o q'
+2026-09-11 13:05:19,905 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 13:05:19,906 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=338.5s api_calls=13 response=1678 chars
+2026-09-11 13:05:19,921 INFO gateway.platforms.telegram: [Telegram] Sending media group of 2 photo(s) (chunk 1/1)
+2026-09-11 13:37:22,139 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (172 chars)
+2026-09-11 13:37:22,140 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Pode colocar o briefing do cmo duas vezes por dia. Normalmente eu durmo às 00:00'
+2026-09-11 13:40:53,918 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 13:40:53,919 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=211.8s api_calls=5 response=707 chars
+2026-09-11 14:41:59,979 INFO gateway.run: Image cache cleanup: removed 21 stale file(s)
+2026-09-11 14:45:33,366 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3880s)
+2026-09-11 14:45:33,368 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-11 15:42:00,131 INFO gateway.run: Image cache cleanup: removed 1 stale file(s)
+2026-09-11 16:27:42,130 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (377 chars)
+2026-09-11 16:27:42,131 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='voce esta gerando pelo krea ou com o canva as artes?  a segunda postagem de hoje'
+2026-09-11 16:30:50,488 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 16:30:50,488 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=188.4s api_calls=5 response=1757 chars
+2026-09-11 16:30:50,494 WARNING gateway.platforms.base: Skipping unsafe MEDIA directive path: /home/hermes/cuidarvc/squad/artes/template-board2.pngOs dois boards estão anexados aí em cima, numerados. É só me dizer quais números aprova em cada um que registro no gosto-do-rob.md
+2026-09-11 16:30:50,496 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-11 16:38:51,780 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (71 chars)
+2026-09-11 16:38:51,781 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='gostei do 1, do 6, 3, 5 e 10. o resto quero que melhore, estao pessimos'
+2026-09-11 16:42:25,003 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 16:42:25,004 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=213.2s api_calls=3 response=818 chars
+2026-09-11 16:43:04,057 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (78 chars)
+2026-09-11 16:43:04,058 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='quero que use o cnava para as artes. e utilize mais gradientes e glassmorfism.'
+2026-09-11 16:47:48,884 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (758 chars)
+2026-09-11 16:56:23,352 WARNING [20260911_125941_7cf40be8] gateway.platforms.base: Skipping unsafe MEDIA directive path: /home/hermes/cuidarvc/squad/artes/glass/amostra-padrao.png MEDIA:/home/hermes/cuidarvc/squad/artes/glass/amostra-dado.png
+2026-09-11 16:58:19,854 INFO [20260911_125941_7cf40be8] gateway.run: Session split detected: 20260911_125941_7cf40be8 → 20260911_164332_1fad5d (compression)
+2026-09-11 16:58:21,096 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-11 17:13:08,454 INFO [20260911_164332_1fad5d] gateway.run: Session split detected: 20260911_125941_7cf40be8 → 20260911_170644_3880cb (compression)
+2026-09-11 17:13:09,695 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 17:13:09,695 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=1805.6s api_calls=41 response=694 chars
+2026-09-11 17:19:21,608 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (31 chars)
+2026-09-11 17:19:21,609 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='crie uma foto de perfil para vc'
+2026-09-11 17:26:12,509 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 17:26:12,509 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=410.9s api_calls=11 response=726 chars
+2026-09-11 17:26:12,516 INFO gateway.platforms.telegram: [Telegram] Sending media group of 1 photo(s) (chunk 1/1)
+2026-09-11 17:39:28,924 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (30 chars)
+2026-09-11 17:39:28,925 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Põe você minha filha, se vira!'
+2026-09-11 17:44:54,339 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 17:44:54,339 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=325.4s api_calls=17 response=860 chars
+2026-09-11 18:46:07,172 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3674s)
+2026-09-11 18:46:07,173 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-11 19:10:50,343 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (65 chars)
+2026-09-11 19:10:50,344 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='analise este repo: https://github.com/VoltAgent/awesome-design-md'
+2026-09-11 19:12:16,262 INFO [20260911_170644_3880cb] gateway.run: Session split detected: 20260911_170644_3880cb → 20260911_191125_4912ca (compression)
+2026-09-11 19:12:17,387 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 19:12:17,387 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=87.0s api_calls=6 response=1681 chars
+2026-09-11 20:16:14,397 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3838s)
+2026-09-11 20:16:14,398 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-11 20:34:58,844 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (43 chars)
+2026-09-11 20:34:58,845 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='primeiro, vamos criar o CTO e os subagentes'
+2026-09-11 20:45:45,320 INFO gateway.platforms.telegram: Telegram clarify button resolved (id=9233e8a1e6, choice='4 como proposto (CTO + Dev + QA + DevOps, bot próprio pro CTO)', user=Rob)
+2026-09-11 20:57:08,184 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (634 chars)
+2026-09-11 21:02:20,220 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-11 21:09:26,642 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8944451892: skipping resend because final streamed delivery was confirmed.
+2026-09-11 21:21:54,440 INFO gateway.platforms.telegram: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-11 21:22:36,617 INFO [20260911_191125_4912ca] gateway.run: Session split detected: 20260911_191125_4912ca → 20260911_211018_244300 (compression)
+2026-09-11 21:22:37,719 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-11 21:22:37,720 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=2858.9s api_calls=26 response=752 chars
+2026-09-11 22:26:22,725 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3826s)
+2026-09-11 22:26:22,726 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-11 22:42:01,228 INFO gateway.run: Image cache cleanup: removed 4 stale file(s)
+2026-09-11 23:42:01,378 INFO gateway.run: Image cache cleanup: removed 2 stale file(s)
+2026-09-12 00:32:37,429 INFO gateway.platforms.base: [Telegram] Sending response (190 chars) to 8944451892
+2026-09-12 00:42:01,541 INFO gateway.run: Image cache cleanup: removed 1 stale file(s)
+2026-09-12 01:10:40,928 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-12 01:10:40,929 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-12 01:10:46,615 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Bad Gateway
+2026-09-12 01:10:46,615 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
+2026-09-12 01:11:16,954 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
+2026-09-12 01:11:16,955 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
+2026-09-12 01:11:37,443 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 3)
+2026-09-12 04:01:45,113 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-12 04:01:45,114 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-14 10:58:59,072 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[325412]
+2026-09-14 22:09:52,436 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (83 chars)
+2026-09-14 22:09:52,437 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='como podemos usar isso como vantagem? https://apify.com/apify/google-trends-scra'
+2026-09-14 22:11:37,834 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 22:11:37,834 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=105.4s api_calls=4 response=1099 chars
+2026-09-14 22:26:19,941 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (167 chars)
+2026-09-14 22:26:19,942 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='Os nossos agentes conversam entre si? quando que um sabe o que deve ser feito de'
+2026-09-14 22:27:43,255 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-14 22:27:43,256 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=83.3s api_calls=2 response=1463 chars
+2026-09-14 22:35:05,034 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (9 chars)
+2026-09-14 22:35:05,034 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='cria os 3'

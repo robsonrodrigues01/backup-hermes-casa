@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/hermes/.hermes/profiles/era4/logs/curator/20260910-053134",
+  "last_run_at": "2026-09-10T05:31:34.903805+00:00",
+  "last_run_duration_seconds": 43.231363,
+  "last_run_summary": "auto: no changes; llm: Scan complete. Here is the verdict.\n\n## Curator pass — 2026-09-10 (era4 profile)\n\n### What I scanned\n\n| Stage | Result |\n|---|---|\n| Candidate list vs. filesystem | Match. Exactly **1 agent-created skill**: `brand-assets` (branding). The 24…",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 1
+}

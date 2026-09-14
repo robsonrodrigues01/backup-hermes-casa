@@ -1,0 +1,172 @@
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+2026-09-10T%.2TZ; 126362  109079 Wed Sep  9 21:20:14 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python /home/hermes/.local/bin/hermes dashboard --host 0.0.0.0 --port 9119 --no-open
+2026-09-10T%.2TZ; 134733  109079 Thu Sep 10 00:18:40 2026 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace

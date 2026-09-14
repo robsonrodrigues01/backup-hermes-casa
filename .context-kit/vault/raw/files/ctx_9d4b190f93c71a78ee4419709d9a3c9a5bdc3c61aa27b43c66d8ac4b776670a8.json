@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-09-09T18:17:42Z",
+  "item": {
+    "account": null,
+    "id": "ctx_9d4b190f93c71a78ee4419709d9a3c9a5bdc3c61aa27b43c66d8ac4b776670a8",
+    "occurred_at": "2026-09-09T18:17:42Z",
+    "provenance": "files:demo-promessa-reuniao.md",
+    "source": "files",
+    "source_item_id": "demo-promessa-reuniao.md:0650284eb8b1089933ea975d8012d2b1e261e1c84e794fa6006daf1c24993b79",
+    "text": "# Reunião de demonstração\n\nEu prometi enviar a proposta revisada até sexta-feira.",
+    "thread_id": null,
+    "title": "demo-promessa-reuniao",
+    "who": "Arquivo: demo-promessa-reuniao.md",
+    "who_kind": "ferramenta"
+  },
+  "raw": {
+    "bytes": 86,
+    "relative_path": "demo-promessa-reuniao.md",
+    "sha256": "0650284eb8b1089933ea975d8012d2b1e261e1c84e794fa6006daf1c24993b79"
+  },
+  "schema_version": 1
+}

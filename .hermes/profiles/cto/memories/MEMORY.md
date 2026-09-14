@@ -1,0 +1,13 @@
+cuidar.vc (set/2026): em preparação para lançamento público (prazo: o quanto antes). Site no ar, código no GitHub, hospedado no Lovable, codado com Claude Code. Instagram @cuidarvc.br. Público-alvo: cuidadores e idosos + demais profissionais do hall (babás, enfermeiros). Atuação: BRASIL TODO (11/09), sem praça regional. Tom acolhedor e emocional. Claudete produz conteúdo para Rob publicar.
+§
+Squad 24/7 (set/2026): 1-2 posts/dia (IG e FB) via Zernio (chave squad/zernio-key.txt). Pipeline: Planejador → Copywriter → Artes (z-image-turbo: foto SEM texto + compose_card_glass.py, estilo OFICIAL glass 11/09, entrega canva_publish.py no Canva) → QC → Agendador → Métricas. CMO TEM BOT PRÓPRIO t.me/cmocuidarvcbot (profile Hermes "cmo", gateway systemd dedicado, token próprio, skills marketing symlink cmo→cuidar): Rob conversa marketing direto com ele lá; briefing 2x/dia (07h/18h BSB) máx 12 linhas + até 3 artes p/ aprovar gosto saem por lá (job 8c20e6866ceb no profile cmo; antigo 9b7420a209aa pausado). Agentes 1-6 silenciados (deliver=local); feedback em squad/gosto-do-rob.md; pipeline nunca trava esperando resposta. Rob dorme 00h/acorda 07h: nada urgente 22h+. Gosto/layouts: gosto-do-rob.md.
+§
+Piapi (10/09): chave exige prefixo sk- (sem ele 401); base api.piapi.ai; só /v1/chat/completions confirmado; ler doc por provider antes de usar.
+§
+MCP no Hermes: venv exige mcp==1.26.0 exato (fix: uv pip install --python ~/.local/share/uv/tools/hermes-agent/bin/python mcp==1.26.0). krea-ai HABILITADO (34 ferramentas; key MCP_KREA_AI_API_KEY no .env).
+§
+Canva conectado (10-11/09): app OC-AaCNd93weRRM (CANVA_* no .env), tokens+refresh em cuidarvc/squad/canva-tokens.json; canva_publish.py = entrega padrão de artes (compose_card → asset → design editável → export PNG).
+§
+Telegram DM do Rob = chat_id 8944451892 (usar send_message; TELEGRAM_HOME_CHANNEL no perfil cuidar).
+§
+Lovable MCP + GitHub OK no cto: id Lovable 42e995f4-4daf-4261-be2d-7a7472551277, repo robsoncoffy/cuidarvc (clone /home/hermes/cuidarvc/repo, GITHUB_TOKEN no .env). Claude Code = coder da squad: ~/.local/bin/claude, login em ~/.claude renova sozinho (se vencer: claude auth login --claudeai em PTY, nunca setup-token: sanitizador mascara o token); Dev usa claude -p --dangerously-skip-permissions; Claude = ÚNICO coder (diretiva Rob 12/09): nenhum agente edita arquivo do repo direto, toda mudança passa por claude -p; modelo SEMPRE Opus 5 (padrão global em ~/.claude/settings.json, flag --model opus, diretriz Rob 12/09). .env do repo versionado de propósito (só VITE_* públicas).

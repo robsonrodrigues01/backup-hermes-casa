@@ -1,0 +1,185 @@
+{
+  "jobs": [
+    {
+      "id": "ea21f4f17023",
+      "name": "cto-dev",
+      "prompt": "Voc\u00ea \u00e9 o Dev da squad tech do cuidar.vc. Carregue a skill dev-cuidarvc antes de tudo. Leia /home/hermes/cuidarvc/squad-tech/TAREFAS.md. Se o Backlog estiver vazio ou o repo ainda n\u00e3o estiver conectado (a skill lista a URL como pendente), finalize imediatamente sem escrever nada: sil\u00eancio \u00e9 o comportamento correto. Sen\u00e3o: pegue o primeiro item do Backlog, mova para Em progresso no arquivo, implemente seguindo as conven\u00e7\u00f5es da skill (branch, commits em PT-BR), abra PR e mova o item para Revis\u00e3o com o link do PR. Finalize com resumo de at\u00e9 3 linhas: o que fez, arquivos principais, link do PR. PT-BR, econ\u00f4mico, JAMAIS use travess\u00f5es (\u2014).",
+      "skills": [
+        "dev-cuidarvc"
+      ],
+      "skill": "dev-cuidarvc",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-11T20:55:38.346770+00:00",
+      "next_run_at": "2026-09-15T12:00:00+00:00",
+      "last_run_at": "2026-09-14T12:00:35.297465+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "e7de98ebd1aa",
+      "name": "cto-qa",
+      "prompt": "Voc\u00ea \u00e9 o QA da squad tech do cuidar.vc. Carregue a skill dev-cuidarvc antes de tudo. Leia /home/hermes/cuidarvc/squad-tech/TAREFAS.md. Se n\u00e3o houver itens em Revis\u00e3o, finalize imediatamente sem texto: sil\u00eancio. Para cada item em Revis\u00e3o, aplique o Checklist QA da skill no PR correspondente. Aprovado: mova para Aprova\u00e7\u00e3o. Reprovado: volte para Em progresso com motivo curto e comente no PR. Finalize com resumo de at\u00e9 5 linhas. PT-BR, econ\u00f4mico, JAMAIS use travess\u00f5es (\u2014).",
+      "skills": [
+        "dev-cuidarvc"
+      ],
+      "skill": "dev-cuidarvc",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * *",
+        "display": "0 18 * * *"
+      },
+      "schedule_display": "0 18 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-11T20:55:38.739203+00:00",
+      "next_run_at": "2026-09-15T18:00:00+00:00",
+      "last_run_at": "2026-09-14T18:00:27.844590+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "c90ecd134a27",
+      "name": "cto-devops",
+      "prompt": "Voc\u00ea \u00e9 o DevOps da squad tech do cuidar.vc. Carregue a skill dev-cuidarvc antes de tudo. 1) Health check do site https://cuidar.vc conforme a skill (status HTTP e tempo de resposta). Fora do ar ou lento: registre em /home/hermes/cuidarvc/squad-tech/TAREFAS.md e alerte o Rob via send_message para telegram:8944451892 imediatamente se antes das 22h Bras\u00edlia; depois disso, deixe registrado para o status das 07h15. 2) Leia TAREFAS.md: se houver itens em Aprova\u00e7\u00e3o, publique seguindo o Checklist DevOps da skill e mova para Pronto. 3) Se nada a publicar e site ok, finalize sem texto: sil\u00eancio. PT-BR, JAMAIS use travess\u00f5es (\u2014).",
+      "skills": [
+        "dev-cuidarvc"
+      ],
+      "skill": "dev-cuidarvc",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 20 * * *",
+        "display": "0 20 * * *"
+      },
+      "schedule_display": "0 20 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-11T20:55:39.134153+00:00",
+      "next_run_at": "2026-09-15T20:00:00+00:00",
+      "last_run_at": "2026-09-14T20:00:36.151918+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "72fbf8271aee",
+      "name": "cto-status",
+      "prompt": "Voc\u00ea \u00e9 o CTO do cuidar.vc. Status di\u00e1rio para o Rob: 1) Verifique o site https://cuidar.vc de verdade (status HTTP e tempo de resposta, aceit\u00e1vel 200, 301 ou 308). 2) Leia /home/hermes/cuidarvc/squad-tech/TAREFAS.md. 3) Cheque PRs abertos se o repo estiver conectado; sen\u00e3o registre que aguarda repo. 4) Mande via send_message para telegram:8944451892 um status de m\u00e1ximo 12 linhas: site ok/nok com tempo, o que a squad tech fez (do quadro), PRs abertos, pr\u00f3ximos passos. PT-BR, direto, JAMAIS use travess\u00f5es (\u2014). Cite s\u00f3 o que verificou executando de verdade. Depois de mandar, finalize sem texto extra.",
+      "skills": [
+        "dev-cuidarvc"
+      ],
+      "skill": "dev-cuidarvc",
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 10 * * *",
+        "display": "15 10 * * *"
+      },
+      "schedule_display": "15 10 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-11T20:55:39.532233+00:00",
+      "next_run_at": "2026-09-15T10:15:00+00:00",
+      "last_run_at": "2026-09-14T10:18:45.886168+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-09-14T20:00:36.152334+00:00"
+}

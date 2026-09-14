@@ -1,0 +1,49 @@
+# PENDENTES & PRAZOS — Claudinho (chefe: Rob)
+
+> Regra de ouro: leia ESTE arquivo antes de responder "o que tá em aberto?", "o que falta?" ou "quais os prazos?".
+> Manutenção: concluiu item → mova pra Feito · novo item → anote com a data · prazo → [até DD/MM].
+> Por quê: memória pode falhar; este arquivo não. Atualizado em 2026-09-09.
+> Régua de respostas (2026-09-09): dia-a-dia curto; análise de print/decisões detalhado. Rob cobra valor por token.
+
+## Esperando decisão do Rob
+- [ ] (Rob, 1 min): apagar a mensagem com o token `ghp_...` aqui do Telegram + ativar 2FA no GitHub
+- [ ] (Rob, opcional 30s): apagar repo VAZIO_backup `backup-cuidarvc-repo` no GitHub (Settings → Danger Zone) — o repo do cuidar.vc de verdade já mora no robsoncoffy/cuidarvc
+- [x] 10/09 00:59 Painel Mac (porta 9119) DESLIGADO e fora do boot — Rob não conectou o app; era o principal suspeito do martelo de 5-10min
+- [x] 10/09 03:57 RESOLVIDO: Rob rodou sudo (disable+rm fantasma do sótão + daemon-reload) — porta 9119 livre, receitas apagadas. Higiene final: --replace removido do meu unit + daemon-reload + restart limpo agendado (paz-final, 45s) → ÚNICOreste: conferir amanhã que não houve morte nenhuma na noite (journal gateway) → CONFERIDO 12/09 09h Bsb: journal dos 4 gateways limpo desde 11/09 18h.
+- [ ] Docker pra Maxun → monitoramento automático de sites (era4) — precisa senha de sudo; pedir no momento
+- [ ] Canais premium Agent-Reach (X/Reddit/LinkedIn) → cookies de conta secundária + JINA_API_KEY (2 min no site)
+- [~] PARKED pelo Rob (09/09): "esquece esse conselho por enquanto" — só retomar se ELE pedir
+
+## Abertas (a meu critério)
+- [~] 2026-09-11 Autonomia espalhada: constituição no SOUL de Claudemir e Claudete + cron briefing-matinal 9h Bsb nos 3 perfis de negócio (default/era4/cuidar). Observar 3 primeiros briefings (começa 12/09)
+- [~] CÉREBRO era4 (2026-09-11): raio-X local FEITO — ~/.hermes/profiles/era4/brain/ com manual+raio-X+diário+snapshot dos arquivos de serviço+comercial. Falta a parte do Rob: criar o repo PRIVADO era4-brain + token fine-grained e me avisar aqui (o Claudemir engancha o commit diário). Instrução de 2 min enviada no recado do 11/09.
+- [ ] Consolidar memória (teto em 95%) — pro curator; prioridade baixa
+
+- [x] 2026-09-09 Skills leves instaladas + provadas: conselho-de-ia + skill-creator + agent-context-kit (cofre ok, leitura com fonte/data funcionando)
+- [x] 2026-09-09 Nota: parcado gbrain (banco externo pesado); SOUL do agente-orquestrador capturado como anotação pra squads
+- [~] [TODO] uv tool upgrade hermes-agent (1 commit atrás; traz plug de MCP que o cofre do kit quer usar) — BLOQUEADO 13/09 09h Bsb: tentativa no automático falhou, `__pycache__/jiter` em site-packages é dono root (Jun 16) e hermes não apaga. Precisa: `sudo rm -rf /home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/jiter/__pycache__` → depois `uv tool upgrade hermes-agent` (~1 min). Novo código só vale nos restarts dos gateways.
+
+## Migração de servidor (kit pronto 2026-09-12)
+- [x] Backup completo gerado: `/home/hermes/hermes-mudanca.zip` (334MB, 8561 arquivos, ~27s) — contém os 6 perfis inteiros (memórias, skills, SOUL, cron, .env com tokens dos bots). Restaura com `hermes import`
+- [ ] Quando a máquina nova existir: copiar o zip pra ela → `hermes import` → religar gateways POR PERFIL → Headroom (`skill local-proxy-headroom`). Ver skill/index de migração anotado na conversa 12/09. ATENÇÃO: desligar gateways da máquina velha ANTES de ligar os da nova (1 token = 1 poller, senão colisão 409)
+
+### Desenho squads + Conselho (proposta no papel — aguardando OK do Rob)
+1. Grupo "Conselho" (os 3 bots + Rob): bots só falam quando @mencionados.
+   Rob manda a ideia → cada bot dá opinião de 2-3 linhas do SEU domínio (Claudinho=casa, Claudete=cuidar, Claudemir=era4) → Claudinho consolida veredito (bots só falam quando @mencionados).
+2. Squads por tarefa (duplas, sempre a cobaia primeiro):
+   - Squad casa = Claudinho + Cobaia (as ideias da casa testam primeiro aqui)
+   - Squad cuidar = Claudete + Cobaia
+   - Squad era4 = Claudemir + Cobaia
+   Cobaia = @bottesteerabot (perfil _lab_, já com Headroom testado).
+3. Fluxo de skill: ACHADO (print do Rob) → Claudinho inventaria + valida repo → teste com prova real → pedir OK → distribui pro perfil certo → anota no PENDENTES.
+
+## Feito recente
+- [x] 14/09 **Cofre GitHub ao vivo** (`robsoncoffy/backup-live-hermes`, privado): 16.318 arquivos = casa toda conteúdo real (6 perfis, skills, projetos, ferramentas) + Release `migracao-2026-09-12` com zip 351MB anexado. Cron `backup-cofre-github-diario` (17h Bsb): push git diário; dia 1 de cada mês cria Release com zip COMPLETO (inclui diários state.db). README no repo tem o passo-a-passo de restauração. Obs: o repo do cuidar.vc de verdade (robsoncoffy/cuidarvc) jámtarlá é backup do cuidarvc/repo (local tá 14 commits atrás, nada perdido).
+### Kit de ativação (pré-montado — dispara com SIM do Rob)
+1. Rob cria grupo "Conselho" no Telegram e adiciona: @claudinhovc_bot, @claudetezinhabot, @Claudemirera4bot, @bottesteerabot.
+2. Claudinho grava regra do Conselho no SOUL dos 3 perfil-bons: opinar 2-3 linhas do SEU ramo, só quando @mencionado; Claudinho consolida veredito.
+3. Teste ordem: cobaia primeiro (lab) → grupo real. Fluxo dos prints entra no mesmo lote.
+4. Atualizar MAPA.md (seção squads) + anotar data no mural.
+- [x] 2026-09-09 Headroom (compressor) ligado nos 4 bots, verificado
+- [x] 2026-09-09 marketingskills nos 3 perfis; last30days + agent-reach instalados
+- [x] 2026-09-09 PENDENTES.md + MAPA.md criados (ideias do print Amora, aprovadas pelo Rob)

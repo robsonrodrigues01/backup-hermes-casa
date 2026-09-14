@@ -1,0 +1,41 @@
+cam start 2026-09-09T22:47:37Z
+=== NOVO PROCESSO 2026-09-09T%.3Z ===
+ 124411  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile lab gateway run
+ 124413  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile cuidar gateway run
+ 124421  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile era4 gateway run
+ 129818       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+-- pid 124411 pai=109079 genealogia:
+ 124411  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile lab gateway run
+ 109079       1 /usr/lib/systemd/systemd --user
+-- pid 124413 pai=109079 genealogia:
+ 124413  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile cuidar gateway run
+ 109079       1 /usr/lib/systemd/systemd --user
+-- pid 124421 pai=109079 genealogia:
+ 124421  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main --profile era4 gateway run
+ 109079       1 /usr/lib/systemd/systemd --user
+-- pid 129818 pai=1 genealogia:
+ 129818       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+=== NOVO PROCESSO 2026-09-09T%.3Z ===
+ 130590       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+-- pid 130590 pai=1 genealogia:
+ 130590       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+=== NOVO PROCESSO 2026-09-09T%.3Z ===
+ 130700       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+-- pid 130700 pai=1 genealogia:
+ 130700       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+=== NOVO PROCESSO 2026-09-09T%.3Z ===
+ 130823       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+-- pid 130823 pai=1 genealogia:
+ 130823       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+=== NOVO PROCESSO 2026-09-09T%.3Z ===
+ 130934       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+-- pid 130934 pai=1 genealogia:
+ 130934       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+=== NOVO PROCESSO 2026-09-09T%.3Z ===
+ 131043  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+ 131044       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
+-- pid 131043 pai=109079 genealogia:
+ 131043  109079 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main gateway run --replace
+ 109079       1 /usr/lib/systemd/systemd --user
+-- pid 131044 pai=1 genealogia:
+ 131044       1 /home/hermes/.local/share/uv/tools/hermes-agent/bin/python -m hermes_cli.main dashboard --host 0.0.0.0 --port 9119 --insecure --no-open
