@@ -58,3 +58,9 @@
 2026-09-15 03:59:36,183 INFO [20260915_032116_024911bd] gateway.run: Session split detected: 20260915_032116_024911bd → 20260915_035857_854635 (compression)
 2026-09-15 03:59:37,305 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
 2026-09-15 03:59:37,305 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=71.7s api_calls=5 response=562 chars
+2026-09-15 04:01:11,822 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (27 chars)
+2026-09-15 04:01:11,823 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='tente economizar tokens ok?'
+2026-09-15 04:01:17,338 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 04:01:17,339 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=5.5s api_calls=3 response=36 chars
+2026-09-15 05:01:29,336 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3613s)
+2026-09-15 05:01:29,336 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)

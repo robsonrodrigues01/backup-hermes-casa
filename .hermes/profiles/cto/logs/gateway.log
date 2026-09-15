@@ -185,3 +185,5 @@
 2026-09-15 03:52:58,260 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='[IMPORTANT: Background process proc_50a8bfbb99b2 completed (exit code 1). Comman'
 2026-09-15 03:53:13,225 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
 2026-09-15 03:53:13,225 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=15.0s api_calls=3 response=205 chars
+2026-09-15 04:57:29,162 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3857s)
+2026-09-15 04:57:29,162 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)

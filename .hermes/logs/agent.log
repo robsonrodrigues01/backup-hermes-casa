@@ -1112,3 +1112,4 @@ RuntimeError: Could not determine home directory.
 2026-09-15 04:00:15,110 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
 2026-09-15 04:00:15,110 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=MainThread:128258567241856 provider=custom base_url=http://127.0.0.1:8788/v1 model=glm-5.3-flash
 2026-09-15 04:00:15,113 INFO gateway.run: Session expiry done: 1 finalized
+2026-09-15 04:00:20,562 INFO cron.scheduler: Job 'd76ee3655730': delivered to telegram:8944451892 via live adapter

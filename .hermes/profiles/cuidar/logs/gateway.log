@@ -761,3 +761,5 @@ telegram.error.RetryAfter: Flood control exceeded. Retry in 238 seconds
 2026-09-15 03:44:30,870 INFO [20260914_220952_841676e3] gateway.run: Session split detected: 20260914_220952_841676e3 → 20260915_034135_6bb37b (compression)
 2026-09-15 03:44:31,848 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
 2026-09-15 03:44:31,849 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=205.9s api_calls=5 response=1465 chars
+2026-09-15 04:01:03,779 INFO gateway.run: Session expiry: 1 sessions to finalize (telegram:1)
+2026-09-15 04:01:03,782 INFO gateway.run: Session expiry done: 1 finalized

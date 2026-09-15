@@ -40,3 +40,7 @@
 2026-09-15 03:58:25,637 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:58:27,942 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:59:36,228 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:01:11,830 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:01:11,831 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:01:13,037 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:01:14,311 WARNING [20260915_035857_854635] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 1,274/1,375 chars. Adding this entry (164 chars) would exceed the limit. Replace or remove existing entries first.", "current_entries": ["User's name is Rob. He 

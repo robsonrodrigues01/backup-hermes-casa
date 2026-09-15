@@ -3938,3 +3938,6 @@ This sh
 2026-09-15 03:53:39,869 INFO [20260915_031859_45e849] agent.conversation_loop: API call #3: model=glm-5.3-flash provider=custom in=61515 out=101 total=61616 latency=1.5s
 2026-09-15 03:53:39,870 INFO [20260915_031859_45e849] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=glm-5.3-flash api_calls=4/16 budget=4/16 tool_turns=50 last_msg_role=assistant response_len=320 session=20260915_031859_45e849
 2026-09-15 03:53:39,871 INFO [20260915_031859_45e849] run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=bg-review:125332932761280 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 04:57:29,162 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3857s)
+2026-09-15 04:57:29,162 INFO run_agent: OpenAI client closed (cache_evict, shared=True, tcp_force_closed=0) thread=agent-cache-idle-agent:main:telegram:dm:8:125332932761280 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 04:57:29,162 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)

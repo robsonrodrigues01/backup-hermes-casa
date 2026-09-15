@@ -1654,3 +1654,5 @@ telegram.error.TimedOut: Timed out
 2026-09-15 03:41:07,692 WARNING [20260914_220952_841676e3] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:41:07,738 WARNING [20260914_220952_841676e3] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:43:16,270 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "# Kit de Recrutamento de Prestadores v1 (15/09/2026)\n\nMensagens p)
+2026-09-15 08:00:14,540 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 08:00:14,586 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth

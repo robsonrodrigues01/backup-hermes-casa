@@ -2050,3 +2050,59 @@ data: {"type": "error", "error": {"type": "connection_error", "message": "Failed
 2026-09-15 03:48:49,566 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:48:53,561 WARNING [cron_b1c27fe585a1_20260915_034849] agent.tool_executor: Tool read_file returned error (0.10s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: community/playbook.md"}
 2026-09-15 03:48:53,562 WARNING [cron_b1c27fe585a1_20260915_034849] agent.tool_executor: Tool read_file returned error (0.09s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: community/estado.json"}
+2026-09-15 04:04:49,519 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 04:04:49,556 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:04:49,601 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:04:59,357 WARNING [cron_b1c27fe585a1_20260915_040449] agent.tool_executor: Tool terminal returned error (0.96s): {"output": "IG:200\nFB:200\nTraceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAttributeError: 'str' object has no attribute 'get'\nIG convs: 2", "exit_code": 1, "error": nu
+2026-09-15 04:05:01,715 WARNING [cron_b1c27fe585a1_20260915_040449] agent.tool_executor: Tool terminal returned error (0.17s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 14, in <module>\nAttributeError: 'str' object has no attribute 'get'\n==== IG top keys: ['data', 'pagination', 'meta']\nconvs:
+2026-09-15 04:21:49,569 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 04:21:49,607 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:21:49,655 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:37:49,619 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 04:37:49,655 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:37:49,700 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:53:49,669 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 04:53:49,709 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 04:53:49,757 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:09:49,717 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 05:09:49,752 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:09:49,798 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:25:49,765 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 05:25:49,803 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:25:49,848 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:41:49,809 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 05:41:49,847 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:41:49,892 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:57:49,856 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 05:57:49,893 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:57:49,937 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 05:58:04,396 WARNING [cron_b1c27fe585a1_20260915_055749] agent.tool_executor: Tool terminal returned error (0.15s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAttributeError: 'str' object has no attribute 'get'\n=== ig: 2 conversas ===", "exit_code": 1, "error": null}
+2026-09-15 05:58:18,520 WARNING [cron_b1c27fe585a1_20260915_055749] agent.tool_executor: Tool terminal returned error (0.14s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAttributeError: 'str' object has no attribute 'get'\n=== ig: 4 posts ===", "exit_code": 1, "error": null}
+2026-09-15 06:13:49,907 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 06:13:49,947 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 06:13:49,991 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 06:14:00,213 WARNING [cron_b1c27fe585a1_20260915_061349] agent.tool_executor: Tool terminal returned error (0.17s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "curl -s -m 30 -H @zernio.hdr \"https://api.zernio.com/v1/accounts\" | python3 -c \"impo
+2026-09-15 06:14:07,870 WARNING [cron_b1c27fe585a1_20260915_061349] agent.tool_executor: Tool terminal returned error (0.56s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 8, in <module>\nAttributeError: 'str' object has no attribute 'get'\nID: 1033890216298836\n  name: Jesus Rodrigues | updated: 
+2026-09-15 06:29:49,952 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 06:29:49,990 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 06:29:50,035 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 06:30:02,843 WARNING [cron_b1c27fe585a1_20260915_062949] agent.tool_executor: Tool terminal returned error (0.14s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAttributeError: 'str' object has no attribute 'get'\n--- ig: 2 conversas", "exit_code": 1, "error": null}
+2026-09-15 06:45:50,000 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 06:45:50,036 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 06:45:50,083 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 06:46:05,363 WARNING [cron_b1c27fe585a1_20260915_064550] agent.tool_executor: Tool terminal returned error (0.14s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAttributeError: 'str' object has no attribute 'get'\n=== IG convs: 2", "exit_code": 1, "error": null}
+2026-09-15 07:01:50,046 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 07:01:50,082 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 07:01:50,127 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 07:02:06,335 WARNING [cron_b1c27fe585a1_20260915_070150] agent.tool_executor: Tool terminal returned error (0.15s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAttributeError: 'str' object has no attribute 'get'\n== ig: 2 conversas", "exit_code": 1, "error": null}
+2026-09-15 07:18:50,100 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 07:18:50,138 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 07:18:50,184 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 07:19:05,039 WARNING [cron_b1c27fe585a1_20260915_071850] agent.tool_executor: Tool terminal returned error (0.14s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 12, in <module>\nAttributeError: 'str' object has no attribute 'get'\n== IG: 2 conversas", "exit_code": 1, "error": null}
+2026-09-15 07:19:06,649 WARNING [cron_b1c27fe585a1_20260915_071850] agent.tool_executor: Tool terminal returned error (0.17s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 12, in <module>\nAttributeError: 'str' object has no attribute 'get'\n== IG | tipo: dict | chaves: ['data', 'pagination', 'met
+2026-09-15 07:35:50,151 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 07:35:50,332 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 07:35:50,376 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 07:51:50,196 WARNING tools.skills_tool: Skill security warning for 'marca-cuidar-vc': skill file is outside the trusted skills directory (~/.hermes/skills/): /home/hermes/.hermes/profiles/cmo/skills/marketing/marca-cuidar-vc/SKILL.md
+2026-09-15 07:51:50,234 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 07:51:50,277 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
