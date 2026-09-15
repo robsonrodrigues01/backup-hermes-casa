@@ -1,6 +1,6 @@
 model:
   provider: custom
-  default: zai-org/GLM-5.1-FP8
+  default: glm-5.3-flash
   base_url: http://127.0.0.1:8787/v1
   api_key: SLJ22RSCDIY735K7JVFBQERYMZCUQVVHKHDQ
   api_mode: chat_completions

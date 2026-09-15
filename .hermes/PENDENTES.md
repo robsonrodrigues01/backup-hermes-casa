@@ -70,6 +70,6 @@ Meta: conta ~US$2700 -> ~US$400/mês.
 
 ## Plano economia Vultr (15/09)
 Passo 1 FEITO e PROVADO: cmo e cto trocados p/ glm-5.3-flash (configs; rota 8789 testada ok).
-Passo 2 (falta OK do Rob): lab primeiro, depois era4 e Claudinho — sair do glm-5.1 moribundo (404 recorrente, sumiu da lista Vultr).
+Passo 2 FEITO e PROVADO: lab, era4 e Claudinho -> glm-5.3-flash (rotas 8787/8790/8788 testadas ok).
 Passo 3: cuidar fica no glm-5.3 completo (fala com cliente).
 Meta: conta ~US$2700 → ~US$400/mês.
