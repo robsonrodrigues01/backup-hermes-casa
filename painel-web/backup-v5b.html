@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escritório virtual · cuidar.vc</title>
+<link rel="icon" href="data:,">
+<style>
+:root{--tilt:50deg;--gold:#ffc861;--cyan:#6ff3ff;--ink:#f6ecdf;--muted:#b8a48e;--line:#3a2b1f;--wood:#d7ac77}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);min-height:100vh;background:radial-gradient(1400px 700px at 50% -240px,#3b2717 0%,#171009 58%,#0c0806 100%)}
+
+/* ---------- page chrome (mobile first) ---------- */
+.top{position:sticky;top:0;z-index:50;background:rgba(14,10,7,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,220,170,.08)}
+.top-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.logo{flex:none;width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,#ffd27a,#e98a3b);display:grid;place-items:center;box-shadow:0 4px 14px rgba(233,138,59,.35)}
+.logo i{position:relative;width:14px;height:14px;background:#fff;transform:rotate(45deg) translate(2px,2px);border-radius:2px}
+.logo i::before,.logo i::after{content:"";position:absolute;width:14px;height:14px;background:#fff;border-radius:50%}
+.logo i::before{left:-7px;top:0}.logo i::after{left:0;top:-7px}
+.wordmark{font-size:19px;font-weight:800;letter-spacing:-.3px;color:#fff4e2}
+.wordmark b{color:var(--gold);font-weight:800}
+.brand .sep{display:none;width:1px;height:22px;background:#4a3726}
+.brand .sub{display:none;font-size:13px;color:var(--muted);white-space:nowrap}
+.hr{display:flex;align-items:center;gap:8px}
+.live{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:#cfe9d8;background:rgba(34,197,94,.10);border:1px solid rgba(74,222,128,.28);border-radius:999px;padding:5px 10px;white-space:nowrap}
+.live i{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.clock{font-variant-numeric:tabular-nums;font-size:12.5px;background:rgba(255,240,220,.05);border:1px solid rgba(255,220,170,.12);border-radius:999px;padding:5px 11px;white-space:nowrap}
+.clock b{display:none;color:var(--gold);font-weight:700;margin-right:6px}
+main{max-width:1240px;margin:0 auto;padding:18px 12px 0;display:grid;gap:28px}
+.stage-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.stage-head h1{font-size:20px;font-weight:750;letter-spacing:-.2px;line-height:1.2;color:#fff2de}
+.stage-head p{font-size:13px;line-height:1.45;color:var(--muted);margin-top:4px}
+.btn{font:600 13px system-ui,sans-serif;color:#1c130b;background:linear-gradient(180deg,#ffd48a,#e9a54b);border:0;border-radius:10px;padding:8px 14px;cursor:pointer;box-shadow:0 4px 14px rgba(233,165,75,.3);white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.fitwrap{position:relative;width:100%;overflow:hidden;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,220,170,.10)}
+.fitwrap.zoomed{cursor:grab;touch-action:none}
+.fitwrap.dragging{cursor:grabbing}
+.scenebox{position:absolute;left:0;top:0;width:1200px;height:780px;transform-origin:0 0}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#d9c7b0;background:rgba(255,240,220,.04);border:1px solid rgba(255,220,170,.10);border-radius:999px;padding:5px 11px}
+.legend i{width:8px;height:8px;border-radius:50%;background:var(--k);box-shadow:0 0 8px var(--k)}
+.hint{font-size:12px;color:#8e7c69;text-align:center;margin-top:10px}
+.gcard{position:relative;padding:14px;border-radius:22px;background:linear-gradient(160deg,rgba(255,236,210,.08),rgba(255,236,210,.02) 45%,rgba(255,236,210,.05));border:1px solid rgba(255,220,170,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,240,220,.10)}
+.gcard-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:2px 2px 12px}
+.gcard-title{display:flex;align-items:center;gap:10px}
+.gcard h2{font-size:17px;font-weight:750;color:#fff2de}
+.badge-live{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.3px;color:#bbf7d0;background:rgba(34,197,94,.12);border:1px solid rgba(74,222,128,.3);border-radius:999px;padding:3px 9px}
+.badge-live i{position:relative;display:block;width:7px;height:7px;border-radius:50%;background:#4ade80}
+.badge-live i::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:#4ade80;animation:ping 1.6s cubic-bezier(0,0,.2,1) infinite}
+@keyframes ping{75%,100%{transform:scale(2.6);opacity:0}}
+.gcard-link{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--gold);text-decoration:none;padding:7px 12px;border-radius:10px;border:1px solid rgba(255,200,97,.28);background:rgba(255,200,97,.06);white-space:nowrap}
+.gcard-link:hover{background:rgba(255,200,97,.14)}
+.gcard-link svg{width:13px;height:13px}
+.gcard-frame{border-radius:16px;overflow:hidden;background:#0f0b08;border:1px solid rgba(255,220,170,.10)}
+.gcard iframe{display:block;width:100%;height:55vh;min-height:340px;border:0;background:#0f0b08}
+footer{max-width:1240px;margin:36px auto 0;padding:18px 12px 26px;border-top:1px solid rgba(255,220,170,.07);display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:#7d6c5b}
+footer .dot{width:3px;height:3px;border-radius:50%;background:#5a4a3b}
+@media(min-width:720px){
+ .top-in{padding:12px 20px}.wordmark{font-size:21px}
+ .brand .sep,.brand .sub{display:block}.clock b{display:inline}
+ main{padding:28px 20px 0;gap:38px}
+ .stage-head h1{font-size:24px}.stage-head p{font-size:14px}
+ .fitwrap{border-radius:22px}
+ .gcard{padding:20px}.gcard h2{font-size:19px}
+ .gcard iframe{height:65vh}
+}
+
+/* ---------- 3D scene ---------- */
+.viewport{position:absolute;left:0;top:0;width:1200px;height:780px;overflow:hidden;perspective:1600px;perspective-origin:50% 16%;background:linear-gradient(180deg,#120b07 0%,#24160d 40%,#2d1c10 100%)}
+.world{position:absolute;left:0;top:0;width:1200px;height:900px;transform-style:preserve-3d;transform-origin:50% 0;transform:translateY(262px) translateZ(-900px) rotateX(var(--tilt))}
+.world div,.world i{position:absolute}
+.b,.v{transform-style:preserve-3d}
+.f{backface-visibility:hidden}
+.f.t{left:0;top:0;width:100%;height:100%;transform:translateZ(var(--h));transform-style:preserve-3d}
+.f.s{left:0;top:calc(100% - var(--h));width:100%;height:var(--h);transform-origin:50% 100%;transform:rotateX(-90deg)}
+.f.w{left:0;top:0;width:var(--h);height:100%;transform-origin:0 50%;transform:rotateY(-90deg)}
+.f.e{left:calc(100% - var(--h));top:0;width:var(--h);height:100%;transform-origin:100% 50%;transform:rotateY(90deg)}
+.v{pointer-events:none}
+
+/* floor: light oak planks running toward the viewer */
+.floor{background-color:#d5a974;background-image:
+ linear-gradient(180deg,rgba(60,30,10,.34),rgba(60,30,10,0) 30%,rgba(255,220,170,.10) 62%,rgba(60,30,10,.22)),
+ conic-gradient(at 48px 2px,#0000 75%,rgba(90,52,22,.55) 0),
+ conic-gradient(at 48px 2px,#0000 75%,rgba(90,52,22,.55) 0),
+ conic-gradient(at 48px 2px,#0000 75%,rgba(90,52,22,.55) 0),
+ linear-gradient(90deg,rgba(85,50,20,.6) 0 2px,rgba(255,236,200,.18) 2px 3px,#0000 3px),
+ conic-gradient(at 48px 100%,#0000 75%,rgba(120,70,30,.13) 0),
+ conic-gradient(at 48px 100%,#0000 75%,rgba(255,230,190,.10) 0),
+ conic-gradient(at 48px 100%,#0000 75%,rgba(100,55,20,.09) 0),
+ repeating-linear-gradient(90deg,#0000 0 5px,rgba(120,75,35,.13) 5px 6px,#0000 6px 13px,rgba(255,235,205,.10) 13px 14px,#0000 14px 23px,rgba(110,65,30,.10) 23px 24px,#0000 24px 31px),
+ repeating-linear-gradient(90deg,#0000 0 2px,rgba(90,55,25,.07) 2px 3px,#0000 3px 9px);
+ background-size:100% 100%,96px 250px,144px 310px,240px 190px,48px 100%,144px 100%,240px 100%,336px 100%,48px 100%,17px 100%;
+ background-position:0 0,0 0,48px 120px,96px 60px,0 0,0 0,96px 0,192px 0,0 0,0 0}
+.floor i{pointer-events:none}
+.sun{background:linear-gradient(180deg,rgba(255,238,190,.34),rgba(255,230,170,0));filter:blur(6px)}
+.pool{border-radius:50%;background:radial-gradient(closest-side,rgba(255,196,110,.30),rgba(255,180,90,0))}
+.fs{border-radius:14px;background:rgba(40,20,6,.32);filter:blur(7px)}
+
+/* bricks */
+.wall{--m:#4d2a1b;background-color:#8f4b2f;background-image:
+ linear-gradient(180deg,rgba(15,6,2,.62),rgba(15,6,2,.1) 26%,rgba(255,190,120,.05) 55%,rgba(15,6,2,.38)),
+ conic-gradient(at 3px 21px,#0000 75%,var(--m) 0),
+ conic-gradient(at 3px 21px,#0000 75%,var(--m) 0),
+ linear-gradient(#0000 18px,var(--m) 0),
+ conic-gradient(at 66px 21px,#0000 75%,rgba(0,0,0,.16) 0),
+ conic-gradient(at 66px 21px,#0000 75%,rgba(255,170,110,.10) 0),
+ conic-gradient(at 66px 21px,#0000 75%,rgba(40,10,0,.18) 0),
+ conic-gradient(at 66px 21px,#0000 75%,rgba(190,110,60,.16) 0),
+ conic-gradient(at 66px 21px,#0000 75%,rgba(0,0,0,.10) 0);
+ background-size:100% 100%,66px 42px,66px 42px,66px 21px,198px 63px,264px 84px,330px 105px,462px 126px,396px 147px;
+ background-position:0 0,0 0,33px 21px,0 0,0 0,33px 21px,132px 42px,99px 63px,264px 0}
+.wall::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:linear-gradient(#3a2415,#23150c)}
+.wall.side{filter:brightness(.82)}
+.beam{background:linear-gradient(90deg,#1f130b,#4a3020 25%,#3d2718 60%,#1c110a);box-shadow:5px 0 14px rgba(0,0,0,.5),-3px 0 10px rgba(0,0,0,.35)}
+.beam.h{background:linear-gradient(180deg,#4b3120,#2d1c11 70%,#1c110a);box-shadow:0 6px 16px rgba(0,0,0,.55)}
+.brace{height:18px;background:linear-gradient(180deg,#4b3120,#2a190f);box-shadow:0 5px 12px rgba(0,0,0,.45);transform-origin:0 50%}
+
+/* windows */
+.win{border:9px solid #2c1c12;border-radius:3px;background:#2c1c12;display:grid;gap:6px;box-shadow:0 0 50px 12px rgba(255,226,160,.30),inset 0 0 0 2px #1a0f08;overflow:hidden}
+.win span{background:linear-gradient(180deg,#bfe6ff 0%,#eaf8ff 55%,#fff6d6 100%);position:relative;overflow:hidden}
+.win span::after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.55) 0 12%,#0000 12% 30%,rgba(255,255,255,.25) 30% 36%,#0000 36%)}
+.win .sky{position:absolute;inset:9px;pointer-events:none;background:radial-gradient(60px 40px at 78% 22%,rgba(255,250,215,.95),rgba(255,240,180,0))}
+.win::after{content:"";position:absolute;left:-12px;right:-12px;bottom:-12px;height:12px;background:#3a2517}
+.sill{height:12px;background:linear-gradient(#5a3a24,#2d1c11);box-shadow:0 8px 14px rgba(0,0,0,.45)}
+
+/* neon */
+.neon{text-align:center;pointer-events:none}
+.world .neon div,.world .frame div{position:relative}
+.neon .n1{font:800 64px/1"Trebuchet MS","Segoe UI",system-ui,sans-serif;letter-spacing:6px;color:#fff6d8;text-shadow:0 0 2px #fff,0 0 7px #ffe08a,0 0 16px #ffc13b,0 0 32px #ff9f1a,0 0 60px #ff8a00,0 0 90px rgba(255,138,0,.6);animation:flick 7s infinite}
+.neon .n2{font:600 26px/1.2 "Trebuchet MS","Segoe UI",system-ui,sans-serif;letter-spacing:2px;margin-top:8px;color:#effeff;text-shadow:0 0 2px #fff,0 0 6px #8ff7ff,0 0 14px #2de2f5,0 0 28px #00c8e8,0 0 52px #00a5d8}
+.neon::before{content:"";position:absolute;left:-60px;right:-60px;top:-40px;bottom:-40px;background:radial-gradient(closest-side,rgba(255,170,60,.22),rgba(255,170,60,0));z-index:-1}
+@keyframes flick{0%,40%,44%,100%{opacity:1}42%{opacity:.72}43%{opacity:.95}}
+
+/* pendant lamps */
+.lamp .wire{left:59px;top:0;width:2px;height:calc(100% - 78px);background:#15100c}
+.lamp .cap{left:52px;bottom:70px;width:16px;height:12px;background:linear-gradient(90deg,#3a2c20,#8a6a45 45%,#2b2017);border-radius:3px 3px 1px 1px}
+.lamp .bulb{left:48px;bottom:44px;width:24px;height:28px;border-radius:50% 50% 48% 48%/58% 58% 42% 42%;background:radial-gradient(circle at 45% 42%,#fffbe8 0 18%,#ffe39a 38%,#ffb54a 80%);box-shadow:0 0 18px 6px rgba(255,196,90,.75),0 0 44px 16px rgba(255,170,60,.35)}
+.lamp .halo{left:-30px;bottom:-22px;width:180px;height:160px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,200,110,.30),rgba(255,180,80,0))}
+
+/* furniture */
+.desk>.f.t{background:linear-gradient(135deg,rgba(255,240,215,.20),rgba(0,0,0,0) 45%,rgba(60,30,10,.18)),repeating-linear-gradient(90deg,#0000 0 9px,rgba(120,70,30,.10) 9px 10px,#0000 10px 23px),#c89462;border-radius:3px;box-shadow:inset 0 0 0 2px #a97443,inset 0 3px 0 rgba(255,235,200,.35)}
+.desk>.f.s{background:linear-gradient(180deg,#b37d4c 0 7px,#7e5330 7px 9px,#946238 9px),#8e5d35;box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)}
+.desk>.f.s::before{content:"";position:absolute;left:8px;top:14px;width:58px;bottom:6px;border-radius:2px;background:repeating-linear-gradient(180deg,#a06b40 0 calc(33.3% - 2px),#5c3a20 calc(33.3% - 2px) 33.3%);box-shadow:inset 0 0 0 1px #5c3a20}
+.desk>.f.s::after{content:"";position:absolute;right:8px;top:14px;width:58px;bottom:6px;border-radius:2px;background:radial-gradient(circle at 50% 30%,#e9c68b 0 2px,#0000 2.5px),radial-gradient(circle at 50% 70%,#e9c68b 0 2px,#0000 2.5px),#a06b40;box-shadow:inset 0 0 0 1px #5c3a20}
+.desk>.f.w,.desk>.f.e{background:linear-gradient(90deg,#6e4626,#835530)}
+.desk.walnut>.f.t{background:linear-gradient(135deg,rgba(255,230,200,.18),rgba(0,0,0,0) 45%,rgba(0,0,0,.25)),repeating-linear-gradient(90deg,#0000 0 11px,rgba(20,8,0,.14) 11px 12px,#0000 12px 27px),#6a3f22;box-shadow:inset 0 0 0 2px #4a2a15,inset 0 3px 0 rgba(255,220,180,.2)}
+.desk.walnut>.f.s{background:linear-gradient(180deg,#6d4225 0 7px,#3a2213 7px 9px,#553219 9px)}
+.desk.walnut>.f.s::before,.desk.walnut>.f.s::after{background-color:#5e391e;box-shadow:inset 0 0 0 1px #2e1a0c}
+.desk.walnut>.f.w,.desk.walnut>.f.e{background:linear-gradient(90deg,#3a2213,#4d2e18)}
+.counter>.f.t{background:linear-gradient(135deg,#e7e1d6,#b9b1a4);box-shadow:inset 0 0 0 2px #948b7e}
+.counter>.f.s,.counter>.f.e,.counter>.f.w{background:repeating-linear-gradient(90deg,#6b4a2e 0 48px,#3e2a19 48px 50px)}
+.chair-seat>.f.t{background:radial-gradient(circle at 50% 40%,#3d3f47,#1f2026);border-radius:8px}
+.chair-seat>.f.s,.chair-seat>.f.w,.chair-seat>.f.e{background:#16171b}
+.chair-back{background:linear-gradient(90deg,#1c1d22,#3a3c45 45%,#1c1d22);border-radius:12px 12px 6px 6px;box-shadow:inset 0 0 0 2px #121317}
+.chair-back::after{content:"";position:absolute;left:44%;width:12%;top:100%;height:12px;background:#16171b}
+.chair-back.exec{background:linear-gradient(90deg,#3b1d12,#7a3d22 45%,#3b1d12);border-radius:16px 16px 8px 8px;box-shadow:inset 0 0 0 3px #2a130a,inset 0 18px 0 -12px rgba(255,200,160,.18)}
+.chair-pole{background:linear-gradient(90deg,#222,#666,#222)}
+.chair-base{width:40px;height:30px;border-radius:50%;background:radial-gradient(closest-side,#1b1b1f 0 30%,rgba(20,20,24,.0) 32%),conic-gradient(#222 0 8%,#0000 8% 20%,#222 20% 28%,#0000 28% 40%,#222 40% 48%,#0000 48% 60%,#222 60% 68%,#0000 68% 80%,#222 80% 88%,#0000 88%);opacity:.85}
+.pot>.f.t{background:radial-gradient(circle,#3b2a1c 0 55%,#d9d4cb 58%);border-radius:4px}
+.pot>.f.s,.pot>.f.w,.pot>.f.e{background:linear-gradient(90deg,#cfc8bc,#f0ebe3 40%,#b7afa3)}
+.pot.terra>.f.s,.pot.terra>.f.w,.pot.terra>.f.e{background:linear-gradient(90deg,#9a4f2c,#c8714a 40%,#8a4426)}
+.pot.terra>.f.t{background:radial-gradient(circle,#3b2a1c 0 55%,#b8633c 58%)}
+.leaf{bottom:0;transform-origin:50% 100%;border-radius:50% 50% 45% 45%/70% 70% 30% 30%;background:linear-gradient(90deg,#1f5a2a 0 46%,#7dc57a 46% 52%,#2f7a37 52%);box-shadow:inset 0 -6px 10px rgba(0,0,0,.25)}
+.leaf.l2{background:linear-gradient(90deg,#2d6e30 0 47%,#9bd88f 47% 51%,#3f8e3f 51%)}
+.leaf.snake{border-radius:50% 50% 10% 10%/90% 90% 10% 10%;background:repeating-linear-gradient(180deg,#2e6b35 0 6px,#5a9a4e 6px 9px),#2e6b35;box-shadow:inset 3px 0 0 #c9c56b,inset -3px 0 0 #c9c56b}
+
+/* monitors */
+.mon .bez{left:0;top:0;width:100%;height:calc(100% - 13px);background:#17181c;border-radius:4px;padding:3px;box-shadow:0 0 18px rgba(150,205,255,.35),inset 0 0 0 1px #2c2d33}
+.mon .scr{position:relative;width:100%;height:100%;border-radius:2px;overflow:hidden;background:#0d1117}
+.mon .neck{left:calc(50% - 3px);bottom:3px;width:6px;height:11px;background:linear-gradient(90deg,#1c1d21,#4a4b52,#1c1d21)}
+.mon .foot{left:calc(50% - 15px);bottom:0;width:30px;height:4px;background:#24252a;border-radius:3px}
+.mon.lap .bez{height:calc(100% - 5px);border-radius:3px 3px 0 0}
+.mon.lap .neck{display:none}
+.mon.lap .foot{left:-4px;width:calc(100% + 8px);height:5px;background:linear-gradient(#c7cbd2,#8a8f98);border-radius:0 0 3px 3px}
+.scr .ln{left:0;top:0;width:100%;height:200%}
+.scr.code .ln{background:
+ conic-gradient(at 38% 2px,#0000 75%,#79c0ff 0) 4px 3px/100% 18px repeat-y,
+ conic-gradient(at 24% 2px,#0000 75%,#ff7b72 0) 10px 9px/100% 30px repeat-y,
+ conic-gradient(at 46% 2px,#0000 75%,#d2a8ff 0) 10px 15px/100% 42px repeat-y,
+ conic-gradient(at 30% 2px,#0000 75%,#7ee787 0) 16px 21px/100% 24px repeat-y,
+ conic-gradient(at 18% 2px,#0000 75%,#ffa657 0) 4px 6px/100% 36px repeat-y;animation:scroll 11s linear infinite}
+.scr.term{background:#06110a}
+.scr.term .ln{background:
+ conic-gradient(at 60% 2px,#0000 75%,#4ade80 0) 3px 3px/100% 6px repeat-y,
+ conic-gradient(at 20% 2px,#0000 75%,#06110a 0) 40% 3px/100% 12px repeat-y;animation:scroll 6s linear infinite}
+.scr.doc{background:#f5f1e8}
+.scr.doc .ln{background:
+ conic-gradient(at 70% 2px,#0000 75%,#9aa3ad 0) 5px 4px/100% 5px repeat-y,
+ conic-gradient(at 40% 2px,#0000 75%,#f5f1e8 0) 60% 4px/100% 20px repeat-y;animation:scroll 16s linear infinite}
+.scr.dash{background:
+ linear-gradient(90deg,#0000 0 4%,#1e293b 4% 31%,#0000 31% 36%,#1e293b 36% 63%,#0000 63% 68%,#1e293b 68% 96%,#0000 96%) 0 4px/100% 30% no-repeat,
+ linear-gradient(0deg,#0000 0 10%,#22d3ee 10% 70%,#0000 70%) 12% 100%/7% 55% no-repeat,
+ linear-gradient(0deg,#0000 0 10%,#22d3ee 10% 90%,#0000 90%) 24% 100%/7% 55% no-repeat,
+ linear-gradient(0deg,#0000 0 10%,#a78bfa 10% 55%,#0000 55%) 36% 100%/7% 55% no-repeat,
+ linear-gradient(0deg,#0000 0 10%,#22d3ee 10% 100%) 48% 100%/7% 55% no-repeat,
+ linear-gradient(0deg,#0000 0 10%,#f472b6 10% 80%,#0000 80%) 60% 100%/7% 55% no-repeat,
+ linear-gradient(0deg,#0000 0 10%,#22d3ee 10% 95%,#0000 95%) 72% 100%/7% 55% no-repeat,
+ linear-gradient(0deg,#0000 0 10%,#facc15 10% 65%,#0000 65%) 84% 100%/7% 55% no-repeat,#0f172a}
+.scr.dash .ln{height:30%;top:4px;background:radial-gradient(circle at 18% 50%,#4ade80 0 2px,#0000 3px),radial-gradient(circle at 50% 50%,#facc15 0 2px,#0000 3px),radial-gradient(circle at 82% 50%,#f472b6 0 2px,#0000 3px);animation:pulse 2.4s infinite}
+.scr.chart{background:linear-gradient(0deg,rgba(255,255,255,.07) 1px,#0000 1px) 0 0/100% 8px,#111827}
+.scr.chart .ln{height:100%;background:
+ linear-gradient(0deg,#34d399 0 100%) 10% 100%/9% 35% no-repeat,
+ linear-gradient(0deg,#34d399 0 100%) 25% 100%/9% 50% no-repeat,
+ linear-gradient(0deg,#34d399 0 100%) 40% 100%/9% 42% no-repeat,
+ linear-gradient(0deg,#34d399 0 100%) 55% 100%/9% 64% no-repeat,
+ linear-gradient(0deg,#34d399 0 100%) 70% 100%/9% 72% no-repeat,
+ linear-gradient(0deg,#fbbf24 0 100%) 85% 100%/9% 88% no-repeat;transform-origin:50% 100%;animation:grow 5s ease-in-out infinite}
+.scr.insta{background:#fff;padding:3px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.scr.insta b{position:relative;border-radius:1px;background:linear-gradient(135deg,#f9a8d4,#fb923c)}
+.scr.insta b:nth-child(2){background:linear-gradient(135deg,#99f6e4,#38bdf8)}
+.scr.insta b:nth-child(3){background:linear-gradient(135deg,#fde68a,#f59e0b)}
+.scr.insta b:nth-child(4){background:linear-gradient(135deg,#c4b5fd,#818cf8)}
+.scr.insta b:nth-child(5){background:linear-gradient(135deg,#86efac,#14b8a6);animation:pulse 3s infinite}
+.scr.insta b:nth-child(6){background:linear-gradient(135deg,#fecaca,#f43f5e)}
+.scr.server{background:#0a0f0c}
+.scr.server .ln{height:100%;background:
+ radial-gradient(circle,#4ade80 0 1.6px,#0000 2.2px) 5px 3px/100% 7px repeat-y,
+ conic-gradient(at 70% 2px,#0000 75%,#3f5f4a 0) 14px 5px/100% 7px repeat-y;animation:pulse 1.4s steps(2) infinite}
+.scr.check{background:#f8fafc}
+.scr.check .ln{background:
+ radial-gradient(circle,#22c55e 0 2.2px,#0000 2.8px) 6px 3px/100% 8px repeat-y,
+ conic-gradient(at 62% 2px,#0000 75%,#94a3b8 0) 14px 6px/100% 8px repeat-y;animation:scroll 14s linear infinite}
+.scr.cal{background:
+ linear-gradient(90deg,#0000 0 8%,#fda4af 8% 30%,#0000 30%) 0 28%/100% 14% no-repeat,
+ linear-gradient(90deg,#0000 0 40%,#93c5fd 40% 70%,#0000 70%) 0 56%/100% 14% no-repeat,
+ linear-gradient(90deg,#0000 0 60%,#86efac 60% 92%,#0000 92%) 0 84%/100% 14% no-repeat,
+ linear-gradient(90deg,#e2e8f0 1px,#0000 1px) 0 0/14.28% 100%,
+ linear-gradient(#e2e8f0 1px,#0000 1px) 0 0/100% 25%,
+ linear-gradient(#0f766e 0 18%,#fff 18%)}
+.scr.design{background:
+ linear-gradient(#f472b6,#f472b6) 12% 22%/34% 40% no-repeat,
+ radial-gradient(circle,#facc15 0 30%,#0000 32%) 70% 26%/40% 60% no-repeat,
+ linear-gradient(#38bdf8,#38bdf8) 60% 82%/58% 16% no-repeat,
+ linear-gradient(90deg,#0000 0 86%,#27272a 86%),#fafaf9}
+.scr.design .ln{height:100%;background:linear-gradient(#0000 0 30%,#a855f7 30% 36%,#0000 36%) 90% 0/6% 100% no-repeat,linear-gradient(#0000 0 50%,#22c55e 50% 56%,#0000 56%) 90% 0/6% 100% no-repeat;animation:pulse 2s infinite}
+.scr.sheet{background:linear-gradient(90deg,#cbd5e1 1px,#0000 1px) 0 0/20% 100%,linear-gradient(#cbd5e1 1px,#0000 1px) 0 0/100% 6px,linear-gradient(#16a34a 0 16%,#fff 16%)}
+.scr.sheet .ln{height:100%;background:linear-gradient(#0000 0 40%,rgba(34,197,94,.35) 40% 52%,#0000 52%);animation:scroll 5s steps(5) infinite}
+.scr.mail{background:#f1f5f9}
+.scr.mail .ln{background:
+ radial-gradient(circle,#0ea5e9 0 2.5px,#0000 3px) 5px 4px/100% 10px repeat-y,
+ conic-gradient(at 70% 2px,#0000 75%,#475569 0) 13px 3px/100% 10px repeat-y,
+ conic-gradient(at 50% 2px,#0000 75%,#94a3b8 0) 13px 7px/100% 10px repeat-y;animation:scroll 20s linear infinite}
+@keyframes scroll{to{transform:translateY(-50%)}}
+@keyframes grow{0%,100%{transform:scaleY(.8)}50%{transform:scaleY(1)}}
+
+/* desk clutter */
+.kb{height:13px;border-radius:2px;background:repeating-linear-gradient(90deg,#3b3d44 0 3px,#23242a 3px 4px),#2a2b31;box-shadow:0 1px 0 #111;transform:translateZ(.6px)}
+.mouse{width:7px;height:10px;border-radius:4px;background:#2a2b31;transform:translateZ(.6px)}
+.paper{background:linear-gradient(#0000 0 4px,#b9b2a4 4px 5px,#0000 5px 8px,#b9b2a4 8px 9px,#0000 9px 12px,#b9b2a4 12px 13px,#0000 13px) 3px 3px/70% 100% no-repeat,#fbf8f1;box-shadow:1px 1px 2px rgba(0,0,0,.25);transform:translateZ(.8px)}
+.mug{border-radius:2px 2px 5px 5px;background:linear-gradient(90deg,#c9c2b6,#fffdf8 40%,#bdb5a8)}
+.mug::after{content:"";position:absolute;right:-5px;top:3px;width:5px;height:6px;border:2px solid #d8d1c5;border-left:0;border-radius:0 5px 5px 0}
+.mug.red{background:linear-gradient(90deg,#8f1f1f,#e04a3a 40%,#7d1a1a)}
+.mug.teal{background:linear-gradient(90deg,#0f5e57,#1fb3a3 40%,#0b4a44)}
+.steam{left:2px;top:-18px;width:10px;height:18px}
+.steam i{bottom:0;width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.75);filter:blur(1.5px);animation:rise 2.6s ease-out infinite}
+.steam i:nth-child(2){left:4px;animation-delay:.9s}
+.steam i:nth-child(3){left:1px;animation-delay:1.7s}
+@keyframes rise{0%{transform:translateY(4px) scale(.5);opacity:0}30%{opacity:.8}100%{transform:translateY(-16px) scale(1.4);opacity:0}}
+.book>.f.t{background:#f3ead6}
+.book>.f.s,.book>.f.e,.book>.f.w{background:var(--bc)}
+.dlamp{width:30px}
+.dlamp::before{content:"";position:absolute;left:13px;bottom:0;width:4px;height:34px;background:#222;transform:rotate(-12deg);transform-origin:50% 100%}
+.dlamp::after{content:"";position:absolute;left:4px;top:0;width:24px;height:12px;border-radius:12px 12px 2px 2px;background:linear-gradient(#1f4d3c,#12302a);box-shadow:0 8px 14px rgba(255,210,120,.6)}
+
+/* rack */
+.rack>.f.t{background:#141517}
+.rack>.f.w,.rack>.f.e{background:repeating-linear-gradient(90deg,#101113 0 6px,#1b1c20 6px 8px)}
+.rack>.f.s{background:linear-gradient(90deg,#0b0c0e,#1b1d21 50%,#0b0c0e);padding:10px 6px;display:flex;flex-direction:column;gap:4px}
+.rack .u{position:relative;flex:1;border-radius:2px;background:linear-gradient(#26282e,#15161a);box-shadow:inset 0 0 0 1px #33363d}
+.rack .u::before{content:"";position:absolute;left:5px;top:50%;margin-top:-2px;width:34px;height:4px;background:radial-gradient(circle,#4ade80 0 1.7px,#0000 2.2px) 0 0/7px 4px repeat-x;filter:drop-shadow(0 0 2px #4ade80);animation:led 1.1s steps(2) infinite}
+.rack .u::after{content:"";position:absolute;right:5px;top:50%;margin-top:-2px;width:14px;height:4px;background:radial-gradient(circle,#86efac 0 1.7px,#0000 2.2px) 0 0/7px 4px repeat-x;filter:drop-shadow(0 0 2px #22c55e);animation:led .7s steps(2) infinite reverse}
+.rack .u:nth-child(3n)::before{animation-duration:1.7s}
+.rack .u:nth-child(4n)::before{animation-duration:.5s}
+.rack .u:nth-child(5n)::after{animation-duration:2.3s;background-image:radial-gradient(circle,#fbbf24 0 1.7px,#0000 2.2px)}
+.rack .u:nth-child(2n)::after{animation-delay:.3s}
+@keyframes led{50%{opacity:.25}}
+
+/* glass room */
+.glass{background:linear-gradient(115deg,rgba(255,255,255,.16) 0 6%,#0000 6% 22%,rgba(255,255,255,.08) 22% 26%,#0000 26% 60%,rgba(255,255,255,.07) 60% 63%,#0000 63%),linear-gradient(180deg,rgba(200,230,240,.10),rgba(200,230,240,.18));border:4px solid #1d1f22;border-bottom-width:6px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.glass::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:4px;background:#1d1f22}
+.glass .etch{position:absolute;left:0;right:0;top:44%;text-align:center;font:600 13px system-ui,sans-serif;letter-spacing:3px;color:rgba(255,255,255,.34)}
+.glass.side::before{display:none}
+.frame{border:6px solid #2a1a10;background:#f4efe6;box-shadow:0 8px 18px rgba(0,0,0,.45)}
+.wclock{border-radius:50%;background:radial-gradient(circle,#fffaf0 0 60%,#e8dcc6 61%);border:6px solid #2a1a10;box-shadow:0 6px 16px rgba(0,0,0,.5)}
+.wclock i{left:50%;bottom:50%;transform-origin:50% 100%;background:#222;border-radius:2px}
+.wclock .hh{width:4px;height:22%;margin-left:-2px}
+.wclock .mm{width:3px;height:34%;margin-left:-1.5px}
+.wclock .ss{width:1px;height:38%;background:#c0392b}
+.board{background:#fbfbf8;border:6px solid #8b8f96;box-shadow:0 8px 18px rgba(0,0,0,.4);padding:10px 12px;font:600 14px/1.5 system-ui,sans-serif;color:#1e3a8a}
+.board em{display:block;font-style:normal;font-size:12px;color:#334155}
+.board s{text-decoration:none;color:#16a34a}
+.sofa>.f.t{background:linear-gradient(90deg,#2f5f58,#3d7a70);border-radius:6px}
+.sofa>.f.s,.sofa>.f.w,.sofa>.f.e{background:#244a44}
+.cooler{background:linear-gradient(90deg,#c9ced6,#f5f7fa 40%,#aab0b9);border-radius:4px}
+.cooler::before{content:"";position:absolute;left:4px;right:4px;top:-34px;height:36px;border-radius:12px 12px 4px 4px;background:linear-gradient(90deg,rgba(80,160,230,.55),rgba(180,225,255,.85) 40%,rgba(70,140,210,.55))}
+.cooler::after{content:"";position:absolute;left:12px;top:18px;width:10px;height:6px;background:#3b82f6;border-radius:2px;box-shadow:12px 0 0 #ef4444}
+.machine{background:linear-gradient(90deg,#1f2023,#4b4d53 40%,#1a1b1e);border-radius:4px}
+.machine::after{content:"";position:absolute;left:8px;top:8px;width:5px;height:5px;border-radius:50%;background:#ef4444;box-shadow:0 0 6px #ef4444,10px 0 0 #22c55e}
+.shelf>.f.e{background:
+ repeating-linear-gradient(90deg,#3e2716 0 6px,#0000 6px 38px),
+ repeating-linear-gradient(180deg,#b91c1c 0 9px,#1e3a8a 9px 16px,#d97706 16px 24px,#065f46 24px 30px,#f3ead6 30px 34px,#6b21a8 34px 42px,#0000 42px 47px,#92400e 47px 55px),#2a190e}
+.shelf>.f.t,.shelf>.f.w,.shelf>.f.s{background:#3e2716}
+.rug{border-radius:10px;background:repeating-linear-gradient(90deg,#0000 0 18px,rgba(255,255,255,.06) 18px 20px),radial-gradient(closest-side,#b3563a,#8a3b27);box-shadow:inset 0 0 0 6px #e5c38e,inset 0 0 0 9px #8a3b27}
+
+/* agents: chibi figures, billboard facing the camera */
+.agent{left:0;top:0;width:0;height:0;transform-style:preserve-3d;will-change:transform}
+.agent .ash{left:-22px;top:-9px;width:44px;height:18px;border-radius:50%;background:radial-gradient(closest-side,rgba(25,12,4,.62),rgba(25,12,4,.25) 60%,rgba(25,12,4,0));transform:translateZ(.4px)}
+.agent.sit .ash{left:-26px;width:52px}
+.agent.walk .ash{animation:shad .22s ease-in-out infinite alternate}
+@keyframes shad{to{transform:translateZ(.4px) scale(.84)}}
+.agent .ring{left:-30px;top:-15px;width:60px;height:30px;border-radius:50%;border:3px solid #ffd76a;box-shadow:0 0 16px 2px rgba(255,215,106,.85),inset 0 0 12px rgba(255,215,106,.55);opacity:0;transform:translateZ(.8px);transition:opacity .3s}
+.agent.sel .ring{opacity:1;animation:ring 1.3s ease-in-out infinite}
+@keyframes ring{50%{transform:translateZ(.8px) scale(1.14);box-shadow:0 0 26px 6px rgba(255,215,106,.9),inset 0 0 14px rgba(255,215,106,.6)}}
+.agent.sel .bw{filter:drop-shadow(0 0 3px rgba(255,225,130,1)) drop-shadow(0 0 9px rgba(255,190,80,.75))}
+.agent .fig{left:-28px;top:-100px;width:56px;height:100px;transform-origin:50% 100%;transform:rotateX(-90deg) scale(1.15);cursor:pointer}
+.fig .hit{left:-12px;top:-8px;width:80px;height:112px;border-radius:30px}
+.fig .bw,.fig .up{left:0;top:0;width:100%;height:100%}
+.fig .leg{bottom:4px;width:10px;height:21px;border-radius:4px 4px 2px 2px;transform-origin:50% 2px;background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(0,0,0,0) 40%,rgba(0,0,0,.24)),var(--p)}
+.fig .leg::after{content:"";position:absolute;left:-2px;bottom:-4px;width:14px;height:7px;border-radius:7px 7px 3px 3px;background:linear-gradient(#3a302a,#15110e);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.fig .leg.l{left:17px}.fig .leg.r{left:29px}
+.fig .torso{left:13px;bottom:21px;width:30px;height:28px;border-radius:13px 13px 7px 7px;background:linear-gradient(90deg,rgba(255,255,255,.16),rgba(255,255,255,0) 35%,rgba(0,0,0,0) 65%,rgba(0,0,0,.2)),var(--c);box-shadow:inset 0 -5px 0 rgba(0,0,0,.14)}
+.fig .torso::before{content:"";position:absolute;left:10px;top:0;width:10px;height:8px;background:var(--sk);clip-path:polygon(0 0,100% 0,50% 100%)}
+.fig .torso::after{content:"";position:absolute;left:14px;top:11px;width:2px;height:11px;border-radius:1px;background:rgba(0,0,0,.15)}
+.fig .arm{bottom:25px;width:9px;height:23px;border-radius:5px;transform-origin:50% 4px;background:linear-gradient(90deg,rgba(255,255,255,.12),rgba(0,0,0,.18)),var(--c)}
+.fig .arm::after{content:"";position:absolute;left:0;bottom:-4px;width:9px;height:9px;border-radius:50%;background:var(--sk);box-shadow:inset -1px -1px 0 rgba(0,0,0,.15)}
+.fig .arm.l{left:6px}.fig .arm.r{left:41px}
+.fig .neck{left:23px;bottom:46px;width:10px;height:6px;border-radius:3px;background:var(--sk);box-shadow:inset 0 2px 0 rgba(0,0,0,.14)}
+.fig .head{left:8px;bottom:49px;width:40px;height:38px;border-radius:50% 50% 46% 46%/54% 54% 46% 46%;background:radial-gradient(circle at 38% 34%,rgba(255,255,255,.22),rgba(255,255,255,0) 55%),var(--sk);box-shadow:inset -4px -3px 0 rgba(0,0,0,.08)}
+.fig .ear{top:16px;width:7px;height:10px;border-radius:50%;background:var(--sk);box-shadow:inset 0 0 0 2px rgba(0,0,0,.06)}
+.fig .ear.l{left:-3px}.fig .ear.r{right:-3px}
+.fig .hair{left:-2px;top:-4px;width:44px;height:17px;background:var(--hc);border-radius:22px 22px 8px 8px/20px 20px 8px 8px;box-shadow:inset 0 3px 0 rgba(255,255,255,.1)}
+.fig .brow{top:14px;width:8px;height:2px;border-radius:2px;background:var(--hc);opacity:.85}
+.fig .brow.l{left:9px}.fig .brow.r{left:23px}
+.fig .eye{top:18px;width:6px;height:7px;border-radius:3px;background:radial-gradient(circle at 35% 30%,#fff 0 1.1px,#241812 1.5px);animation:blink 5s infinite;animation-delay:var(--bd)}
+.fig .eye.l{left:10px}.fig .eye.r{left:24px}
+.fig .mouth{left:16px;top:27px;width:8px;height:4px;border-bottom:2px solid #8a3b2e;border-radius:0 0 8px 8px}
+.fig .blush{left:4px;top:25px;width:32px;height:5px;background:radial-gradient(circle at 8% 50%,rgba(240,110,100,.4) 0 2.5px,#0000 3.5px),radial-gradient(circle at 92% 50%,rgba(240,110,100,.4) 0 2.5px,#0000 3.5px)}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.h-long .hair::after{content:"";position:absolute;left:0;top:8px;width:44px;height:34px;border-radius:6px 6px 12px 12px;background:linear-gradient(90deg,var(--hc) 0 7px,#0000 7px 37px,var(--hc) 37px)}
+.h-bun .hair::before{content:"";position:absolute;left:14px;top:-10px;width:16px;height:14px;border-radius:50%;background:var(--hc)}
+.h-curly .hair{left:-5px;top:-8px;width:50px;height:22px;background:radial-gradient(circle at 16% 64%,var(--hc) 0 8px,#0000 8.5px),radial-gradient(circle at 34% 40%,var(--hc) 0 9px,#0000 9.5px),radial-gradient(circle at 50% 46%,var(--hc) 0 11px,#0000 11.5px),radial-gradient(circle at 66% 40%,var(--hc) 0 9px,#0000 9.5px),radial-gradient(circle at 84% 64%,var(--hc) 0 8px,#0000 8.5px);box-shadow:none}
+.agent.back.h-curly .hair{background:var(--hc);left:-2px;width:44px}
+.h-pony .hair::after{content:"";position:absolute;right:-8px;top:6px;width:11px;height:26px;border-radius:6px 6px 11px 11px;background:var(--hc)}
+.h-bald .hair{left:6px;width:28px;height:7px;top:-1px;opacity:.7}
+.a-glasses .head::after{content:"";position:absolute;left:6px;top:15px;width:28px;height:13px;background:radial-gradient(circle at 25% 50%,#0000 0 4px,#1c1c1c 4.3px 5.5px,#0000 5.8px),radial-gradient(circle at 75% 50%,#0000 0 4px,#1c1c1c 4.3px 5.5px,#0000 5.8px),linear-gradient(#1c1c1c,#1c1c1c) 50% 45%/6px 1.5px no-repeat}
+.a-headset .head::before{content:"";position:absolute;left:-5px;top:-7px;width:50px;height:26px;border:3px solid #1f2937;border-bottom:0;border-radius:26px 26px 0 0;z-index:2}
+.a-headset .head::after{content:"";position:absolute;left:-6px;top:14px;width:8px;height:12px;border-radius:4px;background:#111827;box-shadow:44px 0 0 #111827;z-index:2}
+.a-beret .hair::before{content:"";position:absolute;left:-4px;top:-8px;width:48px;height:14px;border-radius:50% 60% 40% 40%;background:#b91c1c;transform:rotate(-8deg)}
+.a-cap .hair::before{content:"";position:absolute;left:-1px;top:-4px;width:46px;height:14px;border-radius:23px 23px 0 0;background:#1d4ed8}
+.a-cap .hair::after{content:"";position:absolute;left:28px;top:8px;width:24px;height:5px;border-radius:3px;background:#1e40af}
+.crown{left:17px;bottom:84px;width:22px;height:14px;background:linear-gradient(180deg,#fff2a8,#f5b82e 55%,#b7791f);clip-path:polygon(0 100%,0 25%,22% 60%,50% 0,78% 60%,100% 25%,100% 100%);filter:drop-shadow(0 0 3px rgba(255,200,60,.9))}
+.crown::after{content:"";position:absolute;left:9px;bottom:3px;width:4px;height:4px;border-radius:50%;background:#e11d48}
+.agent.back .eye,.agent.back .mouth,.agent.back .blush,.agent.back .brow,.agent.back .head::after{display:none}
+.agent.back .hair{height:calc(100% + 4px);border-radius:22px 22px 16px 16px}
+.agent.flip .bw{transform:scaleX(-1)}
+/* walking: alternate steps, foot lifts on the pass, arms counter swing */
+.agent.walk .leg.l{animation:stepL .44s linear infinite}
+.agent.walk .leg.r{animation:stepR .44s linear infinite}
+.agent.walk .arm.l{animation:armA .44s ease-in-out infinite}
+.agent.walk .arm.r{animation:armB .44s ease-in-out infinite}
+.agent.walk .up{animation:bob .22s ease-in-out infinite alternate}
+@keyframes stepL{0%,100%{transform:rotate(24deg)}25%{transform:translateY(-3px) rotate(0)}50%{transform:rotate(-24deg)}75%{transform:rotate(0)}}
+@keyframes stepR{0%,100%{transform:rotate(-24deg)}25%{transform:rotate(0)}50%{transform:rotate(24deg)}75%{transform:translateY(-3px) rotate(0)}}
+@keyframes armA{0%,100%{transform:rotate(-22deg)}50%{transform:rotate(22deg)}}
+@keyframes armB{0%,100%{transform:rotate(22deg)}50%{transform:rotate(-22deg)}}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-2px)}}
+.agent.idle .up{animation:breathe 3s ease-in-out infinite}
+@keyframes breathe{50%{transform:translateY(-1px)}}
+/* working: seated, hands on the keyboard, gentle typing sway */
+.agent.sit .leg{display:none}
+.agent.sit .up{top:6px;animation:typeSway 1.6s ease-in-out infinite}
+.agent.sit .arm{height:20px;bottom:24px;z-index:2}
+.agent.sit .arm.l{animation:typeL .24s ease-in-out infinite alternate}
+.agent.sit .arm.r{animation:typeR .24s .12s ease-in-out infinite alternate}
+.agent.sit .head{animation:nod 5s ease-in-out infinite}
+@keyframes typeSway{0%,50%,100%{transform:translate(0,0)}25%{transform:translate(.6px,.5px)}75%{transform:translate(-.6px,.5px)}}
+@keyframes typeL{from{transform:rotate(-30deg) scaleY(.9)}to{transform:rotate(-40deg) scaleY(.84) translateY(1px)}}
+@keyframes typeR{from{transform:rotate(30deg) scaleY(.9)}to{transform:rotate(40deg) scaleY(.84) translateY(1px)}}
+@keyframes nod{0%,86%,100%{transform:translateY(0)}90%{transform:translateY(1px) rotate(3deg)}}
+/* in a chat: stop and look at the visitor */
+.agent.chatting .up,.agent.chatting .head,.agent.chatting .arm{animation:none}
+.agent.chatting.sit .arm.l{transform:rotate(-16deg)}
+.agent.chatting.sit .arm.r{transform:rotate(16deg)}
+.hanc{left:27px;top:-6px;width:2px;height:2px}
+
+/* overlays */
+.grade{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 70% at 50% 45%,rgba(255,180,90,.06),rgba(10,5,2,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 18%)}
+.stems{position:absolute;left:0;top:0;width:1200px;height:780px;pointer-events:none;overflow:visible}
+.stems line{stroke:rgba(255,214,150,.55);stroke-width:1.2}
+.stems circle{fill:#ffd08a}
+.hud{position:absolute;left:0;top:0;width:1200px;height:780px;pointer-events:none}
+.plate{position:absolute;left:0;top:0;padding:4px 10px 5px;border-radius:8px;text-align:center;white-space:nowrap;line-height:1.2;background:linear-gradient(180deg,rgba(44,30,20,.94),rgba(26,17,11,.94));border:1px solid #b88a4f;box-shadow:0 5px 14px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,220,160,.2);opacity:0;transition:opacity .5s}
+.plate.on{opacity:1}
+.plate b{display:block;font-size:13px;font-weight:750;color:#ffe3a6}
+.plate span{display:block;font-size:10.5px;color:#e6d4bd}
+.plate.boss{border-color:#f5c451;background:linear-gradient(180deg,rgba(70,44,14,.96),rgba(38,24,8,.96))}
+.plate.boss b::before{content:"";display:inline-block;width:13px;height:9px;margin-right:5px;vertical-align:0;background:linear-gradient(#ffe9a0,#e0a22a);clip-path:polygon(0 100%,0 20%,25% 60%,50% 0,75% 60%,100% 20%,100% 100%)}
+.bub{position:absolute;left:0;top:0;max-width:210px;padding:6px 10px;border-radius:12px;background:#fffdf7;color:#2a2118;font-size:12px;line-height:1.3;box-shadow:0 6px 16px rgba(0,0,0,.4);opacity:0;transform:scale(.7);transform-origin:50% 100%;transition:opacity .25s,transform .3s cubic-bezier(.34,1.56,.64,1);z-index:5}
+.bub b{color:#9a5b12;margin-right:4px}
+.bub.on{opacity:1;transform:scale(1)}
+.bub::after{content:"";position:absolute;left:var(--tx,50%);bottom:-5px;width:10px;height:10px;margin-left:-5px;background:#fffdf7;transform:rotate(45deg)}
+
+/* ---------- chat ---------- */
+body.noscroll{overflow:hidden}
+.chat{position:fixed;left:0;top:0;width:100%;height:100%;z-index:100;display:none;align-items:flex-end;justify-content:center;padding:0 8px 8px;background:rgba(8,5,3,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.chat.open{display:flex;animation:fadeIn .2s ease-out}
+.chat-dlg{position:relative;width:100%;max-width:460px;height:min(640px,92%);display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:linear-gradient(180deg,#2b1e14,#17100a);border:1px solid rgba(255,220,170,.16);box-shadow:0 30px 80px rgba(0,0,0,.6);animation:popUp .3s cubic-bezier(.2,.9,.3,1.15)}
+@keyframes fadeIn{from{opacity:0}}
+@keyframes popUp{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.chat-head{display:flex;align-items:center;gap:12px;padding:14px 14px 12px 16px;background:linear-gradient(180deg,rgba(255,200,120,.10),rgba(255,200,120,0));border-bottom:1px solid rgba(255,220,170,.10)}
+.av{position:relative;flex:none;width:48px;height:48px;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 30%,#4a3524,#24180f);box-shadow:0 0 0 2px var(--c),0 0 18px rgba(255,200,120,.25)}
+.av i{position:absolute;display:block}
+.av .av-body{left:9px;width:30px;bottom:-10px;height:22px;border-radius:14px 14px 0 0;background:var(--c)}
+.av .av-head{left:12px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--sk)}
+.av .av-hair{left:-1px;top:-3px;width:26px;height:11px;border-radius:13px 13px 5px 5px;background:var(--hc)}
+.av .av-eye{top:11px;width:3px;height:4px;border-radius:2px;background:#271b15}
+.av .av-eye.l{left:7px}.av .av-eye.r{left:14px}
+.av .av-mouth{left:9px;top:16px;width:6px;height:3px;border-bottom:2px solid #8a3b2e;border-radius:0 0 6px 6px}
+.chat-who{flex:1;min-width:0}
+.chat-who b{display:block;font-size:16px;color:#fff2de}
+.chat-who span{display:block;font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-who em{display:flex;align-items:center;gap:6px;margin-top:3px;font-style:normal;font-size:11px;color:#86efac;white-space:nowrap;overflow:hidden}
+.chat-who em i{flex:none;width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80}
+.chat-who em span{font-size:11px;color:#86efac}
+.chat-x{flex:none;width:38px;height:38px;border-radius:12px;border:1px solid rgba(255,220,170,.16);background:rgba(255,255,255,.04);color:#f6ecdf;font-size:22px;line-height:1;cursor:pointer}
+.chat-x:hover{background:rgba(255,255,255,.1)}
+.chat-msgs{flex:1;min-height:0;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:8px;overscroll-behavior:contain}
+.msg{display:flex;max-width:84%;animation:msgIn .22s ease-out}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}}
+.msg p{padding:9px 13px;border-radius:16px;font-size:14px;line-height:1.42;overflow-wrap:anywhere}
+.msg.ag{align-self:flex-start}
+.msg.ag p{background:#3a2a1d;color:#f6ecdf;border:1px solid rgba(255,220,170,.10);border-bottom-left-radius:5px}
+.msg.me{align-self:flex-end}
+.msg.me p{background:linear-gradient(180deg,#ffd48a,#e9a54b);color:#1c130b;border-bottom-right-radius:5px}
+.typing p{display:flex;align-items:center;gap:4px;padding:10px 14px;color:#cdb89c;font-size:12.5px}
+.typing span{margin-right:4px}
+.typing i{display:block;width:6px;height:6px;border-radius:50%;background:#d9c3a5;animation:dot 1s ease-in-out infinite}
+.typing i:nth-of-type(2){animation-delay:.15s}.typing i:nth-of-type(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-4px);opacity:1}}
+.chat-form{display:flex;gap:8px;padding:10px 12px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(255,220,170,.1);background:rgba(0,0,0,.2)}
+.chat-form input{flex:1;min-width:0;font:16px/1.3 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#fff4e2;background:#120d09;border:1px solid #4a3726;border-radius:14px;padding:11px 14px;outline:none}
+.chat-form input::placeholder{color:#8e7c69}
+.chat-form input:focus{border-color:#e9a54b;box-shadow:0 0 0 3px rgba(233,165,75,.2)}
+.chat-form button{flex:none;width:48px;border:0;border-radius:14px;background:linear-gradient(180deg,#ffd48a,#e9a54b);color:#1c130b;cursor:pointer;display:grid;place-items:center}
+.chat-form button svg{width:20px;height:20px}
+@media(min-width:720px){.chat{align-items:center;padding:24px}.chat-dlg{height:min(620px,86%)}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="top-in">
+  <div class="brand"><span class="logo" aria-hidden="true"><i></i></span><span class="wordmark">cuidar<b>.vc</b></span><span class="sep"></span><span class="sub">Escritório virtual</span></div>
+  <div class="hr"><span class="live"><i></i><span id="liveTxt">13 agentes ativos</span></span><span class="clock"><b id="dateTxt">hoje</b><span id="clock">--:--:--</span></span></div>
+ </div>
+</header>
+
+<main>
+ <section class="stage">
+  <div class="stage-head">
+   <div><span class="eyebrow">Ao vivo agora</span><h1>Escritório virtual</h1><p>A equipe do cuidar.vc trabalhando em tempo real. Toque em alguém para conversar.</p></div>
+   <button class="btn" id="zoomBtn" type="button">Ampliar</button>
+  </div>
+  <div class="fitwrap" id="fitwrap">
+   <div class="scenebox" id="scenebox">
+    <div class="viewport" id="vp">
+     <div class="world" id="world"></div>
+     <div class="grade"></div>
+     <svg class="stems" id="stems" viewBox="0 0 1200 780" aria-hidden="true"></svg>
+     <div class="hud" id="hud"></div>
+    </div>
+   </div>
+  </div>
+  <div class="legend" aria-label="Legenda da cena">
+   <span style="--k:#f5c451"><i></i>Sala do fundador</span>
+   <span style="--k:#14b8a6"><i></i>Tecnologia</span>
+   <span style="--k:#ec4899"><i></i>Marketing</span>
+   <span style="--k:#22c55e"><i></i>Produto</span>
+   <span style="--k:#f59e0b"><i></i>Mesa de conteúdo</span>
+  </div>
+  <p class="hint" id="hint">Toque em um agente para abrir a conversa</p>
+ </section>
+
+ <section class="gcard">
+  <div class="gcard-head">
+   <div class="gcard-title"><h2>Painel do CMO</h2><span class="badge-live"><i></i>ao vivo</span></div>
+   <a class="gcard-link" href="/dash/#hoje" target="_blank" rel="noopener">abrir em tela cheia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h4v4M13 3L7.5 8.5M12 9.5V13H3V4h3.5"/></svg></a>
+  </div>
+  <div class="gcard-frame"><iframe src="/dash/#hoje" title="Painel do CMO" loading="lazy"></iframe></div>
+ </section>
+</main>
+
+<footer><span>cuidar.vc</span><span class="dot"></span><span>escritório virtual</span><span class="dot"></span><span>horário de Brasília</span></footer>
+
+<div class="chat" id="chat">
+ <div class="chat-dlg" id="chatDlg" role="dialog" aria-modal="true" aria-labelledby="chatName">
+  <div class="chat-head">
+   <div class="av" id="chatAv" aria-hidden="true"><i class="av-body"></i><i class="av-head"><i class="av-hair"></i><i class="av-eye l"></i><i class="av-eye r"></i><i class="av-mouth"></i></i></div>
+   <div class="chat-who"><b id="chatName">Agente</b><span id="chatRole">Cargo</span><em><i></i><span id="chatSt">online</span></em></div>
+   <button class="chat-x" id="chatX" type="button" aria-label="Fechar conversa">&times;</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs" aria-live="polite"></div>
+  <form class="chat-form" id="chatForm" autocomplete="off">
+   <input id="chatIn" type="text" maxlength="300" enterkeyhint="send" aria-label="Mensagem">
+   <button type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7z"/></svg></button>
+  </form>
+ </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+var SW=1200,SH=780;
+var $=function(id){return document.getElementById(id)};
+var world=$('world'),vp=$('vp'),hud=$('hud'),stems=$('stems');
+var rand=function(a,b){return a+Math.random()*(b-a)};
+var pick=function(a){return a[Math.floor(Math.random()*a.length)]};
+var sleep=function(ms){return new Promise(function(r){setTimeout(r,ms)})};
+
+function mk(parent,cls,css,html){var e=document.createElement('div');if(cls)e.className=cls;if(css)e.style.cssText=css;if(html)e.innerHTML=html;parent.appendChild(e);return e}
+// Solid box: footprint (x,y,w,d) on the parent plane, height h, optional lift z
+function box(parent,x,y,w,d,h,cls,z){
+ var b=mk(parent,'b '+(cls||''),'left:'+x+'px;top:'+y+'px;width:'+w+'px;height:'+d+'px;--h:'+h+'px;'+(z?'transform:translateZ('+z+'px)':''));
+ return {b:b,t:mk(b,'f t'),s:mk(b,'f s'),w:mk(b,'f w'),e:mk(b,'f e')};
+}
+// Upright plane: bottom edge starts at (x,y) (or is centered on it) and runs along angle rz
+function plane(parent,x,y,w,h,cls,o){
+ o=o||{};var ox=o.center?w/2:0;
+ return mk(parent,'v '+(cls||''),'left:'+(x-ox)+'px;top:'+(y-h)+'px;width:'+w+'px;height:'+h+'px;transform-origin:'+ox+'px 100%;transform:translateZ('+(o.z||0)+'px) rotateZ('+(o.rz||0)+'deg) rotateX(-90deg)');
+}
+
+/* ---------------- room ---------------- */
+var WH=340;
+var floor=mk(world,'floor','left:0;top:0;width:1200px;height:900px');
+function onFloor(cls,css){return mk(floor,cls,css)}
+onFloor('sun','left:0;top:0;width:520px;height:460px;clip-path:polygon(40px 0,330px 0,500px 460px,190px 460px)');
+onFloor('sun','left:0;top:400px;width:360px;height:300px;clip-path:polygon(0 30px,0 250px,340px 300px,300px 90px);opacity:.8');
+onFloor('sun','left:900px;top:0;width:300px;height:340px;clip-path:polygon(60px 0,250px 0,300px 300px,120px 300px);opacity:.55');
+onFloor('rug','left:1030px;top:560px;width:150px;height:240px');
+[[180,210],[470,140],[740,230],[1060,150],[300,520],[860,560],[600,760]].forEach(function(p){onFloor('pool','left:'+(p[0]-170)+'px;top:'+(p[1]-120)+'px;width:340px;height:240px')});
+
+var back=plane(world,0,0,1200,WH,'wall');
+var leftW=plane(world,0,900,900,WH,'wall side',{rz:-90});
+var rightW=plane(world,1200,0,900,WH,'wall side',{rz:90});
+
+// back wall dressing (wall coords: x along wall, y from ceiling down)
+function beam(p,x,w){mk(p,'beam','left:'+x+'px;top:0;width:'+w+'px;height:'+WH+'px')}
+mk(back,'beam h','left:0;top:0;width:1200px;height:26px');
+beam(back,0,24);beam(back,344,24);beam(back,846,24);beam(back,1176,24);
+mk(back,'brace','left:368px;top:40px;width:140px;transform:rotate(-16deg)');
+mk(back,'brace','left:846px;top:40px;width:140px;transform:rotate(196deg) translateY(-18px)');
+mk(back,'brace','left:24px;top:40px;width:120px;transform:rotate(-18deg)');
+mk(back,'brace','left:1176px;top:40px;width:120px;transform:rotate(198deg) translateY(-18px)');
+function windowEl(p,x,y,w,h,cols,rows){
+ var el=mk(p,'win','left:'+x+'px;top:'+y+'px;width:'+w+'px;height:'+h+'px;grid-template-columns:repeat('+cols+',1fr);grid-template-rows:repeat('+rows+',1fr)');
+ var s='';for(var i=0;i<cols*rows;i++)s+='<span></span>';el.innerHTML=s+'<b class="sky"></b>';
+ mk(p,'sill','left:'+(x-10)+'px;top:'+(y+h)+'px;width:'+(w+20)+'px');
+ return el;
+}
+windowEl(back,52,70,272,200,4,3);
+var neon=mk(back,'neon','left:376px;top:40px;width:430px','<div class="n1">CUIDAR.VC</div><div class="n2">cuidado com quem cuida</div>');
+var wclock=mk(back,'wclock','left:1010px;top:66px;width:66px;height:66px','<i class="hh"></i><i class="mm"></i><i class="ss"></i>');
+mk(back,'frame','left:960px;top:160px;width:170px;height:110px','<div style="position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:800 22px system-ui,sans-serif;color:#b45309;background:linear-gradient(135deg,#fff7ea,#fde7c6)">cuidar.vc<div style="font:600 10px system-ui,sans-serif;color:#7c5a3a;letter-spacing:1px">DESDE O PRIMEIRO DIA</div></div>');
+// left wall (x = 900 - worldY)
+beam(leftW,0,22);beam(leftW,420,22);beam(leftW,878,22);
+mk(leftW,'beam h','left:0;top:0;width:900px;height:24px');
+windowEl(leftW,236,60,210,230,3,4);
+// right wall (x = worldY)
+beam(rightW,0,22);beam(rightW,470,22);beam(rightW,878,22);
+mk(rightW,'beam h','left:0;top:0;width:900px;height:24px');
+mk(rightW,'board','left:520px;top:110px;width:200px;height:130px','Metas da semana<em><s>✔</s> 7 posts publicados</em><em><s>✔</s> site estável</em><em>novo fluxo de cadastro</em>');
+
+/* ---------------- helpers for props ---------------- */
+function fshadow(x,y,w,d){onFloor('fs','left:'+(x+6)+'px;top:'+(y+8)+'px;width:'+w+'px;height:'+d+'px')}
+function plant(x,y,s,kind){
+ onFloor('fs','left:'+(x-s*.5)+'px;top:'+(y-s*.3)+'px;width:'+s+'px;height:'+(s*.7)+'px;border-radius:50%');
+ box(world,x-s*.3,y-s*.3,s*.6,s*.6,s*.55,'pot'+(kind==='terra'?' terra':''));
+ var H=s*2.3,W=s*2;
+ [35,-55,80].forEach(function(rz,k){
+  var pl=plane(world,x,y,W,H,'',{center:true,rz:rz,z:s*.5});
+  var n=kind==='snake'?5:7,html='';
+  for(var i=0;i<n;i++){
+   var ang=kind==='snake'?(-18+i*9+rand(-4,4)):(-68+i*(136/(n-1))+rand(-8,8));
+   var lh=kind==='snake'?rand(.6,.95)*H:(rand(.42,.7)*H*(1-Math.abs(ang)/220));
+   var lw=kind==='snake'?s*.2:s*.34;
+   html+='<i class="leaf '+(kind==='snake'?'snake':(i%2?'l2':''))+'" style="left:'+(W/2-lw/2)+'px;width:'+lw+'px;height:'+lh+'px;transform:rotate('+ang+'deg)"></i>';
+  }
+  if(k===2&&kind!=='snake')html='';
+  pl.innerHTML=html;
+ });
+}
+function chair(x,y,exec){
+ var cw=exec?50:40;
+ onFloor('chair-base','left:'+(x-20)+'px;top:'+(y-15)+'px');
+ plane(world,x,y,6,exec?34:30,'chair-pole',{center:true});
+ box(world,x-cw/2,y-cw/2+4,cw,cw-8,6,'chair-seat',exec?32:28);
+ plane(world,x,y-cw/2+4,cw,exec?76:50,'chair-back'+(exec?' exec':''),{center:true,z:exec?38:34});
+}
+function monitor(parent,x,y,kind,o){
+ o=o||{};var w=o.w||64,h=o.h||46,lap=!!o.lap;
+ var m=plane(parent,x,y,w,lap?h:h+13,'mon'+(lap?' lap':''),{center:true,rz:o.rz||0,z:.5});
+ var inner=kind==='insta'?'<b></b><b></b><b></b><b></b><b></b><b></b>':'<i class="ln"></i>';
+ m.innerHTML='<div class="bez"><div class="scr '+kind+'">'+inner+'</div></div><i class="neck"></i><i class="foot"></i>';
+ return m;
+}
+function mug(parent,x,y,col){var m=plane(parent,x,y,12,15,'mug '+(col||''),{center:true,z:.5});m.innerHTML='<div class="steam"><i></i><i></i><i></i></div>'}
+function paper(parent,x,y,rot,w,h){mk(parent,'paper','left:'+x+'px;top:'+y+'px;width:'+(w||26)+'px;height:'+(h||32)+'px;transform:translateZ(.8px) rotate('+rot+'deg)')}
+function books(parent,x,y){
+ var cols=['#7c2d12','#1e3a8a','#166534','#a16207'],z=0;
+ for(var i=0;i<3;i++){var hh=5+i%2;var bk=box(parent,x+i*2,y-i,34-i*3,24-i,hh,'book',z);bk.b.style.setProperty('--bc',cols[i]);z+=hh}
+}
+
+/* ---------------- structures ---------------- */
+// Rack beside the founder's room, DevOps sits right next to it
+fshadow(815,20,70,74);
+var rack=box(world,815,20,70,74,215,'rack');
+var us='';for(var i=0;i<10;i++)us+='<div class="u"></div>';rack.s.innerHTML=us;
+
+// Founder glass room
+plane(world,900,340,300,236,'glass',{}).innerHTML='<div class="etch">SALA DO FUNDADOR</div>';
+plane(world,900,0,232,236,'glass side',{rz:90});
+plane(world,900,232,8,236,'beam',{rz:90});
+
+// Coffee corner, cooler, shelf, sofa
+fshadow(0,470,60,150);
+var ctr=box(world,0,470,60,150,50,'counter');
+plane(ctr.t,29,54,38,46,'machine',{center:true,rz:-90,z:.5});
+mug(ctr.t,30,90,'red');mug(ctr.t,30,116,'teal');
+plane(world,322,34,34,62,'cooler',{center:true});
+fshadow(0,180,38,120);
+box(world,0,180,38,120,170,'shelf');
+fshadow(1112,610,72,180);
+box(world,1112,610,72,180,34,'sofa');
+box(world,1160,610,30,180,78,'sofa');
+box(world,1112,600,78,18,50,'sofa');
+box(world,1112,782,78,18,50,'sofa');
+
+/* ---------------- team & desks ---------------- */
+var TEAM=[
+ {id:'rob',n:'Rob',r:'Fundador',boss:true,c:'#7f1d1d',p:'#1f2937',hc:'#2a1a12',sk:'#e7b28a',hair:'short',acc:'crown',spd:66,
+  desk:{x:960,y:122,w:210,d:100,h:52,exec:true,scr:['dash','mail']},exit:[[930,100],[930,300]],aisle:300,
+  work:['aprovei as artes de hoje','o cuidado vem primeiro','gostei desse resultado','bora crescer esse mês','reunião rápida às 15h']},
+ {id:'cto',n:'CTO',r:'Chefe de tecnologia',c:'#0f766e',p:'#27303d',hc:'#1c1917',sk:'#f0c29c',hair:'short',acc:'glasses',spd:80,
+  desk:{x:80,y:130,w:200,d:90,h:48,scr:['code','dash']},exit:[[320,108],[320,300]],aisle:300,
+  work:['pipeline verde por aqui','revisando a arquitetura','status das 07h15 enviado','Dev, pega essa tarefa?']},
+ {id:'cmo',n:'CMO',r:'Chefe de marketing',c:'#be185d',p:'#312e38',hc:'#7c2d12',sk:'#e9b98e',hair:'long',spd:76,
+  desk:{x:360,y:130,w:200,d:90,h:48,scr:['insta','chart']},exit:[[590,108],[590,300]],aisle:300,
+  work:['briefing das 18h pronto','engajamento subiu hoje','campanha nova no ar','vamos testar esse criativo']},
+ {id:'devops',n:'DevOps',r:'Infraestrutura',c:'#c2410c',p:'#2d2a26',hc:'#3f3f46',sk:'#c98a64',hair:'short',acc:'headset',spd:84,
+  desk:{x:620,y:130,w:200,d:90,h:48,scr:['term','server']},exit:[[840,108],[840,300]],aisle:300,
+  work:['servidor estável','deploy concluído','backup das 04h ok','uptime de 100% hoje','todos os LEDs verdes']},
+ {id:'dev',n:'Dev',r:'Desenvolvedor',c:'#1d4ed8',p:'#1f2937',hc:'#4a2f1d',sk:'#e8b98a',hair:'short',acc:'cap',spd:82,
+  desk:{x:80,y:370,w:200,d:90,h:48,scr:['code','term']},exit:[[180,300]],aisle:300,
+  work:['subindo o PR agora','refatorando o login','teste passou de primeira','commit feito']},
+ {id:'qa',n:'QA',r:'Qualidade de software',c:'#6d28d9',p:'#2b2d42',hc:'#111',sk:'#8d5a3b',hair:'curly',acc:'glasses',spd:78,
+  desk:{x:360,y:370,w:200,d:90,h:48,scr:['check','code']},exit:[[460,300]],aisle:300,
+  work:['achei um bug no cadastro','testando no celular','PR aprovado','rodando a regressão']},
+ {id:'claudete',n:'Claudete',r:'Produto e operações',c:'#15803d',p:'#3b3226',hc:'#5b3a29',sk:'#d9a07a',hair:'bun',spd:74,
+  desk:{x:660,y:370,w:200,d:90,h:48,scr:['doc','cal']},exit:[[760,300]],aisle:300,
+  work:['atualizei os pendentes','organizando a semana','processo documentado','falei com o Rob agora']},
+ {id:'plan',n:'Planejador',r:'Pauta de posts',c:'#0e7490',p:'#334155',hc:'#1f2937',sk:'#f2c49b',hair:'short',spd:80,work:['pauta da semana fechada','tema de amanhã definido','calendário atualizado'],scr:'cal'},
+ {id:'copy',n:'Copy',r:'Textos e legendas',c:'#a21caf',p:'#27272a',hc:'#18181b',sk:'#e8b98a',hair:'pony',spd:78,work:['legenda nova saindo','ajustando o tom de voz','título mais acolhedor'],scr:'doc',lap:true},
+ {id:'arte',n:'Artes',r:'Design das peças',c:'#d97706',p:'#1e293b',hc:'#111827',sk:'#8d5524',hair:'curly',acc:'beret',spd:76,work:['arte glass finalizada','testando outra paleta','card novo exportado'],scr:'design'},
+ {id:'qc',n:'QC',r:'Revisão final',c:'#b91c1c',p:'#292524',hc:'#78350f',sk:'#f2c49b',hair:'long',spd:74,work:['revisei texto e arte','faltou uma vírgula aqui','aprovado pra publicar'],scr:'check'},
+ {id:'agend',n:'Agendador',r:'Publicação',c:'#4d7c0f',p:'#1c1917',hc:'#3f2a1d',sk:'#c68863',hair:'short',spd:82,work:['post agendado pras 19h','fila do Canva em dia','publicação confirmada'],scr:'insta'},
+ {id:'metr',n:'Métricas',r:'Análise de dados',c:'#475569',p:'#1e293b',hc:'#0f172a',sk:'#e0ac7e',hair:'bald',acc:'glasses',spd:72,work:['alcance subiu 12%','relatório semanal pronto','salvamentos em alta'],scr:'sheet'}
+];
+
+function buildDesk(a){
+ var d=a.desk,cx=d.x+d.w/2;
+ fshadow(d.x,d.y,d.w,d.d);
+ a.seat=[cx,d.y-22];
+ chair(cx,a.seat[1],d.exec);
+ var B=box(world,d.x,d.y,d.w,d.d,d.h,'desk'+(d.exec?' walnut':''));
+ var t=B.t,w=d.w;
+ monitor(t,w*.2,36,d.scr[0],{rz:10});
+ monitor(t,w*.8,36,d.scr[1],{rz:-10});
+ mk(t,'kb','left:'+(w/2-23)+'px;top:44px;width:46px');
+ mk(t,'mouse','left:'+(w/2+32)+'px;top:46px');
+ paper(t,18,52,-12);paper(t,34,56,8,24,30);
+ if(d.exec){plane(t,w-16,30,30,46,'dlamp',{center:true,z:.5});books(t,w-70,70);mug(t,w-26,78,'red')}
+ else{books(t,w-52,62);mug(t,w-16,76,a.id==='dev'?'teal':'')}
+ a.plateAt=[cx,a.seat[1],d.exec?160:146];
+}
+var squad=TEAM.slice(7);
+var TX=150,TY=662,TW=900,TD=80,TH=46;
+fshadow(TX,TY,TW,TD);
+squad.forEach(function(a,i){a.seat=[TX+75+i*150,TY-22];chair(a.seat[0],a.seat[1],false)});
+var table=box(world,TX,TY,TW,TD,TH,'desk');
+squad.forEach(function(a,i){
+ var lx=75+i*150;
+ monitor(table.t,lx+54,34,a.scr,a.lap?{lap:true,w:52,h:34,rz:-14}:{rz:-12});
+ mk(table.t,'kb','left:'+(lx-21)+'px;top:40px;width:42px');
+ paper(table.t,lx-62,40,-10+i*4);
+ if(i%2)mug(table.t,lx-40,70,i%4===1?'teal':'');else books(table.t,lx-58,62);
+ a.exit=[[a.seat[0],575]];a.aisle=575;
+ a.plateAt=[a.seat[0],a.seat[1],140];
+});
+TEAM.slice(0,7).forEach(buildDesk);
+
+// Plants and pendant lamps
+plant(40,120,40,'');plant(600,52,34,'terra');plant(1168,60,36,'snake');plant(1168,300,34,'');
+plant(40,700,42,'terra');plant(44,862,46,'');plant(1166,860,44,'snake');plant(882,520,34,'');
+plant(300,850,38,'');plant(890,860,36,'terra');
+function lamp(x,y,z){plane(world,x,y,120,760,'lamp',{center:true,z:z-64}).innerHTML='<i class="halo"></i><i class="wire"></i><i class="cap"></i><i class="bulb"></i>'}
+[[180,210,300],[270,160,350],[450,250,250],[740,290,240],[1060,160,330],[300,500,390],[860,520,410]].forEach(function(l){lamp(l[0],l[1],l[2])});
+
+/* ---------------- agents ---------------- */
+function buildAgent(a,i){
+ var el=mk(world,'agent sit h-'+(a.hair||'short')+(a.acc?' a-'+a.acc:''));
+ el.style.setProperty('--c',a.c);el.style.setProperty('--p',a.p);el.style.setProperty('--hc',a.hc);el.style.setProperty('--sk',a.sk);el.style.setProperty('--bd',(Math.random()*4).toFixed(2)+'s');
+ el.innerHTML='<i class="ash"></i><i class="ring"></i><div class="fig" title="Conversar com '+a.n+'"><i class="hit"></i><div class="bw"><i class="leg l"></i><i class="leg r"></i><div class="up"><i class="arm l"></i><i class="arm r"></i><i class="torso"></i><i class="neck"></i><div class="head"><i class="ear l"></i><i class="ear r"></i><i class="hair"></i><i class="brow l"></i><i class="brow r"></i><i class="eye l"></i><i class="eye r"></i><i class="mouth"></i><i class="blush"></i></div>'+(a.acc==='crown'?'<i class="crown"></i>':'')+'<i class="hanc"></i></div></div></div>';
+ a.el=el;a.anc=el.querySelector('.hanc');a.x=a.seat[0];a.y=a.seat[1];a.path=null;a.away=false;a.cur=a.work[0];a.st={k:'desk'};
+ place(a);
+ el.querySelector('.fig').addEventListener('click',function(ev){ev.stopPropagation();if(dragMoved){dragMoved=false;return}openChat(a)});
+ var b=document.createElement('div');b.className='bub';hud.appendChild(b);a.bub=b;
+}
+function place(a){a.el.style.transform='translate3d('+a.x.toFixed(1)+'px,'+a.y.toFixed(1)+'px,0)'}
+function pose(a,p){a.el.classList.remove('walk','sit','idle');a.el.classList.add(p);if(p!=='walk')a.el.classList.remove('back')}
+
+/* ---------------- plates (2D overlay, collision free) ---------------- */
+var plates=[];
+function buildPlates(){
+ TEAM.forEach(function(a){
+  var el=document.createElement('div');el.className='plate'+(a.boss?' boss':'');
+  el.innerHTML='<b>'+a.n+'</b><span>'+a.r+'</span>';hud.appendChild(el);
+  var anc=mk(world,'','left:'+a.plateAt[0]+'px;top:'+a.plateAt[1]+'px;width:2px;height:2px;transform:translateZ('+a.plateAt[2]+'px)');
+  plates.push({el:el,anc:anc});
+ });
+}
+function vpRect(){var r=vp.getBoundingClientRect();return {l:r.left,t:r.top,s:r.width/SW}}
+function project(node,R){var r=node.getBoundingClientRect();return [(r.left+r.width/2-R.l)/R.s,(r.top+r.height/2-R.t)/R.s]}
+function layoutPlates(){
+ var R=vpRect();if(!R.s)return;
+ var GAP=6,items=plates.map(function(p){var q=project(p.anc,R),w=p.el.offsetWidth,h=p.el.offsetHeight;return {p:p,ax:q[0],ay:q[1],w:w,h:h,x:q[0]-w/2,y:q[1]-h}});
+ function clamp(it){it.x=Math.max(6,Math.min(SW-6-it.w,it.x));it.y=Math.max(6,Math.min(SH-6-it.h,it.y))}
+ items.forEach(clamp);
+ for(var k=0;k<300;k++){
+  var moved=false;
+  for(var i=0;i<items.length;i++)for(var j=i+1;j<items.length;j++){
+   var A=items[i],B=items[j];
+   var ox=Math.min(A.x+A.w,B.x+B.w)-Math.max(A.x,B.x)+GAP,oy=Math.min(A.y+A.h,B.y+B.h)-Math.max(A.y,B.y)+GAP;
+   if(ox>0&&oy>0){moved=true;
+    if(ox<oy){var dx=ox/2+.01;if(A.x+A.w/2<B.x+B.w/2){A.x-=dx;B.x+=dx}else{A.x+=dx;B.x-=dx}}
+    else{var dy=oy/2+.01;if(A.y+A.h/2<B.y+B.h/2){A.y-=dy;B.y+=dy}else{A.y+=dy;B.y-=dy}}
+    clamp(A);clamp(B);
+   }
+  }
+  if(!moved)break;
+ }
+ var svg='';
+ items.forEach(function(it){
+  it.p.el.style.transform='translate('+it.x.toFixed(1)+'px,'+it.y.toFixed(1)+'px)';it.p.el.classList.add('on');
+  var bx=it.x+it.w/2,by=it.y+it.h,ty=it.ay+14;
+  svg+='<line x1="'+bx.toFixed(1)+'" y1="'+by.toFixed(1)+'" x2="'+it.ax.toFixed(1)+'" y2="'+ty.toFixed(1)+'"/><circle cx="'+it.ax.toFixed(1)+'" cy="'+ty.toFixed(1)+'" r="2"/>';
+ });
+ stems.innerHTML=svg;
+ plateBoxes=items.map(function(it){return {x:it.x,y:it.y,w:it.w,h:it.h}});
+}
+var plateBoxes=[];
+
+/* ---------------- speech ---------------- */
+var talking=[];
+function say(a,text,dur){
+ // fewer bubbles while a chat is open, and never over the agent in the chat
+ if(a.chat||(CHAT.a&&Math.random()<.7))return;
+ a.bub.innerHTML='<b>'+a.n+'</b>'+text;a.bub.classList.add('on');
+ if(talking.indexOf(a)<0)talking.push(a);
+ posAll(vpRect());
+ clearTimeout(a.bt);a.bt=setTimeout(function(){a.bub.classList.remove('on');setTimeout(function(){if(!a.bub.classList.contains('on')){var k=talking.indexOf(a);if(k>=0)talking.splice(k,1)}},320)},dur||3800);
+}
+function hush(a){clearTimeout(a.bt);a.bub.classList.remove('on');var k=talking.indexOf(a);if(k>=0)talking.splice(k,1)}
+// Bubbles are placed in order; each one avoids the plates and the bubbles placed before it
+function posAll(R){var taken=plateBoxes.slice();talking.forEach(function(a){taken.push(posBub(a,R,taken))})}
+function posBub(a,R,taken){
+ var q=project(a.anc,R),w=a.bub.offsetWidth,h=a.bub.offsetHeight;
+ var x=Math.max(6,Math.min(SW-6-w,q[0]-w/2)),y=q[1]-h-10;
+ for(var k=0;k<taken.length;k++){var p=taken[k];
+  if(x<p.x+p.w+4&&p.x<x+w+4&&y<p.y+p.h+4&&p.y<y+h+4){y=p.y-h-6;k=-1}}
+ y=Math.max(6,y);
+ a.bub.style.left=x.toFixed(1)+'px';a.bub.style.top=y.toFixed(1)+'px';
+ a.bub.style.setProperty('--tx',Math.max(12,Math.min(w-12,q[0]-x)).toFixed(1)+'px');
+ return {x:x,y:y,w:w,h:h};
+}
+
+/* ---------------- movement engine ---------------- */
+var CORR=[322,610];
+var POI=[
+ {pt:[92,548],aisle:575,ax:92,where:'no cantinho do café',go:'indo pegar um café',lines:['pausa pro café','esse café tá ótimo','alguém quer café?']},
+ {pt:[322,76],aisle:300,ax:322,where:'no bebedouro',go:'indo beber uma água',lines:['água gelada, que delícia','hidratar é importante']},
+ {pt:[230,56],aisle:300,ax:322,pre:[[322,56]],where:'na janela olhando a rua',go:'indo até a janela',lines:['que dia bonito lá fora','olhando o movimento da rua']},
+ {pt:[852,124],aisle:300,ax:852,where:'perto do rack de servidores',go:'indo conferir o rack',lines:['conferindo os servidores','tudo verde no rack']},
+ {pt:[64,300],aisle:300,ax:64,where:'na estante de livros',go:'indo até a estante',lines:['procurando aquele livro','boa leitura essa']},
+ {pt:[1078,690],aisle:575,ax:1078,where:'no sofá do descanso',go:'indo pro sofá',lines:['pausa de cinco minutos','ideia boa surgindo aqui']},
+ {pt:[1150,500],aisle:575,ax:1150,where:'no quadro de metas',go:'indo ver o quadro de metas',lines:['metas da semana conferidas','anotando no quadro']}
+];
+var VISIT=['bora alinhar rapidinho?','me ajuda com isso?','olha esse resultado','tem um minuto?','ficou ótimo, viu?'];
+var REPLY=['claro, pode falar','boa ideia!','vou ver agora','combinado','te mando já já','bora!'];
+function visitSpot(b){
+ if(b.desk){var d=b.desk,front=d.y+d.d+24;return {pt:[b.seat[0]+rand(-30,30),front],aisle:front<300?300:575,ax:null,host:b}}
+ var ex=b.seat[0]<600?118:1080;return {pt:[b.seat[0]+rand(-20,20),772],aisle:575,ax:ex,pre:[[ex,772]],host:b};
+}
+function route(a,dest){
+ var pts=a.exit.map(function(p){return p.slice()}),my=a.aisle,last=pts[pts.length-1];
+ var ax=dest.ax==null?dest.pt[0]:dest.ax;
+ if(dest.aisle!==my){
+  var mid=(last[0]+ax)/2,cx=Math.abs(CORR[0]-mid)<Math.abs(CORR[1]-mid)?CORR[0]:CORR[1];
+  pts.push([cx,my],[cx,dest.aisle]);
+ }
+ pts.push([ax,dest.aisle]);
+ (dest.pre||[]).forEach(function(p){pts.push(p.slice())});
+ pts.push(dest.pt.slice());
+ return pts;
+}
+function walk(a,pts){return new Promise(function(res){a.path=pts;a.done=res;pose(a,'walk')})}
+var last=performance.now();
+function tick(now){
+ var dt=Math.min(.05,(now-last)/1000);last=now;
+ for(var i=0;i<TEAM.length;i++){
+  var a=TEAM[i];if(!a.path||a.chat)continue;
+  var t=a.path[0],dx=t[0]-a.x,dy=t[1]-a.y,dist=Math.hypot(dx,dy),step=a.spd*dt;
+  if(dist<=step){a.x=t[0];a.y=t[1];a.path.shift();if(!a.path.length){a.path=null;var r=a.done;a.done=null;if(r)r()}}
+  else{a.x+=dx/dist*step;a.y+=dy/dist*step;
+   if(Math.abs(dx)>Math.abs(dy)){a.el.classList.toggle('flip',dx<0);a.el.classList.remove('back')}
+   else a.el.classList.toggle('back',dy<0);
+  }
+  place(a);
+ }
+ if(talking.length)posAll(vpRect());
+ requestAnimationFrame(tick);
+}
+// Like sleep, but the clock stops while this agent is in a chat
+async function wait(a,ms){
+ var end=performance.now()+ms;
+ while(a.chat||performance.now()<end)await sleep(a.chat?250:Math.max(16,Math.min(250,end-performance.now())));
+}
+var awayCount=0;
+async function life(a,delay){
+ await wait(a,delay);
+ var eager=delay<3000;
+ for(;;){
+  pose(a,'sit');a.st={k:'desk'};
+  if(Math.random()<.6){a.cur=pick(a.work);say(a,a.cur)}
+  await wait(a,eager?rand(900,2200):rand(6000,15000));
+  if(!eager&&(awayCount>=5||Math.random()<.3))continue;
+  eager=false;
+  awayCount++;a.away=true;
+  var dest,host=null;
+  if(Math.random()<.45){
+   var others=TEAM.filter(function(b){return b!==a&&!b.away});
+   dest=visitSpot(pick(others));host=dest.host;
+  }else dest=pick(POI);
+  var poi=host?null:dest;
+  var jit=dest.host?0:rand(-12,12);dest={pt:[dest.pt[0]+jit,dest.pt[1]],aisle:dest.aisle,ax:dest.ax,pre:dest.pre,lines:dest.lines,host:dest.host};
+  var pts=route(a,dest);
+  a.cur=host?'conversando com '+host.n:'dando uma pausa';
+  a.st={k:'going',host:host,poi:poi};
+  await walk(a,pts);
+  pose(a,'idle');a.el.classList.remove('flip');
+  a.st={k:'there',host:host,poi:poi};
+  if(host){say(a,pick(VISIT));if(!host.away)setTimeout(function(){say(host,pick(REPLY))},1600)}
+  else say(a,pick(dest.lines));
+  await wait(a,rand(3800,6500));
+  var backPts=pts.slice(0,-1).reverse();backPts.push(a.seat.slice());
+  a.st={k:'back'};
+  await walk(a,backPts);
+  a.el.classList.remove('flip');
+  a.away=false;awayCount--;
+ }
+}
+
+/* ---------------- chat: local reply engine ---------------- */
+// Per agent repertoire. gen + gen2 are combined when nothing else matches.
+var REP={
+ rob:{
+  oi:['Oi! Que alegria ter você aqui no escritório.','Olá! Entra, a casa é sua.','E aí! Chegou numa hora ótima, o time está voando hoje.','Oi, oi! Senta aí, aceita um café?','Olá! Sempre bom receber gente nova por aqui.'],
+  faz:['Eu fundei o cuidar.vc e cuido para que cada agente saiba pra onde a gente vai.','Sou o fundador. Dou a direção e escalo o time: CTO na tecnologia, CMO no marketing, Claudete nas operações.','Meu trabalho é juntar as peças: Planejador faz a PAUTA, Copy escreve, Artes desenha, QC revisa e Agendador publica.','Eu decido prioridades e garanto que o cuidado esteja em tudo que a gente entrega.','Sou quem dá o sim final. Mas quem faz a mágica são esses 12 agentes.'],
+  agora:['A pauta da semana está redondinha, o Planejador caprichou.','Acabei de ver o relatório do Métricas e gostei muito.','Estou de olho na campanha nova que o CMO subiu.','Hoje o foco é crescer sem perder o carinho no atendimento.','Pedi pra Claudete organizar os pendentes e está tudo andando.'],
+  obg:['Eu que agradeço! Gente como você faz isso aqui valer a pena.','Imagina! Conta sempre comigo.','Agradeço de coração.','Por nada! Volta sempre que quiser.'],
+  tchau:['Até logo! A porta da sala está sempre aberta.','Tchau! Cuide bem de você também.','Até mais! Vou voltar pras aprovações.','Valeu pela visita, até a próxima!'],
+  cuidar:['O cuidar.vc nasceu pra cuidar de quem cuida. Esse é o nosso norte.','A gente cria conteúdo e ferramentas pra quem cuida de alguém se sentir menos só.','Somos um escritório de 13 agentes com uma missão: cuidado com quem cuida.','Aqui cada post, cada linha de código e cada número servem a quem cuida todo dia.'],
+  gen:['Boa pergunta, deixa eu pensar como fundador.','Anotei isso no meu caderno.','Gostei de você ter trazido isso.','Hmm, isso merece uma conversa com o time.'],
+  gen2:['Vou levar pra reunião das 15h.','Se precisar, o CTO e o CMO me ajudam a decidir.','O importante é que o cuidado venha primeiro.','Me conta mais, quero entender direitinho.']
+ },
+ cto:{
+  oi:['Oi! Pode chegar, estou entre um deploy e outro.','Olá! Bem na hora, acabei de fechar uma revisão de arquitetura.','E aí! Tudo em ordem por aqui na tecnologia.','Oi! Diz aí, em que posso ajudar?'],
+  faz:['Eu tomo as decisões técnicas: que tecnologia usar, como escalar e o que fica pra depois.','Coordeno Dev, QA e DevOps pra que o site rode liso e seguro.','Desenho a arquitetura e mando o status técnico todo dia às 07h15.','Meu papel é trocar risco por clareza: cada escolha técnica tem um porquê.'],
+  agora:['Decidi manter o banco atual e otimizar as consultas antes de trocar qualquer coisa.','O pipeline está verde, só falta o QA dar o ok.','Estou priorizando o novo fluxo de cadastro para esta semana.','Revisei o plano de backup com o DevOps e ficou sólido.','Dividi a tarefa do login em partes menores pro Dev.'],
+  obg:['Por nada! Tecnologia boa é a que ninguém percebe.','Imagina, estou aqui pra isso.','Valeu! Qualquer dúvida técnica, me chama.','Eu que agradeço a paciência.'],
+  tchau:['Até mais! Vou voltar pro quadro de arquitetura.','Tchau! Se algo cair, eu fico sabendo primeiro.','Até logo, bom trabalho pra você!','Falou! Volto pro code review.'],
+  cuidar:['Por trás do cuidar.vc tem um site leve e estável, pensado pra funcionar até em celular simples.','A tecnologia do cuidar.vc existe pra tirar peso de quem já cuida de muita coisa.','Escolhemos soluções simples e seguras: quem cuida não pode esperar tela carregando.','O cuidar.vc é cuidado em forma de produto, e eu garanto que ele fique no ar.'],
+  gen:['Tecnicamente, dá pra fazer.','Deixa eu avaliar os prós e contras.','Interessante, isso muda algumas prioridades.','Hmm, vou pensar na arquitetura disso.'],
+  gen2:['Primeiro valido com o QA, depois decido.','Prefiro começar simples e evoluir.','Vou registrar como decisão técnica da semana.','Se fizer sentido, o Dev pega amanhã.']
+ },
+ cmo:{
+  oi:['Oi! Chegou bem na hora do briefing.','Olá! Que energia boa, igual ao engajamento de hoje.','E aí! Senta, quero te mostrar uns números de alcance.','Oi! Adoro visita, rende até ideia de post.'],
+  faz:['Cuido do marketing: alcance, campanhas e a voz do cuidar.vc nas redes.','Eu lidero o time de conteúdo, do Planejador ao Agendador.','Meu trabalho é fazer a mensagem certa chegar em quem cuida de alguém.','Defino campanhas, testo criativos e acompanho o alcance todo dia.'],
+  agora:['O alcance da semana subiu e os salvamentos estão ótimos.','Estou testando dois criativos pra ver qual conversa melhor.','O briefing das 18h já está quase pronto.','Separei os posts com mais compartilhamentos pra repetir o formato.','Estou alinhando a próxima campanha com Copy e Artes.'],
+  obg:['Eu que agradeço! Isso vale mais que mil curtidas.','Valeu demais, de verdade.','Imagina! Compartilha a gente por aí, combinado?','Por nada, volta sempre!'],
+  tchau:['Até mais! Vou ver como o post das 19h performa.','Tchau! Segue a gente nas redes.','Até logo, foi ótimo conversar!','Um abraço, até a próxima!'],
+  cuidar:['O cuidar.vc fala com quem cuida de pai, mãe, filho ou paciente, e quer alcançar cada um.','Nossa missão nas redes é simples: quem cuida precisa se sentir visto.','O cuidar.vc é acolhimento com estratégia, cada post tem um propósito.','Queremos que o cuidar.vc seja o primeiro lugar lembrado por quem está cansado de cuidar sem apoio.'],
+  gen:['Adorei, isso dá um post!','Hmm, isso tem potencial de alcance.','Anotado no meu mural de ideias.','Interessante, quero ouvir mais.'],
+  gen2:['Vou pedir pro Métricas ver se o público reage bem.','Talvez vire um teste A/B semana que vem.','Posso levar pra pauta com o Planejador.','O importante é falar com carinho e chegar longe.']
+ },
+ devops:{
+  oi:['Oi! Todos os LEDs verdes, pode chegar.','Olá! Servidor estável e café quente, dia bom.','E aí! Estou de headset, mas estou te ouvindo.','Oi! Chegou numa hora tranquila, sem alerta nenhum.'],
+  faz:['Cuido da infraestrutura: servidores, deploy, backup e monitoramento.','Garanto que o cuidar.vc fique no ar 24 horas, sem susto.','Eu automatizo o caminho do código até produção.','Sou quem acorda se o servidor espirrar. Mas ele quase nunca espirra.'],
+  agora:['O backup das 04h rodou certinho.','Uptime de 100% nas últimas 24 horas.','Estou ajustando os alertas pra avisar antes do problema.','Deploy concluído e nenhum erro no log.','Estou de olho no uso de memória do rack, tudo tranquilo.'],
+  obg:['Por nada! Servidor feliz, time feliz.','Imagina, é só chamar.','Valeu! Isso aquece mais que o rack.','Eu que agradeço a visita.'],
+  tchau:['Até mais! Volto a vigiar os gráficos.','Tchau! Se piscar vermelho, eu resolvo.','Falou, bom resto de dia!','Até logo, que os LEDs fiquem verdes pra você.'],
+  cuidar:['O cuidar.vc precisa estar no ar sempre, porque quem cuida acessa de madrugada também.','Minha parte no cuidar.vc é invisível: estabilidade, velocidade e dados seguros.','Cuidar de quem cuida começa por um site que não cai.','O cuidar.vc roda numa infraestrutura enxuta e bem monitorada, feita com carinho.'],
+  gen:['Hmm, deixa eu checar os logs mentais.','Anotei no meu runbook.','Boa, isso dá pra automatizar.','Entendi, vou monitorar isso.'],
+  gen2:['Se precisar de servidor, eu provisiono.','Tudo que se repete vira script aqui.','Primeiro faço backup, depois mexo.','Qualquer coisa, abro um alerta pro CTO.']
+ },
+ dev:{
+  oi:['Oi! Só deixa eu salvar o arquivo... pronto, fala!','Olá! Estou no meio de um commit, mas sempre tem tempo.','E aí! Chega mais no cantinho do código.','Oi! O terminal pode esperar um minuto.'],
+  faz:['Eu escrevo o código do cuidar.vc: telas, login, cadastro e tudo mais.','Transformo as tarefas do CTO em funcionalidades que funcionam de verdade.','Sou dev: código, pull request, teste e mais código.','Construo as partes do site que você clica e usa.'],
+  agora:['Estou refatorando o login pra ficar mais rápido.','O PR do cadastro está quase pronto pra revisão do QA.','Achei uma função gigante e estou quebrando em pedaços menores.','Os testes passaram de primeira, raridade!','Estou corrigindo um detalhe de layout no celular.'],
+  obg:['Por nada! Bora codar.','Imagina, foi um prazer.','Valeu! Isso compila direto no coração.','Eu que agradeço, sério.'],
+  tchau:['Até mais! Vou dar push aqui.','Tchau! Sem bugs pra você.','Falou! Volto pro editor.','Até logo, bom deploy pra todos nós!'],
+  cuidar:['O cuidar.vc é o site que eu programo todo dia pensando em quem cuida de alguém.','No cuidar.vc cada botão precisa ser simples, quem cuida não tem tempo a perder.','Programar pro cuidar.vc é diferente, cada tela ajuda alguém de verdade.','O cuidar.vc é feito com código limpo e muito carinho.'],
+  gen:['Hmm, isso daria uma boa issue.','Interessante, deixa eu pensar na lógica.','Anotei no meu backlog.','Boa, dá pra implementar.'],
+  gen2:['Vou abrir um PR e o QA revisa.','Primeiro escrevo o teste, depois o código.','Talvez caiba numa função pequena.','Se o CTO aprovar, sai essa semana.']
+ },
+ qa:{
+  oi:['Oi! Pode falar, estou rodando uma bateria de testes.','Olá! Chegou sem bug nenhum, que ótimo.','E aí! Esse oi foi testado e aprovado.','Oi! Estava justamente testando no celular.'],
+  faz:['Eu testo tudo antes de chegar em você: telas, fluxos e casos estranhos.','Sou QA, meu trabalho é achar o bug antes do usuário.','Reviso os PRs do Dev e rodo testes de regressão.','Testo no celular, no computador e no pior cenário possível.'],
+  agora:['Rodando a regressão completa, 42 casos até agora.','Achei um bug no cadastro e já avisei o Dev.','Estou testando o site numa conexão bem lenta.','O PR do login passou em todos os testes.','Montando casos de teste pro novo fluxo de cadastro.'],
+  obg:['Por nada! Aprovado com louvor.','Imagina, foi um teste agradável.','Valeu! Zero bugs nessa conversa.','Eu que agradeço.'],
+  tchau:['Até mais! Volto pros testes.','Tchau! Se achar um bug, me conta.','Falou! Vou rodar mais uma regressão.','Até logo, caso de teste encerrado.'],
+  cuidar:['O cuidar.vc precisa funcionar de primeira, porque quem cuida já tem problema demais.','Testo o cuidar.vc pensando numa pessoa cansada usando o celular às 3h da manhã.','Qualidade no cuidar.vc é respeito com quem cuida.','Cada teste que eu faço protege a experiência de quem usa o cuidar.vc.'],
+  gen:['Hmm, vou escrever um caso de teste pra isso.','Interessante, e se der errado?','Anotei como cenário de teste.','Deixa eu reproduzir isso na cabeça.'],
+  gen2:['Testo e te conto o resultado.','Melhor prevenir que corrigir.','Vou validar no celular também.','Se passar na regressão, está valendo.']
+ },
+ claudete:{
+  oi:['Oi! Que bom, estava mesmo querendo uma pausa boa.','Olá! Senta, vou só fechar essa lista de pendentes.','E aí! Tudo organizado por aqui.','Oi! A agenda está cheia, mas sempre cabe uma conversa.'],
+  faz:['Cuido do produto e das operações: processos, prioridades e pendentes.','Organizo a semana do time e garanto que nada fique esquecido.','Sou a ponte entre o Rob e o time, transformo ideias em planos.','Documento processos pra que tudo rode mesmo quando alguém tira férias.'],
+  agora:['Atualizei a lista de pendentes, sobraram só três.','Estou organizando a semana com o Rob.','Documentei o processo de publicação de ponta a ponta.','Revisando o calendário pra ninguém ficar sobrecarregado.','Priorizei as melhorias pedidas pelos usuários.'],
+  obg:['Por nada! Organizar é comigo.','Imagina, foi um prazer.','Eu que agradeço a atenção.','Valeu! Anotado com carinho.'],
+  tchau:['Até mais! Vou voltar pros pendentes.','Tchau! Coloquei um lembrete pra gente conversar de novo.','Até logo, boa semana!','Tchau, tchau! Bom trabalho.'],
+  cuidar:['O cuidar.vc é um produto que organiza a vida de quem cuida, e eu organizo o cuidar.vc.','A gente constrói o cuidar.vc ouvindo quem cuida de verdade.','O cuidar.vc quer ser o apoio que falta na rotina de quem cuida.','Cada processo aqui dentro existe pro cuidar.vc chegar melhor em quem precisa.'],
+  gen:['Hmm, deixa eu anotar isso.','Boa, isso entra na lista.','Interessante, vou ver a prioridade.','Faz sentido, quero organizar isso.'],
+  gen2:['Coloco na pauta da semana.','Vou alinhar com o Rob.','Documento e compartilho com o time.','Prometo que não fica esquecido.']
+ },
+ plan:{
+  oi:['Oi! Estava fechando a pauta, chegou em boa hora.','Olá! Quer saber o tema de amanhã?','E aí! Calendário aberto e cabeça cheia de ideias.','Oi! Cuidado, toda conversa aqui pode virar pauta.'],
+  faz:['Eu monto a PAUTA: o que vai ao ar, em que dia e por quê.','Planejo o calendário de posts da semana inteira.','Escolho os temas e passo o briefing pro Copy e pro time de Artes.','Organizo a pauta pro cuidar.vc falar do assunto certo na hora certa.'],
+  agora:['A pauta da semana está fechada, só falta o tema de sexta.','Definindo o tema de amanhã: o descanso de quem cuida.','Atualizei o calendário com as datas especiais do mês.','Estou separando ideias que vieram dos comentários.','Mandei o briefing pro Copy agora há pouco.'],
+  obg:['Por nada! Já virou item de pauta.','Imagina, foi ótimo.','Eu que agradeço, rendeu ideia.','Valeu! Anotado no calendário.'],
+  tchau:['Até mais! Volto pro calendário.','Tchau! Amanhã tem post novo.','Até logo, fica de olho na pauta!','Falou! Boa semana.'],
+  cuidar:['O cuidar.vc tem pauta pensada pra quem cuida: dicas, acolhimento e informação.','No cuidar.vc a pauta nasce das dores reais de quem cuida.','Cada semana do cuidar.vc tem temas que abraçam quem cuida de alguém.','O cuidar.vc fala de cuidado, e minha pauta garante que fale todo dia.'],
+  gen:['Hmm, isso daria uma pauta boa.','Anotei na lista de temas.','Interessante, cabe numa série.','Boa, deixa eu olhar o calendário.'],
+  gen2:['Posso encaixar na semana que vem.','Passo pro Copy desenvolver.','Talvez vire um carrossel.','Vou checar se combina com a campanha do CMO.']
+ },
+ copy:{
+  oi:['Oi! Estava aqui procurando a palavra certa.','Olá! Chegou no meio de uma legenda, mas pode falar.','E aí! Palavras prontas pra você.','Oi! Que bom, uma conversa sem limite de caracteres.'],
+  faz:['Escrevo os textos e as legendas do cuidar.vc.','Cuido do tom de voz: acolhedor, claro e sem enrolação.','Transformo a pauta em frases que tocam quem cuida.','Escrevo títulos, legendas, chamadas e até os avisos do site.'],
+  agora:['Reescrevendo uma legenda pra ficar mais acolhedora.','Ajustando o título do post de amanhã.','Cortei duas frases, texto bom é texto enxuto.','Estou testando três chamadas diferentes pro mesmo post.','Revisando o tom de voz da campanha nova.'],
+  obg:['Por nada! Palavra dada é palavra cumprida.','Imagina, foi um prazer escrever essa conversa com você.','Eu que agradeço as boas palavras.','Valeu! Isso ainda vira legenda.'],
+  tchau:['Até mais! Ponto final por hoje.','Tchau! Volto pras legendas.','Até logo, com reticências...','Falou! Fica bem.'],
+  cuidar:['O cuidar.vc escreve pra quem cuida como quem senta do lado e escuta.','No cuidar.vc cada palavra tem que acolher antes de informar.','O cuidar.vc tem uma voz gentil, e eu cuido dela.','Escrever pro cuidar.vc é lembrar que do outro lado tem alguém cansado precisando de carinho.'],
+  gen:['Hmm, que frase boa essa sua.','Anotei, pode virar legenda.','Interessante, tem história aí.','Gostei do jeito que você falou.'],
+  gen2:['Deixa eu achar as palavras certas.','Vou lapidar isso num texto curto.','Com um bom título, isso voa.','Depois passo pro QC dar uma olhada.']
+ },
+ arte:{
+  oi:['Oi! Pode chegar, estou escolhendo uma paleta.','Olá! Bem na hora, acabei de exportar um card.','E aí! Cuidado com a tinta fresca.','Oi! Estava aqui ajustando um degradê.'],
+  faz:['Crio as peças visuais do cuidar.vc: cards, carrosséis e capas.','Cuido das cores, das fontes e da identidade visual.','Transformo o texto do Copy em imagem que para o scroll.','Desenho cada peça pensando em acolher só com o olhar.'],
+  agora:['Finalizei uma arte com efeito de vidro.','Testando outra paleta, mais quente.','Exportando um card novo pro Agendador.','Ajustando o espaçamento de um carrossel.','Estou alinhando os ícones da campanha nova.'],
+  obg:['Por nada! Ficou lindo esse agradecimento.','Imagina, foi um prazer.','Eu que agradeço, deu até inspiração.','Valeu! Isso colore meu dia.'],
+  tchau:['Até mais! Volto pro canvas.','Tchau! Leva essa paleta boa com você.','Até logo, um dia bem colorido pra você!','Falou! Vou exportar aqui.'],
+  cuidar:['O cuidar.vc tem cores quentes e acolhedoras, como um abraço.','No cuidar.vc o visual precisa ser calmo, quem cuida já vive muita correria.','Cada peça do cuidar.vc tenta dizer: você não precisa cuidar sem apoio.','A identidade do cuidar.vc mistura o laranja do afeto com a leveza do vidro.'],
+  gen:['Hmm, consigo visualizar isso.','Anotei no meu moodboard.','Interessante, dá uma peça bonita.','Boa, isso tem cor.'],
+  gen2:['Posso fazer um rascunho rapidinho.','Vou testar em duas paletas.','Passo pro QC revisar o visual.','Com um bom contraste, fica lindo.']
+ },
+ qc:{
+  oi:['Oi! Chegou revisado e aprovado.','Olá! Estava conferindo uma vírgula, pode falar.','E aí! Nada passa por aqui sem uma boa olhada.','Oi! Que bom, uma pausa entre revisões.'],
+  faz:['Faço a revisão final: texto, arte e contexto antes de publicar.','Sou o último olhar antes do post ir pro ar.','Confiro ortografia, tom, cores e se tudo combina com a pauta.','Garanto que nada sai com erro, nem uma vírgula fora do lugar.'],
+  agora:['Revisei texto e arte do post de amanhã.','Faltou uma vírgula aqui, já corrigi.','Aprovei dois posts pra publicar.','Voltei uma arte pro time de Artes com um ajuste pequeno.','Estou checando se a legenda combina com a imagem.'],
+  obg:['Por nada! Agradecimento aprovado.','Imagina, foi um prazer.','Eu que agradeço, e sem nenhuma correção.','Valeu! Isso passou na revisão.'],
+  tchau:['Até mais! Volto pra fila de revisão.','Tchau! Revisado e encerrado.','Até logo, cuidado com as vírgulas!','Falou! Boa sorte por aí.'],
+  cuidar:['O cuidar.vc só publica o que foi revisado com carinho.','Quem cuida merece informação certa, por isso reviso tudo no cuidar.vc.','O cuidar.vc tem padrão alto, e eu sou quem segura a régua.','No cuidar.vc qualidade é uma forma de cuidado.'],
+  gen:['Hmm, deixa eu revisar isso com calma.','Anotado, com pontuação e tudo.','Interessante, vou olhar com lupa.','Boa observação.'],
+  gen2:['Se estiver certo, eu aprovo.','Vale uma segunda leitura.','Te devolvo com sugestões.','Detalhe pequeno faz diferença grande.']
+ },
+ agend:{
+  oi:['Oi! A fila de publicação está em dia, pode falar.','Olá! Tenho um post saindo às 19h, mas dá tempo.','E aí! Relógio sincronizado e pronto.','Oi! Chegou pontual, gosto disso.'],
+  faz:['Agendo e publico os posts na hora certa.','Cuido da fila de publicação e confirmo se tudo foi ao ar.','Recebo a peça aprovada pelo QC e coloco no horário ideal.','Sou o dono do relógio: nada atrasa, nada sai antes.'],
+  agora:['Post agendado pras 19h.','A fila do Canva está em dia.','A publicação de hoje está confirmada.','Estou reorganizando os horários com base nos números do Métricas.','Tenho três posts na fila pra amanhã.'],
+  obg:['Por nada! Agradecimento entregue no horário.','Imagina, foi pontual e com carinho.','Eu que agradeço.','Valeu! Anotei na agenda.'],
+  tchau:['Até mais! Tenho um post pra soltar.','Tchau! Próxima publicação às 19h.','Até logo, no horário combinado!','Falou! Vou conferir a fila.'],
+  cuidar:['O cuidar.vc publica quando quem cuida consegue parar um pouquinho pra ver.','No cuidar.vc a hora do post importa, a gente respeita a rotina de quem cuida.','O cuidar.vc aparece todo dia no feed, com constância e carinho.','Minha parte no cuidar.vc é garantir que o cuidado chegue na hora.'],
+  gen:['Hmm, deixa eu ver a agenda.','Anotado com data e hora.','Interessante, tem um horário bom pra isso.','Boa, cabe na fila.'],
+  gen2:['Posso agendar pra amanhã cedo.','Confirmo depois que publicar.','Primeiro o QC aprova, depois eu solto.','Horário certo faz o alcance subir.']
+ },
+ metr:{
+  oi:['Oi! Alcance em alta e você por aqui, dia bom.','Olá! Estava olhando uma planilha linda.','E aí! Sua visita aumentou meu engajamento em 100%.','Oi! Pode falar, os números esperam.'],
+  faz:['Analiso os dados: alcance, salvamentos, cliques e crescimento.','Transformo números em decisões pro CMO e pro Rob.','Monto o relatório semanal e aponto o que funciona.','Sou quem diz se o post foi bem, com dados na mão.'],
+  agora:['O alcance subiu 12% essa semana.','Os salvamentos estão 30% acima da média.','Terminei o relatório semanal agora.','Carrossel está rendendo o dobro de imagem única.','O melhor horário de post essa semana foi 19h.'],
+  obg:['Por nada! Satisfação de 100%.','Imagina, foi um prazer estatisticamente significativo.','Eu que agradeço, esse dado vai pro relatório.','Valeu! Taxa de gentileza lá em cima.'],
+  tchau:['Até mais! Volto pras planilhas.','Tchau! Os números te mandam um abraço.','Até logo, que sua semana cresça 20%!','Falou! Vou atualizar o dashboard.'],
+  cuidar:['O cuidar.vc cresce toda semana, e cada número é uma pessoa que cuida.','Os dados do cuidar.vc mostram que conteúdo acolhedor é o mais salvo.','No cuidar.vc eu meço alcance, mas o que importa é quantas pessoas se sentiram ajudadas.','O cuidar.vc usa números pra cuidar melhor, não só pra crescer.'],
+  gen:['Hmm, precisaria de mais dados.','Anotei como hipótese.','Interessante, dá pra medir isso.','Boa, vou cruzar com a planilha.'],
+  gen2:['Em uma semana te trago o gráfico.','Correlação não é causa, mas é pista.','Mando pro CMO com os números.','Se o dado confirmar, a gente escala.']
+ }
+};
+var HELLO=['Oi!','Olá!','Opa, oi!','Oi, tudo bem por aqui!'];
+var GREET=['Oi! Agora estou {onde}, mas tenho um tempinho pra você.','Olá! Você me encontrou {onde}. Pode falar!','Oi, que bom te ver! Estou {onde} neste momento.','Olá! Chegou na hora certa, estou {onde}.'];
+var GREET_DESK=['Por aqui: {cur}.','O que rolou agora: {cur}.','Última novidade: {cur}.'];
+var NOW=['Neste momento estou {onde}.','Agora estou {onde}.','Você me pegou {onde}.','Por enquanto estou {onde}.'];
+var NOW_DESK=['Agora estou {onde}, e a última foi: {cur}.','Estou {onde}. Por aqui: {cur}.','Tudo andando {onde}. Na tela: {cur}.'];
+var ORDER=['tchau','obg','faz','agora','cuidar','oi'];
+var RX={
+ tchau:/(tchau|\bate (mais|logo|amanha|breve|a proxima|ja)\b|\bfalou\b|\bflw\b|\bbye\b|boa noite|\bfui\b|vou nessa|to indo embora)/,
+ obg:/(obrigad|brigad|valeu|\bvlw\b|agradec|gratidao|\bthanks?\b)/,
+ faz:/(o que (voce |vc |tu )?faz\b|qual (e )?(o |a )?(seu|sua) (papel|cargo|trabalho|funcao|servico)|sua funcao|seu papel|quem (e )?(voce|vc)|voce faz o que|pra que (voce|vc) serve|\bcargo\b|responsavel por)/,
+ agora:/(fazendo|como (esta|ta|anda|vai) (o |a )?(trabalho|dia|servico|projeto|semana)|trabalho|ocupad|\bagora\b|progresso|novidade|andamento|\bstatus\b)/,
+ cuidar:/(cuidar|empresa|startup|missao|proposito|plataforma|\bmarca\b|negocio|escritorio)/,
+ oi:/(^|\b)(oi+e?|ola|opa|e ?ai|bom dia|boa tarde|hey|salve|tudo (bem|bom|certo)|como vai|beleza|blz)\b/
+};
+var chatEl=$('chat'),chatMsgs=$('chatMsgs'),chatForm=$('chatForm'),chatIn=$('chatIn'),chatAv=$('chatAv');
+var CHAT={a:null,token:0,chain:Promise.resolve(),back:null};
+var HIST={};
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim()}
+function atDesk(a){return !a.st||a.st.k==='desk'}
+function estado(a){
+ var s=a.st||{k:'desk'};
+ if(s.k==='going')return s.host?'indo falar com '+s.host.n:s.poi.go;
+ if(s.k==='there')return s.host?'conversando com '+s.host.n:s.poi.where;
+ if(s.k==='back')return 'voltando pra minha mesa';
+ return a.boss?'aqui na minha sala':(a.desk?'aqui na minha mesa':'na mesa grande do conteúdo');
+}
+function fill(a,s){return s.replace(/\{onde\}/g,estado(a)).replace(/\{cur\}/g,a.cur)}
+// Random piece that is never the same as the previous one of that kind
+function fresh(a,key,arr){a.lp=a.lp||{};var s,n=0;do{s=pick(arr)}while(arr.length>1&&s===a.lp[key]&&++n<12);a.lp[key]=s;return s}
+function greet(a){
+ var out,n=0;
+ do{out=fill(a,fresh(a,'greet',GREET)+(atDesk(a)?' '+fresh(a,'greetd',GREET_DESK):''))}while(out===a.lastSaid&&++n<12);
+ return a.lastSaid=out;
+}
+function reply(a,text){
+ var t=norm(text),R=REP[a.id],cat='gen',out,n=0;
+ for(var i=0;i<ORDER.length;i++)if(RX[ORDER[i]].test(t)){cat=ORDER[i];break}
+ do{
+  if(cat==='gen')out=fresh(a,'gen',R.gen)+' '+fresh(a,'gen2',R.gen2);
+  else if(cat==='agora')out=fresh(a,'now',atDesk(a)?NOW_DESK:NOW)+' '+fresh(a,'agora',R.agora);
+  else{out=fresh(a,cat,R[cat]);if(cat!=='oi'&&RX.oi.test(t))out=fresh(a,'hello',HELLO)+' '+out}
+  out=fill(a,out);
+ }while(out===a.lastSaid&&++n<12);
+ return a.lastSaid=out;
+}
+function push(a,from,t){var h=HIST[a.id]=HIST[a.id]||[];h.push({f:from,t:t});if(h.length>6)h.splice(0,h.length-6)}
+function bubble(f,t){var d=document.createElement('div');d.className='msg '+f;var p=document.createElement('p');p.textContent=t;d.appendChild(p);return d}
+function scrollEnd(){requestAnimationFrame(function(){chatMsgs.scrollTop=chatMsgs.scrollHeight})}
+function vvFit(){
+ if(!CHAT.a||!window.visualViewport)return;
+ var v=window.visualViewport;chatEl.style.height=v.height+'px';chatEl.style.top=v.offsetTop+'px';scrollEnd();
+}
+function openChat(a){
+ if(CHAT.a===a)return;
+ if(CHAT.a)closeChat(true);
+ CHAT.a=a;CHAT.token++;
+ if(!chatEl.classList.contains('open'))CHAT.back=document.activeElement;
+ a.chat=true;a.el.classList.add('sel','chatting');
+ if(a.path)pose(a,'idle');
+ hush(a);
+ $('chatName').textContent=a.n;$('chatRole').textContent=a.r;$('chatSt').textContent='online, '+estado(a);
+ ['c','sk','hc'].forEach(function(k){chatAv.style.setProperty('--'+k,a[k])});
+ chatIn.placeholder='Fale com '+a.n+'...';chatIn.value='';
+ push(a,'ag',greet(a));
+ chatMsgs.innerHTML='';
+ HIST[a.id].forEach(function(m){chatMsgs.appendChild(bubble(m.f,m.t))});
+ chatEl.classList.add('open');document.body.classList.add('noscroll');
+ vvFit();scrollEnd();
+ if(window.matchMedia&&matchMedia('(hover:hover) and (pointer:fine)').matches)setTimeout(function(){chatIn.focus()},60);
+}
+function closeChat(keepOpen){
+ var a=CHAT.a;if(!a)return;
+ CHAT.a=null;CHAT.token++;
+ a.chat=false;a.el.classList.remove('sel','chatting');
+ if(a.path)pose(a,'walk');
+ if(keepOpen)return;
+ chatEl.classList.remove('open');document.body.classList.remove('noscroll');
+ chatEl.style.height='';chatEl.style.top='';
+ if(CHAT.back&&CHAT.back.focus){try{CHAT.back.focus()}catch(_){}}
+}
+chatForm.addEventListener('submit',function(e){
+ e.preventDefault();
+ var v=chatIn.value.trim(),a=CHAT.a,tok=CHAT.token;
+ if(!v||!a)return;
+ chatIn.value='';
+ push(a,'me',v);chatMsgs.appendChild(bubble('me',v));scrollEnd();
+ CHAT.chain=CHAT.chain.then(function(){
+  if(tok!==CHAT.token){push(a,'ag',reply(a,v));return}
+  var ty=document.createElement('div');ty.className='msg ag typing';
+  ty.innerHTML='<p><span>digitando</span><i></i><i></i><i></i></p>';
+  chatMsgs.appendChild(ty);scrollEnd();
+  return sleep(rand(800,1500)).then(function(){
+   if(ty.parentNode)ty.parentNode.removeChild(ty);
+   var r=reply(a,v);push(a,'ag',r);
+   if(tok===CHAT.token){chatMsgs.appendChild(bubble('ag',r));scrollEnd()}
+  });
+ }).catch(function(){});
+});
+$('chatX').addEventListener('click',function(){closeChat()});
+chatEl.addEventListener('click',function(e){if(e.target===chatEl)closeChat()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&CHAT.a)closeChat()});
+if(window.visualViewport){window.visualViewport.addEventListener('resize',vvFit);window.visualViewport.addEventListener('scroll',vvFit)}
+
+/* ---------------- clock ---------------- */
+var hh=wclock.querySelector('.hh'),mm=wclock.querySelector('.mm'),ss=wclock.querySelector('.ss');
+function clock(){
+ var d=new Date(),tz='America/Sao_Paulo';
+ $('clock').textContent=d.toLocaleTimeString('pt-BR',{timeZone:tz});
+ $('dateTxt').textContent=d.toLocaleDateString('pt-BR',{timeZone:tz,weekday:'short',day:'2-digit',month:'short'}).replace(/\./g,'');
+ var p=d.toLocaleTimeString('en-GB',{timeZone:tz,hour12:false}).split(':').map(Number);
+ hh.style.transform='rotate('+((p[0]%12)*30+p[1]*.5)+'deg)';mm.style.transform='rotate('+(p[1]*6)+'deg)';ss.style.transform='rotate('+(p[2]*6)+'deg)';
+}
+
+/* ---------------- fit, zoom and pan ---------------- */
+var fitwrap=$('fitwrap'),scenebox=$('scenebox'),zoomBtn=$('zoomBtn'),zoomed=false;
+function fit(){
+ var avail=fitwrap.clientWidth||SW;
+ if(zoomed){
+  scenebox.style.transform='none';
+  fitwrap.style.height=Math.min(SH,Math.max(320,Math.round(window.innerHeight*.72)))+'px';
+ }else{
+  var s=Math.min(1,avail/SW);
+  scenebox.style.transform='scale('+s+')';
+  fitwrap.style.height=Math.round(SH*s)+'px';
+  fitwrap.scrollLeft=0;fitwrap.scrollTop=0;
+ }
+ // spacer so the scroll area matches the unscaled scene when zoomed
+ scenebox.style.position=zoomed?'relative':'absolute';
+}
+zoomBtn.addEventListener('click',function(){
+ zoomed=!zoomed;fitwrap.classList.toggle('zoomed',zoomed);
+ zoomBtn.textContent=zoomed?'Ajustar à tela':'Ampliar';
+ $('hint').textContent=zoomed?'Arraste a cena para navegar e toque em um agente para conversar':'Toque em um agente para abrir a conversa';
+ fit();
+ if(zoomed){fitwrap.scrollLeft=(SW-fitwrap.clientWidth)/2;fitwrap.scrollTop=(SH-fitwrap.clientHeight)/2}
+});
+// Pointer capture only starts once the finger really moves, so taps still reach the agents
+var drag=null,dragMoved=false;
+fitwrap.addEventListener('pointerdown',function(e){dragMoved=false;if(!zoomed)return;drag={x:e.clientX,y:e.clientY,l:fitwrap.scrollLeft,t:fitwrap.scrollTop,moved:false}});
+fitwrap.addEventListener('pointermove',function(e){
+ if(!drag)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+ if(!drag.moved&&Math.abs(dx)+Math.abs(dy)>4){drag.moved=dragMoved=true;fitwrap.classList.add('dragging');try{fitwrap.setPointerCapture(e.pointerId)}catch(_){}}
+ if(drag.moved){fitwrap.scrollLeft=drag.l-dx;fitwrap.scrollTop=drag.t-dy}
+});
+function endDrag(){if(!drag)return;drag=null;fitwrap.classList.remove('dragging')}
+fitwrap.addEventListener('pointerup',endDrag);fitwrap.addEventListener('pointercancel',endDrag);
+var rt;window.addEventListener('resize',function(){fit();clearTimeout(rt);rt=setTimeout(layoutPlates,150)});
+
+/* ---------------- boot ---------------- */
+buildPlates();
+TEAM.forEach(buildAgent);
+$('liveTxt').textContent=TEAM.length+' agentes ativos';
+fit();clock();setInterval(clock,1000);
+requestAnimationFrame(function(){requestAnimationFrame(function(){layoutPlates();setTimeout(layoutPlates,600)})});
+requestAnimationFrame(tick);
+TEAM.forEach(function(a,i){life(a,i<4?rand(600,2500):rand(2000,12000))});
+})();
+</script>
+</body>
+</html>

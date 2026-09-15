@@ -1113,3 +1113,8 @@ RuntimeError: Could not determine home directory.
 2026-09-15 04:00:15,110 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=MainThread:128258567241856 provider=custom base_url=http://127.0.0.1:8788/v1 model=glm-5.3-flash
 2026-09-15 04:00:15,113 INFO gateway.run: Session expiry done: 1 finalized
 2026-09-15 04:00:20,562 INFO cron.scheduler: Job 'd76ee3655730': delivered to telegram:8944451892 via live adapter
+2026-09-15 08:00:21,131 INFO cron.scheduler: Job 'd76ee3655730': delivered to telegram:8944451892 via live adapter
+2026-09-15 12:00:18,363 INFO cron.scheduler: Running job 'briefing-matinal' (ID: 04c40e86800a)
+2026-09-15 12:00:18,363 INFO cron.scheduler: Prompt: [IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final response will be automatic
+2026-09-15 12:00:18,436 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 12:00:18,476 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_2:128257496172224 provider=custom base_url=http://127.0.0.1:8788/v1 model=glm-5.3-flash

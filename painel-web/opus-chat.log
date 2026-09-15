@@ -1,0 +1,28 @@
+Reescrevi o motor de respostas do chat em `escritorio-v5.html`. A frase de enchimento sumiu: "ola rob, como foi o dia?" agora recebe "Olá! Dia corrido, do jeito que eu gosto. Estou revisando com a Claudete o que falta pro lançamento público."
+
+**Verificação**
+- Extraí o `<script>` e rodei `node --check`: sem erros de sintaxe.
+- `reply(a,text)` manteve a mesma assinatura e os dois pontos de chamada no submit continuam iguais.
+- Zero travessões (—) no arquivo. As buscas por "me conta mais" e "pode desenvolver" não acham nada.
+- O diff só mexe no trecho do motor (antigas linhas 875 a 1053). CSS, HTML, modal, painel CMO, iframe, relógio e animação ficaram intactos.
+- Simulei no Node conversas com os 13 agentes (saudação, "tudo bem?", "o que você faz", "o que tá fazendo", lançamento, app, babás, emoji solto, "k", "blz", repetição, despedida). Ainda não abri no navegador.
+
+**O que mudou**
+- **Intenções:** a ordem de detecção é: mensagem vazia (emoji ou 1 a 2 letras), despedida, agradecimento, atividade agora, o que faz, "como foi o dia", pergunta sobre o projeto, elogio, "sim/não" depois de uma pergunta do agente, resposta ao "e com você?", saudação pura. As regex aceitam grafias como oq, vc, tá, flw, vlw e obg.
+- **Saudação junto com pergunta:** "oi rob, o que você faz?" responde "Olá!" e depois a resposta de verdade. "tudo bem?" responde e pergunta de volta; se a pessoa diz "tô cansado", o agente reage a isso.
+- **Projeto:** são 12 tópicos (lançamento, verificação, pagamento, avaliações, enfermeiros, cuidadores, babás, famílias, app, site, funcionalidades, divulgação), mais uma categoria geral do projeto.
+  - Cada agente tem 5 respostas próprias de estado do projeto e falas específicas nos tópicos da sua área.
+  - Fora da área dele, o agente diz o fato e aponta quem cuida do assunto ("pra detalhe fino, vale falar com o CTO").
+  - Se a pergunta cita dois tópicos, responde o primeiro citado e oferece o segundo.
+- **Pergunta fora do escopo:** o agente diz que não quer chutar e pergunta algo concreto, como "Quer saber do lançamento ou das funcionalidades?". Se a pessoa responde "sim" ou "ok", ele fala do primeiro tópico oferecido; com "os dois", fala dos dois.
+- **Atividade agora:** usa `estado(a)`/`atDesk(a)`. Se o boneco está andando ou conversando com outro agente, diz isso ("Neste momento estou conversando com Rob...").
+- **Memória curta:** cada agente guarda as últimas 12 mensagens. Se uma se repete, ele avisa ("Você repetiu isso, tô atento.") e responde com outra variação.
+- **Variedade:** `fresh()` embaralha as frases de cada agente e só repete uma depois de usar todas, inclusive entre conversas diferentes.
+
+**Decisões para você revisar**
+- **Chaves renomeadas:** tirei `gen`, `gen2`, `cuidar` e `ORDER` e criei `proj`, `tema`, `off`, `TOPIC` e outras listas. Confirmei antes que nada fora do motor usava essas chaves. `REP`, `HELLO`, `GREET`, `GREET_DESK`, `NOW`, `NOW_DESK`, `RX`, `greet`, `fresh` e `reply` continuam existindo.
+- **"Boa noite":** no começo da conversa é tratado como saudação; depois que a pessoa já falou algo, como despedida.
+- **Detalhes inventados:** alguns detalhes das falas são criação minha para dar substância, como "42 casos na regressão", "nenhum dado de cartão guardado" e "app nativo não é prioridade". Vale uma revisada se algum não bater com a realidade.
+- **Frases antigas reescritas:** as falas antigas descreviam o cuidar.vc como conteúdo para quem cuida. Troquei pelo modelo real: plataforma de contratação com profissionais verificados.
+
+Não fiz commit. Tem um backup do arquivo original em `/tmp/escritorio-v5.bak.html`.

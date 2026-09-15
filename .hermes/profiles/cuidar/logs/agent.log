@@ -13525,3 +13525,874 @@ telegram.error.TimedOut: Timed out
 2026-09-15 08:00:16,338 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
 2026-09-15 08:00:16,777 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: conversation turn: session=cron_9587d40be7e7_20260915_080014 model=glm-5.3 provider=custom platform=cron history=0 msg='[IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicatin...'
 2026-09-15 08:00:16,800 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6358 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:20,211 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6358 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:20,212 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #1: model=glm-5.3 provider=custom in=17076 out=334 total=17410 latency=3.4s
+2026-09-15 08:00:20,214 INFO tools.file_tools: Creating new local environment for task default...
+2026-09-15 08:00:20,264 INFO tools.environments.base: Session snapshot created (session=5e98e2257441, cwd=/home/hermes)
+2026-09-15 08:00:20,264 INFO tools.file_tools: local environment ready for task default
+2026-09-15 08:00:20,377 INFO agent.tool_executor: tool search_files completed (0.16s, 762 chars)
+2026-09-15 08:00:20,423 INFO agent.tool_executor: tool read_file completed (0.21s, 7410 chars)
+2026-09-15 08:00:20,443 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6367 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:24,016 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6367 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:24,018 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #2: model=glm-5.3 provider=custom in=20280 out=459 total=20739 latency=3.6s
+2026-09-15 08:00:24,105 INFO agent.tool_executor: tool read_file failed (0.08s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /home/hermes/cuidarvc/squad/metricas/aprendizados-2026-09-14.md",
+2026-09-15 08:00:24,170 INFO agent.tool_executor: tool read_file completed (0.15s, 14497 chars)
+2026-09-15 08:00:24,179 INFO agent.tool_executor: tool read_file completed (0.16s, 14534 chars)
+2026-09-15 08:00:24,181 WARNING [cron_9587d40be7e7_20260915_080014] agent.tool_executor: Tool read_file returned error (0.08s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /home/hermes/cuidarvc/squad/metricas/aprendizados-2026-09-14.md",
+2026-09-15 08:00:24,201 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6378 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:43,012 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6378 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:43,013 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #3: model=glm-5.3 provider=custom in=30381 out=2285 total=32666 latency=18.8s
+2026-09-15 08:00:43,115 INFO agent.tool_executor: tool search_files completed (0.10s, 1037 chars)
+2026-09-15 08:00:43,153 INFO agent.tool_executor: tool read_file completed (0.14s, 3480 chars)
+2026-09-15 08:00:43,179 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6386 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:48,108 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6386 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:00:48,109 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #4: model=glm-5.3 provider=custom in=34403 out=656 total=35059 latency=5.0s
+2026-09-15 08:00:48,299 INFO agent.tool_executor: tool search_files completed (0.19s, 18 chars)
+2026-09-15 08:00:48,300 INFO agent.tool_executor: tool read_file completed (0.19s, 44038 chars)
+2026-09-15 08:00:48,307 INFO agent.tool_executor: tool read_file completed (0.19s, 14995 chars)
+2026-09-15 08:00:48,331 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6398 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:15,068 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6398 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:15,069 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #5: model=glm-5.3 provider=custom in=53251 out=3961 total=57212 latency=26.8s
+2026-09-15 08:01:15,199 INFO agent.tool_executor: tool read_file failed (0.13s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /home/hermes/cuidarvc/squad/pautas/pauta-2026-09-12-08.md", "simi
+2026-09-15 08:01:15,278 INFO agent.tool_executor: tool read_file completed (0.21s, 8752 chars)
+2026-09-15 08:01:15,321 INFO agent.tool_executor: tool read_file completed (0.25s, 4580 chars)
+2026-09-15 08:01:15,323 WARNING [cron_9587d40be7e7_20260915_080014] agent.tool_executor: Tool read_file returned error (0.13s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /home/hermes/cuidarvc/squad/pautas/pauta-2026-09-12-08.md", "simi
+2026-09-15 08:01:15,346 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6409 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:15,953 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6409 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:15,954 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: Empty response after tool calls — nudging model to continue processing
+2026-09-15 08:01:15,974 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6410 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:24,998 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6410 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:24,998 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #6: model=glm-5.3 provider=custom in=61723 out=1553 total=63276 latency=9.0s
+2026-09-15 08:01:25,121 INFO agent.tool_executor: tool read_file completed (0.12s, 9666 chars)
+2026-09-15 08:01:25,136 INFO agent.tool_executor: tool read_file completed (0.13s, 7721 chars)
+2026-09-15 08:01:25,159 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6419 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:47,396 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6419 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:01:47,396 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #7: model=glm-5.3 provider=custom in=68844 out=3854 total=72698 latency=22.3s
+2026-09-15 08:01:47,518 INFO agent.tool_executor: tool read_file completed (0.12s, 10543 chars)
+2026-09-15 08:01:47,527 INFO agent.tool_executor: tool read_file completed (0.13s, 10011 chars)
+2026-09-15 08:01:47,552 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6428 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:02:19,252 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6428 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:02:19,284 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6429 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:02:47,089 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6429 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:02:47,090 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #8: model=glm-5.3 provider=custom in=79332 out=3693 total=83025 latency=27.8s
+2026-09-15 08:02:47,214 INFO [cron_9587d40be7e7_20260915_080014] agent.tool_executor: tool read_file completed (0.12s, 38148 chars)
+2026-09-15 08:02:47,238 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6434 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:03:18,097 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6434 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:03:18,131 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6435 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:04:39,627 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6435 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:04:39,627 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #9: model=glm-5.3 provider=custom in=95714 out=10004 total=105718 latency=81.5s
+2026-09-15 08:04:39,770 INFO [cron_9587d40be7e7_20260915_080014] agent.tool_executor: tool write_file completed (0.14s, 274 chars)
+2026-09-15 08:04:39,798 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6442 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:04:46,945 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6442 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:04:46,946 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #10: model=glm-5.3 provider=custom in=105820 out=1301 total=107121 latency=7.2s
+2026-09-15 08:04:47,169 INFO [cron_9587d40be7e7_20260915_080014] agent.tool_executor: tool patch completed (0.22s, 6311 chars)
+2026-09-15 08:04:48,411 INFO [cron_9587d40be7e7_20260915_080014] agent.tool_executor: tool patch completed (0.24s, 3838 chars)
+2026-09-15 08:04:48,439 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6459 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:04:54,521 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6459 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:04:54,521 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: API call #11: model=glm-5.3 provider=custom in=110616 out=794 total=111410 latency=6.1s
+2026-09-15 08:04:54,667 INFO [cron_9587d40be7e7_20260915_080014] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=glm-5.3 api_calls=14/90 budget=14/90 tool_turns=10 last_msg_role=assistant response_len=1478 session=cron_9587d40be7e7_20260915_080014
+2026-09-15 08:04:54,669 INFO cron.scheduler: Job 'Agente 1 Planejador — 3x/dia' completed successfully
+2026-09-15 08:04:54,678 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 08:10:34,812 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 08:15:15,453 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 08:15:15,455 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 08:30:15,394 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 08:30:15,396 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 08:45:15,446 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 08:45:15,448 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 09:00:14,676 INFO cron.scheduler: Running job 'Agente 2 Copywriter — copys e estratégia' (ID: 7bd73f39264b)
+2026-09-15 09:00:14,676 INFO cron.scheduler: Prompt: [IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicating they want you to f
+2026-09-15 09:00:14,710 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 09:00:14,714 INFO cron.scheduler: Job '7bd73f39264b': 61 MCP tool(s) available
+2026-09-15 09:00:14,886 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:00:14,888 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 09:00:15,563 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 09:00:15,564 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 09:00:16,898 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-15 09:00:17,374 INFO [cron_7bd73f39264b_20260915_090014] agent.conversation_loop: conversation turn: session=cron_7bd73f39264b_20260915_090014 model=glm-5.3 provider=custom platform=cron history=0 msg='[IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicatin...'
+2026-09-15 09:00:17,406 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6460 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:00:20,254 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6460 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:00:20,255 INFO [cron_7bd73f39264b_20260915_090014] agent.conversation_loop: API call #1: model=glm-5.3 provider=custom in=16835 out=284 total=17119 latency=2.9s
+2026-09-15 09:00:20,256 INFO tools.file_tools: Creating new local environment for task default...
+2026-09-15 09:00:20,297 INFO tools.environments.base: Session snapshot created (session=3403e99c8012, cwd=/home/hermes)
+2026-09-15 09:00:20,297 INFO tools.file_tools: local environment ready for task default
+2026-09-15 09:00:20,406 INFO agent.tool_executor: tool search_files completed (0.15s, 365 chars)
+2026-09-15 09:00:20,423 INFO agent.tool_executor: tool search_files completed (0.17s, 823 chars)
+2026-09-15 09:00:20,443 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6468 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:00:22,187 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6468 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:00:22,188 INFO [cron_7bd73f39264b_20260915_090014] agent.conversation_loop: API call #2: model=glm-5.3 provider=custom in=17636 out=206 total=17842 latency=1.8s
+2026-09-15 09:00:22,406 INFO agent.tool_executor: tool read_file completed (0.22s, 14796 chars)
+2026-09-15 09:00:22,411 INFO agent.tool_executor: tool read_file completed (0.22s, 10852 chars)
+2026-09-15 09:00:22,419 INFO agent.tool_executor: tool read_file completed (0.23s, 10291 chars)
+2026-09-15 09:00:22,443 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6481 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:00:57,599 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6481 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:00:57,620 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6482 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:01:07,191 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6482 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:01:07,192 INFO [cron_7bd73f39264b_20260915_090014] agent.conversation_loop: API call #3: model=glm-5.3 provider=custom in=29697 out=1320 total=31017 latency=9.6s
+2026-09-15 09:01:07,251 INFO [cron_7bd73f39264b_20260915_090014] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=glm-5.3 api_calls=4/90 budget=4/90 tool_turns=2 last_msg_role=assistant response_len=1915 session=cron_7bd73f39264b_20260915_090014
+2026-09-15 09:01:07,252 INFO cron.scheduler: Job 'Agente 2 Copywriter — copys e estratégia' completed successfully
+2026-09-15 09:01:07,257 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3
+2026-09-15 09:05:35,172 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 09:15:15,477 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 09:15:15,478 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 09:30:15,575 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 09:30:15,576 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 09:45:15,703 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 09:45:15,704 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 10:00:14,811 INFO cron.scheduler: Job '8c20e6866ceb': using Hermes profile 'cmo' (/home/hermes/.hermes/profiles/cmo)
+2026-09-15 10:00:14,886 INFO cron.scheduler: Running job 'Agente 3 Artes — criação de arte' (ID: 7ab152d68c07)
+2026-09-15 10:00:14,886 INFO cron.scheduler: Prompt: [IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicating they want you to f
+2026-09-15 10:00:14,915 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:00:14,921 INFO cron.scheduler: Running job 'CMO cuidar.vc — briefing 2x/dia (bot próprio)' (ID: 8c20e6866ceb)
+2026-09-15 10:00:14,921 INFO cron.scheduler: Prompt: [IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicating they want you to f
+2026-09-15 10:00:14,947 INFO cron.scheduler: Job '7ab152d68c07': 61 MCP tool(s) available
+2026-09-15 10:00:14,974 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:00:14,978 INFO cron.scheduler: Job '8c20e6866ceb': 61 MCP tool(s) available
+2026-09-15 10:00:14,993 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:15,005 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:00:15,022 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-seq_0:135717902591680 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:15,065 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:00:15,081 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3)
+2026-09-15 10:00:15,099 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:00:15,114 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3)
+2026-09-15 10:00:15,183 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:00:15,664 INFO cron.scheduler: Job 'b66e74eee96a' (no_agent): empty stdout — silent run
+2026-09-15 10:00:15,665 INFO cron.scheduler: Job 'b66e74eee96a': agent returned [SILENT] — skipping delivery
+2026-09-15 10:00:16,859 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3-flash' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-15 10:00:16,867 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3-flash' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-15 10:00:17,306 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: conversation turn: session=cron_8c20e6866ceb_20260915_100014 model=glm-5.3-flash provider=custom platform=cron history=0 msg='[IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicatin...'
+2026-09-15 10:00:17,309 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: conversation turn: session=cron_7ab152d68c07_20260915_100014 model=glm-5.3-flash provider=custom platform=cron history=0 msg='[IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicatin...'
+2026-09-15 10:00:17,342 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6483 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:17,364 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6484 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:20,614 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6483 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:20,615 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #1: model=glm-5.3-flash provider=custom in=20475 out=454 total=20929 latency=3.3s
+2026-09-15 10:00:20,618 INFO tools.file_tools: Creating new local environment for task default...
+2026-09-15 10:00:20,658 INFO tools.environments.base: Session snapshot created (session=86832b173a87, cwd=/home/hermes)
+2026-09-15 10:00:20,659 INFO tools.file_tools: local environment ready for task default
+2026-09-15 10:00:20,819 INFO agent.tool_executor: tool search_files completed (0.20s, 365 chars)
+2026-09-15 10:00:20,823 INFO agent.tool_executor: tool search_files completed (0.20s, 313 chars)
+2026-09-15 10:00:20,828 INFO agent.tool_executor: tool search_files completed (0.21s, 3776 chars)
+2026-09-15 10:00:20,875 INFO agent.tool_executor: tool read_file completed (0.26s, 2444 chars)
+2026-09-15 10:00:20,901 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6499 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:21,376 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6484 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:21,376 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #1: model=glm-5.3-flash provider=custom in=38357 out=230 total=38587 latency=4.0s
+2026-09-15 10:00:21,491 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.11s, 87 chars)
+2026-09-15 10:00:22,616 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.12s, 38880 chars)
+2026-09-15 10:00:22,639 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6505 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:22,875 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6499 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:22,876 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #2: model=glm-5.3-flash provider=custom in=23553 out=299 total=23852 latency=2.0s
+2026-09-15 10:00:23,000 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool read_file completed (0.12s, 10852 chars)
+2026-09-15 10:00:24,128 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.13s, 55 chars)
+2026-09-15 10:00:24,148 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6511 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:25,908 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6511 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:25,908 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #3: model=glm-5.3-flash provider=custom in=27386 out=215 total=27601 latency=1.8s
+2026-09-15 10:00:26,026 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool read_file completed (0.12s, 8953 chars)
+2026-09-15 10:00:26,046 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6516 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:35,120 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6505 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:35,122 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #2: model=glm-5.3-flash provider=custom in=51561 out=1386 total=52947 latency=12.5s
+2026-09-15 10:00:35,313 INFO agent.tool_executor: tool search_files completed (0.18s, 153 chars)
+2026-09-15 10:00:35,329 INFO agent.tool_executor: tool search_files completed (0.20s, 18 chars)
+2026-09-15 10:00:35,351 INFO agent.tool_executor: tool read_file completed (0.23s, 8212 chars)
+2026-09-15 10:00:35,375 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6526 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:37,361 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6526 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:37,362 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #3: model=glm-5.3-flash provider=custom in=55631 out=271 total=55902 latency=2.0s
+2026-09-15 10:00:37,441 INFO agent.tool_executor: tool search_files completed (0.08s, 2797 chars)
+2026-09-15 10:00:37,449 INFO agent.tool_executor: tool search_files completed (0.09s, 90 chars)
+2026-09-15 10:00:37,474 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6531 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:39,892 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6531 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:39,893 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #4: model=glm-5.3-flash provider=custom in=57105 out=483 total=57588 latency=2.4s
+2026-09-15 10:00:39,899 WARNING [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: Tool execute_code returned error (0.00s): {"status": "error", "error": "BLOCKED: execute_code runs arbitrary local Python (including subprocess calls that bypass shell-string approval checks). Cron jobs run without a user present to approve i
+2026-09-15 10:00:39,921 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6532 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:40,805 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6516 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:40,806 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #4: model=glm-5.3-flash provider=custom in=31110 out=2943 total=34053 latency=14.8s
+2026-09-15 10:00:40,969 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6532 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:40,971 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #5: model=glm-5.3-flash provider=custom in=57671 out=75 total=57746 latency=1.1s
+2026-09-15 10:00:40,979 INFO agent.tool_executor: tool read_file completed (0.17s, 5302 chars)
+2026-09-15 10:00:41,003 INFO agent.tool_executor: tool read_file completed (0.20s, 5720 chars)
+2026-09-15 10:00:41,040 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6541 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:41,126 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.15s, 15259 chars)
+2026-09-15 10:00:41,150 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6546 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:43,047 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6546 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:43,048 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #6: model=glm-5.3-flash provider=custom in=62468 out=171 total=62639 latency=1.9s
+2026-09-15 10:00:43,146 INFO agent.tool_executor: tool search_files completed (0.09s, 344 chars)
+2026-09-15 10:00:43,235 INFO agent.tool_executor: tool read_file completed (0.18s, 1959 chars)
+2026-09-15 10:00:43,269 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6553 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:44,984 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6553 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:44,984 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #7: model=glm-5.3-flash provider=custom in=63437 out=222 total=63659 latency=1.7s
+2026-09-15 10:00:45,132 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.15s, 2193 chars)
+2026-09-15 10:00:45,156 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6558 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:48,434 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6541 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:48,435 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #5: model=glm-5.3-flash provider=custom in=37974 out=1292 total=39266 latency=7.4s
+2026-09-15 10:00:48,564 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool read_file completed (0.13s, 4232 chars)
+2026-09-15 10:00:49,686 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.12s, 5327 chars)
+2026-09-15 10:00:49,710 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6564 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:51,660 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6558 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:51,661 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #8: model=glm-5.3-flash provider=custom in=64377 out=1046 total=65423 latency=6.5s
+2026-09-15 10:00:51,800 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.14s, 10852 chars)
+2026-09-15 10:00:51,825 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6569 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:54,183 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6564 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:54,184 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #6: model=glm-5.3-flash provider=custom in=42734 out=691 total=43425 latency=4.5s
+2026-09-15 10:00:54,306 INFO agent.tool_executor: tool search_files failed (0.12s): {"total_count": 0, "error": "Search failed: rg: regex parse error:\n    (?:*.py)\n       ^\nerror: repetition operator missing expression"}
+2026-09-15 10:00:54,409 INFO agent.tool_executor: tool read_file completed (0.22s, 3191 chars)
+2026-09-15 10:00:54,410 WARNING [cron_7ab152d68c07_20260915_100014] agent.tool_executor: Tool search_files returned error (0.12s): {"total_count": 0, "error": "Search failed: rg: regex parse error:\n    (?:*.py)\n       ^\nerror: repetition operator missing expression"}
+2026-09-15 10:00:54,431 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6576 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:54,761 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6569 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:54,762 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #9: model=glm-5.3-flash provider=custom in=68934 out=321 total=69255 latency=3.0s
+2026-09-15 10:00:54,901 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.13s, 2295 chars)
+2026-09-15 10:00:54,924 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6581 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:56,751 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6581 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:56,752 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #10: model=glm-5.3-flash provider=custom in=70018 out=479 total=70497 latency=1.8s
+2026-09-15 10:00:56,967 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool write_file completed (0.21s, 226 chars)
+2026-09-15 10:00:56,991 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6589 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:58,036 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6589 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:00:58,037 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #11: model=glm-5.3-flash provider=custom in=70572 out=34 total=70606 latency=1.1s
+2026-09-15 10:00:58,912 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.87s, 2077 chars)
+2026-09-15 10:00:58,937 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6591 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:03,601 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6591 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:03,602 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #12: model=glm-5.3-flash provider=custom in=71317 out=894 total=72211 latency=4.7s
+2026-09-15 10:01:03,670 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.07s, 733 chars)
+2026-09-15 10:01:03,698 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6594 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:05,001 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6594 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:05,001 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #13: model=glm-5.3-flash provider=custom in=72530 out=105 total=72635 latency=1.3s
+2026-09-15 10:01:13,096 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6576 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:13,097 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #7: model=glm-5.3-flash provider=custom in=44721 out=3512 total=48233 latency=18.7s
+2026-09-15 10:01:13,334 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.24s, 64 chars)
+2026-09-15 10:01:13,357 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6597 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:16,451 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6597 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:16,452 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #8: model=glm-5.3-flash provider=custom in=48262 out=675 total=48937 latency=3.1s
+2026-09-15 10:01:17,355 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool write_file completed (0.90s, 258 chars)
+2026-09-15 10:01:17,382 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6605 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:18,460 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6605 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:18,461 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #9: model=glm-5.3-flash provider=custom in=49034 out=46 total=49080 latency=1.1s
+2026-09-15 10:01:31,548 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (13.08s, 313 chars)
+2026-09-15 10:01:31,569 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6607 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:32,965 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6607 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:32,966 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #10: model=glm-5.3-flash provider=custom in=49214 out=193 total=49407 latency=1.4s
+2026-09-15 10:01:33,141 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.17s, 290 chars)
+2026-09-15 10:01:33,164 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6609 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:50,835 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "#!/usr/bin/env python\n\"\"\"gera_cards.py — carrossel 'Alta hospit)
+2026-09-15 10:01:50,836 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6609 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:01:50,859 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6610 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:02:19,887 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "#!/usr/bin/env python\n\"\"\"gera_cards.py — carrossel 'Alta hospit)
+2026-09-15 10:02:19,887 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6610 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:02:19,905 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6611 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:00,991 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6611 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:00,992 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #11: model=glm-5.3-flash provider=custom in=49553 out=10697 total=60250 latency=87.8s
+2026-09-15 10:03:02,609 INFO [cron_7ab152d68c07_20260915_100014] hermes.lint.lsp: lsp[pyright] 10 diags (/home/hermes/cuidarvc/squad/artes/artes-2026-09-15/gera_cards.py)
+2026-09-15 10:03:02,614 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool write_file completed (1.62s, 542 chars)
+2026-09-15 10:03:02,636 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6619 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:05,089 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6619 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:05,089 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #12: model=glm-5.3-flash provider=custom in=60432 out=413 total=60845 latency=2.5s
+2026-09-15 10:03:06,032 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool patch completed (0.94s, 782 chars)
+2026-09-15 10:03:06,054 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6627 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:07,390 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6627 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:07,391 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #13: model=glm-5.3-flash provider=custom in=61134 out=248 total=61382 latency=1.4s
+2026-09-15 10:03:07,883 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool patch completed (0.49s, 1135 chars)
+2026-09-15 10:03:07,906 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6635 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:08,994 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6635 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:08,995 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #14: model=glm-5.3-flash provider=custom in=61780 out=45 total=61825 latency=1.1s
+2026-09-15 10:03:12,292 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (3.29s, 391 chars)
+2026-09-15 10:03:12,314 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6637 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:19,164 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6637 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:19,164 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #15: model=glm-5.3-flash provider=custom in=62003 out=1379 total=63382 latency=6.9s
+2026-09-15 10:03:19,651 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.48s, 179 chars)
+2026-09-15 10:03:19,675 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6639 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:24,017 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6639 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:24,017 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #16: model=glm-5.3-flash provider=custom in=63474 out=1011 total=64485 latency=4.4s
+2026-09-15 10:03:24,588 INFO [cron_7ab152d68c07_20260915_100014] hermes.lint.lsp: lsp[pyright] 4 diags (/home/hermes/cuidarvc/squad/artes/artes-2026-09-15/qc_tudo.py)
+2026-09-15 10:03:24,589 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool write_file completed (0.57s, 586 chars)
+2026-09-15 10:03:24,613 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6647 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:27,334 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6647 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:27,334 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #17: model=glm-5.3-flash provider=custom in=64683 out=795 total=65478 latency=2.7s
+2026-09-15 10:03:27,585 INFO [cron_7ab152d68c07_20260915_100014] hermes.lint.lsp: lsp[pyright] 3 diags (/home/hermes/cuidarvc/squad/artes/artes-2026-09-15/qc_tudo.py)
+2026-09-15 10:03:27,586 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool write_file completed (0.25s, 1077 chars)
+2026-09-15 10:03:27,610 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6653 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:28,794 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6653 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:28,794 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #18: model=glm-5.3-flash provider=custom in=65820 out=73 total=65893 latency=1.2s
+2026-09-15 10:03:29,151 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.36s, 704 chars)
+2026-09-15 10:03:29,176 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6655 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:32,208 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6655 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:32,209 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #19: model=glm-5.3-flash provider=custom in=66157 out=417 total=66574 latency=3.1s
+2026-09-15 10:03:32,304 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool search_files completed (0.09s, 18 chars)
+2026-09-15 10:03:32,328 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6658 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:33,536 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6658 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:33,536 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #20: model=glm-5.3-flash provider=custom in=66585 out=103 total=66688 latency=1.2s
+2026-09-15 10:03:33,657 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.12s, 2167 chars)
+2026-09-15 10:03:33,681 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6660 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:35,006 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6660 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:35,007 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #21: model=glm-5.3-flash provider=custom in=67455 out=93 total=67548 latency=1.3s
+2026-09-15 10:03:35,506 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.50s, 96 chars)
+2026-09-15 10:03:35,531 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6662 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:36,884 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6662 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:03:36,885 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #22: model=glm-5.3-flash provider=custom in=67586 out=209 total=67795 latency=1.4s
+2026-09-15 10:04:10,609 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (33.72s, 313 chars)
+2026-09-15 10:04:10,632 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6664 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:13,337 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6664 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:13,338 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #23: model=glm-5.3-flash provider=custom in=67956 out=357 total=68313 latency=2.7s
+2026-09-15 10:04:13,538 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool terminal completed (0.20s, 635 chars)
+2026-09-15 10:04:13,564 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6666 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:21,578 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6666 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:21,578 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #24: model=glm-5.3-flash provider=custom in=68614 out=1746 total=70360 latency=8.0s
+2026-09-15 10:04:21,730 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool write_file completed (0.15s, 281 chars)
+2026-09-15 10:04:21,765 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6673 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:23,258 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6673 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:23,259 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #25: model=glm-5.3-flash provider=custom in=70463 out=248 total=70711 latency=1.5s
+2026-09-15 10:04:23,466 INFO [cron_7ab152d68c07_20260915_100014] agent.tool_executor: tool patch completed (0.20s, 1121 chars)
+2026-09-15 10:04:23,490 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6682 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:26,680 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6682 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:26,707 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6683 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:30,218 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6683 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:04:30,219 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: API call #26: model=glm-5.3-flash provider=custom in=54217 out=168 total=54385 latency=3.5s
+2026-09-15 10:04:30,379 INFO [cron_7ab152d68c07_20260915_100014] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=glm-5.3-flash api_calls=27/90 budget=27/90 tool_turns=25 last_msg_role=assistant response_len=1288 session=cron_7ab152d68c07_20260915_100014
+2026-09-15 10:04:30,381 INFO cron.scheduler: Job 'Agente 3 Artes — criação de arte' completed successfully
+2026-09-15 10:04:30,384 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:05,231 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (420.23s, 45 chars)
+2026-09-15 10:08:05,253 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6684 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:06,919 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6684 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:06,919 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #14: model=glm-5.3-flash provider=custom in=72655 out=104 total=72759 latency=1.7s
+2026-09-15 10:08:07,579 INFO agent.tool_executor: tool search_files completed (0.09s, 117 chars)
+2026-09-15 10:08:07,606 INFO agent.tool_executor: tool search_files completed (0.12s, 18 chars)
+2026-09-15 10:08:07,632 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6690 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:08,914 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6690 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:08,915 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #15: model=glm-5.3-flash provider=custom in=72821 out=106 total=72927 latency=1.3s
+2026-09-15 10:08:08,996 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.08s, 336 chars)
+2026-09-15 10:08:09,020 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6693 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:10,154 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6693 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:10,154 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #16: model=glm-5.3-flash provider=custom in=73062 out=59 total=73121 latency=1.2s
+2026-09-15 10:08:10,309 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.15s, 1472 chars)
+2026-09-15 10:08:10,337 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6698 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:12,066 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6698 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:12,067 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #17: model=glm-5.3-flash provider=custom in=73651 out=174 total=73825 latency=1.7s
+2026-09-15 10:08:12,188 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.12s, 4858 chars)
+2026-09-15 10:08:12,214 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6703 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:14,468 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6703 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:14,469 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #18: model=glm-5.3-flash provider=custom in=75616 out=247 total=75863 latency=2.3s
+2026-09-15 10:08:14,590 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.12s, 1855 chars)
+2026-09-15 10:08:14,615 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6708 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:16,329 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6708 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:16,330 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #19: model=glm-5.3-flash provider=custom in=76492 out=105 total=76597 latency=1.7s
+2026-09-15 10:08:16,445 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.11s, 18 chars)
+2026-09-15 10:08:16,472 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6712 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:20,201 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6712 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:20,202 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #20: model=glm-5.3-flash provider=custom in=76608 out=505 total=77113 latency=3.7s
+2026-09-15 10:08:20,279 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.07s, 820 chars)
+2026-09-15 10:08:20,304 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6715 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:22,156 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6715 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:22,158 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #21: model=glm-5.3-flash provider=custom in=77415 out=126 total=77541 latency=1.9s
+2026-09-15 10:08:22,216 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.06s, 18 chars)
+2026-09-15 10:08:22,241 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6718 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:23,373 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6718 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:23,373 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #22: model=glm-5.3-flash provider=custom in=77552 out=41 total=77593 latency=1.1s
+2026-09-15 10:08:23,451 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.07s, 979 chars)
+2026-09-15 10:08:23,477 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6721 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:24,755 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6721 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:24,755 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #23: model=glm-5.3-flash provider=custom in=77927 out=67 total=77994 latency=1.3s
+2026-09-15 10:08:24,815 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.06s, 566 chars)
+2026-09-15 10:08:24,841 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6724 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:26,193 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6724 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:26,193 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #24: model=glm-5.3-flash provider=custom in=78206 out=100 total=78306 latency=1.4s
+2026-09-15 10:08:26,338 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.14s, 2671 chars)
+2026-09-15 10:08:26,366 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6729 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:29,531 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6729 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:29,532 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #25: model=glm-5.3-flash provider=custom in=79446 out=1069 total=80515 latency=3.2s
+2026-09-15 10:08:30,615 INFO [cron_8c20e6866ceb_20260915_100014] hermes.lint.lsp: lsp[pyright] 1 diags (/home/hermes/cuidarvc/squad/artes/artes-2026-09-15/board_carrossel.py)
+2026-09-15 10:08:30,617 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool write_file completed (1.08s, 556 chars)
+2026-09-15 10:08:30,641 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6737 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:31,839 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6737 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:31,839 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #26: model=glm-5.3-flash provider=custom in=80698 out=46 total=80744 latency=1.2s
+2026-09-15 10:08:35,312 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (3.47s, 142 chars)
+2026-09-15 10:08:35,337 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6739 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:37,205 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6739 (_call):135717535606464 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:08:37,206 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #27: model=glm-5.3-flash provider=custom in=80806 out=208 total=81014 latency=1.9s
+2026-09-15 10:08:37,209 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/board-car
+2026-09-15 10:08:37,209 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Inspeci
+2026-09-15 10:08:37,209 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/board-carrossel-2026-09-15.png
+2026-09-15 10:08:37,209 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Image ready (1656.1 KB)
+2026-09-15 10:08:37,209 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Converting image to base64...
+2026-09-15 10:08:37,214 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Image converted to base64 (2208.1 KB)
+2026-09-15 10:08:37,214 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Processing image with vision model...
+2026-09-15 10:08:37,221 WARNING [cron_8c20e6866ceb_20260915_100014] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:08:37,239 INFO [cron_8c20e6866ceb_20260915_100014] agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 10:08:56,463 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Image analysis completed (15318 characters)
+2026-09-15 10:08:56,464 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool vision_analyze completed (19.26s, 15758 chars)
+2026-09-15 10:08:56,487 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6740 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:01,770 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6740 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:01,771 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #28: model=glm-5.3-flash provider=custom in=85284 out=732 total=86016 latency=5.3s
+2026-09-15 10:09:01,990 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.22s, 62 chars)
+2026-09-15 10:09:02,016 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6742 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:03,568 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6742 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:03,568 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #29: model=glm-5.3-flash provider=custom in=86045 out=106 total=86151 latency=1.6s
+2026-09-15 10:09:03,577 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/_crop-car
+2026-09-15 10:09:03,577 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Este é 
+2026-09-15 10:09:03,577 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/_crop-card6-fim.png
+2026-09-15 10:09:03,577 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Image ready (107.5 KB)
+2026-09-15 10:09:03,577 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Converting image to base64...
+2026-09-15 10:09:03,577 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Image converted to base64 (143.4 KB)
+2026-09-15 10:09:03,578 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Processing image with vision model...
+2026-09-15 10:09:03,584 WARNING [cron_8c20e6866ceb_20260915_100014] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 10:09:03,600 INFO [cron_8c20e6866ceb_20260915_100014] agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 10:09:08,989 INFO [cron_8c20e6866ceb_20260915_100014] tools.vision_tools: Image analysis completed (1496 characters)
+2026-09-15 10:09:08,990 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool vision_analyze completed (5.41s, 1568 chars)
+2026-09-15 10:09:09,014 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6743 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:14,286 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6743 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:14,287 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #30: model=glm-5.3-flash provider=custom in=86611 out=555 total=87166 latency=5.3s
+2026-09-15 10:09:14,470 INFO agent.tool_executor: tool search_files completed (0.18s, 18 chars)
+2026-09-15 10:09:14,489 INFO agent.tool_executor: tool read_file completed (0.20s, 390 chars)
+2026-09-15 10:09:14,518 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6751 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:15,953 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6751 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:15,953 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #31: model=glm-5.3-flash provider=custom in=87321 out=41 total=87362 latency=1.5s
+2026-09-15 10:09:16,071 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.11s, 18 chars)
+2026-09-15 10:09:16,099 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6755 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:17,724 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6755 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:17,724 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #32: model=glm-5.3-flash provider=custom in=87373 out=175 total=87548 latency=1.6s
+2026-09-15 10:09:17,799 INFO agent.tool_executor: tool search_files completed (0.07s, 381 chars)
+2026-09-15 10:09:17,832 INFO agent.tool_executor: tool search_files failed (0.10s): {"total_count": 0, "error": "Path not found: /home/hermes/.hermes/profiles/cuidar/cron/output/74a8ba3fcce7"}
+2026-09-15 10:09:17,833 WARNING [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: Tool search_files returned error (0.10s): {"total_count": 0, "error": "Path not found: /home/hermes/.hermes/profiles/cuidar/cron/output/74a8ba3fcce7"}
+2026-09-15 10:09:17,859 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6761 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:19,823 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6761 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:19,823 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #33: model=glm-5.3-flash provider=custom in=87761 out=189 total=87950 latency=2.0s
+2026-09-15 10:09:20,492 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.67s, 1408 chars)
+2026-09-15 10:09:21,600 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.11s, 5867 chars)
+2026-09-15 10:09:21,626 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6767 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:23,209 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6767 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:23,209 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #34: model=glm-5.3-flash provider=custom in=90274 out=114 total=90388 latency=1.6s
+2026-09-15 10:09:23,269 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.06s, 18 chars)
+2026-09-15 10:09:23,295 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6770 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:24,441 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6770 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:24,442 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #35: model=glm-5.3-flash provider=custom in=90399 out=64 total=90463 latency=1.2s
+2026-09-15 10:09:24,554 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.11s, 152 chars)
+2026-09-15 10:09:24,581 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6772 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:25,801 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6772 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:25,801 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #36: model=glm-5.3-flash provider=custom in=90517 out=60 total=90577 latency=1.2s
+2026-09-15 10:09:25,913 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.11s, 1140 chars)
+2026-09-15 10:09:25,939 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6777 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:28,475 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6777 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:28,475 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #37: model=glm-5.3-flash provider=custom in=90979 out=229 total=91208 latency=2.6s
+2026-09-15 10:09:29,145 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.67s, 1148 chars)
+2026-09-15 10:09:29,172 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6779 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:42,646 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6779 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:42,647 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #38: model=glm-5.3-flash provider=custom in=91647 out=1854 total=93501 latency=13.5s
+2026-09-15 10:09:42,782 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.13s, 3907 chars)
+2026-09-15 10:09:42,811 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6784 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:45,960 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6784 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:45,960 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #39: model=glm-5.3-flash provider=custom in=94741 out=315 total=95056 latency=3.2s
+2026-09-15 10:09:46,075 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.11s, 6560 chars)
+2026-09-15 10:09:46,101 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6789 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:49,526 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6789 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:49,527 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #40: model=glm-5.3-flash provider=custom in=97183 out=374 total=97557 latency=3.4s
+2026-09-15 10:09:49,592 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.06s, 984 chars)
+2026-09-15 10:09:49,620 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6792 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:53,387 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6792 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:53,388 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #41: model=glm-5.3-flash provider=custom in=97875 out=589 total=98464 latency=3.8s
+2026-09-15 10:09:54,107 INFO [cron_8c20e6866ceb_20260915_100014] hermes.lint.lsp: lsp[pyright] 2 diags (/home/hermes/cuidarvc/squad/blog/cmo_repo_check.py)
+2026-09-15 10:09:54,108 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool write_file completed (0.72s, 494 chars)
+2026-09-15 10:09:54,135 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6800 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:56,482 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6800 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:56,483 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #42: model=glm-5.3-flash provider=custom in=98612 out=34 total=98646 latency=2.4s
+2026-09-15 10:09:56,759 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.27s, 310 chars)
+2026-09-15 10:09:56,786 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6802 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:59,097 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6802 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:09:59,098 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #43: model=glm-5.3-flash provider=custom in=98753 out=356 total=99109 latency=2.3s
+2026-09-15 10:09:59,463 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool patch completed (0.36s, 1066 chars)
+2026-09-15 10:09:59,493 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6810 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:01,036 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6810 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:01,036 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #44: model=glm-5.3-flash provider=custom in=99453 out=107 total=99560 latency=1.6s
+2026-09-15 10:10:01,313 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.27s, 310 chars)
+2026-09-15 10:10:01,341 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6812 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:02,847 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6812 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:02,848 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #45: model=glm-5.3-flash provider=custom in=99667 out=93 total=99760 latency=1.5s
+2026-09-15 10:10:03,018 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.17s, 228 chars)
+2026-09-15 10:10:03,047 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6814 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:05,398 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6814 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:05,400 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #46: model=glm-5.3-flash provider=custom in=99838 out=247 total=100085 latency=2.4s
+2026-09-15 10:10:05,591 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.19s, 240 chars)
+2026-09-15 10:10:05,619 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6816 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:09,941 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6816 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:09,942 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #47: model=glm-5.3-flash provider=custom in=100172 out=653 total=100825 latency=4.3s
+2026-09-15 10:10:10,194 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool write_file completed (0.25s, 411 chars)
+2026-09-15 10:10:10,226 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6822 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:11,582 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6822 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:11,582 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #48: model=glm-5.3-flash provider=custom in=100944 out=34 total=100978 latency=1.4s
+2026-09-15 10:10:12,274 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.69s, 1692 chars)
+2026-09-15 10:10:12,303 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6824 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:16,450 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6824 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:16,451 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #49: model=glm-5.3-flash provider=custom in=101467 out=583 total=102050 latency=4.2s
+2026-09-15 10:10:19,214 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (2.76s, 86 chars)
+2026-09-15 10:10:19,298 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6826 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:25,671 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6826 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:25,671 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #50: model=glm-5.3-flash provider=custom in=102083 out=887 total=102970 latency=6.4s
+2026-09-15 10:10:26,423 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.75s, 152 chars)
+2026-09-15 10:10:26,452 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6828 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:28,882 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6828 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:28,882 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #51: model=glm-5.3-flash provider=custom in=102902 out=282 total=103184 latency=2.4s
+2026-09-15 10:10:29,046 WARNING [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: Tool terminal returned error (0.16s): {"output": "", "exit_code": -1, "error": "", "status": "pending_approval", "approval_pending": true, "command": "curl -s -m 30 http://localhost:0/blog >/dev/null 2>&1; curl -s -m 30 https://cuidar.vc/
+2026-09-15 10:10:29,072 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6829 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:31,258 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6829 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:31,259 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #52: model=glm-5.3-flash provider=custom in=103472 out=281 total=103753 latency=2.2s
+2026-09-15 10:10:32,049 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool write_file completed (0.79s, 229 chars)
+2026-09-15 10:10:32,077 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6837 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:33,329 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6837 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:33,330 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #53: model=glm-5.3-flash provider=custom in=103828 out=34 total=103862 latency=1.3s
+2026-09-15 10:10:34,205 WARNING [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: Tool terminal returned error (0.87s): {"output": "Traceback (most recent call last):\n  File \"/home/hermes/cuidarvc/squad/blog/cmo_blog_check.py\", line 15, in <module>\n    with urllib.request.urlopen(req, timeout=60) as r:\n         ^^
+2026-09-15 10:10:34,233 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6839 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:36,220 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6839 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:36,221 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #54: model=glm-5.3-flash provider=custom in=104222 out=261 total=104483 latency=2.0s
+2026-09-15 10:10:37,168 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.95s, 238 chars)
+2026-09-15 10:10:37,204 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6841 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:44,752 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6841 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:44,753 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #55: model=glm-5.3-flash provider=custom in=104568 out=1545 total=106113 latency=7.6s
+2026-09-15 10:10:45,327 INFO [cron_8c20e6866ceb_20260915_100014] hermes.lint.lsp: lsp[pyright] 1 diags (/home/hermes/cuidarvc/squad/blog/cmo_capas_github.py)
+2026-09-15 10:10:45,329 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool write_file completed (0.57s, 526 chars)
+2026-09-15 10:10:45,357 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6849 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:46,714 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6849 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:46,715 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #56: model=glm-5.3-flash provider=custom in=106274 out=36 total=106310 latency=1.4s
+2026-09-15 10:10:47,387 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.67s, 409 chars)
+2026-09-15 10:10:47,415 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6851 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:52,215 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6851 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:52,215 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #57: model=glm-5.3-flash provider=custom in=106436 out=679 total=107115 latency=4.8s
+2026-09-15 10:10:53,160 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.94s, 173 chars)
+2026-09-15 10:10:53,190 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6853 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:58,731 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6853 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:10:58,731 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #58: model=glm-5.3-flash provider=custom in=107181 out=679 total=107860 latency=5.6s
+2026-09-15 10:10:58,919 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.19s, 45 chars)
+2026-09-15 10:10:58,948 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6855 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:02,290 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6855 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:02,290 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #59: model=glm-5.3-flash provider=custom in=107880 out=433 total=108313 latency=3.4s
+2026-09-15 10:11:02,842 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.55s, 196 chars)
+2026-09-15 10:11:02,873 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6857 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:20,608 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6857 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:20,609 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #60: model=glm-5.3-flash provider=custom in=108372 out=2882 total=111254 latency=17.8s
+2026-09-15 10:11:20,801 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool patch completed (0.19s, 18429 chars)
+2026-09-15 10:11:20,830 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6866 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:25,510 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6866 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:25,510 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #61: model=glm-5.3-flash provider=custom in=117569 out=645 total=118214 latency=4.7s
+2026-09-15 10:11:25,712 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool patch completed (0.20s, 14833 chars)
+2026-09-15 10:11:25,742 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6875 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:30,653 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6875 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:30,653 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #62: model=glm-5.3-flash provider=custom in=123149 out=657 total=123806 latency=4.9s
+2026-09-15 10:11:30,832 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool write_file completed (0.18s, 285 chars)
+2026-09-15 10:11:30,862 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6882 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:32,473 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6882 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:32,474 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #63: model=glm-5.3-flash provider=custom in=123909 out=121 total=124030 latency=1.6s
+2026-09-15 10:11:36,362 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (3.89s, 147 chars)
+2026-09-15 10:11:36,391 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6884 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:39,973 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6884 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:11:39,974 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #64: model=glm-5.3-flash provider=custom in=124083 out=365 total=124448 latency=3.6s
+2026-09-15 10:15:15,832 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 10:17:35,711 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 10:18:40,129 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (420.15s, 45 chars)
+2026-09-15 10:18:40,164 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6886 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:18:42,401 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6886 (_call):135717493642944 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:18:42,402 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #65: model=glm-5.3-flash provider=custom in=124468 out=104 total=124572 latency=2.3s
+2026-09-15 10:18:42,968 INFO tools.file_tools: Creating new local environment for task default...
+2026-09-15 10:18:43,012 INFO tools.environments.base: Session snapshot created (session=91bb68998502, cwd=/home/hermes)
+2026-09-15 10:18:43,012 INFO tools.file_tools: local environment ready for task default
+2026-09-15 10:18:43,155 INFO agent.tool_executor: tool search_files completed (0.19s, 18 chars)
+2026-09-15 10:18:43,183 INFO agent.tool_executor: tool search_files completed (0.22s, 18 chars)
+2026-09-15 10:18:43,218 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6896 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:18:45,271 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6896 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:18:45,272 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #66: model=glm-5.3-flash provider=custom in=124592 out=132 total=124724 latency=2.1s
+2026-09-15 10:18:45,958 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.68s, 400 chars)
+2026-09-15 10:18:45,988 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6898 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:18:48,824 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6898 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:18:48,824 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #67: model=glm-5.3-flash provider=custom in=124900 out=232 total=125132 latency=2.9s
+2026-09-15 10:23:49,113 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (300.29s, 50 chars)
+2026-09-15 10:23:49,142 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6900 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:23:54,697 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6900 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:23:54,698 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #68: model=glm-5.3-flash provider=custom in=125156 out=455 total=125611 latency=5.6s
+2026-09-15 10:29:35,790 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 10:30:15,910 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 10:33:25,678 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.27s, 45 chars)
+2026-09-15 10:33:25,715 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6902 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:33:27,657 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6902 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:33:27,658 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #69: model=glm-5.3-flash provider=custom in=125631 out=30 total=125661 latency=2.0s
+2026-09-15 10:33:28,231 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: Creating new local environment for task default...
+2026-09-15 10:33:28,268 INFO [cron_8c20e6866ceb_20260915_100014] tools.environments.base: Session snapshot created (session=df0e714b617c, cwd=/home/hermes)
+2026-09-15 10:33:28,269 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: local environment ready for task default
+2026-09-15 10:38:35,846 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 10:42:58,534 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.30s, 50 chars)
+2026-09-15 10:42:58,563 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6905 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:43:02,056 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6905 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:43:02,056 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #70: model=glm-5.3-flash provider=custom in=125685 out=316 total=126001 latency=3.5s
+2026-09-15 10:43:02,631 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: Creating new local environment for task default...
+2026-09-15 10:43:02,668 INFO [cron_8c20e6866ceb_20260915_100014] tools.environments.base: Session snapshot created (session=a2605798ff65, cwd=/home/hermes)
+2026-09-15 10:43:02,668 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: local environment ready for task default
+2026-09-15 10:45:16,048 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 10:48:35,909 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 10:52:32,930 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.30s, 45 chars)
+2026-09-15 10:52:32,969 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6908 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:52:34,947 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6908 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 10:52:34,948 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #71: model=glm-5.3-flash provider=custom in=126021 out=20 total=126041 latency=2.0s
+2026-09-15 10:52:35,657 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: Creating new local environment for task default...
+2026-09-15 10:52:35,702 INFO [cron_8c20e6866ceb_20260915_100014] tools.environments.base: Session snapshot created (session=19e05caedbdc, cwd=/home/hermes)
+2026-09-15 10:52:35,702 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: local environment ready for task default
+2026-09-15 10:57:35,971 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 11:00:15,070 INFO cron.scheduler: Running job 'Agente 4 Controle de Qualidade — 11h' (ID: 9e68702df006)
+2026-09-15 11:00:15,071 INFO cron.scheduler: Prompt: [IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicating they want you to f
+2026-09-15 11:00:15,098 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:00:15,102 INFO cron.scheduler: Job '9e68702df006': 61 MCP tool(s) available
+2026-09-15 11:00:15,139 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:00:15,144 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:00:15,159 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 11:00:15,166 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:00:15,931 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 11:00:17,196 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3-flash' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-15 11:00:17,637 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: conversation turn: session=cron_9e68702df006_20260915_110015 model=glm-5.3-flash provider=custom platform=cron history=0 msg='[IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicatin...'
+2026-09-15 11:00:17,662 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6911 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:00:20,585 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6911 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:00:20,586 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #1: model=glm-5.3-flash provider=custom in=20262 out=317 total=20579 latency=2.9s
+2026-09-15 11:00:20,589 INFO tools.file_tools: Creating new local environment for task default...
+2026-09-15 11:00:20,630 INFO tools.environments.base: Session snapshot created (session=3abd6f69c9fe, cwd=/home/hermes)
+2026-09-15 11:00:20,631 INFO tools.file_tools: local environment ready for task default
+2026-09-15 11:00:20,744 INFO agent.tool_executor: tool search_files completed (0.15s, 1551 chars)
+2026-09-15 11:00:20,755 INFO agent.tool_executor: tool search_files completed (0.17s, 365 chars)
+2026-09-15 11:00:20,776 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6919 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:00:21,609 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6919 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:00:21,610 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #2: model=glm-5.3-flash provider=custom in=21330 out=154 total=21484 latency=0.9s
+2026-09-15 11:00:21,823 INFO agent.tool_executor: tool read_file completed (0.21s, 2444 chars)
+2026-09-15 11:00:21,838 INFO agent.tool_executor: tool read_file completed (0.23s, 10852 chars)
+2026-09-15 11:00:21,839 INFO agent.tool_executor: tool read_file completed (0.23s, 4858 chars)
+2026-09-15 11:00:21,860 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6932 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:00:33,953 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6932 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:00:33,953 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #3: model=glm-5.3-flash provider=custom in=27552 out=2715 total=30267 latency=12.1s
+2026-09-15 11:00:33,958 INFO tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-2-ca
+2026-09-15 11:00:33,958 INFO tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Card in
+2026-09-15 11:00:33,959 INFO tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-2-canva.png
+2026-09-15 11:00:33,959 INFO tools.vision_tools: Image ready (375.4 KB)
+2026-09-15 11:00:33,959 INFO tools.vision_tools: Converting image to base64...
+2026-09-15 11:00:33,960 INFO tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-3-ca
+2026-09-15 11:00:33,960 INFO tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Card in
+2026-09-15 11:00:33,960 INFO tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-3-canva.png
+2026-09-15 11:00:33,960 INFO tools.vision_tools: Image ready (1283.3 KB)
+2026-09-15 11:00:33,960 INFO tools.vision_tools: Converting image to base64...
+2026-09-15 11:00:33,964 INFO tools.vision_tools: Image converted to base64 (1711.1 KB)
+2026-09-15 11:00:33,964 INFO tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-1-ca
+2026-09-15 11:00:33,965 INFO tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Card de
+2026-09-15 11:00:33,965 INFO tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-1-capa-canva.png
+2026-09-15 11:00:33,965 INFO tools.vision_tools: Image ready (1200.5 KB)
+2026-09-15 11:00:33,965 INFO tools.vision_tools: Converting image to base64...
+2026-09-15 11:00:33,965 INFO tools.vision_tools: Image converted to base64 (500.6 KB)
+2026-09-15 11:00:33,968 INFO tools.vision_tools: Processing image with vision model...
+2026-09-15 11:00:33,965 INFO tools.vision_tools: Processing image with vision model...
+2026-09-15 11:00:33,968 INFO tools.vision_tools: Image converted to base64 (1600.7 KB)
+2026-09-15 11:00:33,972 INFO tools.vision_tools: Processing image with vision model...
+2026-09-15 11:00:33,986 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:00:33,987 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:00:33,992 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:00:34,022 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 11:00:34,029 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 11:00:34,032 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 11:00:45,900 INFO tools.vision_tools: Image analysis completed (3113 characters)
+2026-09-15 11:00:45,901 INFO agent.tool_executor: tool vision_analyze completed (11.94s, 3200 chars)
+2026-09-15 11:00:54,865 INFO tools.vision_tools: Image analysis completed (4510 characters)
+2026-09-15 11:00:54,865 INFO agent.tool_executor: tool vision_analyze completed (20.91s, 4644 chars)
+2026-09-15 11:01:03,276 INFO tools.vision_tools: Image analysis completed (3836 characters)
+2026-09-15 11:01:03,277 INFO agent.tool_executor: tool vision_analyze completed (29.32s, 3936 chars)
+2026-09-15 11:01:03,295 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6933 (_call):135717485250240 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:05,986 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6933 (_call):135717485250240 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:05,986 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #4: model=glm-5.3-flash provider=custom in=33906 out=631 total=34537 latency=2.7s
+2026-09-15 11:01:05,989 INFO tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-4-ca
+2026-09-15 11:01:05,989 INFO tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Card in
+2026-09-15 11:01:05,989 INFO tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-4-canva.png
+2026-09-15 11:01:05,989 INFO tools.vision_tools: Image ready (379.4 KB)
+2026-09-15 11:01:05,989 INFO tools.vision_tools: Converting image to base64...
+2026-09-15 11:01:05,990 INFO tools.vision_tools: Image converted to base64 (505.9 KB)
+2026-09-15 11:01:05,991 INFO tools.vision_tools: Processing image with vision model...
+2026-09-15 11:01:05,999 INFO tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-6-ca
+2026-09-15 11:01:05,999 INFO tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Card fi
+2026-09-15 11:01:05,999 INFO tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-6-canva.png
+2026-09-15 11:01:05,999 INFO tools.vision_tools: Image ready (361.9 KB)
+2026-09-15 11:01:05,999 INFO tools.vision_tools: Converting image to base64...
+2026-09-15 11:01:06,000 INFO tools.vision_tools: Image converted to base64 (482.6 KB)
+2026-09-15 11:01:06,001 INFO tools.vision_tools: Analyzing image: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-5-ca
+2026-09-15 11:01:06,001 INFO tools.vision_tools: User prompt: Fully describe and explain everything about this image, then answer the following question:
+
+Card de
+2026-09-15 11:01:06,001 INFO tools.vision_tools: Processing image with vision model...
+2026-09-15 11:01:06,002 INFO tools.vision_tools: Using local image file: /home/hermes/cuidarvc/squad/artes/artes-2026-09-15/card-5-canva.png
+2026-09-15 11:01:06,004 INFO tools.vision_tools: Image ready (1452.3 KB)
+2026-09-15 11:01:06,004 INFO tools.vision_tools: Converting image to base64...
+2026-09-15 11:01:06,008 INFO tools.vision_tools: Image converted to base64 (1936.5 KB)
+2026-09-15 11:01:06,009 INFO tools.vision_tools: Processing image with vision model...
+2026-09-15 11:01:06,028 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:01:06,031 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:01:06,032 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:01:06,052 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 11:01:06,092 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 11:01:06,092 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 11:01:14,922 INFO tools.vision_tools: Image analysis completed (4132 characters)
+2026-09-15 11:01:14,922 INFO agent.tool_executor: tool vision_analyze completed (8.93s, 4252 chars)
+2026-09-15 11:01:17,520 INFO tools.vision_tools: Image analysis completed (4657 characters)
+2026-09-15 11:01:17,521 INFO agent.tool_executor: tool vision_analyze completed (11.53s, 4786 chars)
+2026-09-15 11:01:32,789 INFO tools.vision_tools: Image analysis completed (3913 characters)
+2026-09-15 11:01:32,790 INFO agent.tool_executor: tool vision_analyze completed (26.80s, 4022 chars)
+2026-09-15 11:01:32,811 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6934 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:48,335 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6934 (_call):135717510428352 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:48,336 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #5: model=glm-5.3-flash provider=custom in=38541 out=2899 total=41440 latency=15.5s
+2026-09-15 11:01:48,445 INFO agent.tool_executor: tool search_files completed (0.11s, 2890 chars)
+2026-09-15 11:01:48,455 INFO agent.tool_executor: tool search_files completed (0.12s, 206 chars)
+2026-09-15 11:01:48,471 INFO agent.tool_executor: tool search_files completed (0.13s, 569 chars)
+2026-09-15 11:01:48,499 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6941 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:55,623 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6941 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:55,624 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #6: model=glm-5.3-flash provider=custom in=42745 out=1538 total=44283 latency=7.1s
+2026-09-15 11:01:55,819 INFO [cron_9e68702df006_20260915_110015] agent.tool_executor: tool write_file completed (0.19s, 236 chars)
+2026-09-15 11:01:55,842 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6949 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:56,781 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6949 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:01:56,781 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #7: model=glm-5.3-flash provider=custom in=44372 out=41 total=44413 latency=1.0s
+2026-09-15 11:01:57,273 INFO [cron_9e68702df006_20260915_110015] agent.tool_executor: tool terminal completed (0.49s, 609 chars)
+2026-09-15 11:01:57,295 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6951 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:02:06,013 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.36s, 45 chars)
+2026-09-15 11:02:06,048 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6952 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:02:07,521 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6952 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:02:07,521 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #72: model=glm-5.3-flash provider=custom in=126061 out=20 total=126081 latency=1.5s
+2026-09-15 11:02:10,044 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6951 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:02:10,045 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #8: model=glm-5.3-flash provider=custom in=44692 out=2986 total=47678 latency=12.8s
+2026-09-15 11:02:10,198 INFO [cron_9e68702df006_20260915_110015] agent.tool_executor: tool write_file completed (0.15s, 253 chars)
+2026-09-15 11:02:10,220 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6960 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:02:12,762 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6960 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:02:12,763 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: API call #9: model=glm-5.3-flash provider=custom in=47774 out=458 total=48232 latency=2.6s
+2026-09-15 11:02:12,870 INFO [cron_9e68702df006_20260915_110015] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=glm-5.3-flash api_calls=9/90 budget=9/90 tool_turns=8 last_msg_role=assistant response_len=917 session=cron_9e68702df006_20260915_110015
+2026-09-15 11:02:12,872 INFO cron.scheduler: Job 'Agente 4 Controle de Qualidade — 11h' completed successfully
+2026-09-15 11:02:12,877 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:07:36,041 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 11:11:37,789 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.27s, 45 chars)
+2026-09-15 11:11:37,818 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6961 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:11:39,523 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6961 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:11:39,524 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #73: model=glm-5.3-flash provider=custom in=126101 out=29 total=126130 latency=1.7s
+2026-09-15 11:11:40,351 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: Creating new local environment for task default...
+2026-09-15 11:11:40,388 INFO [cron_8c20e6866ceb_20260915_100014] tools.environments.base: Session snapshot created (session=c9cd94e3dec7, cwd=/home/hermes)
+2026-09-15 11:11:40,388 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: local environment ready for task default
+2026-09-15 11:15:16,022 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 11:16:40,664 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (300.31s, 50 chars)
+2026-09-15 11:16:40,697 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6964 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:42,778 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6964 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:42,779 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #74: model=glm-5.3-flash provider=custom in=126154 out=58 total=126212 latency=2.1s
+2026-09-15 11:16:43,724 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.11s, 117 chars)
+2026-09-15 11:16:43,755 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6968 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:45,361 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6968 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:45,362 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #75: model=glm-5.3-flash provider=custom in=126266 out=79 total=126345 latency=1.6s
+2026-09-15 11:16:45,433 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool search_files completed (0.07s, 18 chars)
+2026-09-15 11:16:45,463 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6971 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:47,160 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6971 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:47,161 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #76: model=glm-5.3-flash provider=custom in=126356 out=65 total=126421 latency=1.7s
+2026-09-15 11:16:47,272 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (0.11s, 60 chars)
+2026-09-15 11:16:47,302 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6973 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:48,898 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6973 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:48,899 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #77: model=glm-5.3-flash provider=custom in=126447 out=61 total=126508 latency=1.6s
+2026-09-15 11:16:49,010 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool read_file completed (0.11s, 1110 chars)
+2026-09-15 11:16:49,040 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6978 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:51,852 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6978 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:51,853 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #78: model=glm-5.3-flash provider=custom in=126915 out=282 total=127197 latency=2.8s
+2026-09-15 11:16:52,055 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool patch completed (0.20s, 1786 chars)
+2026-09-15 11:16:52,086 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6987 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:53,571 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6987 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:16:53,572 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #79: model=glm-5.3-flash provider=custom in=127742 out=20 total=127762 latency=1.5s
+2026-09-15 11:22:36,139 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 11:26:23,846 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.27s, 45 chars)
+2026-09-15 11:26:23,874 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6989 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:26:25,881 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6989 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:26:25,881 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #80: model=glm-5.3-flash provider=custom in=127782 out=20 total=127802 latency=2.0s
+2026-09-15 11:26:26,447 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: Creating new local environment for task default...
+2026-09-15 11:26:26,484 INFO [cron_8c20e6866ceb_20260915_100014] tools.environments.base: Session snapshot created (session=2c739a5c049b, cwd=/home/hermes)
+2026-09-15 11:26:26,485 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: local environment ready for task default
+2026-09-15 11:30:15,113 INFO cron.scheduler: Running job 'retrabalho-QC 11h30 (gatilho)' (ID: b9b585468254)
+2026-09-15 11:30:15,120 INFO cron.scheduler: Prompt: [IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final response will be automatic
+2026-09-15 11:30:15,167 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:30:15,170 INFO cron.scheduler: Job 'b9b585468254': 61 MCP tool(s) available
+2026-09-15 11:30:15,210 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_1:135717919377088 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:15,287 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 11:30:16,156 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 11:30:16,908 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3-flash' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-15 11:30:17,351 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: conversation turn: session=cron_b9b585468254_20260915_113015 model=glm-5.3-flash provider=custom platform=cron history=0 msg='[IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final respon...'
+2026-09-15 11:30:17,375 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6992 (_call):135717476857536 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:20,109 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6992 (_call):135717476857536 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:20,110 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: API call #1: model=glm-5.3-flash provider=custom in=6645 out=520 total=7165 latency=2.8s
+2026-09-15 11:30:20,244 INFO agent.tool_executor: tool search_files completed (0.13s, 2106 chars)
+2026-09-15 11:30:20,271 INFO agent.tool_executor: tool search_files completed (0.16s, 1440 chars)
+2026-09-15 11:30:20,292 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6999 (_call):135717443286720 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:21,356 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6999 (_call):135717443286720 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:21,357 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: API call #2: model=glm-5.3-flash provider=custom in=8496 out=123 total=8619 latency=1.1s
+2026-09-15 11:30:21,493 INFO [cron_b9b585468254_20260915_113015] agent.tool_executor: tool read_file completed (0.13s, 4550 chars)
+2026-09-15 11:30:21,513 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7004 (_call):135717443286720 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:28,656 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7004 (_call):135717443286720 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:28,656 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: API call #3: model=glm-5.3-flash provider=custom in=10173 out=1722 total=11895 latency=7.2s
+2026-09-15 11:30:28,744 INFO agent.tool_executor: tool search_files completed (0.09s, 3492 chars)
+2026-09-15 11:30:28,773 INFO agent.tool_executor: tool read_file completed (0.11s, 2446 chars)
+2026-09-15 11:30:28,794 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7011 (_call):135717476857536 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:32,852 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7011 (_call):135717476857536 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:32,853 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: API call #4: model=glm-5.3-flash provider=custom in=13981 out=1032 total=15013 latency=4.1s
+2026-09-15 11:30:32,954 INFO agent.tool_executor: tool search_files completed (0.10s, 109 chars)
+2026-09-15 11:30:32,962 INFO agent.tool_executor: tool search_files failed (0.11s): {"total_count": 0, "error": "Search failed: rg: regex parse error:\n    (?:preo(?!co))\n           ^^^\nerror: look-around, including look-ahead and look-behind, is not supported\nConsider enabling PC
+2026-09-15 11:30:33,025 INFO agent.tool_executor: tool read_file completed (0.17s, 639 chars)
+2026-09-15 11:30:33,026 WARNING [cron_b9b585468254_20260915_113015] agent.tool_executor: Tool search_files returned error (0.11s): {"total_count": 0, "error": "Search failed: rg: regex parse error:\n    (?:preo(?!co))\n           ^^^\nerror: look-around, including look-ahead and look-behind, is not supported\nConsider enabling PC
+2026-09-15 11:30:33,046 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7020 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:37,740 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7020 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:37,740 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: API call #5: model=glm-5.3-flash provider=custom in=15418 out=796 total=16214 latency=4.7s
+2026-09-15 11:30:37,820 INFO [cron_b9b585468254_20260915_113015] agent.tool_executor: tool search_files completed (0.08s, 396 chars)
+2026-09-15 11:30:37,842 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7023 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:42,597 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7023 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:42,616 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7024 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:45,079 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7024 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:30:45,080 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: API call #6: model=glm-5.3-flash provider=custom in=12979 out=360 total=13339 latency=2.5s
+2026-09-15 11:30:45,113 INFO [cron_b9b585468254_20260915_113015] agent.conversation_loop: Turn ended: reason=text_response(finish_reason=stop) model=glm-5.3-flash api_calls=7/90 budget=7/90 tool_turns=5 last_msg_role=assistant response_len=756 session=cron_b9b585468254_20260915_113015
+2026-09-15 11:30:45,115 INFO cron.scheduler: Job 'retrabalho-QC 11h30 (gatilho)' completed successfully
+2026-09-15 11:30:45,119 INFO run_agent: OpenAI client closed (agent_close, shared=True, tcp_force_closed=0) thread=cron-parallel_1:135717919377088 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:35:56,782 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.34s, 45 chars)
+2026-09-15 11:35:56,818 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7025 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:35:58,836 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7025 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:35:58,836 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #81: model=glm-5.3-flash provider=custom in=127822 out=20 total=127842 latency=2.0s
+2026-09-15 11:41:36,267 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 11:45:16,068 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 11:45:29,669 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (570.27s, 45 chars)
+2026-09-15 11:45:29,697 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7027 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:45:39,446 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7027 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:45:39,446 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #82: model=glm-5.3-flash provider=custom in=127862 out=29 total=127891 latency=9.8s
+2026-09-15 11:45:40,003 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: Creating new local environment for task default...
+2026-09-15 11:45:40,045 INFO [cron_8c20e6866ceb_20260915_100014] tools.environments.base: Session snapshot created (session=675e726164d3, cwd=/home/hermes)
+2026-09-15 11:45:40,045 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: local environment ready for task default
+2026-09-15 11:51:36,336 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 11:52:40,200 INFO [cron_8c20e6866ceb_20260915_100014] agent.tool_executor: tool terminal completed (420.20s, 50 chars)
+2026-09-15 11:52:40,229 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7030 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:52:42,698 INFO run_agent: OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7030 (_call):135717527213760 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 11:52:42,699 INFO [cron_8c20e6866ceb_20260915_100014] agent.conversation_loop: API call #83: model=glm-5.3-flash provider=custom in=127915 out=95 total=128010 latency=2.5s
+2026-09-15 11:52:43,397 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: Creating new local environment for task default...
+2026-09-15 11:52:43,443 INFO [cron_8c20e6866ceb_20260915_100014] tools.environments.base: Session snapshot created (session=05bf70dd436a, cwd=/home/hermes)
+2026-09-15 11:52:43,443 INFO [cron_8c20e6866ceb_20260915_100014] tools.terminal_tool: local environment ready for task default
+2026-09-15 11:58:36,381 INFO tools.terminal_tool: Cleaned up inactive environment for task: default
+2026-09-15 12:00:15,208 INFO cron.scheduler: Running job 'briefing-matinal' (ID: fb802f948cba)
+2026-09-15 12:00:15,208 INFO cron.scheduler: Prompt: [IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final response will be automatic
+2026-09-15 12:00:15,274 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 12:00:15,286 INFO cron.scheduler: Job 'fb802f948cba': 61 MCP tool(s) available
+2026-09-15 12:00:15,294 INFO cron.scheduler: Running job 'Agente 5 Agendador/Publicador — 12h' (ID: d2fd43a7edcd)
+2026-09-15 12:00:15,301 INFO cron.scheduler: Prompt: [IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicating they want you to f
+2026-09-15 12:00:15,346 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 12:00:15,349 INFO cron.scheduler: Job 'd2fd43a7edcd': 61 MCP tool(s) available
+2026-09-15 12:00:15,362 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_2:135717502035648 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 12:00:15,389 INFO run_agent: OpenAI client created (agent_init, shared=True) thread=cron-parallel_1:135717919377088 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 12:00:15,397 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 12:00:15,401 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 12:00:15,422 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 12:00:15,440 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 12:00:15,453 INFO agent.auxiliary_client: Vision auto-detect: using main provider custom (glm-5.3-flash)
+2026-09-15 12:00:15,460 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 12:00:16,155 INFO cron.scheduler: Job 'b66e74eee96a': delivered to telegram:8944451892 via live adapter
+2026-09-15 12:00:17,416 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3-flash' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-15 12:00:17,689 INFO agent.model_metadata: Could not detect context length for model 'glm-5.3-flash' at http://127.0.0.1:8789/v1 — defaulting to 256,000 tokens (probe-down). Set model.context_length in config.yaml to override.
+2026-09-15 12:00:17,858 INFO [cron_fb802f948cba_20260915_120015] agent.conversation_loop: conversation turn: session=cron_fb802f948cba_20260915_120015 model=glm-5.3-flash provider=custom platform=cron history=0 msg='[IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final respon...'
+2026-09-15 12:00:17,908 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7033 (_call):135717627860672 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash
+2026-09-15 12:00:18,267 INFO [cron_d2fd43a7edcd_20260915_120015] agent.conversation_loop: conversation turn: session=cron_d2fd43a7edcd_20260915_120015 model=glm-5.3-flash provider=custom platform=cron history=0 msg='[IMPORTANT: The user has invoked the "squad-postagens-cuidarvc" skill, indicatin...'
+2026-09-15 12:00:18,290 INFO run_agent: OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7034 (_call):135717518821056 provider=custom base_url=http://127.0.0.1:8789/v1 model=glm-5.3-flash

@@ -873,152 +873,275 @@ async function life(a,delay){
 }
 
 /* ---------------- chat: local reply engine ---------------- */
-// Per agent repertoire. gen + gen2 are combined when nothing else matches.
+// Per agent repertoire. proj = project status from the agent's role, tema = role answers per topic, off = topics the agent offers back.
 var REP={
  rob:{
-  oi:['Oi! Que alegria ter você aqui no escritório.','Olá! Entra, a casa é sua.','E aí! Chegou numa hora ótima, o time está voando hoje.','Oi, oi! Senta aí, aceita um café?','Olá! Sempre bom receber gente nova por aqui.'],
-  faz:['Eu fundei o cuidar.vc e cuido para que cada agente saiba pra onde a gente vai.','Sou o fundador. Dou a direção e escalo o time: CTO na tecnologia, CMO no marketing, Claudete nas operações.','Meu trabalho é juntar as peças: Planejador faz a PAUTA, Copy escreve, Artes desenha, QC revisa e Agendador publica.','Eu decido prioridades e garanto que o cuidado esteja em tudo que a gente entrega.','Sou quem dá o sim final. Mas quem faz a mágica são esses 12 agentes.'],
-  agora:['A pauta da semana está redondinha, o Planejador caprichou.','Acabei de ver o relatório do Métricas e gostei muito.','Estou de olho na campanha nova que o CMO subiu.','Hoje o foco é crescer sem perder o carinho no atendimento.','Pedi pra Claudete organizar os pendentes e está tudo andando.'],
+  oi:['Que alegria ter você aqui no escritório.','Entra, a casa é sua.','Chegou numa hora ótima, o time está voando hoje.','Senta aí, aceita um café?','Sempre bom receber gente por aqui.'],
+  faz:['Fundei o cuidar.vc, uma plataforma pra famílias contratarem cuidadores de idosos, babás e enfermeiros verificados.','Sou o fundador. Dou a direção e escalo o time: CTO na tecnologia, CMO no marketing, Claudete no produto e operações.','Meu trabalho é decidir prioridades e garantir que a confiança venha antes de tudo no cuidar.vc.','Sou quem dá o sim final antes do lançamento. Mas quem faz a mágica são esses 12 agentes.'],
+  agora:['Estou revisando com a Claudete o que falta pro lançamento público.','Acabei de ver o relatório do Métricas e gostei muito.','Estou de olho na campanha de lançamento que o CMO está preparando.','Aprovei as artes de hoje agora há pouco.','Alinhei com o CTO as prioridades do site pra esta semana.'],
+  proj:['O site do cuidar.vc já está no ar. Minha prioridade agora é chegar no lançamento público com verificação e pagamento impecáveis.','Do meu lado o foco é um só: nenhuma família pode ter dúvida sobre quem está entrando na casa dela.','Estamos na reta de preparação do lançamento: produto com a Claudete, site com o CTO e divulgação com o CMO.','Toda decisão minha passa por uma pergunta: isso aumenta a confiança de quem contrata e de quem trabalha?','Durmo à meia-noite e acordo às 7h, e a primeira coisa que leio é o status técnico do CTO e os pendentes da Claudete.'],
+  tema:{
+   lancamento:['O lançamento público está em preparação, e só abro quando cadastro, verificação e pagamento estiverem redondos. Prefiro atrasar a abrir mal.','Sobre o lançamento: o site já está no ar pra gente validar, e eu dou o sim final quando o time me mostrar que está tudo pronto.'],
+   verificacao:['Verificação é inegociável pra mim. É ela que faz uma família confiar num desconhecido pra cuidar do pai ou do filho.','Sobre a verificação: pedi pro time tratar como regra número um. Perfil sem checagem não aparece pra ninguém.'],
+   pagamento:['Pagamento seguro pela plataforma protege a família e o profissional, por isso não abro mão dele.'],
+   avaliacoes:['Avaliação real é nosso maior patrimônio. Uma nota falsa destrói a confiança que a gente está construindo.']
+  },
+  off:['lancamento','verificacao'],
   obg:['Eu que agradeço! Gente como você faz isso aqui valer a pena.','Imagina! Conta sempre comigo.','Agradeço de coração.','Por nada! Volta sempre que quiser.'],
-  tchau:['Até logo! A porta da sala está sempre aberta.','Tchau! Cuide bem de você também.','Até mais! Vou voltar pras aprovações.','Valeu pela visita, até a próxima!'],
-  cuidar:['O cuidar.vc nasceu pra cuidar de quem cuida. Esse é o nosso norte.','A gente cria conteúdo e ferramentas pra quem cuida de alguém se sentir menos só.','Somos um escritório de 13 agentes com uma missão: cuidado com quem cuida.','Aqui cada post, cada linha de código e cada número servem a quem cuida todo dia.'],
-  gen:['Boa pergunta, deixa eu pensar como fundador.','Anotei isso no meu caderno.','Gostei de você ter trazido isso.','Hmm, isso merece uma conversa com o time.'],
-  gen2:['Vou levar pra reunião das 15h.','Se precisar, o CTO e o CMO me ajudam a decidir.','O importante é que o cuidado venha primeiro.','Me conta mais, quero entender direitinho.']
+  tchau:['Até logo! A porta da sala está sempre aberta.','Tchau! Cuide bem de você também.','Até mais! Vou voltar pras aprovações.','Valeu pela visita, até a próxima!']
  },
  cto:{
-  oi:['Oi! Pode chegar, estou entre um deploy e outro.','Olá! Bem na hora, acabei de fechar uma revisão de arquitetura.','E aí! Tudo em ordem por aqui na tecnologia.','Oi! Diz aí, em que posso ajudar?'],
-  faz:['Eu tomo as decisões técnicas: que tecnologia usar, como escalar e o que fica pra depois.','Coordeno Dev, QA e DevOps pra que o site rode liso e seguro.','Desenho a arquitetura e mando o status técnico todo dia às 07h15.','Meu papel é trocar risco por clareza: cada escolha técnica tem um porquê.'],
-  agora:['Decidi manter o banco atual e otimizar as consultas antes de trocar qualquer coisa.','O pipeline está verde, só falta o QA dar o ok.','Estou priorizando o novo fluxo de cadastro para esta semana.','Revisei o plano de backup com o DevOps e ficou sólido.','Dividi a tarefa do login em partes menores pro Dev.'],
+  oi:['Pode chegar, estou entre um deploy e outro.','Bem na hora, acabei de fechar uma revisão de arquitetura.','Tudo em ordem por aqui na tecnologia.','Diz aí, em que posso ajudar?'],
+  faz:['Cuido do site do cuidar.vc e dos deploys: decido tecnologia, arquitetura e o que entra em produção.','Coordeno Dev, QA e DevOps pra que o site rode liso e seguro.','Desenho a arquitetura e mando o status técnico todo dia às 07h15.','Meu papel é trocar risco por clareza: cada escolha técnica tem um porquê.'],
+  agora:['Decidi manter o banco atual e otimizar as consultas antes de trocar qualquer coisa.','O pipeline está verde, só falta o QA dar o ok.','Estou priorizando o fluxo de cadastro dos profissionais para esta semana.','Revisei o plano de backup com o DevOps e ficou sólido.','Dividi a tarefa do login em partes menores pro Dev.'],
+  proj:['O site está no ar e estável. Esta semana a prioridade técnica é o fluxo de cadastro dos profissionais.','Tecnicamente, o que falta pro lançamento é fechar cadastro, verificação e pagamento com os testes do QA passando.','Cada deploy do site passa pelo pipeline: Dev sobe o PR, QA valida, DevOps publica e eu acompanho.','Estou priorizando desempenho no celular, porque é por lá que a maioria das famílias vai procurar um profissional.','Meu status das 07h15 de hoje: site no ar, pipeline verde e cadastro como foco.'],
+  tema:{
+   site:['O site está no ar com pipeline verde. Cada deploy passa pelo QA antes de ir pra produção.','Sobre o site: estou otimizando as consultas e o carregamento no celular antes de pensar em trocar qualquer peça.'],
+   pagamento:['Pagamento é a parte técnica mais sensível: integração segura, nenhum dado de cartão guardado com a gente e teste exaustivo com o QA.'],
+   verificacao:['Na verificação, o desafio técnico é garantir que perfil não verificado nunca apareça na busca. Isso tem teste automático.'],
+   app:['Aplicativo nativo não é prioridade antes do lançamento. O site responsivo cobre bem o celular e custa bem menos manter.'],
+   lancamento:['Pro lançamento, meu checklist técnico é: cadastro estável, pagamento testado, backup validado e monitoramento com alerta.']
+  },
+  off:['site','pagamento'],
   obg:['Por nada! Tecnologia boa é a que ninguém percebe.','Imagina, estou aqui pra isso.','Valeu! Qualquer dúvida técnica, me chama.','Eu que agradeço a paciência.'],
-  tchau:['Até mais! Vou voltar pro quadro de arquitetura.','Tchau! Se algo cair, eu fico sabendo primeiro.','Até logo, bom trabalho pra você!','Falou! Volto pro code review.'],
-  cuidar:['Por trás do cuidar.vc tem um site leve e estável, pensado pra funcionar até em celular simples.','A tecnologia do cuidar.vc existe pra tirar peso de quem já cuida de muita coisa.','Escolhemos soluções simples e seguras: quem cuida não pode esperar tela carregando.','O cuidar.vc é cuidado em forma de produto, e eu garanto que ele fique no ar.'],
-  gen:['Tecnicamente, dá pra fazer.','Deixa eu avaliar os prós e contras.','Interessante, isso muda algumas prioridades.','Hmm, vou pensar na arquitetura disso.'],
-  gen2:['Primeiro valido com o QA, depois decido.','Prefiro começar simples e evoluir.','Vou registrar como decisão técnica da semana.','Se fizer sentido, o Dev pega amanhã.']
+  tchau:['Até mais! Vou voltar pro quadro de arquitetura.','Tchau! Se algo cair, eu fico sabendo primeiro.','Até logo, bom trabalho pra você!','Falou! Volto pro code review.']
  },
  cmo:{
-  oi:['Oi! Chegou bem na hora do briefing.','Olá! Que energia boa, igual ao engajamento de hoje.','E aí! Senta, quero te mostrar uns números de alcance.','Oi! Adoro visita, rende até ideia de post.'],
-  faz:['Cuido do marketing: alcance, campanhas e a voz do cuidar.vc nas redes.','Eu lidero o time de conteúdo, do Planejador ao Agendador.','Meu trabalho é fazer a mensagem certa chegar em quem cuida de alguém.','Defino campanhas, testo criativos e acompanho o alcance todo dia.'],
-  agora:['O alcance da semana subiu e os salvamentos estão ótimos.','Estou testando dois criativos pra ver qual conversa melhor.','O briefing das 18h já está quase pronto.','Separei os posts com mais compartilhamentos pra repetir o formato.','Estou alinhando a próxima campanha com Copy e Artes.'],
+  oi:['Chegou bem na hora do briefing.','Que energia boa, igual ao engajamento de hoje.','Senta, quero te mostrar uns números de alcance.','Adoro visita, rende até ideia de post.'],
+  faz:['Cuido do marketing do cuidar.vc: fazer famílias e profissionais saberem que a plataforma existe.','Lidero o time de conteúdo, do Planejador ao Agendador.','Meu trabalho é passar confiança nas redes: profissionais verificados, pagamento seguro e avaliações reais.','Defino campanhas, testo criativos e acompanho o alcance todo dia.'],
+  agora:['O alcance da semana subiu e os salvamentos estão ótimos.','Estou testando dois criativos pra ver qual conversa melhor.','O briefing das 18h já está quase pronto.','Separei os posts com mais compartilhamentos pra repetir o formato.','Estou alinhando a campanha de lançamento com Copy e Artes.'],
+  proj:['Estou preparando a campanha do lançamento público com foco em confiança: verificação e avaliações reais.','A gente fala com dois públicos: famílias que precisam contratar e profissionais que querem trabalho sério.','Nas redes, o que mais engaja até agora é mostrar como funciona a verificação dos profissionais.','O briefing das 18h vai definir os temas da semana, puxando pelo lançamento.','Antes de abrir ao público quero uma boa base de profissionais cadastrados, pra família não chegar e achar a busca vazia.'],
+  tema:{
+   divulgacao:['A divulgação hoje é conteúdo diário nas redes, e na reta do lançamento entra campanha paga com foco em famílias.','Sobre divulgação: o tema que mais salva é como a gente verifica os profissionais, então vou repetir o formato.'],
+   lancamento:['Pro lançamento, a campanha vai ter três mensagens: profissional verificado, pagamento seguro e avaliação de verdade.'],
+   babas:['Babás são um público forte nas redes: mães e pais querem ver como a gente verifica quem cuida dos filhos.'],
+   cuidadores:['Quem busca cuidador de idoso normalmente é o filho ou a filha adulta, cansada e com pressa. A comunicação fala direto com essa pessoa.'],
+   avaliacoes:['Avaliação real vira prova social. Quando lançar, depoimento de família vai ser nosso melhor conteúdo.']
+  },
+  off:['lancamento','divulgacao'],
   obg:['Eu que agradeço! Isso vale mais que mil curtidas.','Valeu demais, de verdade.','Imagina! Compartilha a gente por aí, combinado?','Por nada, volta sempre!'],
-  tchau:['Até mais! Vou ver como o post das 19h performa.','Tchau! Segue a gente nas redes.','Até logo, foi ótimo conversar!','Um abraço, até a próxima!'],
-  cuidar:['O cuidar.vc fala com quem cuida de pai, mãe, filho ou paciente, e quer alcançar cada um.','Nossa missão nas redes é simples: quem cuida precisa se sentir visto.','O cuidar.vc é acolhimento com estratégia, cada post tem um propósito.','Queremos que o cuidar.vc seja o primeiro lugar lembrado por quem está cansado de cuidar sem apoio.'],
-  gen:['Adorei, isso dá um post!','Hmm, isso tem potencial de alcance.','Anotado no meu mural de ideias.','Interessante, quero ouvir mais.'],
-  gen2:['Vou pedir pro Métricas ver se o público reage bem.','Talvez vire um teste A/B semana que vem.','Posso levar pra pauta com o Planejador.','O importante é falar com carinho e chegar longe.']
+  tchau:['Até mais! Vou ver como o post das 19h performa.','Tchau! Segue a gente nas redes.','Até logo, foi ótimo conversar!','Um abraço, até a próxima!']
  },
  devops:{
-  oi:['Oi! Todos os LEDs verdes, pode chegar.','Olá! Servidor estável e café quente, dia bom.','E aí! Estou de headset, mas estou te ouvindo.','Oi! Chegou numa hora tranquila, sem alerta nenhum.'],
-  faz:['Cuido da infraestrutura: servidores, deploy, backup e monitoramento.','Garanto que o cuidar.vc fique no ar 24 horas, sem susto.','Eu automatizo o caminho do código até produção.','Sou quem acorda se o servidor espirrar. Mas ele quase nunca espirra.'],
+  oi:['Todos os LEDs verdes, pode chegar.','Servidor estável e café quente, dia bom.','Estou de headset, mas estou te ouvindo.','Chegou numa hora tranquila, sem alerta nenhum.'],
+  faz:['Cuido da infraestrutura do cuidar.vc: servidores, deploy, backup e monitoramento.','Garanto que o site fique no ar 24 horas, sem susto.','Automatizo o caminho do código até produção.','Sou quem acorda se o servidor espirrar. Mas ele quase nunca espirra.'],
   agora:['O backup das 04h rodou certinho.','Uptime de 100% nas últimas 24 horas.','Estou ajustando os alertas pra avisar antes do problema.','Deploy concluído e nenhum erro no log.','Estou de olho no uso de memória do rack, tudo tranquilo.'],
+  proj:['O site está no ar com uptime de 100% nas últimas 24 horas.','O backup roda todo dia às 04h e eu testo a restauração, porque backup que não volta não serve.','Pro lançamento, estou preparando o servidor pra aguentar o pico de acesso da divulgação.','Os alertas agora avisam antes do problema: disco, memória e tempo de resposta do site.','Dados de famílias e profissionais ficam protegidos: acesso restrito, conexão segura e backup criptografado.'],
+  tema:{
+   site:['O site está no ar, servidor estável e sem erro no log. O último deploy foi limpo.'],
+   lancamento:['No lançamento, meu cuidado é o pico de acesso. Por isso já estou ajustando escala e alertas antes.'],
+   pagamento:['Na parte de pagamento eu cuido do ambiente: conexão segura, segredos fora do código e log sem dado sensível.'],
+   verificacao:['Os documentos da verificação ficam em armazenamento com acesso restrito e backup. É dado sensível e eu trato como tal.']
+  },
+  off:['site','lancamento'],
   obg:['Por nada! Servidor feliz, time feliz.','Imagina, é só chamar.','Valeu! Isso aquece mais que o rack.','Eu que agradeço a visita.'],
-  tchau:['Até mais! Volto a vigiar os gráficos.','Tchau! Se piscar vermelho, eu resolvo.','Falou, bom resto de dia!','Até logo, que os LEDs fiquem verdes pra você.'],
-  cuidar:['O cuidar.vc precisa estar no ar sempre, porque quem cuida acessa de madrugada também.','Minha parte no cuidar.vc é invisível: estabilidade, velocidade e dados seguros.','Cuidar de quem cuida começa por um site que não cai.','O cuidar.vc roda numa infraestrutura enxuta e bem monitorada, feita com carinho.'],
-  gen:['Hmm, deixa eu checar os logs mentais.','Anotei no meu runbook.','Boa, isso dá pra automatizar.','Entendi, vou monitorar isso.'],
-  gen2:['Se precisar de servidor, eu provisiono.','Tudo que se repete vira script aqui.','Primeiro faço backup, depois mexo.','Qualquer coisa, abro um alerta pro CTO.']
+  tchau:['Até mais! Volto a vigiar os gráficos.','Tchau! Se piscar vermelho, eu resolvo.','Falou, bom resto de dia!','Até logo, que os LEDs fiquem verdes pra você.']
  },
  dev:{
-  oi:['Oi! Só deixa eu salvar o arquivo... pronto, fala!','Olá! Estou no meio de um commit, mas sempre tem tempo.','E aí! Chega mais no cantinho do código.','Oi! O terminal pode esperar um minuto.'],
-  faz:['Eu escrevo o código do cuidar.vc: telas, login, cadastro e tudo mais.','Transformo as tarefas do CTO em funcionalidades que funcionam de verdade.','Sou dev: código, pull request, teste e mais código.','Construo as partes do site que você clica e usa.'],
+  oi:['Só deixa eu salvar o arquivo... pronto, fala!','Estou no meio de um commit, mas sempre tem tempo.','Chega mais no cantinho do código.','O terminal pode esperar um minuto.'],
+  faz:['Escrevo o código do cuidar.vc: telas, login, cadastro, busca e tudo mais.','Transformo as tarefas do CTO em funcionalidades que funcionam de verdade.','Sou dev: código, pull request, teste e mais código.','Construo as partes do site que famílias e profissionais clicam e usam.'],
   agora:['Estou refatorando o login pra ficar mais rápido.','O PR do cadastro está quase pronto pra revisão do QA.','Achei uma função gigante e estou quebrando em pedaços menores.','Os testes passaram de primeira, raridade!','Estou corrigindo um detalhe de layout no celular.'],
+  proj:['Estou no fluxo de cadastro dos profissionais: dados, documentos e envio pra verificação.','O PR do login está pronto, agora é o QA validar pra subir.','Estou deixando a busca de profissionais mais rápida, com filtro por tipo: cuidador, babá ou enfermeiro.','Corrigi um detalhe de layout no celular na página de perfil do profissional.','Antes do lançamento, minha lista é: cadastro, tela de avaliação e ajustes no pagamento.'],
+  tema:{
+   features:['A funcionalidade que estou tocando agora é o cadastro do profissional com envio de documentos pra verificação.','Sobre funcionalidades: a busca com filtro por tipo de profissional está quase pronta pro QA.'],
+   avaliacoes:['A tela de avaliação só libera depois de uma contratação concluída. Foi assim que o CTO pediu, pra garantir que é real.'],
+   pagamento:['No pagamento eu cuido da tela e da integração, e qualquer mudança ali passa por revisão dupla.'],
+   site:['No site, o que mudou por último foi o login mais rápido e os ajustes de layout no celular.']
+  },
+  off:['features','avaliacoes'],
   obg:['Por nada! Bora codar.','Imagina, foi um prazer.','Valeu! Isso compila direto no coração.','Eu que agradeço, sério.'],
-  tchau:['Até mais! Vou dar push aqui.','Tchau! Sem bugs pra você.','Falou! Volto pro editor.','Até logo, bom deploy pra todos nós!'],
-  cuidar:['O cuidar.vc é o site que eu programo todo dia pensando em quem cuida de alguém.','No cuidar.vc cada botão precisa ser simples, quem cuida não tem tempo a perder.','Programar pro cuidar.vc é diferente, cada tela ajuda alguém de verdade.','O cuidar.vc é feito com código limpo e muito carinho.'],
-  gen:['Hmm, isso daria uma boa issue.','Interessante, deixa eu pensar na lógica.','Anotei no meu backlog.','Boa, dá pra implementar.'],
-  gen2:['Vou abrir um PR e o QA revisa.','Primeiro escrevo o teste, depois o código.','Talvez caiba numa função pequena.','Se o CTO aprovar, sai essa semana.']
+  tchau:['Até mais! Vou dar push aqui.','Tchau! Sem bugs pra você.','Falou! Volto pro editor.','Até logo, bom deploy pra todos nós!']
  },
  qa:{
-  oi:['Oi! Pode falar, estou rodando uma bateria de testes.','Olá! Chegou sem bug nenhum, que ótimo.','E aí! Esse oi foi testado e aprovado.','Oi! Estava justamente testando no celular.'],
-  faz:['Eu testo tudo antes de chegar em você: telas, fluxos e casos estranhos.','Sou QA, meu trabalho é achar o bug antes do usuário.','Reviso os PRs do Dev e rodo testes de regressão.','Testo no celular, no computador e no pior cenário possível.'],
+  oi:['Pode falar, estou rodando uma bateria de testes.','Chegou sem bug nenhum, que ótimo.','Esse oi foi testado e aprovado.','Estava justamente testando no celular.'],
+  faz:['Testo tudo do cuidar.vc antes de chegar em você: telas, fluxos e casos estranhos.','Sou QA, meu trabalho é achar o bug antes do usuário.','Reviso os PRs do Dev e rodo testes de regressão.','Testo no celular, no computador e no pior cenário possível.'],
   agora:['Rodando a regressão completa, 42 casos até agora.','Achei um bug no cadastro e já avisei o Dev.','Estou testando o site numa conexão bem lenta.','O PR do login passou em todos os testes.','Montando casos de teste pro novo fluxo de cadastro.'],
+  proj:['Estou rodando a regressão completa do site antes do lançamento, 42 casos até agora.','Achei um bug no cadastro de profissional e o Dev já está corrigindo.','Testo cada fluxo no celular com internet lenta, porque é assim que muita família vai acessar.','Pagamento tem a bateria de testes mais pesada: aprovado, recusado, cancelado e reembolso.','Nenhum deploy sai sem meu ok. O CTO só publica com a regressão verde.'],
+  tema:{
+   pagamento:['No pagamento testo todos os cenários: aprovado, recusado, cancelado e reembolso. É onde erro custa mais caro.'],
+   verificacao:['Na verificação, meu teste principal é garantir que perfil não aprovado nunca aparece na busca.'],
+   avaliacoes:['Em avaliações eu testo se só quem contratou consegue avaliar e se a nota não pode ser editada depois.'],
+   lancamento:['Pro lançamento, só dou ok com a regressão toda verde, no celular e no computador.'],
+   site:['No site, o último teste pegou um bug no cadastro. Fora isso, login e perfil passaram limpos.']
+  },
+  off:['pagamento','lancamento'],
   obg:['Por nada! Aprovado com louvor.','Imagina, foi um teste agradável.','Valeu! Zero bugs nessa conversa.','Eu que agradeço.'],
-  tchau:['Até mais! Volto pros testes.','Tchau! Se achar um bug, me conta.','Falou! Vou rodar mais uma regressão.','Até logo, caso de teste encerrado.'],
-  cuidar:['O cuidar.vc precisa funcionar de primeira, porque quem cuida já tem problema demais.','Testo o cuidar.vc pensando numa pessoa cansada usando o celular às 3h da manhã.','Qualidade no cuidar.vc é respeito com quem cuida.','Cada teste que eu faço protege a experiência de quem usa o cuidar.vc.'],
-  gen:['Hmm, vou escrever um caso de teste pra isso.','Interessante, e se der errado?','Anotei como cenário de teste.','Deixa eu reproduzir isso na cabeça.'],
-  gen2:['Testo e te conto o resultado.','Melhor prevenir que corrigir.','Vou validar no celular também.','Se passar na regressão, está valendo.']
+  tchau:['Até mais! Volto pros testes.','Tchau! Se achar um bug, me conta.','Falou! Vou rodar mais uma regressão.','Até logo, caso de teste encerrado.']
  },
  claudete:{
-  oi:['Oi! Que bom, estava mesmo querendo uma pausa boa.','Olá! Senta, vou só fechar essa lista de pendentes.','E aí! Tudo organizado por aqui.','Oi! A agenda está cheia, mas sempre cabe uma conversa.'],
-  faz:['Cuido do produto e das operações: processos, prioridades e pendentes.','Organizo a semana do time e garanto que nada fique esquecido.','Sou a ponte entre o Rob e o time, transformo ideias em planos.','Documento processos pra que tudo rode mesmo quando alguém tira férias.'],
+  oi:['Que bom, estava mesmo querendo uma pausa boa.','Senta, vou só fechar essa lista de pendentes.','Tudo organizado por aqui.','A agenda está cheia, mas sempre cabe uma conversa.'],
+  faz:['Cuido do produto e das operações do cuidar.vc: processos, prioridades e pendentes.','Organizo a semana do time e garanto que nada fique esquecido.','Sou a ponte entre o Rob e o time, transformo ideias em planos.','Desenho a jornada de famílias e profissionais na plataforma e documento cada processo.'],
   agora:['Atualizei a lista de pendentes, sobraram só três.','Estou organizando a semana com o Rob.','Documentei o processo de publicação de ponta a ponta.','Revisando o calendário pra ninguém ficar sobrecarregado.','Priorizei as melhorias pedidas pelos usuários.'],
+  proj:['Estou organizando os pendentes do lançamento público. Sobraram poucos itens, e todos têm dono.','No produto, a prioridade é deixar a jornada da família simples: buscar, confiar, contratar e pagar.','Documentei o processo de verificação dos profissionais de ponta a ponta.','Estou mapeando o que acontece quando algo dá errado numa contratação: cancelamento, troca e suporte.','Toda semana alinho com o Rob o que entra antes e o que fica pra depois do lançamento.'],
+  tema:{
+   verificacao:['O processo de verificação está documentado: cadastro, envio de documentos, checagem e só então o perfil aparece.'],
+   lancamento:['Pro lançamento eu mantenho a lista de pendentes. Cada item tem dono e prazo, e o Rob acompanha comigo.'],
+   pacientes:['Pensando nas famílias, estou desenhando o suporte: o que fazer se o profissional faltar ou se precisar trocar.'],
+   features:['Sobre funcionalidades: priorizei o que dá confiança primeiro, que é verificação, avaliação e pagamento seguro. O resto vem depois.'],
+   enfermeiros:['Enfermeiros têm uma etapa a mais na verificação, e documentei isso separado de cuidadores e babás.'],
+   cuidadores:['Cuidador de idoso é o pedido mais comum. Estou ajustando o perfil pra mostrar experiência com rotina, remédios e mobilidade.']
+  },
+  off:['lancamento','verificacao'],
   obg:['Por nada! Organizar é comigo.','Imagina, foi um prazer.','Eu que agradeço a atenção.','Valeu! Anotado com carinho.'],
-  tchau:['Até mais! Vou voltar pros pendentes.','Tchau! Coloquei um lembrete pra gente conversar de novo.','Até logo, boa semana!','Tchau, tchau! Bom trabalho.'],
-  cuidar:['O cuidar.vc é um produto que organiza a vida de quem cuida, e eu organizo o cuidar.vc.','A gente constrói o cuidar.vc ouvindo quem cuida de verdade.','O cuidar.vc quer ser o apoio que falta na rotina de quem cuida.','Cada processo aqui dentro existe pro cuidar.vc chegar melhor em quem precisa.'],
-  gen:['Hmm, deixa eu anotar isso.','Boa, isso entra na lista.','Interessante, vou ver a prioridade.','Faz sentido, quero organizar isso.'],
-  gen2:['Coloco na pauta da semana.','Vou alinhar com o Rob.','Documento e compartilho com o time.','Prometo que não fica esquecido.']
+  tchau:['Até mais! Vou voltar pros pendentes.','Tchau! Coloquei um lembrete pra gente conversar de novo.','Até logo, boa semana!','Tchau, tchau! Bom trabalho.']
  },
  plan:{
-  oi:['Oi! Estava fechando a pauta, chegou em boa hora.','Olá! Quer saber o tema de amanhã?','E aí! Calendário aberto e cabeça cheia de ideias.','Oi! Cuidado, toda conversa aqui pode virar pauta.'],
-  faz:['Eu monto a PAUTA: o que vai ao ar, em que dia e por quê.','Planejo o calendário de posts da semana inteira.','Escolho os temas e passo o briefing pro Copy e pro time de Artes.','Organizo a pauta pro cuidar.vc falar do assunto certo na hora certa.'],
-  agora:['A pauta da semana está fechada, só falta o tema de sexta.','Definindo o tema de amanhã: o descanso de quem cuida.','Atualizei o calendário com as datas especiais do mês.','Estou separando ideias que vieram dos comentários.','Mandei o briefing pro Copy agora há pouco.'],
+  oi:['Estava fechando a pauta, chegou em boa hora.','Quer saber o tema de amanhã?','Calendário aberto e cabeça cheia de ideias.','Cuidado, toda conversa aqui pode virar pauta.'],
+  faz:['Monto a PAUTA do cuidar.vc: o que vai ao ar, em que dia e por quê.','Planejo o calendário de posts da semana inteira.','Escolho os temas e passo o briefing pro Copy e pro time de Artes.','Organizo a pauta pro cuidar.vc falar do assunto certo na hora certa.'],
+  agora:['A pauta da semana está fechada, só falta o tema de sexta.','Definindo o tema de amanhã: o que perguntar antes de contratar.','Atualizei o calendário com as datas especiais do mês.','Estou separando ideias que vieram dos comentários.','Mandei o briefing pro Copy agora há pouco.'],
+  proj:['A pauta da semana puxa pro lançamento: como funciona a verificação, como escolher um cuidador e o que olhar numa avaliação.','Planejo conteúdo pros dois públicos: famílias que vão contratar e profissionais que querem se cadastrar.','O tema de amanhã é o que perguntar antes de contratar uma babá.','Separei ideias dos comentários: muita gente quer saber como a verificação funciona.','O calendário do mês já tem espaço reservado pra reta final do lançamento.'],
+  tema:{
+   divulgacao:['Sobre divulgação: a pauta tem post todo dia, alternando dica prática, bastidor da verificação e convite pra conhecer o site.'],
+   babas:['Babás rendem pauta boa: checklist pra primeira entrevista, sinais de confiança e rotina com as crianças.'],
+   cuidadores:['Pra cuidadores de idosos, a pauta fala de rotina, remédios, companhia e de quando é hora de pedir ajuda.'],
+   lancamento:['Pro lançamento, montei uma sequência de posts: o problema, como o cuidar.vc resolve e o convite pra conhecer o site.']
+  },
+  off:['divulgacao','lancamento'],
   obg:['Por nada! Já virou item de pauta.','Imagina, foi ótimo.','Eu que agradeço, rendeu ideia.','Valeu! Anotado no calendário.'],
-  tchau:['Até mais! Volto pro calendário.','Tchau! Amanhã tem post novo.','Até logo, fica de olho na pauta!','Falou! Boa semana.'],
-  cuidar:['O cuidar.vc tem pauta pensada pra quem cuida: dicas, acolhimento e informação.','No cuidar.vc a pauta nasce das dores reais de quem cuida.','Cada semana do cuidar.vc tem temas que abraçam quem cuida de alguém.','O cuidar.vc fala de cuidado, e minha pauta garante que fale todo dia.'],
-  gen:['Hmm, isso daria uma pauta boa.','Anotei na lista de temas.','Interessante, cabe numa série.','Boa, deixa eu olhar o calendário.'],
-  gen2:['Posso encaixar na semana que vem.','Passo pro Copy desenvolver.','Talvez vire um carrossel.','Vou checar se combina com a campanha do CMO.']
+  tchau:['Até mais! Volto pro calendário.','Tchau! Amanhã tem post novo.','Até logo, fica de olho na pauta!','Falou! Boa semana.']
  },
  copy:{
-  oi:['Oi! Estava aqui procurando a palavra certa.','Olá! Chegou no meio de uma legenda, mas pode falar.','E aí! Palavras prontas pra você.','Oi! Que bom, uma conversa sem limite de caracteres.'],
-  faz:['Escrevo os textos e as legendas do cuidar.vc.','Cuido do tom de voz: acolhedor, claro e sem enrolação.','Transformo a pauta em frases que tocam quem cuida.','Escrevo títulos, legendas, chamadas e até os avisos do site.'],
+  oi:['Estava aqui procurando a palavra certa.','Chegou no meio de uma legenda, mas pode falar.','Palavras prontas pra você.','Que bom, uma conversa sem limite de caracteres.'],
+  faz:['Escrevo os textos e as legendas do cuidar.vc, das redes às telas do site.','Cuido do tom de voz: acolhedor, claro e sem enrolação.','Transformo a pauta em frases que falam com famílias e profissionais.','Escrevo títulos, legendas, chamadas e até os avisos do site.'],
   agora:['Reescrevendo uma legenda pra ficar mais acolhedora.','Ajustando o título do post de amanhã.','Cortei duas frases, texto bom é texto enxuto.','Estou testando três chamadas diferentes pro mesmo post.','Revisando o tom de voz da campanha nova.'],
+  proj:['Estou escrevendo os textos do lançamento com uma regra: explicar verificação e pagamento seguro sem juridiquês.','Reescrevi a chamada da página inicial pra deixar claro que os profissionais são verificados.','Estou nas legendas da semana, com tom acolhedor e direto.','Escrevi os textos da tela de cadastro pro profissional entender o que precisa enviar.','Estou testando três chamadas pra atrair cuidadores, babás e enfermeiros a se cadastrarem.'],
+  tema:{
+   site:['No site eu cuido dos textos: chamada da página inicial, telas de cadastro e avisos.'],
+   verificacao:['Na verificação, o desafio de texto é explicar que é rigorosa sem assustar o profissional que vai se cadastrar.'],
+   lancamento:['A mensagem do lançamento que estou lapidando é: gente de confiança pra cuidar de quem você ama.'],
+   divulgacao:['Pra divulgação, escrevo legendas curtas que terminam sempre com um convite claro pra conhecer o site.']
+  },
+  off:['lancamento','site'],
   obg:['Por nada! Palavra dada é palavra cumprida.','Imagina, foi um prazer escrever essa conversa com você.','Eu que agradeço as boas palavras.','Valeu! Isso ainda vira legenda.'],
-  tchau:['Até mais! Ponto final por hoje.','Tchau! Volto pras legendas.','Até logo, com reticências...','Falou! Fica bem.'],
-  cuidar:['O cuidar.vc escreve pra quem cuida como quem senta do lado e escuta.','No cuidar.vc cada palavra tem que acolher antes de informar.','O cuidar.vc tem uma voz gentil, e eu cuido dela.','Escrever pro cuidar.vc é lembrar que do outro lado tem alguém cansado precisando de carinho.'],
-  gen:['Hmm, que frase boa essa sua.','Anotei, pode virar legenda.','Interessante, tem história aí.','Gostei do jeito que você falou.'],
-  gen2:['Deixa eu achar as palavras certas.','Vou lapidar isso num texto curto.','Com um bom título, isso voa.','Depois passo pro QC dar uma olhada.']
+  tchau:['Até mais! Ponto final por hoje.','Tchau! Volto pras legendas.','Até logo, com reticências...','Falou! Fica bem.']
  },
  arte:{
-  oi:['Oi! Pode chegar, estou escolhendo uma paleta.','Olá! Bem na hora, acabei de exportar um card.','E aí! Cuidado com a tinta fresca.','Oi! Estava aqui ajustando um degradê.'],
-  faz:['Crio as peças visuais do cuidar.vc: cards, carrosséis e capas.','Cuido das cores, das fontes e da identidade visual.','Transformo o texto do Copy em imagem que para o scroll.','Desenho cada peça pensando em acolher só com o olhar.'],
+  oi:['Pode chegar, estou escolhendo uma paleta.','Bem na hora, acabei de exportar um card.','Cuidado com a tinta fresca.','Estava aqui ajustando um degradê.'],
+  faz:['Crio as peças visuais do cuidar.vc: cards, carrosséis, capas e ícones do site.','Cuido das cores, das fontes e da identidade visual.','Transformo o texto do Copy em imagem que para o scroll.','Desenho cada peça pra passar confiança e acolhimento só com o olhar.'],
   agora:['Finalizei uma arte com efeito de vidro.','Testando outra paleta, mais quente.','Exportando um card novo pro Agendador.','Ajustando o espaçamento de um carrossel.','Estou alinhando os ícones da campanha nova.'],
+  proj:['Estou criando as peças do lançamento: selo de profissional verificado, cards e carrossel explicando como funciona.','A identidade do cuidar.vc usa cores quentes pra passar acolhimento e confiança.','Desenhei os ícones do site pra cuidador de idoso, babá e enfermeiro.','Exportei um card novo pro Agendador, sobre como avaliar um profissional.','Estou testando a paleta do selo de verificado: precisa ser visível sem parecer alarme.'],
+  tema:{
+   verificacao:['Estou desenhando o selo de profissional verificado. Ele precisa ser reconhecido de longe no perfil.'],
+   site:['No site, fiz os ícones de cada tipo de profissional e ajustei as cores dos botões.'],
+   divulgacao:['Pra divulgação, criei um carrossel com o passo a passo: buscar, ver o perfil verificado e contratar.'],
+   lancamento:['Pro lançamento, a peça principal é um card com o selo de verificado e a frase do Copy. Está na terceira versão.']
+  },
+  off:['divulgacao','verificacao'],
   obg:['Por nada! Ficou lindo esse agradecimento.','Imagina, foi um prazer.','Eu que agradeço, deu até inspiração.','Valeu! Isso colore meu dia.'],
-  tchau:['Até mais! Volto pro canvas.','Tchau! Leva essa paleta boa com você.','Até logo, um dia bem colorido pra você!','Falou! Vou exportar aqui.'],
-  cuidar:['O cuidar.vc tem cores quentes e acolhedoras, como um abraço.','No cuidar.vc o visual precisa ser calmo, quem cuida já vive muita correria.','Cada peça do cuidar.vc tenta dizer: você não precisa cuidar sem apoio.','A identidade do cuidar.vc mistura o laranja do afeto com a leveza do vidro.'],
-  gen:['Hmm, consigo visualizar isso.','Anotei no meu moodboard.','Interessante, dá uma peça bonita.','Boa, isso tem cor.'],
-  gen2:['Posso fazer um rascunho rapidinho.','Vou testar em duas paletas.','Passo pro QC revisar o visual.','Com um bom contraste, fica lindo.']
+  tchau:['Até mais! Volto pro canvas.','Tchau! Leva essa paleta boa com você.','Até logo, um dia bem colorido pra você!','Falou! Vou exportar aqui.']
  },
  qc:{
-  oi:['Oi! Chegou revisado e aprovado.','Olá! Estava conferindo uma vírgula, pode falar.','E aí! Nada passa por aqui sem uma boa olhada.','Oi! Que bom, uma pausa entre revisões.'],
-  faz:['Faço a revisão final: texto, arte e contexto antes de publicar.','Sou o último olhar antes do post ir pro ar.','Confiro ortografia, tom, cores e se tudo combina com a pauta.','Garanto que nada sai com erro, nem uma vírgula fora do lugar.'],
+  oi:['Chegou revisado e aprovado.','Estava conferindo uma vírgula, pode falar.','Nada passa por aqui sem uma boa olhada.','Que bom, uma pausa entre revisões.'],
+  faz:['Faço a revisão final do cuidar.vc: texto, arte e contexto antes de publicar.','Sou o último olhar antes do post ir pro ar.','Confiro ortografia, tom, cores e se tudo combina com a pauta.','Garanto que nada sai com erro nem com promessa que a plataforma não cumpre.'],
   agora:['Revisei texto e arte do post de amanhã.','Faltou uma vírgula aqui, já corrigi.','Aprovei dois posts pra publicar.','Voltei uma arte pro time de Artes com um ajuste pequeno.','Estou checando se a legenda combina com a imagem.'],
+  proj:['Revisei os textos e as artes do lançamento: não pode ter promessa que a plataforma não cumpre.','Minha régua: todo post que fala de verificação ou pagamento precisa estar exato, sem exagero.','Aprovei dois posts de hoje sobre como escolher um cuidador de idosos.','Voltei uma arte pro time de Artes porque o selo de verificado estava ilegível no celular.','Confiro se o que a gente fala nas redes bate com o que o site realmente faz.'],
+  tema:{
+   verificacao:['Quando um post fala de verificação, confiro se descreve exatamente o processo que a Claudete documentou.'],
+   avaliacoes:['Em avaliações, reviso se nenhum post usa depoimento inventado. Só vale avaliação real.'],
+   divulgacao:['Na divulgação, nada sai sem minha revisão: texto, arte e se a promessa bate com o site.'],
+   lancamento:['Pro lançamento, estou fazendo uma revisão extra de todas as peças, porque é a primeira impressão de muita família.']
+  },
+  off:['divulgacao','avaliacoes'],
   obg:['Por nada! Agradecimento aprovado.','Imagina, foi um prazer.','Eu que agradeço, e sem nenhuma correção.','Valeu! Isso passou na revisão.'],
-  tchau:['Até mais! Volto pra fila de revisão.','Tchau! Revisado e encerrado.','Até logo, cuidado com as vírgulas!','Falou! Boa sorte por aí.'],
-  cuidar:['O cuidar.vc só publica o que foi revisado com carinho.','Quem cuida merece informação certa, por isso reviso tudo no cuidar.vc.','O cuidar.vc tem padrão alto, e eu sou quem segura a régua.','No cuidar.vc qualidade é uma forma de cuidado.'],
-  gen:['Hmm, deixa eu revisar isso com calma.','Anotado, com pontuação e tudo.','Interessante, vou olhar com lupa.','Boa observação.'],
-  gen2:['Se estiver certo, eu aprovo.','Vale uma segunda leitura.','Te devolvo com sugestões.','Detalhe pequeno faz diferença grande.']
+  tchau:['Até mais! Volto pra fila de revisão.','Tchau! Revisado e encerrado.','Até logo, cuidado com as vírgulas!','Falou! Boa sorte por aí.']
  },
  agend:{
-  oi:['Oi! A fila de publicação está em dia, pode falar.','Olá! Tenho um post saindo às 19h, mas dá tempo.','E aí! Relógio sincronizado e pronto.','Oi! Chegou pontual, gosto disso.'],
-  faz:['Agendo e publico os posts na hora certa.','Cuido da fila de publicação e confirmo se tudo foi ao ar.','Recebo a peça aprovada pelo QC e coloco no horário ideal.','Sou o dono do relógio: nada atrasa, nada sai antes.'],
+  oi:['A fila de publicação está em dia, pode falar.','Tenho um post saindo às 19h, mas dá tempo.','Relógio sincronizado e pronto.','Chegou pontual, gosto disso.'],
+  faz:['Agendo e publico os posts do cuidar.vc na hora certa.','Cuido da fila de publicação e confirmo se tudo foi ao ar.','Recebo a peça aprovada pelo QC e coloco no horário ideal.','Sou o dono do relógio: nada atrasa, nada sai antes.'],
   agora:['Post agendado pras 19h.','A fila do Canva está em dia.','A publicação de hoje está confirmada.','Estou reorganizando os horários com base nos números do Métricas.','Tenho três posts na fila pra amanhã.'],
+  proj:['Tenho três posts na fila pra amanhã, todos sobre como funciona a contratação pelo cuidar.vc.','Post agendado pras 19h, que é quando as famílias mais aparecem no feed segundo o Métricas.','A fila está em dia e já reservei os horários da semana do lançamento.','Só publico o que o QC aprovou. Peça sem ok fica parada na fila.','Estou separando horários pros dois públicos: famílias à noite, profissionais no começo da manhã.'],
+  tema:{
+   divulgacao:['Na divulgação, minha parte é constância: post todo dia, no horário em que o público está online.'],
+   lancamento:['Pro lançamento, reservei os melhores horários da semana e deixei posts de reserva caso algo atrase.']
+  },
+  off:['divulgacao','lancamento'],
   obg:['Por nada! Agradecimento entregue no horário.','Imagina, foi pontual e com carinho.','Eu que agradeço.','Valeu! Anotei na agenda.'],
-  tchau:['Até mais! Tenho um post pra soltar.','Tchau! Próxima publicação às 19h.','Até logo, no horário combinado!','Falou! Vou conferir a fila.'],
-  cuidar:['O cuidar.vc publica quando quem cuida consegue parar um pouquinho pra ver.','No cuidar.vc a hora do post importa, a gente respeita a rotina de quem cuida.','O cuidar.vc aparece todo dia no feed, com constância e carinho.','Minha parte no cuidar.vc é garantir que o cuidado chegue na hora.'],
-  gen:['Hmm, deixa eu ver a agenda.','Anotado com data e hora.','Interessante, tem um horário bom pra isso.','Boa, cabe na fila.'],
-  gen2:['Posso agendar pra amanhã cedo.','Confirmo depois que publicar.','Primeiro o QC aprova, depois eu solto.','Horário certo faz o alcance subir.']
+  tchau:['Até mais! Tenho um post pra soltar.','Tchau! Próxima publicação às 19h.','Até logo, no horário combinado!','Falou! Vou conferir a fila.']
  },
  metr:{
-  oi:['Oi! Alcance em alta e você por aqui, dia bom.','Olá! Estava olhando uma planilha linda.','E aí! Sua visita aumentou meu engajamento em 100%.','Oi! Pode falar, os números esperam.'],
-  faz:['Analiso os dados: alcance, salvamentos, cliques e crescimento.','Transformo números em decisões pro CMO e pro Rob.','Monto o relatório semanal e aponto o que funciona.','Sou quem diz se o post foi bem, com dados na mão.'],
+  oi:['Alcance em alta e você por aqui, dia bom.','Estava olhando uma planilha linda.','Sua visita aumentou meu engajamento em 100%.','Pode falar, os números esperam.'],
+  faz:['Analiso os dados do cuidar.vc: alcance, visitas no site, cadastros e crescimento.','Transformo números em decisões pro CMO e pro Rob.','Monto o relatório semanal e aponto o que funciona.','Sou quem diz se algo foi bem, com dados na mão.'],
   agora:['O alcance subiu 12% essa semana.','Os salvamentos estão 30% acima da média.','Terminei o relatório semanal agora.','Carrossel está rendendo o dobro de imagem única.','O melhor horário de post essa semana foi 19h.'],
+  proj:['O alcance subiu 12% essa semana, e conteúdo sobre verificação é o que mais gera salvamento.','Estou medindo quantos visitantes do site começam o cadastro e quantos terminam, pra achar onde travam.','Carrossel explicando como contratar rende o dobro de imagem única.','Pro lançamento, preparei um painel com visitas, cadastros de profissionais e contratações.','O melhor horário de post essa semana foi 19h, já passei pro Agendador.'],
+  tema:{
+   site:['No site eu meço visitas, início e fim de cadastro. O ponto de maior abandono é a etapa de envio de documentos.'],
+   avaliacoes:['Quando as avaliações começarem a entrar, vou acompanhar a nota média e quantas famílias avaliam depois de contratar.'],
+   divulgacao:['Na divulgação, os números dizem: carrossel rende o dobro, e 19h é o melhor horário.'],
+   lancamento:['No lançamento vou olhar três números todo dia: visitas, cadastros de profissionais e primeiras contratações.']
+  },
+  off:['site','divulgacao'],
   obg:['Por nada! Satisfação de 100%.','Imagina, foi um prazer estatisticamente significativo.','Eu que agradeço, esse dado vai pro relatório.','Valeu! Taxa de gentileza lá em cima.'],
-  tchau:['Até mais! Volto pras planilhas.','Tchau! Os números te mandam um abraço.','Até logo, que sua semana cresça 20%!','Falou! Vou atualizar o dashboard.'],
-  cuidar:['O cuidar.vc cresce toda semana, e cada número é uma pessoa que cuida.','Os dados do cuidar.vc mostram que conteúdo acolhedor é o mais salvo.','No cuidar.vc eu meço alcance, mas o que importa é quantas pessoas se sentiram ajudadas.','O cuidar.vc usa números pra cuidar melhor, não só pra crescer.'],
-  gen:['Hmm, precisaria de mais dados.','Anotei como hipótese.','Interessante, dá pra medir isso.','Boa, vou cruzar com a planilha.'],
-  gen2:['Em uma semana te trago o gráfico.','Correlação não é causa, mas é pista.','Mando pro CMO com os números.','Se o dado confirmar, a gente escala.']
+  tchau:['Até mais! Volto pras planilhas.','Tchau! Os números te mandam um abraço.','Até logo, que sua semana cresça 20%!','Falou! Vou atualizar o dashboard.']
  }
 };
-var HELLO=['Oi!','Olá!','Opa, oi!','Oi, tudo bem por aqui!'];
+// Shared facts per topic. dono = who follows it closely (used when the agent has no line of its own)
+var TOPIC={
+ lancamento:{rx:/(\blanc(a|ar|ou|ado|ando|amento|amentos)\b|estreia|abrir (pro|para o|ao) publico|quando (sai|abre|estreia|vai sair|vai abrir|comeca)|go ?live|inaugura)/,de:'do lançamento',dono:'o Rob',
+  base:['O site já está no ar e o lançamento público está em preparação: o time está fechando os últimos ajustes antes de abrir pra todo mundo.','O lançamento público ainda não tem data anunciada. Primeiro a gente garante cadastro, verificação e pagamento redondos.']},
+ verificacao:{rx:/(verifica|checagem|checad|antecedente|documento|\bseguranca|confia|background|\bcpf\b|criminal)/,de:'da verificação dos profissionais',dono:'a Claudete',
+  base:['A verificação é o coração do cuidar.vc: cada cuidador, babá ou enfermeiro passa por checagem antes de aparecer pras famílias.','Sobre a verificação: ninguém aparece na busca sem ter o perfil conferido, porque a família precisa confiar em quem entra na casa dela.']},
+ pagamento:{rx:/(pagament|\bpagar|\bpago\b|\bpix\b|cartao|cobranca|\bcobra\b|\bpreco|\bvalor|quanto custa|\bcusta\b|\btaxa|comissao|dinheiro|reembolso|boleto)/,de:'do pagamento',dono:'o CTO',
+  base:['O pagamento é feito pela plataforma, de forma segura, pra proteger a família e o profissional.','Sobre pagamento: a família paga pelo cuidar.vc e o profissional recebe com segurança, sem combinado solto por fora.']},
+ avaliacoes:{rx:/(avalia|\bnotas?\b|estrela|review|depoiment|reputac)/,de:'das avaliações',dono:'a Claudete',
+  base:['As avaliações do cuidar.vc são reais: vêm de famílias que contrataram pela plataforma.','Sobre avaliações: a nota ajuda a próxima família a escolher, por isso só vale avaliação de quem contratou de verdade.']},
+ enfermeiros:{rx:/(enferm|home ?care|curativo|pos.?operatori|pos.?cirurgi)/,de:'dos enfermeiros',dono:'a Claudete',
+  base:['Enfermeiros passam por verificação com cuidado extra, porque atendem casos de saúde mais delicados.','Sobre enfermeiros: é pra quem precisa de cuidado técnico em casa, como curativos e acompanhamento depois de cirurgia.']},
+ cuidadores:{rx:/(cuidador|\bidos|terceira idade|\bvovo|\bavos?\b|acompanhante|alzheimer|asilo|casa de repouso)/,de:'dos cuidadores de idosos',dono:'a Claudete',
+  base:['Cuidador de idoso é o pedido mais comum das famílias: ajuda na rotina, companhia e remédio na hora certa.','Sobre cuidadores de idosos: o cuidar.vc mostra perfis verificados, com experiência e avaliações de outras famílias.']},
+ babas:{rx:/(\bbabas?\b|creche|\bcriancas?\b|\bbebes?\b|\bnanny)/,de:'das babás',dono:'a Claudete',
+  base:['Babás também estão na plataforma, verificadas e com avaliações de outras famílias.','Sobre babás: a família vê perfil, experiência e o que outras famílias acharam antes de contratar.']},
+ pacientes:{rx:/(paciente|familia|contratante|\bclientes?\b|usuari|quem contrata)/,de:'das famílias que contratam',dono:'a Claudete',
+  base:['Pra quem contrata, a jornada é simples: buscar, ver perfil verificado e avaliações, contratar e pagar pela plataforma.','As famílias querem uma coisa acima de tudo: segurança pra deixar alguém querido nas mãos de outra pessoa.']},
+ app:{rx:/(\bapp\b|\bapps\b|aplicativo|aplicat|\bapk\b|android|iphone|\bios\b|play ?store|app ?store|baixar)/,de:'do aplicativo',dono:'o CTO',
+  base:['Sobre aplicativo: hoje o cuidar.vc funciona pelo site, que abre bem no celular, e é por ali que a gente valida tudo antes do lançamento.','Aplicativo próprio ainda não está no ar. O foco agora é o site funcionar redondo no celular.']},
+ site:{rx:/(\bsite\b|\bsaite\b|\bsites\b|pagina|landing|dominio|\bno ar\b|fora do ar|\bdeploy|servidor|\bonline\b)/,de:'do site',dono:'o CTO',
+  base:['O site do cuidar.vc está no ar e estável, e o CTO acompanha cada deploy.','O site está no ar, leve e pensado pra funcionar bem no celular, que é onde a maioria das famílias acessa.']},
+ features:{rx:/(feature|funcionalidade|recurso|\bfuncoes\b|\bbusca\b|\bbuscar\b|filtro|\bperfil|cadastr|\blogin|\bchat\b|como funciona|\bmatch)/,de:'das funcionalidades',dono:'a Claudete',
+  base:['As funcionalidades principais são busca de profissionais, perfil verificado, pagamento seguro e avaliações reais.','Sobre funcionalidades: o básico já está no site, e antes do lançamento o foco é deixar cadastro e busca bem fáceis.']},
+ divulgacao:{rx:/(marketing|instagram|\binsta\b|\bposts?\b|redes sociais|\bredes\b|campanha|anuncio|seguidor|alcance|conteudo|divulga|engajamento|tiktok|facebook|legenda|pauta)/,de:'da divulgação',dono:'o CMO',
+  base:['A divulgação está sendo preparada pro lançamento, e o time do CMO já produz conteúdo pras redes todo dia.','Sobre divulgação: Planejador, Copy, Artes, QC e Agendador tocam a produção de posts, e o CMO dá a direção.']},
+ projeto:{rx:/(projeto|plataforma|produto|startup|empresa|negocio|cuidar ?\.? ?vc|\bcuidar\b|missao|proposito|como (estao|tao|anda|andam|vao|vai|esta|ta|segue) (as coisas|os trabalhos|o time|a equipe|tudo)|novidade|andamento|\bstatus\b|progresso|atualizac)/,de:'do projeto como um todo',dono:'o Rob',
+  base:['O cuidar.vc é uma plataforma pra contratar cuidadores de idosos, babás e enfermeiros verificados no Brasil, com pagamento seguro e avaliações reais.','Resumindo o projeto: site no ar, lançamento público em preparação e o time todo focado em confiança.']}
+};
+var TOPIC_ORDER=['lancamento','verificacao','pagamento','avaliacoes','enfermeiros','cuidadores','babas','pacientes','app','site','features','divulgacao','projeto'];
+var HELLO=['Oi!','Olá!','Opa, oi!','Oi, que bom te ver!'];
 var GREET=['Oi! Agora estou {onde}, mas tenho um tempinho pra você.','Olá! Você me encontrou {onde}. Pode falar!','Oi, que bom te ver! Estou {onde} neste momento.','Olá! Chegou na hora certa, estou {onde}.'];
 var GREET_DESK=['Por aqui: {cur}.','O que rolou agora: {cur}.','Última novidade: {cur}.'];
 var NOW=['Neste momento estou {onde}.','Agora estou {onde}.','Você me pegou {onde}.','Por enquanto estou {onde}.'];
 var NOW_DESK=['Agora estou {onde}, e a última foi: {cur}.','Estou {onde}. Por aqui: {cur}.','Tudo andando {onde}. Na tela: {cur}.'];
-var ORDER=['tchau','obg','faz','agora','cuidar','oi'];
+var NOW_AWAY=['Já já volto pra mesa.','Daqui a pouco retomo o que estava fazendo.','É uma pausa rápida, logo volto pro trabalho.'];
+var BEM=['Tudo ótimo por aqui, e com você?','Tudo certo, dia rendendo. E você, como está?','Tudo bem, obrigado por perguntar! E por aí?'];
+var BEM_CURTO=['Tudo ótimo por aqui.','Tudo certo por aqui.','Tudo bem, obrigado por perguntar.'];
+var BEM_BOM=['Que bom saber!','Fico feliz!','Ótimo, então bora.'];
+var BEM_MAL=['Poxa, imagino. Obrigado por passar aqui mesmo assim.','Entendo, tem dia assim. Valeu por vir conversar.'];
+var DIA=['O dia está rendendo.','Dia puxado, mas bem produtivo.','Está sendo um bom dia por aqui.','Dia corrido, do jeito que eu gosto.'];
+var ELOGIO=['Valeu! O time inteiro vai gostar de saber.','Que bom que você gostou, isso anima a gente.','Obrigado! Dá trabalho, mas é pra isso que a gente está aqui.','Fico feliz! Vou repassar pro time.'];
+var REPEAT=['Você repetiu isso, tô atento.','Essa você já tinha mandado, tô atento.','De novo essa? Tô atento, respondo de outro jeito.'];
+var VAZIO=['Não peguei. Pode perguntar o que eu faço ou como está o lançamento, por exemplo.','Só isso? Manda uma pergunta, tipo o que estou fazendo agora ou como vai o site.','Hmm, chegou pouca coisa. Pergunta o que quiser do cuidar.vc.'];
+var NAO_SEI=['Essa foge do que eu acompanho, não quero chutar.','Não tenho essa resposta, e prefiro não inventar.','Isso não passa pela minha mesa, então não vou chutar.'];
+var ACK=['Anotado.','Registrado aqui.','Certo, entendi o ponto.'];
+var SIM_SEM=['Combinado.','Beleza.','Fechado.'];
+var NAO_OK=['Tranquilo.','Sem problema.','Tudo bem.'];
+var OFFER=['Quer saber {a} ou {b}?','Posso te contar {a} ou {b}. Qual prefere?','Prefere que eu fale {a} ou {b}?'];
+var OFFER_ONE=['Quer que eu fale {a} também?','Posso contar {a} também, se quiser.'];
+var DONO=['Quem acompanha isso de perto é {d}.','Se quiser mais detalhe, {d} é quem cuida disso.','Pra detalhe fino, vale falar com {d}.'];
 var RX={
- tchau:/(tchau|\bate (mais|logo|amanha|breve|a proxima|ja)\b|\bfalou\b|\bflw\b|\bbye\b|boa noite|\bfui\b|vou nessa|to indo embora)/,
- obg:/(obrigad|brigad|valeu|\bvlw\b|agradec|gratidao|\bthanks?\b)/,
- faz:/(o que (voce |vc |tu )?faz\b|qual (e )?(o |a )?(seu|sua) (papel|cargo|trabalho|funcao|servico)|sua funcao|seu papel|quem (e )?(voce|vc)|voce faz o que|pra que (voce|vc) serve|\bcargo\b|responsavel por)/,
- agora:/(fazendo|como (esta|ta|anda|vai) (o |a )?(trabalho|dia|servico|projeto|semana)|trabalho|ocupad|\bagora\b|progresso|novidade|andamento|\bstatus\b)/,
- cuidar:/(cuidar|empresa|startup|missao|proposito|plataforma|\bmarca\b|negocio|escritorio)/,
- oi:/(^|\b)(oi+e?|ola|opa|e ?ai|bom dia|boa tarde|hey|salve|tudo (bem|bom|certo)|como vai|beleza|blz)\b/
+ tchau:/(tchau|\bxau\b|tchao|\bate (mais|logo|amanha|breve|a proxima|ja|mais tarde|outro dia|depois)\b|\bate\+|\bfalou\b|\bflw\b|\bbye\b|\bfui\b|vou nessa|to indo|abraco|\babs\b|\bbjs?\b|beijo|\bfuiz)/,
+ obg:/(obrigad|brigad|\bobg|valeu|\bvlw\b|agradec|gratidao|\bthanks?\b|\btmj\b)/,
+ agora:/(fazendo|trabalhando (em|no|na|com)|mexendo (em|com)|no que (voce |vc |ce |tu )?(esta|ta|tah|anda)|acao atual|atividade atual|ocupad|(o ?que|oq|\bque\b).{0,25}(\bagora\b|neste momento|nesse momento))/,
+ faz:/((o ?que|oq|\bq\b|\bque\b) (e que )?((voce|vc|vce|ce|tu) )?(faz|fas|fax|fazes)\b|(voce|vc|ce|tu) faz (o que|oq|oque)|faz o que|qual (e )?(o |a )?(seu|sua|teu|tua) (papel|cargo|trabalho|funcao|servico|area|missao)|(seu|sua|teu|tua) (papel|funcao|cargo)\b|quem (e|eh|seria) (voce|vc|tu|ce)|(voce|vc|ce) e quem|o ?que (voce|vc|ce|tu) e aqui|pra que (voce|vc|ce) serve|se apresenta|responsavel por|cuida de que|trabalha com (o que|oq))/,
+ dia:/(como (foi|esta|ta|anda|vai|ta sendo|esta sendo|tem sido) (o |seu |teu |a |sua )?(dia|trampo|trabalho|expediente|semana|manha|tarde|noite|hoje)|como foi hoje|como (esta|ta) sendo hoje)/,
+ elogio:/(\blegal\b|\btop\b|massa|\bshow\b|incrivel|parabens|adorei|amei|gostei|muito bom|\bmt bom|que bom|otimo trabalho|excelente|lind[oa]|maravilh|sensacional|arrasou|mandou bem|mandaram bem|bom trabalho|perfeito|fantastic|genial)/,
+ oiIni:/^(oi+e?|ola+|opa|e ?ai+|eae|iae|ei+|hey|hi|hello|salve|fala|falae|coe|alo)\b/,
+ oiAny:/\b(bom dia|boa tarde|boa noite|boa madrugada|tudo (bem|bom|certo|joia|tranquilo|em cima)|td (bem|bom)|como vai|como (voce|vc|ce) (esta|ta|vai))\b/,
+ oiStrip:/\b(oi+e?|ola+|opa|e ?ai+|eae|iae|ei+|hey|hi|hello|salve|fala|falae|coe|alo|bom dia|boa tarde|boa noite|boa madrugada|tudo (bem|bom|certo|joia|tranquilo|em cima)|td (bem|bom)|como vai|como (voce|vc|ce) (esta|ta|vai)|beleza|blz)\b/g,
+ bemAsk:/\b(tudo (bem|bom|certo|joia|tranquilo|em cima)|td (bem|bom)|como vai|como (voce|vc|ce) (esta|ta|vai))\b/,
+ bemResp:/(tudo (bem|otimo|certo|tranquilo|joia|bom|em cima)|\btd bem|bem (tambem|tb)|\bto bem|estou bem|\botimo|tranquilo|de boa|suave|mais ou menos|cansad|corrid|na luta|\bmal\b|\bbem\b)/,
+ bemMal:/(mais ou menos|cansad|corrid|na luta|\bmal\b|dificil|puxado)/,
+ sim:/^(sim|s|ss|claro|pode( ser| sim| crer)?|por isso|isso( mesmo| ai)?|blz|beleza|ok|okay|okey|ta|ta bom|ta certo|certo|combinado|quero|bora|vamos|uhum|aham|yes|com certeza|manda|fechado|show|os dois|ambos|tanto faz|qualquer um|conta|fala)( [a-z]+)?$/,
+ ambos:/(os dois|ambos|as duas|tanto faz|qualquer um|tudo)/,
+ nao:/^(nao|n|nn|nope|agora nao|deixa|depois|nao precisa|nao obrigad[oa])( [a-z]+)?$/,
+ pergunta:/^((e|mas|ai|entao) )?(o ?que|oq|como|por ?que|pq|quando|quem|onde|qual|quais|quanto|quantos|quantas|cade|ja|tem|vai|sera|existe|da pra|e o|e a|e os|e as|voces|vcs|posso|pode|consigo)\b/
 };
 var chatEl=$('chat'),chatMsgs=$('chatMsgs'),chatForm=$('chatForm'),chatIn=$('chatIn'),chatAv=$('chatAv');
 var CHAT={a:null,token:0,chain:Promise.resolve(),back:null};
@@ -1033,22 +1156,130 @@ function estado(a){
  return a.boss?'aqui na minha sala':(a.desk?'aqui na minha mesa':'na mesa grande do conteúdo');
 }
 function fill(a,s){return s.replace(/\{onde\}/g,estado(a)).replace(/\{cur\}/g,a.cur)}
-// Random piece that is never the same as the previous one of that kind
-function fresh(a,key,arr){a.lp=a.lp||{};var s,n=0;do{s=pick(arr)}while(arr.length>1&&s===a.lp[key]&&++n<12);a.lp[key]=s;return s}
+// Shuffled deck per agent and key: every line comes out once before any repeats, across conversations
+function fresh(a,key,arr){
+ a.lp=a.lp||{};var d=a.lp[key];
+ if(!d||d.src!==arr||!d.q.length){
+  var q=[],i,j,x;for(i=0;i<arr.length;i++)q.push(i);
+  for(i=q.length-1;i>0;i--){j=Math.floor(Math.random()*(i+1));x=q[i];q[i]=q[j];q[j]=x}
+  var last=d&&d.src===arr?d.last:-1;
+  if(q.length>1&&q[q.length-1]===last){x=q[0];q[0]=q[q.length-1];q[q.length-1]=x}
+  d=a.lp[key]={src:arr,q:q,last:last};
+ }
+ d.last=d.q.pop();return arr[d.last];
+}
 function greet(a){
  var out,n=0;
+ a.pend=null;a.askBem=false;
  do{out=fill(a,fresh(a,'greet',GREET)+(atDesk(a)?' '+fresh(a,'greetd',GREET_DESK):''))}while(out===a.lastSaid&&++n<12);
  return a.lastSaid=out;
 }
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1)}
+// Answer about one topic: the agent's own line when it has one, otherwise the shared fact plus who owns it
+function topicLine(a,k){
+ var R=REP[a.id];
+ if(k==='projeto')return fresh(a,'proj',R.proj);
+ a.pool=a.pool||{};
+ if(!a.pool[k]){
+  var own=(R.tema&&R.tema[k])||[];
+  a.pool[k]=own.concat(TOPIC[k].base.map(function(s){return ''+s}));
+ }
+ var s=fresh(a,'tema_'+k,a.pool[k]);
+ if(s.charAt(0)!=='')return s;
+ s=s.slice(1);
+ var d=TOPIC[k].dono,me=norm(a.n);
+ if(d.split(' ')[1].toLowerCase()!==me&&s.indexOf(d.split(' ')[1])<0)s+=' '+fresh(a,'dono',DONO).replace('{d}',d);
+ return s;
+}
+function offer(a,skip){
+ var list=REP[a.id].off.concat(['lancamento','verificacao','features','projeto']),seen={},opts=[];
+ list.forEach(function(k){if(!seen[k]&&(!skip||skip.indexOf(k)<0)){seen[k]=1;opts.push(k)}});
+ var x=opts[0],y=fresh(a,'offer2',opts.slice(1));
+ a.pend=[x,y];
+ return fresh(a,'offer',OFFER).replace('{a}',TOPIC[x].de).replace('{b}',TOPIC[y].de);
+}
+function topicsIn(t){
+ var out=[];TOPIC_ORDER.forEach(function(k){var m=t.match(TOPIC[k].rx);if(m)out.push({k:k,i:m.index})});
+ if(out.length>1)out=out.filter(function(o){return o.k!=='projeto'});
+ out.sort(function(x,y){return x.i-y.i});
+ return out.map(function(o){return o.k});
+}
+function answerTopics(a,ks){
+ var out=topicLine(a,ks[0]);
+ a.lastTopic=ks[0];
+ if(ks.length>1){a.pend=[ks[1]];out+=' '+fresh(a,'offer1',OFFER_ONE).replace('{a}',TOPIC[ks[1]].de)}
+ return out;
+}
+function doing(a){
+ var R=REP[a.id];
+ if(atDesk(a))return fill(a,fresh(a,'now',NOW_DESK))+' '+fresh(a,'agora',R.agora);
+ return fill(a,fresh(a,'nowaway',NOW))+' '+fresh(a,'away',NOW_AWAY);
+}
 function reply(a,text){
- var t=norm(text),R=REP[a.id],cat='gen',out,n=0;
- for(var i=0;i<ORDER.length;i++)if(RX[ORDER[i]].test(t)){cat=ORDER[i];break}
+ var R=REP[a.id],t=norm(text),key=t.replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+ var pend=a.pend,askBem=a.askBem,mem=a.mem=a.mem||[];
+ a.pend=null;a.askBem=false;
+ var nameRx=new RegExp('\\b('+norm(a.n)+'|'+a.id+')\\b','g');
+ var rest=key.replace(RX.oiStrip,' ').replace(nameRx,' ').replace(/\s+/g,' ').trim();
+ var greeted=RX.oiIni.test(key)||RX.oiAny.test(key);
+ var isQ=/\?/.test(text)||RX.pergunta.test(rest);
+ var topics=topicsIn(key);
+ var repeated=key.length>=3&&mem.indexOf(key)>=0;
+ var cat,out,body,n=0;
+
+ if(!key||(key.replace(/ /g,'').length<=2&&!greeted&&!RX.sim.test(key)&&!RX.nao.test(key)&&!RX.tchau.test(key)&&!RX.obg.test(key)))cat='vazio';
+ else if(RX.tchau.test(key)||(/^boa noite\b/.test(key)&&!rest&&mem.length))cat='tchau';
+ else if(RX.obg.test(key))cat='obg';
+ else if(RX.agora.test(key))cat='agora';
+ else if(RX.faz.test(key))cat='faz';
+ else if(RX.dia.test(key))cat='dia';
+ else if(topics.length&&isQ)cat='tema';
+ else if(RX.elogio.test(key)&&!(pend&&RX.sim.test(key)))cat='elogio';
+ else if(pend&&RX.sim.test(key))cat='sim';
+ else if(pend&&RX.nao.test(key))cat='nao';
+ else if(askBem&&!rest.length&&!isQ&&RX.bemResp.test(key))cat='bem';
+ else if(askBem&&RX.bemResp.test(key)&&!isQ)cat='bem';
+ else if(RX.sim.test(key))cat='simsem';
+ else if(RX.nao.test(key))cat='naosem';
+ else if(topics.length)cat='tema';
+ else if(greeted&&rest.length<3)cat='oi';
+ else if(isQ)cat='naosei';
+ else cat='ack';
+ if(cat!=='sim'&&cat!=='nao'&&cat!=='simsem'&&cat!=='naosem'&&cat!=='vazio'){mem.push(key);if(mem.length>12)mem.shift()}
+ else repeated=false;
+
  do{
-  if(cat==='gen')out=fresh(a,'gen',R.gen)+' '+fresh(a,'gen2',R.gen2);
-  else if(cat==='agora')out=fresh(a,'now',atDesk(a)?NOW_DESK:NOW)+' '+fresh(a,'agora',R.agora);
-  else{out=fresh(a,cat,R[cat]);if(cat!=='oi'&&RX.oi.test(t))out=fresh(a,'hello',HELLO)+' '+out}
+  a.pend=null;a.askBem=false;
+  if(cat==='vazio')body=fresh(a,'vazio',VAZIO);
+  else if(cat==='tchau')body=fresh(a,'tchau',R.tchau);
+  else if(cat==='obg')body=fresh(a,'obg',R.obg);
+  else if(cat==='agora')body=doing(a);
+  else if(cat==='faz')body=(/quem/.test(key)?a.n+' aqui, '+a.r.charAt(0).toLowerCase()+a.r.slice(1)+'. ':'')+fresh(a,'faz',R.faz);
+  else if(cat==='dia')body=fresh(a,'dia',DIA)+' '+(atDesk(a)?fresh(a,'agora',R.agora):fill(a,fresh(a,'nowaway',NOW)));
+  else if(cat==='tema')body=answerTopics(a,topics);
+  else if(cat==='elogio')body=fresh(a,'elogio',ELOGIO)+(topics.length?' '+answerTopics(a,topics):'');
+  else if(cat==='sim'){
+   var ks=pend.length>1&&RX.ambos.test(key)?pend.slice(0,2):[pend[0]];
+   body=ks.map(function(k){return topicLine(a,k)}).join(' ');a.lastTopic=ks[0];
+  }
+  else if(cat==='nao')body=fresh(a,'naook',NAO_OK)+' '+fill(a,'Sigo {onde}. Se quiser, pergunta o que eu faço ou o que estou fazendo agora.');
+  else if(cat==='bem')body=(RX.bemMal.test(key)?fresh(a,'bemmal',BEM_MAL):fresh(a,'bembom',BEM_BOM))+' '+offer(a);
+  else if(cat==='simsem')body=fresh(a,'simsem',SIM_SEM)+' '+offer(a,[a.lastTopic]);
+  else if(cat==='naosem')body=fresh(a,'naook',NAO_OK)+' '+offer(a,[a.lastTopic]);
+  else if(cat==='oi'){
+   if(RX.bemAsk.test(key)){body=fresh(a,'bem',BEM);a.askBem=true}
+   else body=fresh(a,'oi',R.oi)+' '+offer(a);
+  }
+  else if(cat==='naosei')body=fresh(a,'naosei',NAO_SEI)+' '+offer(a,[a.lastTopic]);
+  else body=fresh(a,'ack',ACK)+' '+offer(a,[a.lastTopic]);
+  out=body;
+  if(greeted&&cat!=='tchau'&&cat!=='vazio'&&cat!=='bem'){
+   if(cat==='oi')out=fresh(a,'hello',HELLO)+' '+out;
+   else out=fresh(a,'hello',HELLO)+' '+(RX.bemAsk.test(key)?fresh(a,'bemc',BEM_CURTO)+' ':'')+out;
+  }
+  if(repeated)out=fresh(a,'repeat',REPEAT)+' '+out;
   out=fill(a,out);
- }while(out===a.lastSaid&&++n<12);
+ }while(out===a.lastSaid&&++n<4);
  return a.lastSaid=out;
 }
 function push(a,from,t){var h=HIST[a.id]=HIST[a.id]||[];h.push({f:from,t:t});if(h.length>6)h.splice(0,h.length-6)}

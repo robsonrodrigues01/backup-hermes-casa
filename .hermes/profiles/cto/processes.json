@@ -36,24 +36,5 @@
     "watcher_interval": 0,
     "notify_on_complete": false,
     "watch_patterns": []
-  },
-  {
-    "session_id": "proc_26aee6893e98",
-    "command": "cd /home/hermes/painel-web\n# limite do Opus reseta 07:30 UTC (04:30 BSB); espera e tenta com retries\nsleep 14400\nfor i in 1 2 3 4 5; do\n  timeout 1800 ~/.local/bin/claude -p \"$(cat prompt-v5-chat.txt)\" --model opus --dangerously-skip-permissions > opus-chat.log 2>&1\n  if [ $? -eq 0 ]; then echo \"==OK tentativa $i\"; exit 0; fi\n  if grep -q \"session limit\\|OAuth\" opus-chat.log; then sleep 1800; else sleep 300; fi\ndone\necho \"==FALHOU apos 5 tentativas\"",
-    "pid": 408044,
-    "pid_scope": "host",
-    "cwd": "/home/hermes/painel-web",
-    "started_at": 1789444390.6185641,
-    "task_id": "default",
-    "session_key": "agent:main:telegram:dm:8944451892",
-    "watcher_platform": "",
-    "watcher_chat_id": "",
-    "watcher_user_id": "",
-    "watcher_user_name": "",
-    "watcher_thread_id": "",
-    "watcher_message_id": "",
-    "watcher_interval": 0,
-    "notify_on_complete": false,
-    "watch_patterns": []
   }
 ]

@@ -25,6 +25,10 @@
       1788967788008945440,
       29455
     ],
+    "marketing/blog-cuidarvc/SKILL.md": [
+      1789443753292631759,
+      3417
+    ],
     "marketing/community-cuidarvc/SKILL.md": [
       1789261984244966285,
       4634
@@ -193,6 +197,19 @@
       "category": "marketing",
       "frontmatter_name": "ai-seo",
       "description": "When the user wants to optimize content for AI search eng...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "blog-cuidarvc",
+      "category": "marketing",
+      "frontmatter_name": "blog-cuidarvc",
+      "description": "Operar, ajustar e auditar o blog do cuidar.vc e o Agente ...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

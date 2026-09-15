@@ -108,12 +108,12 @@
     "created_at": "2026-09-10T08:00:34.646329+00:00",
     "created_by": null,
     "last_patched_at": "2026-09-11T02:07:29.568900+00:00",
-    "last_used_at": "2026-09-14T21:00:12.424598+00:00",
+    "last_used_at": "2026-09-15T10:00:14.912328+00:00",
     "last_viewed_at": "2026-09-12T18:05:17.242013+00:00",
     "patch_count": 27,
     "pinned": false,
     "state": "active",
-    "use_count": 42,
+    "use_count": 43,
     "view_count": 18
   },
   "mcp-servidores-hermes": {
@@ -160,12 +160,12 @@
     "created_at": "2026-09-10T08:00:34.639841+00:00",
     "created_by": null,
     "last_patched_at": "2026-09-11T17:05:10.325300+00:00",
-    "last_used_at": "2026-09-15T03:40:59.986503+00:00",
+    "last_used_at": "2026-09-15T10:00:14.867993+00:00",
     "last_viewed_at": "2026-09-15T03:40:59.985213+00:00",
     "patch_count": 60,
     "pinned": false,
     "state": "active",
-    "use_count": 84,
+    "use_count": 85,
     "view_count": 61
   }
 }

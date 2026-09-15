@@ -1,0 +1,569 @@
+{
+  "version": 1,
+  "manifest": {
+    "graphic-design/SKILL.md": [
+      1789426151690346119,
+      6669
+    ],
+    "infraestrutura/caddy-exposicao-publica/SKILL.md": [
+      1789262788418967657,
+      14036
+    ],
+    "infraestrutura/delegar-codigo-grande/SKILL.md": [
+      1789254150921642474,
+      9993
+    ],
+    "infraestrutura/gatilho-instantaneo-cron/SKILL.md": [
+      1789443834817843822,
+      6189
+    ],
+    "infraestrutura/gatilho-webhook-agentes/SKILL.md": [
+      1789391504791797257,
+      4834
+    ],
+    "infraestrutura/mcp-servidores-hermes/SKILL.md": [
+      1789428420726244718,
+      10154
+    ],
+    "infraestrutura/radar-cuidarvc/SKILL.md": [
+      1789423888690631585,
+      16238
+    ],
+    "marketing/ai-seo/SKILL.md": [
+      1788967788008945440,
+      29455
+    ],
+    "marketing/blog-cuidarvc/SKILL.md": [
+      1789443753292631759,
+      3417
+    ],
+    "marketing/community-cuidarvc/SKILL.md": [
+      1789261984244966285,
+      4634
+    ],
+    "marketing/community-marketing/SKILL.md": [
+      1788967788011945487,
+      9826
+    ],
+    "marketing/competitor-profiling/SKILL.md": [
+      1788967788012945503,
+      14558
+    ],
+    "marketing/content-strategy/SKILL.md": [
+      1788967788012945503,
+      18711
+    ],
+    "marketing/copywriting/SKILL.md": [
+      1788967788013945518,
+      8401
+    ],
+    "marketing/cro/SKILL.md": [
+      1788967788013945518,
+      6101
+    ],
+    "marketing/customer-research/SKILL.md": [
+      1788967788014945534,
+      14878
+    ],
+    "marketing/emails/SKILL.md": [
+      1788967788015945550,
+      8562
+    ],
+    "marketing/free-tools/SKILL.md": [
+      1788967788016945565,
+      7240
+    ],
+    "marketing/influencer-marketing/SKILL.md": [
+      1788967788016945565,
+      17819
+    ],
+    "marketing/launch/SKILL.md": [
+      1788967788016945565,
+      15179
+    ],
+    "marketing/lead-magnets/SKILL.md": [
+      1788967788017945581,
+      10925
+    ],
+    "marketing/marca-cuidar-vc/SKILL.md": [
+      1789148452479190781,
+      14408
+    ],
+    "marketing/marketing-plan/SKILL.md": [
+      1788967788019945612,
+      24521
+    ],
+    "marketing/marketing-psychology/SKILL.md": [
+      1788967788020945628,
+      21884
+    ],
+    "marketing/offers/SKILL.md": [
+      1788967788021945643,
+      10006
+    ],
+    "marketing/onboarding/SKILL.md": [
+      1788967788021945643,
+      10234
+    ],
+    "marketing/popups/SKILL.md": [
+      1788967788022945659,
+      11805
+    ],
+    "marketing/pricing/SKILL.md": [
+      1788967788022945659,
+      13253
+    ],
+    "marketing/referrals/SKILL.md": [
+      1788967788024945690,
+      9167
+    ],
+    "marketing/seo-audit/SKILL.md": [
+      1788967788026945721,
+      16610
+    ],
+    "marketing/signup/SKILL.md": [
+      1788967788026945721,
+      10382
+    ],
+    "marketing/social/SKILL.md": [
+      1788967788027945737,
+      14936
+    ],
+    "marketing/squad-postagens-cuidarvc/SKILL.md": [
+      1789426916460747100,
+      27985
+    ]
+  },
+  "skills": [
+    {
+      "skill_name": "graphic-design",
+      "category": "graphic-design",
+      "frontmatter_name": "Graphic Design",
+      "description": "Support design understanding from basic visuals to profes...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "caddy-exposicao-publica",
+      "category": "infraestrutura",
+      "frontmatter_name": "caddy-exposicao-publica",
+      "description": "Expor serviços locais da VM publicamente via Caddy (admin...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "delegar-codigo-grande",
+      "category": "infraestrutura",
+      "frontmatter_name": "delegar-codigo-grande",
+      "description": "Delegar geração de código GRANDE (arquivos novos de cente...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "gatilho-instantaneo-cron",
+      "category": "infraestrutura",
+      "frontmatter_name": "gatilho-instantaneo-cron",
+      "description": "Fazer agente cron do Hermes responder em minutos via webh...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "gatilho-webhook-agentes",
+      "category": "infraestrutura",
+      "frontmatter_name": "gatilho-webhook-agentes",
+      "description": "Disparar agentes cron do Hermes NA HORA via webhook exter...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "mcp-servidores-hermes",
+      "category": "infraestrutura",
+      "frontmatter_name": "mcp-servidores-hermes",
+      "description": "Instalar, autenticar e manter servidores MCP remotos (HTT...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "radar-cuidarvc",
+      "category": "infraestrutura",
+      "frontmatter_name": "radar-cuidarvc",
+      "description": "Operar, ajustar e auditar o Agente 8 'Radar' do cuidar.vc...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ai-seo",
+      "category": "marketing",
+      "frontmatter_name": "ai-seo",
+      "description": "When the user wants to optimize content for AI search eng...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "blog-cuidarvc",
+      "category": "marketing",
+      "frontmatter_name": "blog-cuidarvc",
+      "description": "Operar, ajustar e auditar o blog do cuidar.vc e o Agente ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "community-cuidarvc",
+      "category": "marketing",
+      "frontmatter_name": "community-cuidarvc",
+      "description": "Operar, ajustar e auditar o Agente 7 \"Community\" do cuida...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "community-marketing",
+      "category": "marketing",
+      "frontmatter_name": "community-marketing",
+      "description": "Build and leverage online communities to drive product gr...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "competitor-profiling",
+      "category": "marketing",
+      "frontmatter_name": "competitor-profiling",
+      "description": "When the user wants to research, profile, or analyze comp...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "content-strategy",
+      "category": "marketing",
+      "frontmatter_name": "content-strategy",
+      "description": "When the user wants to plan a content strategy, decide wh...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "copywriting",
+      "category": "marketing",
+      "frontmatter_name": "copywriting",
+      "description": "When the user wants to write, rewrite, or improve marketi...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "cro",
+      "category": "marketing",
+      "frontmatter_name": "cro",
+      "description": "When the user wants to optimize, improve, or increase con...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "customer-research",
+      "category": "marketing",
+      "frontmatter_name": "customer-research",
+      "description": "When the user wants to conduct, analyze, or synthesize cu...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "emails",
+      "category": "marketing",
+      "frontmatter_name": "emails",
+      "description": "When the user wants to create or optimize an email sequen...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "free-tools",
+      "category": "marketing",
+      "frontmatter_name": "free-tools",
+      "description": "When the user wants to plan, evaluate, or build a free to...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "influencer-marketing",
+      "category": "marketing",
+      "frontmatter_name": "influencer-marketing",
+      "description": "When the user wants to run influencer, creator, or ambass...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "launch",
+      "category": "marketing",
+      "frontmatter_name": "launch",
+      "description": "When the user wants to plan a product launch, feature ann...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "lead-magnets",
+      "category": "marketing",
+      "frontmatter_name": "lead-magnets",
+      "description": "When the user wants to create, plan, or optimize a lead m...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "marca-cuidar-vc",
+      "category": "marketing",
+      "frontmatter_name": "marca-cuidar-vc",
+      "description": "Identidade, tom de voz e formato de conteúdo do cuidar.vc...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "marketing-plan",
+      "category": "marketing",
+      "frontmatter_name": "marketing-plan",
+      "description": "When the user needs a comprehensive marketing plan for a ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "marketing-psychology",
+      "category": "marketing",
+      "frontmatter_name": "marketing-psychology",
+      "description": "When the user wants to apply psychological principles, me...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "offers",
+      "category": "marketing",
+      "frontmatter_name": "offers",
+      "description": "When the user wants to design, construct, or improve an o...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "onboarding",
+      "category": "marketing",
+      "frontmatter_name": "onboarding",
+      "description": "When the user wants to optimize post-signup onboarding, u...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "popups",
+      "category": "marketing",
+      "frontmatter_name": "popups",
+      "description": "When the user wants to create or optimize popups, modals,...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "pricing",
+      "category": "marketing",
+      "frontmatter_name": "pricing",
+      "description": "When the user wants help with pricing decisions, packagin...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "referrals",
+      "category": "marketing",
+      "frontmatter_name": "referrals",
+      "description": "When the user wants to create, optimize, or analyze a ref...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "seo-audit",
+      "category": "marketing",
+      "frontmatter_name": "seo-audit",
+      "description": "When the user wants to audit, review, or diagnose SEO iss...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "signup",
+      "category": "marketing",
+      "frontmatter_name": "signup",
+      "description": "When the user wants to optimize signup, registration, acc...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "social",
+      "category": "marketing",
+      "frontmatter_name": "social",
+      "description": "When the user wants help creating, scheduling, or optimiz...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "squad-postagens-cuidarvc",
+      "category": "marketing",
+      "frontmatter_name": "squad-postagens-cuidarvc",
+      "description": "Fluxo de trabalho da Squad de Postagens 24/7 do cuidar.vc...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    }
+  ],
+  "category_descriptions": {}
+}
