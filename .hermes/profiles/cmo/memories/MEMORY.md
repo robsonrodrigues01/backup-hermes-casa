@@ -14,4 +14,4 @@ Padrões CMO: skills externas = destilar em PT-BR em references/ da skill da squ
 §
 Agente 7 Community = job b1c27fe585a1 (every 15m, scheduler cmo com profile=cuidar; playbook e escalacoes em squad/community/). Gatilho webhook: receiver hook-zernio.py na 8805 + retrigger 150s (13/09, cobre msg que chega durante run); vigia d58dd88fe8d5; latencia medida 1-3 min; detalhes no playbook.
 §
-Agente 8 Radar (13h UTC, cuidar, a15db537de2d): Apify MCP; painel squad/radar/perfis.json; skill radar-cuidarvc. § Agente 9 Redator Blog (16h UTC, cuidar, 10f502a4aa15): publica DIRETO no site via RPC Supabase, sem revisão; publicar.py injeta CVBLOG_KEY do .env cuidar; pendia cvblog_ (painel Rob) + publishable key REAL (repo/bundle só placeholder mascarado).
+Agente 8 Radar (13h UTC, cuidar, a15db537de2d): Apify MCP; painel squad/radar/perfis.json; skill radar-cuidarvc. § Agente 9 Redator Blog (16h UTC, cuidar, 10f502a4aa15): publica DIRETO no site via RPC Supabase, sem revisão; publicar.py injeta CVBLOG_KEY do .env cuidar (instalada 14/09; rotação via squad/blog/instala_cvblog.py stdin); falta SÓ a publishable key REAL (repo/bundle só placeholder mascarado).

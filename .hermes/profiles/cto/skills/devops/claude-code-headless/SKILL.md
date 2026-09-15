@@ -41,3 +41,8 @@ description: "Operar o Claude Code CLI em servidor headless (Hermes). Instalar, 
 - Convenções do projeto: o CLAUDE.md na raiz do repo é a fonte autoritativa (git pull antes, git push depois, edge function só publica via agente Lovable, build é `npm run build` com tsc -b). Ler antes de delegar qualquer tarefa.
 - O `.env` versionado no repo do cuidar.vc é proposital (só as 3 variáveis públicas VITE_*): não remover nem "corrigir".
 - Detalhes da sessão de setup e fallbacks: `references/login-claude-code.md`.
+
+## Tarefas longas ou com imagem de referência (15/09)
+- Passar IMAGEM pro claude -p (v2.1.270): NÃO existe flag --image/--attach para arquivo local (verificado no --help). O caminho que funciona: cp da imagem pro workdir e citar o caminho no prompt ("leia referencia.jpg com a ferramenta Read"): o Read do Claude renderiza imagem e o Opus enxerga (usado com sucesso na refação do painel-escritório do cuidar.vc).
+- Prompt grande ou com aspas: gravar num arquivo (prompt.txt) via write_file e rodar `claude -p "$(cat prompt.txt)"` evita escaping e quebra de linha no shell.
+- Tarefa que passa de 600s (refazer painel inteiro demora mais que o cap do terminal foreground): rodar via `terminal background=true` + `notify_on_complete=true`, comando `timeout 1800 claude -p ... > run.log 2>&1`. Conferir o início com process poll e deixar o notify avisar o fim. Continua valendo: nunca sem timeout, nunca sem --dangerously-skip-permissions.

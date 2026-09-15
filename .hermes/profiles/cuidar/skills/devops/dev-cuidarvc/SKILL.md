@@ -18,7 +18,7 @@ description: Playbook técnico do cuidar.vc para a squad tech (CTO, Dev, QA, Dev
 ## Claude Code (executor de código da squad, plugado 12/09)
 - Instalado em ~/.local/bin/claude (binário nativo, v2.1.270), autenticado com a conta Claude do Rob (login salvo em ~/.claude, renova sozinho; `claude auth status` mostra loggedIn true).
 - Divisão de papéis: o agente Dev (Hermes) orquestra, lê a tarefa no TAREFAS.md, monta o prompt e o Claude Code coda no repo.
-- REGRA DO ROB (12/09): o Claude Code é o ÚNICO coder da squad, sem exceção. Nenhum agente (Dev, QA, DevOps, CTO) edita arquivo do repo diretamente, nem hotfix pequeno, nem correção de uma linha: toda mudança de código passa por claude -p. Ler diff, revisar, rodar build e publicar continuam com a squad.
+- REGRA DO ROB (12/09, ampliada 15/09): o Claude Code é o ÚNICO coder, sem exceção, e codifica TUDO: site no repo E artefatos internos (painéis, relatórios, scripts, ferramentas). Nenhum agente (Dev, QA, DevOps, CTO) escreve código diretamente, nem hotfix pequeno, nem correção de uma linha: todo código passa por claude -p (em artefato interno, rodar com workdir no diretório do artefato, ex: /home/hermes/painel-web). Ler diff, revisar, rodar build e publicar continuam com a squad.
 - Padrão headless: `cd /home/hermes/cuidarvc/repo && timeout 900 claude -p "<tarefa objetiva em PT-BR, com contexto e critério de pronto>" --model opus --dangerously-skip-permissions`
 - Modelo (diretiva do Rob 12/09): SEMPRE Opus 5. Já é o padrão global via ~/.claude/settings.json ({"model": "opus"} = claude-opus-5, testado de verdade); usar --model opus na linha é o cinto de segurança. Sonnet/Flash só se o Rob pedir explicitamente.
 - Sem --dangerously-skip-permissions o modo -p bloqueia edição e comandos: sempre usar em job autônomo. Nunca rodar sem timeout.
@@ -57,7 +57,7 @@ description: Playbook técnico do cuidar.vc para a squad tech (CTO, Dev, QA, Dev
 5. Rollback: tag do estado anterior antes de publicar; quebrou, reverte e avisa.
 
 ## Regras de ouro
-- Codar é exclusividade do Claude Code (diretiva do Rob): nenhum agente edita arquivo do repo diretamente, nem correção pequena.
+- Codar é exclusividade do Claude Code/Opus em QUALQUER projeto (diretiva do Rob 15/09): repo do site e artefatos internos (painéis, scripts, ferramentas); nenhum agente escreve código direto, nem correção pequena.
 - Nunca reportar status sem comando executado de verdade.
 - Nunca expor segredos (.env, tokens) em log, PR ou chat.
 - Pipeline nunca trava esperando resposta do Rob.

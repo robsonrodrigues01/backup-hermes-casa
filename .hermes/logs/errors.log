@@ -12546,3 +12546,20 @@ telegram.error.TimedOut: Timed out
 2026-09-14 23:42:25,758 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-14 23:42:25,759 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-14 23:42:27,521 WARNING [20260914_223605_8297df] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:30:47,143 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:30:47,144 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:30:48,760 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:30:53,931 WARNING [20260914_152119_8f5d651e] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:30:53,977 WARNING [20260914_152119_8f5d651e] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:33:00,313 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:33:00,314 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:33:01,392 WARNING [20260911_182730_f57ae692] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:33:13,451 WARNING [20260914_223605_8297df] agent.tool_executor: Tool terminal returned error (0.11s): {"output": "== full model block cmo ==\nmodel:\n  provider: custom\n  default: glm-5.3\n  base_url: http://127.0.0.1:8789/v1\n  api_key: SLJ22RSCDIY735K7JVFBQERYMZCUQVVHKHDQ\n  api_mode: chat_completi
+2026-09-15 02:38:29,244 WARNING [20260914_223605_8297df] agent.tool_executor: Tool terminal returned error (300.52s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command timed out without user response. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt
+2026-09-15 02:38:34,704 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:46:39,621 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:46:39,621 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:47:13,376 WARNING [20260914_223605_8297df] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:52:29,573 WARNING [20260914_223605_8297df] agent.tool_executor: Tool terminal returned error (0.23s): {"output": "{\"message\":\"Invalid API key\"}\n== retry com status code ==\n/usr/bin/bash: eval: line 13: unexpected EOF while looking for matching `\"'", "exit_code": 2, "error": null}
+2026-09-15 02:52:39,985 WARNING [20260914_223605_8297df] agent.tool_executor: Tool execute_code returned error (0.00s): {"status": "error", "error": "BLOCKED: execute_code runs arbitrary local Python (including subprocess calls that bypass shell-string approval checks). Cron jobs run without a user present to approve i
+2026-09-15 02:52:54,289 WARNING [20260914_223605_8297df] agent.tool_executor: Tool execute_code returned error (0.00s): {"status": "error", "error": "BLOCKED: execute_code runs arbitrary local Python (including subprocess calls that bypass shell-string approval checks). Cron jobs run without a user present to approve i

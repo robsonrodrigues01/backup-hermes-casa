@@ -1,0 +1,55 @@
+.agent{position:absolute;width:24px;height:46px;z-index:30;cursor:pointer;user-select:none;opacity:0;transition:opacity .7s var(--ease)}
+.agent.in{opacity:1}
+.agent.seated{z-index:5}
+.agent .ashadow{position:absolute;left:50%;bottom:0;width:26px;height:7px;transform:translateX(-50%);background:rgba(0,0,0,.3);border-radius:50%;filter:blur(1px)}
+.fig{position:absolute;left:0;bottom:2px;width:24px;height:44px;transition:transform .16s ease}
+.agent.flip .fig{transform:scaleX(-1)}
+.bobw{position:absolute;inset:0}
+.bobw>div{position:absolute}
+.head{left:5px;top:0;width:14px;height:13px;background:var(--sk);border-radius:7px 7px 5px 5px;z-index:3}
+.hair{position:absolute;left:-1px;top:-2px;width:16px;height:7px;background:var(--hc);border-radius:8px 8px 3px 3px}
+.eye{position:absolute;top:5px;width:2.5px;height:2.5px;background:#26221c;border-radius:50%;animation:blink 4.6s infinite;animation-delay:var(--bd,0s)}
+.eye.l{left:3px}.eye.r{right:3px}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}95%{transform:scaleY(.08)}}
+.torso{left:4px;top:13px;width:16px;height:15px;background:var(--c);border-radius:5px 5px 4px 4px;z-index:2}
+.arm{top:14px;width:4px;height:13px;background:var(--c);border-radius:2px;transform-origin:2px 2px;z-index:1}
+.arm.l{left:0}.arm.r{right:0}
+.leg{top:27px;width:5px;height:14px;background:#3a3f4a;border-radius:2px;transform-origin:2.5px 0}
+.leg.l{left:6px}.leg.r{right:6px}
+.agent.walking .leg.l{animation:swing .34s ease-in-out infinite}
+.agent.walking .leg.r{animation:swing .34s ease-in-out infinite reverse}
+.agent.walking .arm.l{animation:swing .34s ease-in-out infinite reverse}
+.agent.walking .arm.r{animation:swing .34s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(22deg)}50%{transform:rotate(-22deg)}}
+.agent.walking .bobw{animation:bob .17s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-2px)}}
+.agent.standing .bobw{animation:breathe 2.9s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-1px)}}
+.agent.typing .leg{transform:rotate(80deg) scaleY(.5);transform-origin:50% 0}
+.agent.typing .arm{transform:rotate(52deg)}
+.agent.typing .arm.l{animation:type .24s ease-in-out infinite alternate}
+.agent.typing .arm.r{animation:type .24s .12s ease-in-out infinite alternate}
+@keyframes type{from{transform:rotate(46deg)}to{transform:rotate(58deg)}}
+.agent.typing .head{animation:tnod 4.5s ease-in-out infinite}
+@keyframes tnod{0%,88%,100%{transform:translateY(0)}92%{transform:translateY(1px) rotate(3deg)}}
+.agent .zzz{position:absolute;top:-10px;right:-6px;font:700 12px system-ui;color:#9fb4c9;opacity:0;pointer-events:none}
+.agent.sleep .zzz{animation:zzz 2.6s ease-in-out infinite}
+@keyframes zzz{0%{opacity:0;transform:translate(0,0) scale(.7)}30%{opacity:1}100%{opacity:0;transform:translate(12px,-24px) scale(1.25)}}
+.tag{position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:600;background:#26221cd9;color:#8de9d8;border-radius:6px;padding:0 4px;white-space:nowrap}
+.bub{position:absolute;bottom:48px;left:50%;transform:translateX(-50%) scale(.6);transform-origin:50% 100%;background:#fff;border:1px solid #cfc7b5;border-radius:10px;padding:3px 8px;font-size:11px;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,.2);opacity:0;transition:transform .3s cubic-bezier(.34,1.56,.64,1),opacity .22s;pointer-events:none;max-width:240px;overflow:hidden;text-overflow:ellipsis;z-index:5}
+.agent.say .bub,.agent:hover .bub{opacity:1;transform:translateX(-50%) scale(1)}
+.bub::after{content:'';position:absolute;bottom:-5px;left:50%;margin-left:-5px;width:8px;height:8px;background:#fff;border-right:1px solid #cfc7b5;border-bottom:1px solid #cfc7b5;transform:rotate(45deg)}
+#card{position:fixed;right:14px;bottom:14px;width:270px;background:linear-gradient(180deg,#20302a,#1a231f);color:#f5f1e8;border:1px solid var(--accent);border-radius:12px;padding:14px;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.5);display:none;z-index:99}
+#card h3{color:#8de9d8;margin-bottom:6px;font-size:15px}
+#card .x{position:absolute;top:6px;right:10px;cursor:pointer;color:#888}
+#card p{margin:3px 0;line-height:1.45}
+#card b{color:#ffe9a8}
+.foot{color:#8a8271;font-size:11px;margin-top:10px;text-align:center}
+.dashsec{max-width:1140px;margin:4px auto 44px;padding:0 14px}
+.dashtop{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.dashtop h2{font-size:15px;color:#f5f1e8;font-weight:700}
+.dashtop a{color:#8de9d8;font-size:12px;text-decoration:none;border:1px solid var(--accent);border-radius:8px;padding:4px 10px;white-space:nowrap}
+.dashsec iframe{width:100%;height:960px;border:0;border-radius:14px;background:#14120f;box-shadow:0 10px 30px rgba(0,0,0,.45);display:block}
+@media(max-width:760px){.dashsec iframe{height:1300px}.office{height:520px;transform:scale(.62);transform-origin:top left;width:161%}}
+</style>
+</head>

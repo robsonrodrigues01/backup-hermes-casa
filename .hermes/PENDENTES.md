@@ -53,3 +53,10 @@ Repo NOVO único: robsoncoffy/backup-hermes-casa (privado) — só casa Hermes (
 Fora por regra do Rob: logs de conversa (state.db -> zip mensal no Release), plugins de terceiros (gbrain/postiz/agent-vision -> reinstaláveis), binários. TOKENS AGORA SOBEM (pedido do Rob 14/09): .env ×6, mcp-tokens, gh-token, .git-credentials, .claude.json — 2FA no GitHub é o cadeado do cofre.
 Envio a cada 4h (6x/dia Bsb, script backup-github.sh) + zip completo dia 1.
  Pendente p/ Rob decidir: aposentar backup-live-hermes (repo antigo cheio de terceiros) e apagar backup-cuidarvc-repo (vazio, criado por engano)?
+
+## Plano economia Vultr (iniciado 15/09)
+Passo 1 FEITO+PROVADO: cmo e cto -> glm-5.3-flash (config.yaml dos 2, rota 8789 testada ok proven).
+Próximos (Rob aprovou plano? aguardando OK p/ seguir):
+- Passo 2: lab -> glm-5.3-flash (cobaia), depois era4 e Claudinho (glm-5.1 moribundo, 404 recorrente, sumiu da lista Vultr)
+- Passo 3: cuidar fica no glm-5.3 completo (fala com cliente — mantém qualidade)
+Meta: conta ~US$2700 -> ~US$400/mês.

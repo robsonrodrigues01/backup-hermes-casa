@@ -10,4 +10,4 @@ Canva conectado (10-11/09): app OC-AaCNd93weRRM (CANVA_* no .env), tokens+refres
 §
 Telegram DM do Rob = chat_id 8944451892 (usar send_message; TELEGRAM_HOME_CHANNEL no perfil cuidar).
 §
-Lovable MCP+GitHub cto: Lovable 42e995f4-4daf-4261-be2d-7a7472551277, repo robsoncoffy/cuidarvc (clone ~/cuidarvc/repo, GITHUB_TOKEN .env). Claude Code = ÚNICO coder (12/09): via claude -p --dangerously-skip-permissions, Opus 5; auth: claude auth login --claudeai PTY (nunca setup-token). .env repo versionado (VITE_*).
+Lovable MCP+GitHub cto: Lovable 42e995f4-4daf-4261-be2d-7a7472551277, repo robsoncoffy/cuidarvc (detalhes no skill dev-cuidarvc). Claude Code+Opus 5 = coder de TUDO (Rob 15/09: site E artefatos internos, painéis, scripts; agente não escreve código direto): claude -p --dangerously-skip-permissions; auth: claude auth login --claudeai PTY (nunca setup-token). dev-cuidarvc cto é symlink do cuidar: patch exige cross_profile.

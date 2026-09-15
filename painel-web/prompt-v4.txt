@@ -1,0 +1,34 @@
+Tarefa: refazer do zero o painel "escritório virtual" do cuidar.vc em novo estilo visual. Você vai criar o arquivo NOVO em /home/hermes/painel-web/escritorio-v4.html. NÃO toque em index.html (está no ar).
+
+1) PRIMEIRO DE TUDO: leia a imagem referencia.jpg deste diretório com a ferramenta Read. Ela é a referência visual exata do estilo que o dono quer. Depois leia o index.html atual: o motor de movimento JS e os dados são bons, reaproveite as ideias.
+
+2) ESTILO ALVO (igual à referência, mas mais realista ainda): escritório em perspectiva 3D (CSS 3D puro, sem canvas):
+- piso de tábuas de madeira clara (veios via repeating-linear-gradient)
+- parede de fundo de tijolos com vigas de madeira escuras (padrão de tijolos)
+- janela grande de múltiplos vidros na parede, brilhando com luz do dia
+- lâmpadas pendentes de bulbo amarelado penduradas em fios em alturas variadas
+- letreiro neon na parede do fundo: "CUIDAR.VC" em neon dourado e embaixo "cuidado com que cuida" em neon ciano (glow via text-shadow)
+- rack de servidor preto alto com fileiras de LEDs verdes
+- plantas em vasos espalhadas pelo escritório
+- cada estação de trabalho com mesa sólida 3D, monitor(es) ligados mostrando conteúdo, cadeira, papéis, caneca, livros
+- iluminação quente e aconchegante: sombras suaves, luz amarelada, brilho nas janelas
+
+3) ELENCO: 13 membros, todos do cuidar.vc, cada um com mesa própria e plaquinha:
+- Rob (fundador, coroa): sala de vidro separada no canto direito, mesa executiva grande
+- Tech: CTO, Dev, QA, DevOps. O DevOps fica perto do rack de servidor com LEDs
+- Marketing: CMO, Claudete, e a squad de conteúdo numa mesa comprida: Planejador, Copy, Artes, QC, Agendador, Métricas
+
+4) FUNCIONALIDADES (obrigatórias):
+- agentes se movem sozinhos pela sala (motor com pontos de interesse), alternando entre andar e trabalhar sentados digitando
+- cada mesa com plaquinha flutuante legível: nome + função. Nenhuma plaquinha pode sobrepor outra nem cortar texto
+- balão de fala ocasional com frase curta de trabalho (PT-BR, sem travessão)
+- página organizada: header limpo (logo cuidar.vc, relógio ao vivo), cena como destaque, seção abaixo com iframe src="/dash-proxy/" com título "Painel do CMO", footer discreto
+- responsivo: em 390px de largura a cena inteira aparece sem cortes (escala automática); botão de ampliar que libera pan por arrastar
+
+5) REGRAS:
+- arquivo único HTML, zero dependências externas (sem CDN, sem imagens externas, sem fontes externas)
+- zero erro de JavaScript no console
+- todo texto visível em PT-BR e JAMAIS travessão (—) em nenhum texto
+- código e comentários podem ser em inglês
+
+CRITÉRIO DE PRONTO: escritorio-v4.html salvo e completo; ao abrir no browser mostra o escritório no estilo da referência, 13 agentes andando e trabalhando, plaquinhas 100% legíveis sem sobreposição, iframe do CMO presente, sem erro de console, sem cortar em 390px.

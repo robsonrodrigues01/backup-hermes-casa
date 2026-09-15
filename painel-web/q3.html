@@ -1,0 +1,82 @@
+<script>
+const POI=[[26,20],[250,24],[430,22],[880,540],[64,556],[395,335],[985,468],[560,240]];
+const AG=[
+{id:'cto',n:'CTO',e:'🤖',seat:[128,114],c:'#0d9488',hc:'#2b2b2b',sk:'#f2c49b',spd:66,acts:['orquestrando Dev, QA e DevOps','preparando status 07h15 pro Rob','checando o pipeline diário','lendo TAREFAS.md'],info:'<b>Papel:</b> CTO, orquestra a squad tech<br><b>Turno:</b> status diário 07h15 BSB<br><b>Canal:</b> Telegram direto com o Rob'},
+{id:'dev',n:'Dev',e:'👨‍💻',seat:[128,234],c:'#2563eb',hc:'#4a2f1d',sk:'#e8b98a',spd:62,acts:['codando com Claude Opus 5','backlog vazio: aguardando demanda','lendo o quadro TAREFAS.md'],info:'<b>Papel:</b> implementa demandas do backlog<br><b>Turno:</b> 09h00 BSB diário<br><b>Coder:</b> Claude Opus 5'},
+{id:'qa',n:'QA',e:'🕵️',seat:[128,354],c:'#7c3aed',hc:'#1e1b16',sk:'#c68863',spd:58,acts:['revisando PRs','fila de revisão vazia','testando cuidar.vc no navegador'],info:'<b>Papel:</b> revisa PRs do Dev<br><b>Turno:</b> 15h00 BSB diário'},
+{id:'devops',n:'DevOps',e:'🚀',seat:[128,474],c:'#ea580c',hc:'#3f3f46',sk:'#f2c49b',spd:70,acts:['health check do site','monitorando cuidar.vc','olhando o Lovable'],info:'<b>Papel:</b> publica e monitora<br><b>Turno:</b> 17h00 BSB diário'},
+{id:'cmo',n:'CMO',e:'📣',seat:[708,104],c:'#db2777',hc:'#7c2d12',sk:'#e8b98a',spd:60,acts:['preparando briefing 07h/18h','acompanhando métricas de IG','falando com o Rob no bot dele'],info:'<b>Papel:</b> marketing<br><b>Bot próprio:</b> t.me/cmocuidarvcbot<br><b>Horários:</b> briefing 07h e 18h BSB'},
+{id:'claudete',n:'Claudete',e:'📝',seat:[708,274],c:'#16a34a',hc:'#5b3a29',sk:'#c68863',spd:56,acts:['produzindo conteúdo pro Rob','olhando PENDENTES.md','cuidando de produto e operações'],info:'<b>Papel:</b> operações, produto e conteúdo<br><b>Canal:</b> chat próprio com o Rob'},
+{id:'plan',n:'Planejador',e:'📋',seat:[340,466],c:'#0891b2',hc:'#334155',sk:'#f2c49b',spd:64,acts:['planejando 1-2 posts do dia','pipeline IG e FB'],info:'<b>Papel:</b> planeja os posts diários (IG e FB)'},
+{id:'copy',n:'Copy',e:'✍️',seat:[410,466],c:'#c026d3',hc:'#1e1b16',sk:'#e8b98a',spd:63,acts:['escrevendo legendas acolhedoras','revisando tom de voz'],info:'<b>Papel:</b> escreve legendas no tom do cuidar.vc'},
+{id:'arte',n:'Artes',e:'🎨',seat:[480,466],c:'#d97706',hc:'#111827',sk:'#8d5524',spd:68,acts:['gerando imagem com z-image-turbo','compondo card glass'],info:'<b>Papel:</b> z-image-turbo + compose_card_glass'},
+{id:'qc',n:'QC',e:'🧐',seat:[550,466],c:'#dc2626',hc:'#450a0a',sk:'#f2c49b',spd:59,acts:['conferindo texto e arte','checklist de qualidade'],info:'<b>Papel:</b> controle de qualidade das artes'},
+{id:'agend',n:'Agendador',e:'📅',seat:[620,466],c:'#65a30d',hc:'#78350f',sk:'#e8b98a',spd:61,acts:['agendando publicações','entregando no Canva'],info:'<b>Papel:</b> agenda e entrega via canva_publish.py'},
+{id:'metr',n:'Métricas',e:'📈',seat:[690,466],c:'#475569',hc:'#0f172a',sk:'#c68863',spd:57,acts:['coletando números de IG','montando relatório'],info:'<b>Papel:</b> métricas de IG e FB'},
+{id:'rob',n:'Rob',e:'👑',seat:[954,100],c:'#b91c1c',hc:'#171717',sk:'#f2c49b',spd:50,acts:['checando o escritório virtual','aprovando artes do dia','conversando com a equipe','tomando café'],info:'<b>Papel:</b> fundador do cuidar.vc<br><b>Sala:</b> canto superior direito<br><b>Sono:</b> 00h às 07h BSB'}];
+const office=document.getElementById('office'),vp=document.getElementById('viewport');
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function bsbH(){return +new Date().toLocaleString('en-US',{timeZone:'America/Sao_Paulo',hour:'2-digit',hour12:false})}
+function mk(a,i){const d=document.createElement('div');d.className='agent';d.id='ag-'+a.id;
+d.style.setProperty('--c',a.c);d.style.setProperty('--hc',a.hc);d.style.setProperty('--sk',a.sk);d.style.setProperty('--bd',(Math.random()*4).toFixed(2)+'s');
+d.style.left=a.seat[0]+'px';d.style.top=a.seat[1]+'px';
+d.innerHTML='<div class="ashadow"></div><div class="bill"><div class="fig"><div class="bobw"><div class="head"><i class="hair"></i><span class="eye l"></span><span class="eye r"></span></div><div class="torso"></div><div class="arm l"></div><div class="arm r"></div><div class="leg l"></div><div class="leg r"></div></div></div><div class="zzz">z z</div><div class="tag">'+a.n+'</div><div class="bub"></div></div>';
+d.onclick=()=>{const c=document.getElementById('card');document.getElementById('c-title').textContent=a.e+' '+a.n;document.getElementById('c-body').innerHTML=a.info+'<p><b>Agora:</b> '+a.cur+'</p>';c.style.display='block'};
+office.appendChild(d);a.el=d;a.x=a.seat[0];a.y=a.seat[1];a.cur=a.acts[0];
+setTimeout(()=>d.classList.add('in'),420+i*130);
+cycle(a,1200+Math.random()*4000)}
+function plate(a,t){const st=document.getElementById('st-'+a.id);if(st)st.textContent=t}
+function say(a,t,dur){a.cur=t;plate(a,t);const b=a.el.querySelector('.bub');b.textContent=t;b.style.marginLeft='0';a.el.classList.add('say');const o=vp.getBoundingClientRect(),r=b.getBoundingClientRect();let ml=0;if(r.left<o.left+6)ml=o.left+6-r.left;if(r.right>o.right-6)ml=o.right-6-r.right;b.style.marginLeft=ml+'px';clearTimeout(a.tb);a.tb=setTimeout(()=>a.el.classList.remove('say'),dur||3600)}
+function sit(a){a.el.classList.remove('walking','standing','sleep');a.el.classList.add('typing')}
+function stand(a){a.el.classList.remove('typing','standing','sleep');a.el.classList.add('standing')}
+function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+function go(a,x,y){return new Promise(res=>{
+x=Math.max(4,Math.min(x,1080));y=Math.max(4,Math.min(y,618));
+const sx=a.x,sy=a.y,dx=x-sx,dy=y-sy,dist=Math.hypot(dx,dy);
+const dur=Math.max(700,dist*1000/a.spd);
+if(Math.abs(dx)>6)a.el.classList.toggle('flip',dx<0);
+a.el.classList.remove('typing','standing','sleep');a.el.classList.add('walking');
+const t0=performance.now();
+(function fr(now){let p=(now-t0)/dur;
+if(p>=1){a.x=x;a.y=y;a.el.style.left=x+'px';a.el.style.top=y+'px';a.el.classList.remove('walking');res();return}
+const e=ease(p);a.x=sx+dx*e;a.y=sy+dy*e;a.el.style.left=a.x+'px';a.el.style.top=a.y+'px';requestAnimationFrame(fr)})(t0)})}
+const CH=['briefing das 18h saindo','publiquei no Canva já','QA aprovou tudo hoje','site 100% estável agora','métrica de IG subindo','chegou demanda nova no backlog','a arte glass ficou linda','o Rob vai gostar dessa','bora revisar o PR?','esse café tá sagrado','hoje tem briefing 18h'];
+const RP=['boaaa!','kkkk verdade','anota aí','vou ver agora','me passa o link depois','combinado!','tô junto'];
+function replyNear(a){const o=AG.find(b=>b!==a&&!b.el.classList.contains('walking')&&Math.abs(b.x-a.x)<85&&Math.abs(b.y-a.y)<85);
+if(o)setTimeout(()=>say(o,RP[Math.floor(Math.random()*RP.length)]),1300+Math.random()*900)}
+async function cycle(a,wait){
+await sleep(wait);
+if(a.id==='rob'&&bsbH()<7){a.el.classList.remove('walking','standing');a.el.classList.add('typing','sleep');plate(a,'dormindo, acorda 07h');cycle(a,45000);return}
+a.el.classList.remove('sleep');
+const away=a.id==='rob'?.45:.6;
+if(Math.random()<away){
+say(a,a.acts[Math.floor(Math.random()*a.acts.length)]);
+await sleep(3500+Math.random()*4500);
+stand(a);
+const p=POI[Math.floor(Math.random()*POI.length)];
+await go(a,p[0]+6+Math.random()*22,p[1]+14+Math.random()*26);
+say(a,CH[Math.floor(Math.random()*CH.length)]);replyNear(a);
+await sleep(2600+Math.random()*3000);
+if(Math.random()<.5)say(a,CH[Math.floor(Math.random()*CH.length)]);
+await sleep(2400+Math.random()*2800);
+await go(a,a.seat[0],a.seat[1]);
+sit(a);
+say(a,a.acts[Math.floor(Math.random()*a.acts.length)]);
+}else{sit(a);say(a,a.acts[Math.floor(Math.random()*a.acts.length)])}
+cycle(a,7000+Math.random()*9000)}
+AG.forEach(mk);
+function clock(){const t=new Date().toLocaleTimeString('pt-BR',{timeZone:'America/Sao_Paulo'});document.getElementById('clock').textContent='🕒 '+t+' BSB'}
+clock();setInterval(clock,1000);
+const fitwrap=document.getElementById('fitwrap'),scenebox=document.getElementById('scenebox'),fitbtn=document.getElementById('fitbtn');
+let zoomed=false;
+function fit(){
+if(zoomed){scenebox.style.transform='none';scenebox.style.width='1140px';scenebox.style.height='640px';fitwrap.style.height='640px';return}
+const w=fitwrap.clientWidth||window.innerWidth;const s=Math.min(1,w/1150);
+scenebox.style.transform='scale('+s+')';scenebox.style.width=(1150*s)+'px';scenebox.style.height=(640*s)+'px';fitwrap.style.height=(640*s)+'px'}
+fitbtn.onclick=()=>{zoomed=!zoomed;fitwrap.classList.toggle('zoomed',zoomed);fitbtn.textContent=zoomed?'↕ ajustar à tela':'🔍 ampliar';fit()};
+window.addEventListener('resize',fit);
+fit();
+fetch('https://cuidar.vc',{mode:'no-cors'}).then(()=>{document.getElementById('site').textContent='● cuidar.vc no ar'}).catch(()=>{const s=document.getElementById('site');s.textContent='⚠ cuidar.vc sem resposta';s.classList.add('warn')});
+</script>
+</body>
+</html>

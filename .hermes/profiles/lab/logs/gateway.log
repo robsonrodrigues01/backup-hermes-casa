@@ -160,3 +160,6 @@ The brief anticipated 10–25 prefix clusters across a large agent-created pool.
 2026-09-14 01:11:18,928 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Bad Gateway
 2026-09-14 01:11:18,928 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 2/10), reconnecting in 10s. Error: Bad Gateway
 2026-09-14 01:11:45,211 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 2)
+2026-09-15 01:11:19,020 WARNING gateway.platforms.telegram: [Telegram] Telegram network error, scheduling reconnect: Bad Gateway
+2026-09-15 01:11:19,020 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 1/10), reconnecting in 5s. Error: Bad Gateway
+2026-09-15 01:11:49,785 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 1)

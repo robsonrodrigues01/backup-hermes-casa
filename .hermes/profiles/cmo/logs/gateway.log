@@ -364,3 +364,12 @@ telegram.error.NetworkError: Bad Gateway
 2026-09-14 23:58:50,426 INFO [20260914_233204_32f013] gateway.run: Session split detected: 20260914_233204_32f013 → 20260914_235838_bde166 (compression)
 2026-09-14 23:58:51,546 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
 2026-09-14 23:58:51,565 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=314.8s api_calls=33 response=2033 chars
+2026-09-15 01:00:52,113 INFO gateway.run: Agent cache idle-TTL evict: session=agent:main:telegram:dm:8944451892 (idle=3722s)
+2026-09-15 01:00:52,113 INFO gateway.run: Agent cache idle sweep: evicted 1 agent(s)
+2026-09-15 02:09:06,008 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (71 chars)
+2026-09-15 02:09:06,009 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='cvblog_321184bde9a18ddf0b2e091c23ea9b8eacecc712eb985787d3eb830bd65592fc'
+2026-09-15 02:11:09,210 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-15 02:11:25,429 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 02:11:25,429 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=139.4s api_calls=7 response=730 chars
+2026-09-15 02:18:58,730 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (33 chars)
+2026-09-15 02:18:58,731 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='mas o website usa o lovable cloud'
