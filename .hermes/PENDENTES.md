@@ -73,3 +73,10 @@ Passo 1 FEITO e PROVADO: cmo e cto trocados p/ glm-5.3-flash (configs; rota 8789
 Passo 2 FEITO e PROVADO: lab, era4 e Claudinho -> glm-5.3-flash (rotas 8787/8790/8788 testadas ok).
 Passo 3: cuidar fica no glm-5.3 completo (fala com cliente).
 Meta: conta ~US$2700 → ~US$400/mês.
+
+## Projeto AGENTE TRADER (15/09, pedido do Rob)
+Objetivo: agente que opera Polymarket+# prosecutors e gera caixa p/ pagar servidor+LLM (~US$400/mês pós-migração).
+Feasibilidade PROVADA: servidor alcança CLOB Polymarket (200) e Kraken (200); Binance bloqueado (IP datacenter US).
+Arquitetura: bot determinístico (código, estratégias + freios de risco) + Claudinho como supervisor (pesquisa/decisões agendadas, não roda trade a trade) — leitura: economiza tokens e evita decisão impulsiva de LLM.
+Fases: 1) PAPEL (simulado, 7 dias, nada real) 2) real com carteira pequena + freios (perda-dia-máx, sem alavancagem, sem saque nas chaves) 3) escalar certinho se bater meta.
+Falta do Rob: tamanho da carteira (pergunta aberta) e depois: chaves de API SEM permissão de saque / carteira nova só pra isso.
