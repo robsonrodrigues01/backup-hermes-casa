@@ -17,3 +17,44 @@
 2026-09-15 03:20:13,565 INFO gateway.run: Press Ctrl+C to stop
 2026-09-15 03:20:13,655 INFO gateway.run: Cron ticker started (interval=60s)
 2026-09-15 03:20:18,607 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-15 03:21:12,557 INFO gateway.run: Ignoring /start platform ping for session agent:main:telegram:dm:8944451892
+2026-09-15 03:21:16,596 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (2 chars)
+2026-09-15 03:21:16,596 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='oi'
+2026-09-15 03:21:26,086 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:21:26,087 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=9.5s api_calls=1 response=139 chars
+2026-09-15 03:24:26,302 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (144 chars)
+2026-09-15 03:24:26,303 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='absorva tudo: https://medium.com/coding-nexus/20-open-source-github-repositories'
+2026-09-15 03:24:41,780 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-15 03:25:23,904 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-15 03:29:31,537 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (69 chars)
+2026-09-15 03:29:44,071 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (42 chars)
+2026-09-15 03:29:51,011 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (32 chars)
+2026-09-15 03:29:52,863 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8944451892 → 3 (stop_command)
+2026-09-15 03:29:52,863 INFO gateway.run: STOP for session agent:main:telegram:dm:8944451892 — agent interrupted, session lock released
+2026-09-15 03:29:52,888 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8944451892
+2026-09-15 03:29:52,992 INFO gateway.run: Discarding stale agent result for agent:main:telegram:dm:8944451892 — generation 2 is no longer current
+2026-09-15 03:30:15,823 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (145 chars)
+2026-09-15 03:30:15,824 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='https://github.com/pmxt-dev/pmxt GitHub: https://github.com/ent0n29/polybot GitH'
+2026-09-15 03:30:45,189 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:30:45,189 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=29.4s api_calls=3 response=1754 chars
+2026-09-15 03:32:07,885 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (33 chars)
+2026-09-15 03:32:07,885 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sim pip install polymarket-client'
+2026-09-15 03:35:02,041 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:35:02,041 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=174.2s api_calls=23 response=1262 chars
+2026-09-15 03:36:51,748 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (8224 chars)
+2026-09-15 03:36:51,749 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='> ## Documentation Index > Fetch the complete documentation index at: https://do'
+2026-09-15 03:37:13,628 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:37:13,629 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=21.9s api_calls=2 response=1405 chars
+2026-09-15 03:38:16,066 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (51 chars)
+2026-09-15 03:38:16,067 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sim. e como vou acompanhar os trades e saldos e pnl'
+2026-09-15 03:40:27,725 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:40:27,725 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=131.7s api_calls=31 response=1221 chars
+2026-09-15 03:45:07,031 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (48 chars)
+2026-09-15 03:45:07,032 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='https://github.com/thalesvinif/oracle-lag-sniper'
+2026-09-15 03:46:05,447 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:46:05,448 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=58.4s api_calls=8 response=1438 chars
+2026-09-15 03:58:25,625 INFO gateway.run: Process proc_1e8e7a7b3435 finished — injecting agent notification for session agent:main:telegram:dm:8944451892 chat=8944451892 thread=None
+2026-09-15 03:58:25,626 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='[IMPORTANT: Background process proc_1e8e7a7b3435 completed (exit code 0). Comman'
+2026-09-15 03:59:36,183 INFO [20260915_032116_024911bd] gateway.run: Session split detected: 20260915_032116_024911bd → 20260915_035857_854635 (compression)
+2026-09-15 03:59:37,305 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:59:37,305 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=71.7s api_calls=5 response=562 chars

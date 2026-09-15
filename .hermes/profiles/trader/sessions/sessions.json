@@ -1,0 +1,39 @@
+{
+  "agent:main:telegram:dm:8944451892": {
+    "session_key": "agent:main:telegram:dm:8944451892",
+    "session_id": "20260915_035857_854635",
+    "created_at": "2026-09-15T03:21:16.597003",
+    "updated_at": "2026-09-15T03:59:37.306941",
+    "display_name": "Rob",
+    "platform": "telegram",
+    "chat_type": "dm",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 26755,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "8944451892",
+      "chat_name": "Rob",
+      "chat_type": "dm",
+      "user_id": "8944451892",
+      "user_name": "Rob",
+      "thread_id": null,
+      "chat_topic": null,
+      "message_id": "2"
+    }
+  }
+}

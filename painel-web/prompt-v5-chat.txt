@@ -1,0 +1,30 @@
+Missão: reescrever o MOTOR DE RESPOSTAS do chat dos agentes em UM arquivo, mudança cirúrgica. Não mexa em nada além do motor de conversa (funções reply/fresh/greet e os dados de respostas REP/HELLO/NOW etc conforme nomes reais no código).
+
+Arquivo alvo: /home/hermes/painel-web/escritorio-v5.html (um único HTML autônomo, PT-BR). O dono testou e reclamou: "não faz sentido as respostas dos agentes quando eu converso com algum deles".
+
+Problema atual (função reply(), linha ~1043): o matching de intenção é fraco e a categoria genérica devolve frases de enchimento tipo "Gostei de você ter trazido isso. Me conta mais, quero entender direitinho.", que ignoram completamente o que a pessoa perguntou. Exemplo real: usuário disse "ola rob, como foi o dia?" e Rob respondeu esse "me conta mais", absurdo.
+
+Reescreva o motor com estas regras:
+
+1. INTENÇÕES a detectar (ordem de prioridade), com regex PT-BR (inclua variações e erros de digitação comuns):
+   - saudacao (oi/olá/bom dia/boa tarde/boa noite/e aí/fala/tudo bem)
+   - o_que_faz ("o que você faz", "seu papel", "quem é você", "qual seu trabalho", "o que você é aqui")
+   - atividade_agora ("o que está fazendo", "o que tá fazendo", "trabalhando em quê", "no que", "ação atual") → responder com a atividade real do boneco na cena (estado(a)/atDesk(a)).
+   - estado_projeto (pergunta com "?" sobre o site/projeto/features/pacientes/cuidadores/babá/enfermeiros/lançamento/aplicativo/app/verificação/pagamento/avaliações) → resposta SUBSTANTIVA ligada ao papel do agente no cuidar.vc, citando o tópico que a pessoa mencionou.
+   - elogio (legal/top/bom incrível/parabéns/adorei)
+   - agradecimento (obrigado/obrigada/valeu/brigadão)
+   - despedida (tchau/flw/ate mais/até logo/grande abraço, e responde com despedida)
+   - lat+afirmacao (sim/claro/por isso/blz/ok) pós-pergunta do agente
+   - vazia/copy-paste de 1-2 letras ou emoji só → resposta breve convidando a perguntar.
+
+2. ANTI-ENCHIMENTO: é PROIBIDO devolver frases que ignorem a pergunta ("me conta mais", "entendi, pode desenvolver" NENHUMA vez como primeira resposta a uma pergunta "o que/como/por que/quando/quem/onde"). Toda resposta deve: (a) tocar no assunto detectado, ou (b) trazer informação real do papel do agente, ou (c) ser uma pergunta de volta CONCRETA ("quer saber do lançamento ou das features?").
+
+3. SUBSTÂNCIA POR PAPEL: cada agente (Rob fundador, CTO, CMO, DevOps, Dev, QA, Claudete produto/operações, Planejador, Copy, Artes, QC, Agendador, Métricas) precisa de ≥4 respostas próprias para estado_projeto, coerentes com seus objetivos reais no projeto cuidar.vc (plataforma para contratar cuidadores de idosos, babás e enfermeiros verificados no Brasil, pagamento seguro, avaliações reais; site no ar, lançamento público em preparação; CTO cuida de site/deploys, Rob dorme 00h acorda 07h, etc).
+
+4. MEMÓRIA CURTA: se a pessoa já mandou essa mesma mensagem de novo, o agente percebe ("você repetiu isso, tô atento").
+
+5. Variedade: sem repetir a mesma frase em conversas diferentes se houver alternativa (rotacione as respostas).
+
+NÃO mexa em: CSS, posicionamento, animação, HTML do modal, panel CMO, iframe, clock, legendas, nada visual. Só o "cérebro" das respostas. Mantenha todas as chaves de dados existentes que o resto do código consome (se renomear algo, atualize TODO o uso).
+
+Verificação antes de terminar: abra o arquivo num parser de HTML/JS mental, garanta zero erros de sintaxe (pode rodar: python3 - <<'EOF' usando um check balanceado de crases/aspas, ou node --check se disponível; o arquivo é HTML, então extraia o <script> e verifique com node --check se node existir). Confirme que 'reply(' continua com a mesma assinatura usada no submit handler. Não deixe nenhum travessão (—) no arquivo.

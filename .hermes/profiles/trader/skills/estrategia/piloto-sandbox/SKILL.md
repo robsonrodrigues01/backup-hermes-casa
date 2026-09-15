@@ -48,11 +48,24 @@ references/trader-sandbox-fase1.md
 - **Runner em path não versionado** (ex.: /tmp): estado e código somem.
   Runner SEMPRE em `~/.hermes/scripts/` e referenciado por nome RELATIVO
   na ferramenta de cron (mesma exigência da skill backup-github-casa).
+- **`HOME` de sessão/cron aqui é o home do PERFIL** (`~/.hermes/profiles/
+  <perfil>/home`): `expanduser('~')` e glob com `~` em script agendado
+  resolvem pro lugar errado e o script "não acha" o que existe (mordeu o
+  pm_probe). Caminho ABSOLUTO em tudo que agenda ou desacopla
+  (/home/hermes/trader-sandbox/..., sem `~`).
 - **Sandbox que precisa de fonte bloqueada:** testar a fonte (endpoint
   público) no boot do piloto e registrar resultado + data no reference;
   não assumir que a fonte de ontem ainda responde.
+- **SDK oficial em berço (polymarket-client 0.10.0):** a paginação do
+  `search` explode na página 100 da API — chamar sempre `.first_page()`.
+  Padrões válidos e pitfalls do SDK em references/polymarket-sdk.md
+  (viver com data; re-testar a cada versão nova).
 - **Relatório sem números** ("tá rodando") não decide fase: sempre trazer
   P&L do período, nº de operações, freios ativados e custo do piloto.
+- **Avaliar estratégia de repo de terceiro** (P&L printado, .whl de outra
+  conta) só por README: baixar dados abertos, rodar regras próprias e
+  comparar claim; install binário de terceiro = risco de supply chain.
+  Fluxo completo em references/auditoria-strategy-externa.md.
 
 ## Passo-a-passo (copiando do caso trader)
 
@@ -63,13 +76,18 @@ references/trader-sandbox-fase1.md
 3. Testar 2 ticks + gerar 1 relatório À MÃO antes de agendar nada
    (prova real antes do cron — nunca agendar coisa não testada).
 4. Criar 2 crons: tick `*/15 * * * *` no_agent (script cala se nada
-   anormal) + relatório diário às `0 12 * * *` UTC (= 9h Bsb, fuso do
-   Rob) com prompt próprio que lê o estado e manda o resumo no chat.
+   anormal) + relatório diário com horário calibrado olhando o
+   `next_run_at` devolvido pelo create/update — a máquina roda UTC mas o
+   next_run_at exibe em fuso Bsb e casa com a hora da spec (ex.:
+   `0 19 * * *` = 19h Bsb). Não converter de cabeça: ajustar a spec até o
+   next_run_at EXIBIR o horário de Brasília pretendido.
 5. PENDENTES.md: entrada "FASE 1 SANDBOX no ar" com prazo e regras.
 6. Commit + push no cofre (repo `backup-hermes-casa`).
 
 ## Referências
 - references/trader-sandbox-fase1.md — caso AGENTE TRADER completo
+- references/polymarket-sdk.md — leitura read-only da Polymarket no sandbox (padrões do SDK oficial 0.10.0, bug de paginação do search, escada de fetch p/ fonte bloqueada)
+- references/auditoria-strategy-externa.md — auditoria de repo de algoritmo de terceiro antes de integrar (dados abertos + regras próprias, flags de supply chain, e por que prova ao vivo curta não fecha tribunal: vigia 24h > rajada 12min)
 - templates/sandbox-runner.py — esqueleto do runner de papel
 
 ## Caso irmão

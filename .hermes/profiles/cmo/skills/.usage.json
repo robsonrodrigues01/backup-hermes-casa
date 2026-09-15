@@ -12,6 +12,19 @@
     "use_count": 1,
     "view_count": 1
   },
+  "blog-cuidarvc": {
+    "archived_at": null,
+    "created_at": "2026-09-15T03:42:33.295792+00:00",
+    "created_by": "agent",
+    "last_patched_at": null,
+    "last_used_at": "2026-09-15T03:43:15.209161+00:00",
+    "last_viewed_at": "2026-09-15T03:43:15.206701+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "caddy-exposicao-publica": {
     "archived_at": null,
     "created_at": "2026-09-11T21:57:20.397807+00:00",
@@ -68,14 +81,14 @@
     "archived_at": null,
     "created_at": "2026-09-13T03:43:41.619644+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-09-13T03:43:58.203862+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 1,
+    "last_patched_at": "2026-09-15T03:43:54.821204+00:00",
+    "last_used_at": "2026-09-15T03:43:49.520653+00:00",
+    "last_viewed_at": "2026-09-15T03:43:49.516657+00:00",
+    "patch_count": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "gatilho-webhook-agentes": {
     "archived_at": null,
@@ -147,12 +160,12 @@
     "created_at": "2026-09-10T08:00:34.639841+00:00",
     "created_by": null,
     "last_patched_at": "2026-09-11T17:05:10.325300+00:00",
-    "last_used_at": "2026-09-15T02:56:28.734120+00:00",
-    "last_viewed_at": "2026-09-15T02:56:28.730334+00:00",
+    "last_used_at": "2026-09-15T03:40:59.986503+00:00",
+    "last_viewed_at": "2026-09-15T03:40:59.985213+00:00",
     "patch_count": 60,
     "pinned": false,
     "state": "active",
-    "use_count": 83,
-    "view_count": 60
+    "use_count": 84,
+    "view_count": 61
   }
 }

@@ -1647,3 +1647,10 @@ Traceback (most recent call last):
 telegram.error.TimedOut: Timed out
 2026-09-15 01:11:20,047 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
 2026-09-15 01:11:20,047 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
+2026-09-15 03:22:13,645 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:22:13,687 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:41:05,945 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:41:05,946 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:41:07,692 WARNING [20260914_220952_841676e3] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:41:07,738 WARNING [20260914_220952_841676e3] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:43:16,270 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "# Kit de Recrutamento de Prestadores v1 (15/09/2026)\n\nMensagens p)

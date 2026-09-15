@@ -4,7 +4,7 @@ Squad 24/7 (set/2026): 1-2 posts/dia IG/FB via Zernio (key squad/zernio-key.txt)
 §
 Piapi (10/09): chave exige prefixo sk- (sem ele 401); base api.piapi.ai; só /v1/chat/completions confirmado; ler doc por provider antes de usar.
 §
-VPS (14/09): firewall externo só libera 22/80/443; browser_navigate do Hermes roda LOCAL, validar acesso externo via check-host.net. Caddy sem sudo, mas admin API 127.0.0.1:2019 aceita POST /load (vale até restart; backup /tmp/caddy-backup.json). Domínio ac836de9-2434-48c7-aa7b-69c1c7781d84.vultropenclaw.com: /dash → app 8800 (prefixo stripado), /hook → 8805, /painel → server.py 8643 (painel-escritório squad + embed dash CMO, key k injetada server-side, /home/hermes/painel-web). MCP krea ok (mcp==1.26.0 venv uv).
+VPS: validar acesso externo via check-host.net (browser_navigate roda LOCAL). Caddy admin API 127.0.0.1:2019 aceita POST /load (backup /tmp/caddy-backup.json). Domínio ac836de9-2434-48c7-aa7b-69c1c7781d84.vultropenclaw.com: /dash → app 8800, /painel → server.py 8643 (painel-escritório + embed dash CMO, key injetada server-side, /home/hermes/painel-web). Dashboard CMO dashboard-novo.py em 127.0.0.1:8800: se derruber, gateway NÃO respawna, subir nohup manual. Opus CLI bate limite (reseta ~07:30 UTC): retry background.
 §
 Canva conectado (10-11/09): app OC-AaCNd93weRRM (CANVA_* no .env), tokens+refresh em cuidarvc/squad/canva-tokens.json; canva_publish.py = entrega padrão de artes (compose_card → asset → design editável → export PNG).
 §

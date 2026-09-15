@@ -10,6 +10,7 @@ O painel do escritório deixou de ser só arquivo entregue por MEDIA: agora est�
 - Rotas: `/` serve estático de /home/hermes/painel-web (index.html = painel); `/dash/*` é proxy pro app do CMO (ver abaixo).
 - Cópia mestre do painel: /home/hermes/cuidarvc/painel-escritorio.html. Depois de patchear qualquer um dos dois, sincronizar com cp.
 - MORRE NO REBOOT (sem sudo não dá pra criar unit systemd). Restart: `python3 /home/hermes/painel-web/server.py` com terminal background=true. Se a porta estiver ocupada, matar o processo antigo antes (process action=kill).
+- Dash do CMO na 8800 (dashboard-novo.py): esteve rodando como FILHO de um processo alheio (gateway hermes de outro profile). Patch no arquivo do app SÓ vale na 8800 com respawn: matar o pid do dash e re-spawnar `nohup python3 dashboard-novo.py > /tmp/dashboard-novo.log 2>&1 &` no diretório /home/hermes/cuidarvc/squad/dashboard/ manteve painel e /dash no ar. Health: curl http://127.0.0.1:8800/api/health → {"ok":true}.
 
 ## Topologia web do VPS (como descobrir de verdade)
 - O /etc/caddy/Caddyfile NÃO reflete a realidade (mostra só reverse_proxy localhost:9119, que estava morto, e o /dash funcionava mesmo assim). Fonte da verdade é a API admin do Caddy: `curl -s http://127.0.0.1:2019/config/`.

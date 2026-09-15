@@ -15,6 +15,7 @@ description: Construir, estender e verificar artefatos internos do cuidar.vc que
 4. Rodar claude -p em background com timeout 1800 (tarefa grande passa do cap de 600s do terminal foreground); ver receita na skill claude-code-headless.
 5. QA no browser ANTES de publicar: file:// no arquivo novo, assertions por DOM via browser_console, browser_vision só pra layout geral.
 6. Publicar: cp do arquivo novo por cima do index.html (a rota /painel no Caddy já aponta pra ele) e validar externo (curl + check-host.net).
+7. Variante "correção cirúrgica" (validada no fix do rodar, 15/09): prompt de ~20 linhas que aponta arquivo + função/linha exata, comportamento alvo numerado, a lista explícita do que NÃO mexer ("não mexa no endpoint, não reformate, não toque em outra função") e comando de verificação automática (ex: python3 -c "import ast; ast.parse(...)") pro próprio Opus rodar antes de terminar. Saída: mudança contida de ~8 linhas sem efeitos colaterais. Patch em app Python rodando exige respawn do processo (ver publicacao-servidor.md).
 
 ## Arquivo grande sem truncar a resposta
 - write_file gigante numa resposta só estoura o limite de output (2 truncamentos reais em 14/09).
@@ -29,6 +30,8 @@ description: Construir, estender e verificar artefatos internos do cuidar.vc que
 4. Entregar só com zero erros de JS e movimento confirmado por DOM.
 5. Botão de ação em painel interno exige FEEDBACK VISÍVEL além do efeito no servidor: no QA, clicar os botões de ação e exigir reação imediata NA viewport (toast/status colado ao botão). 15/09: o "rodar agora" do dash do CMO executava a ação no server mas o Rob acusava "nada acontece": o elemento de status ficava fora da viewport. Ação sem confirmação visível = bug a reparar no código, não discordância com o Rob.
 6. Painel-escritório: QA com a sonda canônica scripts/qa-painel.js (colar como expression no browser_console). O verde do script é FINAL: publicar e encerrar. Nunca retunar um estado que já passou e nunca repetir a mesma ação idêntica após resultado ruim (15/09: .lp width oscilou 68↔70 por ~40 iterações com o estado já verde, queimando contexto até a compactação; mesmo padrão num loop de memory replace).
+7. Modal/overlay: estado "aberto" VIA offsetParent engana quando o elemento é position:fixed (retorna null mesmo aberto, parece fechado). Validar por classe (ex: #chat.className contém "open") ou getBoundingClientRect().width>0. 15/09: modal do chat v5 quase desclassificado como "não abre" quando na verdade abria.
+8. QA de formulário embutido: disparar o submit com form.requestSubmit(). dispatchEvent(new Event('submit')) NÃO executa o listener do form (nada acontece, input fica sujo). requestSubmit roda o fluxo real inclusive e.preventDefault interno.
 
 ## Publicação no servidor (painel no ar)
 - Publicar sempre como rota no Caddy da 443 (domínio do VPS) fazendo proxy pro server.py stdlib em porta alta. IP:porta alta direto NÃO funciona de fora: firewall externo só libera 22/80/443 (14/09: o Rob pegou ERR_CONNECTION_TIMED_OUT no :8643 que eu tinha "testado").

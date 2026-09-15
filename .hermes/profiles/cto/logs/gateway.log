@@ -173,3 +173,15 @@
 2026-09-15 03:02:17,254 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=187.2s api_calls=23 response=207 chars
 2026-09-15 03:18:22,483 INFO gateway.run: Process proc_ef8508a3c3f9 finished — injecting agent notification for session agent:main:telegram:dm:8944451892 chat=8944451892 thread=None
 2026-09-15 03:18:22,484 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='[IMPORTANT: Background process proc_ef8508a3c3f9 completed (exit code 0). Comman'
+2026-09-15 03:21:24,788 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[404303]
+2026-09-15 03:21:34,545 INFO [20260915_022520_d17c56] gateway.run: Session split detected: 20260915_022520_d17c56 → 20260915_031859_45e849 (compression)
+2026-09-15 03:21:35,433 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:21:35,433 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=192.9s api_calls=42 response=724 chars
+2026-09-15 03:40:01,318 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (76 chars)
+2026-09-15 03:40:01,319 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='nao faz sentido as respostas dos agentes quando eu converso com algum deles.'
+2026-09-15 03:40:28,106 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:40:28,106 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=26.8s api_calls=4 response=199 chars
+2026-09-15 03:52:58,259 INFO gateway.run: Process proc_50a8bfbb99b2 finished — injecting agent notification for session agent:main:telegram:dm:8944451892 chat=8944451892 thread=None
+2026-09-15 03:52:58,260 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='[IMPORTANT: Background process proc_50a8bfbb99b2 completed (exit code 1). Comman'
+2026-09-15 03:53:13,225 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:53:13,225 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=15.0s api_calls=3 response=205 chars

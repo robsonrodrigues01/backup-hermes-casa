@@ -25,6 +25,19 @@
     "use_count": 1,
     "view_count": 1
   },
+  "agent-reach": {
+    "archived_at": null,
+    "created_at": "2026-09-15T03:24:49.287530+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-09-15T03:24:53.876931+00:00",
+    "last_viewed_at": "2026-09-15T03:24:53.875805+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 2,
+    "view_count": 2
+  },
   "agent-second-brain": {
     "archived_at": null,
     "created_at": "2026-09-12T00:30:42.350180+00:00",
@@ -94,26 +107,26 @@
     "archived_at": null,
     "created_at": "2026-09-15T03:15:54.703879+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-09-15T03:16:16.394100+00:00",
-    "last_used_at": "2026-09-15T03:16:10.597529+00:00",
-    "last_viewed_at": "2026-09-15T03:16:10.596389+00:00",
-    "patch_count": 9,
+    "last_patched_at": "2026-09-15T04:00:03.002961+00:00",
+    "last_used_at": "2026-09-15T03:59:50.057573+00:00",
+    "last_viewed_at": "2026-09-15T03:59:50.056295+00:00",
+    "patch_count": 18,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 7,
+    "view_count": 7
   },
   "rob-comms-style": {
     "archived_at": null,
     "created_at": "2026-09-09T17:29:33.879171+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-09-14T15:27:45.951284+00:00",
-    "last_used_at": "2026-09-14T15:21:39.009139+00:00",
-    "last_viewed_at": "2026-09-14T15:21:39.007910+00:00",
-    "patch_count": 2,
+    "last_patched_at": "2026-09-15T03:41:28.352677+00:00",
+    "last_used_at": "2026-09-15T03:41:26.003854+00:00",
+    "last_viewed_at": "2026-09-15T03:41:26.002655+00:00",
+    "patch_count": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 4,
-    "view_count": 4
+    "use_count": 5,
+    "view_count": 5
   }
 }

@@ -1,0 +1,18 @@
+Pronto. Mudei só a função `rodar()` em `dashboard-novo.py:1159`. Foram 4 linhas trocadas e mais 2 acrescentadas; nenhuma outra parte do arquivo foi tocada.
+
+Como ficou o botão:
+- **Ao clicar:** fica desativado e mostra "disparando", como antes.
+- **Se der certo** (resposta 2xx e `j.ok!==false`): volta a ser clicável e mostra "disparado: agente indo".
+- **Se o servidor recusar** (`j.ok===false` ou status fora de 2xx): volta a ser clicável e mostra "falhou, tente de novo".
+- **Se der erro de rede:** `$('acao-msg')` continua mostrando "falha ao disparar, tente de novo", e o botão fica igual ao caso de recusa.
+
+`$('acao-msg')` continua recebendo `j.msg` como antes. O `setTimeout(carrega,5000)` também ficou, e é ele que devolve o texto "rodar agora" quando a lista é redesenhada.
+
+Uma ressalva: se o servidor responder algo que não é JSON, `r.json()` dá erro e o botão cai no caso de erro de rede. Nessa situação o botão ainda mostra "falhou, tente de novo".
+
+Verificações feitas:
+- O `ast.parse` do arquivo passou.
+- `rodar()` tem 6 `{` e 6 `}`, e 11 `(` e 11 `)`.
+- Recortei o trecho da função e passei no `node --check`: sintaxe válida.
+
+Não testei o clique no navegador.

@@ -1,0 +1,91 @@
+{
+  "jobs": [
+    {
+      "id": "b15d6543f307",
+      "name": "sandbox-relatorio-diario 19h Bsb",
+      "prompt": "Voce \u00e9 o Trader (perfil trader, casa do Rob, fuso Bras\u00edlia). Tarefa: rodar `python3 /home/hermes/.hermes/scripts/trader-sandbox.py report`, ler a sa\u00edda e ENTREGAR como resposta final, em PT-BR curto (4-7 bullets no formato do relat\u00f3rio: carteira virtual, resultado total, opera\u00e7\u00f5es do dia, posi\u00e7\u00e3o aberta se houver, leitura Polymarket hor\u00e1rio BTC, freio di\u00e1rio se ativo). Dinheiro \u00e9 IMAGIN\u00c1RIO (sandbox, deadline 22/09). N\u00e3o toque em nada: s\u00f3 leitura do script. Nenhuma pergunta, nenhum texto fora os bullets.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 19 * * *",
+        "display": "0 19 * * *"
+      },
+      "schedule_display": "0 19 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-15T00:39:58.346656-03:00",
+      "next_run_at": "2026-09-15T19:00:00-03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "961266b37ed7",
+      "name": "sandbox-tick 15min",
+      "prompt": "tick sandbox (sem LLM, script only)",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "sandbox-tick.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 * * * *",
+        "display": "*/15 * * * *"
+      },
+      "schedule_display": "*/15 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-15T00:39:59.956695-03:00",
+      "next_run_at": "2026-09-15T01:15:00-03:00",
+      "last_run_at": "2026-09-15T01:00:14.706218-03:00",
+      "last_status": "error",
+      "last_error": "Script not found: /home/hermes/.hermes/profiles/trader/scripts/sandbox-tick.sh",
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-09-15T01:00:14.706596-03:00"
+}

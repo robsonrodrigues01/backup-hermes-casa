@@ -22,15 +22,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 203
+        "completed": 205
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-11T19:48:24.024299+00:00",
-      "next_run_at": "2026-09-15T03:32:44.447120+00:00",
-      "last_run_at": "2026-09-15T03:17:44.447120+00:00",
+      "next_run_at": "2026-09-15T04:04:43.778897+00:00",
+      "last_run_at": "2026-09-15T03:49:43.778897+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -68,15 +68,15 @@
       "schedule_display": "every 30m",
       "repeat": {
         "times": null,
-        "completed": 106
+        "completed": 107
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-12T22:45:17.420723+00:00",
-      "next_run_at": "2026-09-15T03:33:49.276457+00:00",
-      "last_run_at": "2026-09-15T03:03:49.276457+00:00",
+      "next_run_at": "2026-09-15T04:03:49.431120+00:00",
+      "last_run_at": "2026-09-15T03:33:49.431120+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -111,15 +111,15 @@
       "schedule_display": "every 15m",
       "repeat": {
         "times": null,
-        "completed": 185
+        "completed": 187
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-13T01:13:43.280865+00:00",
-      "next_run_at": "2026-09-15T03:32:44.463796+00:00",
-      "last_run_at": "2026-09-15T03:17:44.463796+00:00",
+      "next_run_at": "2026-09-15T04:04:43.793183+00:00",
+      "last_run_at": "2026-09-15T03:49:43.793183+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -229,7 +229,50 @@
       ],
       "workdir": null,
       "profile": "cuidar"
+    },
+    {
+      "id": "ee8234ba33ab",
+      "name": "Vigia capa blog",
+      "prompt": "Watchdog silencioso: roda o refresh das capas do blog do cuidar.vc; sai em sil\u00eancio quando tudo ok, alerta quando quebra.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "refresh_capas.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5 14 * * *",
+        "display": "5 14 * * *"
+      },
+      "schedule_display": "5 14 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 3
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-15T03:21:50.001355+00:00",
+      "next_run_at": "2026-09-15T14:05:00+00:00",
+      "last_run_at": "2026-09-15T03:36:56.431740+00:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\nREFRESH_CAPA: upload da capa falhou para 'quanto-custa-um-cuidador-de-idosos': uploads disabled because it\u2019s been almost nothing but AI botnet spam for the past few months. will be back with a few changes at some point. no ETA.",
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-09-15T03:17:44.463967+00:00"
+  "updated_at": "2026-09-15T03:49:43.793318+00:00"
 }

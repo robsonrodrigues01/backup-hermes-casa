@@ -44,5 +44,8 @@ faltaram — não é estilo nosso, é demanda dele):
      (ex.: github.com/settings/tokens/new?scopes=repo&description=...);
    - dizer qual ÚNICO campo mexer ("Expiration → No expiration") e onde
      clicar;
-   - terminar com a regra de segurança: ele apaga a mensagem com o código
-     do chat depois de eu terminar a configuração.
+9. **"sim" + comando no mesmo recado = aprovação executável** (visto
+   15/09: "sim pip install polymarket-client"). Quando ele responde um
+   pending com sim + o passo/c comando, é GO: executar já, sem
+   re-perguntar "tem certeza". A parte nova vira relatório curto no fim
+   (prova real + estado), não nova rodada de perguntas.

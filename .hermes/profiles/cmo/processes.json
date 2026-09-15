@@ -1,24 +1,5 @@
 [
   {
-    "session_id": "proc_32d02f4c9197",
-    "command": "cd /home/hermes/cuidarvc/squad/dashboard && DASH_PORT=8800 exec python3 dashboard-novo.py",
-    "pid": 243419,
-    "pid_scope": "host",
-    "cwd": "/home/hermes",
-    "started_at": 1789253048.5455837,
-    "task_id": "default",
-    "session_key": "agent:main:telegram:dm:8944451892",
-    "watcher_platform": "",
-    "watcher_chat_id": "",
-    "watcher_user_id": "",
-    "watcher_user_name": "",
-    "watcher_thread_id": "",
-    "watcher_message_id": "",
-    "watcher_interval": 0,
-    "notify_on_complete": false,
-    "watch_patterns": []
-  },
-  {
     "session_id": "proc_c68cd5faad7f",
     "command": "python3 /home/hermes/cuidarvc/squad/community/hook-zernio.py >> /home/hermes/cuidarvc/squad/community/hook-stdout.log 2>&1",
     "pid": 253921,

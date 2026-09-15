@@ -5,7 +5,7 @@ Estrategia v0 (conservadora, BTC/Kraken): comprar recuo de 1.5% vs media 6h,
 realizar lucro +1.5%, cortar prejuizo -2%, freio diario se perda acumulada > $150.
 Estado em state.json. nada disso toca dinheiro real.
 """
-import json, sys, time, urllib.request
+import json, sys, os, time, urllib.request
 from datetime import datetime, timezone, timedelta
 
 BASE = "/home/hermes/trader-sandbox"
@@ -30,6 +30,25 @@ def preco_btc():
     r = json.load(urllib.request.urlopen(req, timeout=20))
     return float(r["result"]["XXBTZUSD"]["c"][0])
 
+PM_PROBE = "/home/hermes/.hermes/scripts/pm_probe.py"
+
+def probe_polymarket():
+    """Leitura READ-ONLY do horario BTC na Polymarket (SDK oficial, sem chave)."""
+    import subprocess
+    candidatos = [f"{BASE}/.venv/bin/python", sys.executable]
+    for py in candidatos:
+        if not os.path.exists(py):
+            continue
+        try:
+            r = subprocess.run([py, PM_PROBE], capture_output=True,
+                               text=True, timeout=120)
+            if r.returncode == 0 and r.stdout.strip().startswith("{"):
+                d = json.loads(r.stdout)
+                return d if isinstance(d, dict) else {"found": False}
+        except Exception as e:
+            print(f"PM probe ({py}) falhou: {e}", file=sys.stderr)
+    return {"found": False}
+
 def carregar():
     try:
         with open(STATE) as f:
@@ -53,6 +72,14 @@ def tick():
         return
     s["history"].append([int(time.time()), p])
     s["history"] = s["history"][-672:]  # 7 dias em ciclos de 15min
+    pm = probe_polymarket()
+    if pm.get("found"):
+        ph = s.setdefault("pm_history", [])
+        ph.append([int(time.time()), pm.get("slug", ""), pm.get("up"), pm.get("down")])
+        s["pm_history"] = ph[-96:]  # 24h de horario em ciclos de 15min
+        pm_txt = f" | PM {pm.get('title','')[:36]} Up={pm.get('up')} Down={pm.get('down')}"
+    else:
+        pm_txt = " | PM off"
     m6 = media(s, 24)  # 6h = 24 ciclos de 15min
     t = agora()
     hh = t.hour * 60 + t.minute
@@ -65,7 +92,7 @@ def tick():
 
     if perda_dia <= FREIO_DIA:
         s["halt_date"] = hoje()
-    print(f"tick {linha} pnl_dia {perda_dia:+.2f} halt {s['halt_date'] == hoje()}")
+    print(f"tick {linha}{pm_txt} pnl_dia {perda_dia:+.2f} halt {s['halt_date'] == hoje()}")
 
     if s["halt_date"] == hoje():
         salvar(s); return
@@ -109,6 +136,13 @@ def report():
         print(f"Operações de hoje: {len(trades_dia)} | resultado do dia {perda_dia:+.2f}")
     if s["halt_date"] == hoje():
         print("Freio diário ATIVO (perdeu o limite do dia — parado até amanhã)")
+    ph = s.get("pm_history") or []
+    if ph:
+        ts, slug, up, dn = ph[-1]
+        mt = datetime.fromtimestamp(int(ts),
+                                    timezone(timedelta(hours=-3)))  # Brasília
+        print(f"Polymarket horário BTC (leitura {mt:%d/%m %H:%M} Bsb): "
+              f"Up={up} Down={dn} [{slug}]")
     if not s["trades"] and not s["pos"]:
         print("Ainda sem operações — aguardando gatilho de preço.")
 

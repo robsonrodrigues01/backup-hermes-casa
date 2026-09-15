@@ -1,0 +1,42 @@
+2026-09-15 03:21:18,399 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:21:18,848 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:21:19,167 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:21:19,333 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:24:26,336 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:24:26,382 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:24:51,891 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool terminal returned error (0.10s): {"output": "", "exit_code": 1, "error": null}
+2026-09-15 03:26:09,723 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:26:15,128 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool delegate_task returned error (5.46s): {"results": [{"task_index": 0, "status": "failed", "summary": "", "api_calls": 3, "duration_seconds": 3.66, "model": "glm-5.3-flash", "exit_reason": "max_iterations", "tokens": {"input": 5037, "output
+2026-09-15 03:26:17,295 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:29:28,904 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool terminal returned error (120.22s): {"output": "== archive.ph ==\nHTTP 000 size 0\n== archive.today ==\nHTTP 000 size 0", "exit_code": 28, "error": null}
+2026-09-15 03:30:15,832 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:30:15,832 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:30:17,088 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:32:07,894 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:32:07,895 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:32:09,893 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:32:33,211 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool terminal returned error (1.14s): {"output": "Traceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\nTypeError: PublicClient.list_events() got an unexpected keyword argument 'active'", "exit_code": 1, "error": nu
+2026-09-15 03:33:19,164 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool terminal returned error (42.29s): {"output": "Traceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\n  File \"/home/hermes/trader-sandbox/.venv/lib/python3.12/site-packages/polymarket/pagination.py\", line 98, in
+2026-09-15 03:34:09,833 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool terminal returned error (48.29s): {"output": "Traceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\n  File \"/home/hermes/trader-sandbox/.venv/lib/python3.12/site-packages/polymarket/pagination.py\", line 98, in
+2026-09-15 03:34:43,951 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool terminal returned error (1.15s): {"output": "celeiro: Bitcoin Up or Down - September 15, 4AM ET | slug: bitcoin-up-or-down-september-15-2026-4am-et\nmerket: Bitcoin Up or Down - September 15, 4AM ET\nTraceback (most recent call last)
+2026-09-15 03:34:49,936 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool terminal returned error (1.15s): {"output": "mercado: Bitcoin Up or Down - September 15, 4AM ET\nTraceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\nAttributeError: 'tuple' object has no attribute 'token_id'"
+2026-09-15 03:35:00,968 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:36:51,758 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:36:51,759 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:36:53,055 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:36:53,092 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:38:16,080 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:38:16,081 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:38:17,354 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:39:51,099 WARNING agent.lsp.servers: bash-language-server: shellcheck not found on PATH — diagnostics will be empty until shellcheck is installed (apt: shellcheck, brew: shellcheck, scoop: shellcheck).
+2026-09-15 03:39:57,345 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool cronjob returned error (0.00s): {"error": "Script path must be relative to ~/.hermes/scripts/. Got absolute or home-relative path: '/home/hermes/.hermes/scripts/sandbox-tick.sh'. Place scripts in ~/.hermes/scripts/ and use just the 
+2026-09-15 03:40:21,486 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool patch returned error (0.02s): {"success": false, "error": "old_string and new_string are identical"}
+2026-09-15 03:40:26,844 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:41:14,321 WARNING [20260915_032116_024911bd] agent.tool_executor: Tool skill_manage returned error (0.00s): {"error": "file_content is required for 'write_file'.", "success": false}
+2026-09-15 03:45:07,045 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:45:07,046 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:45:09,081 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:58:25,636 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:58:25,637 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:58:27,942 WARNING [20260915_032116_024911bd] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:59:36,228 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth

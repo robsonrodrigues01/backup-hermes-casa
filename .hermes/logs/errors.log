@@ -12636,3 +12636,4 @@ RuntimeError: Could not determine home directory.
 2026-09-15 03:19:05,701 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:19:05,702 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:19:07,694 WARNING [20260914_223605_8297df] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:20:28,332 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth

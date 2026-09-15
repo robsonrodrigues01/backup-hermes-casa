@@ -1,33 +1,25 @@
 {
   "version": 1,
   "manifest": {
+    "devops/agente-bot-telegram/SKILL.md": [
+      1789161729431077054,
+      7392
+    ],
+    "devops/dev-cuidarvc/SKILL.md": [
+      1789439175273445019,
+      7023
+    ],
+    "devops/ops-briefing-cuidarvc/SKILL.md": [
+      1789426976240636607,
+      5855
+    ],
     "graphic-design/SKILL.md": [
-      1789426151690346119,
+      1789426157058426378,
       6669
     ],
-    "infraestrutura/caddy-exposicao-publica/SKILL.md": [
-      1789262788418967657,
-      14036
-    ],
-    "infraestrutura/delegar-codigo-grande/SKILL.md": [
-      1789254150921642474,
-      9993
-    ],
-    "infraestrutura/gatilho-instantaneo-cron/SKILL.md": [
-      1789271021616988688,
-      5629
-    ],
-    "infraestrutura/gatilho-webhook-agentes/SKILL.md": [
-      1789391504791797257,
-      4834
-    ],
-    "infraestrutura/mcp-servidores-hermes/SKILL.md": [
-      1789428420726244718,
-      10154
-    ],
-    "infraestrutura/radar-cuidarvc/SKILL.md": [
-      1789423888690631585,
-      16238
+    "i-have-adhd/SKILL.md": [
+      1789151399922193713,
+      7207
     ],
     "marketing/ai-seo/SKILL.md": [
       1788967788008945440,
@@ -132,6 +124,45 @@
   },
   "skills": [
     {
+      "skill_name": "agente-bot-telegram",
+      "category": "devops",
+      "frontmatter_name": "agente-bot-telegram",
+      "description": "Quando o usuário pedir para colocar um agente ou subagent...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "dev-cuidarvc",
+      "category": "devops",
+      "frontmatter_name": "dev-cuidarvc",
+      "description": "Playbook técnico do cuidar.vc para a squad tech (CTO, Dev...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "ops-briefing-cuidarvc",
+      "category": "devops",
+      "frontmatter_name": "ops-briefing-cuidarvc",
+      "description": "Runbook do briefing operacional diário do cuidar.vc (cron...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
       "skill_name": "graphic-design",
       "category": "graphic-design",
       "frontmatter_name": "Graphic Design",
@@ -145,75 +176,10 @@
       }
     },
     {
-      "skill_name": "caddy-exposicao-publica",
-      "category": "infraestrutura",
-      "frontmatter_name": "caddy-exposicao-publica",
-      "description": "Expor serviços locais da VM publicamente via Caddy (admin...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "delegar-codigo-grande",
-      "category": "infraestrutura",
-      "frontmatter_name": "delegar-codigo-grande",
-      "description": "Delegar geração de código GRANDE (arquivos novos de cente...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "gatilho-instantaneo-cron",
-      "category": "infraestrutura",
-      "frontmatter_name": "gatilho-instantaneo-cron",
-      "description": "Fazer agente cron do Hermes responder em minutos via webh...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "gatilho-webhook-agentes",
-      "category": "infraestrutura",
-      "frontmatter_name": "gatilho-webhook-agentes",
-      "description": "Disparar agentes cron do Hermes NA HORA via webhook exter...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "mcp-servidores-hermes",
-      "category": "infraestrutura",
-      "frontmatter_name": "mcp-servidores-hermes",
-      "description": "Instalar, autenticar e manter servidores MCP remotos (HTT...",
-      "platforms": [],
-      "conditions": {
-        "fallback_for_toolsets": [],
-        "requires_toolsets": [],
-        "fallback_for_tools": [],
-        "requires_tools": []
-      }
-    },
-    {
-      "skill_name": "radar-cuidarvc",
-      "category": "infraestrutura",
-      "frontmatter_name": "radar-cuidarvc",
-      "description": "Operar, ajustar e auditar o Agente 8 'Radar' do cuidar.vc...",
+      "skill_name": "i-have-adhd",
+      "category": "i-have-adhd",
+      "frontmatter_name": "i-have-adhd",
+      "description": "Shape output for a reader with ADHD: lead with the next a...",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],

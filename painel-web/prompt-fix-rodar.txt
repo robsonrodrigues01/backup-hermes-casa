@@ -1,0 +1,18 @@
+Missão: correção cirúrgica em UM arquivo, mudança mínima. Não reforme nada além do descrito.
+
+Arquivo alvo: /home/hermes/cuidarvc/squad/dashboard/dashboard-novo.py (painel do CMO, app Python puro que gera HTML+JS embutido, servidor em 127.0.0.1:8800).
+
+Problema reportado pelo fundador: ao clicar "rodar agora" em um agente, parece que nada acontece. A função rodar() (linha ~1159) desabilita o botão, muda o texto para "disparando" e escreve o feedback em $('acao-msg'), um elemento que fica FORA da vista do usuário quando ele clica (está no topo da página, o usuário está olhando o card do agente). Resultado: disparo funciona no servidor, mas o usuário não vê nenhuma confirmação e o botão fica travado em "disparando" até o carrega() de 5s.
+
+Faça EXATAMENTE isto, alterando somente a função rodar() (linhas 1159-1165), sem mexer em nada além dela:
+
+1. Mantenha btn.disabled=true e btn.textContent='disparando'.
+2. Após o fetch ter sucesso (j.ok!==false e status 2xx): btn.disabled=false e btn.textContent='disparado: agente indo'.
+3. Após o fetch com erro (catch ou j.ok===false): btn.disabled=false e btn.textContent='falhou, tente de novo'.
+4. O texto do botão volta para "rodar agora" no próximo carrega() automaticamente (a lista é re-renderizada), então NÃO precisa de timer para restaurar o texto.
+5. NÃO remova nem esconda $('acao-msg') — apenas não dependa dela como única forma de feedback. Deixe-a recebendo j.msg como está hoje.
+6. Em caso de erro de rede (catch), mantenha 'falha ao disparar, tente de novo' em $('acao-msg') E o estado do botão da regra 3.
+
+Não: não mexa no endpoint Python (api/acao), não mexa em decidir(), não mexa em CSS, HTML ou qualquer outra função, não renomeie variáveis, não reformate o arquivo, não troca travessão por hífen em outro lugar. Mudança esperada: cerca de 8-12 linhas alteradas dentro de rodar().
+
+Verificação que você deve fazer antes de terminar: o arquivo continua um app Python válido (python3 -c "import ast; ast.parse(open('/home/hermes/cuidarvc/squad/dashboard/dashboard-novo.py',encoding='utf-8').read())" precisa passar) e o JS embutido continua válido visualmente (contagem de chaves/parênteses da função rodar).

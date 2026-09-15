@@ -756,3 +756,8 @@ telegram.error.RetryAfter: Flood control exceeded. Retry in 238 seconds
 2026-09-15 01:11:20,047 WARNING gateway.platforms.telegram: [Telegram] Telegram polling reconnect failed: Timed out
 2026-09-15 01:11:20,047 WARNING gateway.platforms.telegram: [Telegram] Telegram network error (attempt 3/10), reconnecting in 20s. Error: Timed out
 2026-09-15 01:11:40,538 INFO gateway.platforms.telegram: [Telegram] Telegram polling resumed after network error (attempt 3)
+2026-09-15 03:41:05,934 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (143 chars)
+2026-09-15 03:41:05,936 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='claudete, voce tem que se mexer minha filha, o que vamos faze mais pra bombar es'
+2026-09-15 03:44:30,870 INFO [20260914_220952_841676e3] gateway.run: Session split detected: 20260914_220952_841676e3 → 20260915_034135_6bb37b (compression)
+2026-09-15 03:44:31,848 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:44:31,849 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=205.9s api_calls=5 response=1465 chars
