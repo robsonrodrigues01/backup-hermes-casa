@@ -12631,3 +12631,8 @@ RuntimeError: Could not determine home directory.
 2026-09-15 03:13:03,732 WARNING [20260914_152119_8f5d651e] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:14:03,107 WARNING [20260914_223605_8297df] agent.tool_executor: Tool cronjob returned error (0.00s): {"error": "Script path must be relative to ~/.hermes/scripts/. Got absolute or home-relative path: '/home/hermes/trader-sandbox/trader-sandbox.py'. Place scripts in ~/.hermes/scripts/ and use just the
 2026-09-15 03:14:04,108 WARNING [20260914_223605_8297df] agent.tool_executor: Tool cronjob returned error (0.00s): {"error": "Script path must be relative to ~/.hermes/scripts/. Got absolute or home-relative path: '/home/hermes/trader-sandbox/trader-sandbox.py'. Place scripts in ~/.hermes/scripts/ and use just the
+2026-09-15 03:14:19,904 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:15:30,870 WARNING agent.message_sanitization: Unrepairable tool_call arguments for skill_manage — replaced with empty object (was: {"action": "create", "category": "estrategia", "content": "---\nname: piloto-san)
+2026-09-15 03:19:05,701 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:19:05,702 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:19:07,694 WARNING [20260914_223605_8297df] hermes_cli.config: providers.vultr: unknown config keys ignored: auth

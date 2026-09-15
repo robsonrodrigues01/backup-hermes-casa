@@ -11,41 +11,63 @@
 html,body{overflow-x:hidden}
 body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);min-height:100vh;background:radial-gradient(1400px 700px at 50% -240px,#3b2717 0%,#171009 58%,#0c0806 100%)}
 
-/* ---------- page chrome ---------- */
-.top{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 18px;background:rgba(16,11,7,.86);backdrop-filter:blur(8px);border-bottom:1px solid #3a2a1c}
+/* ---------- page chrome (mobile first) ---------- */
+.top{position:sticky;top:0;z-index:50;background:rgba(14,10,7,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,220,170,.08)}
+.top-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px}
 .brand{display:flex;align-items:center;gap:10px;min-width:0}
-.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,#ffd27a,#e98a3b);display:grid;place-items:center;box-shadow:0 4px 14px rgba(233,138,59,.35)}
+.logo{flex:none;width:34px;height:34px;border-radius:10px;background:linear-gradient(140deg,#ffd27a,#e98a3b);display:grid;place-items:center;box-shadow:0 4px 14px rgba(233,138,59,.35)}
 .logo i{position:relative;width:14px;height:14px;background:#fff;transform:rotate(45deg) translate(2px,2px);border-radius:2px}
 .logo i::before,.logo i::after{content:"";position:absolute;width:14px;height:14px;background:#fff;border-radius:50%}
 .logo i::before{left:-7px;top:0}.logo i::after{left:0;top:-7px}
-.wordmark{font-size:21px;font-weight:800;letter-spacing:-.3px;color:#fff4e2}
+.wordmark{font-size:19px;font-weight:800;letter-spacing:-.3px;color:#fff4e2}
 .wordmark b{color:var(--gold);font-weight:800}
-.brand .sep{width:1px;height:22px;background:#4a3726}
-.brand .sub{font-size:13px;color:var(--muted);white-space:nowrap}
-.hr{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.live{display:flex;align-items:center;gap:7px;font-size:12px;color:#cfe9d8;background:#15251b;border:1px solid #2c5a3c;border-radius:20px;padding:5px 11px;white-space:nowrap}
-.live i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:pulse 1.8s ease-in-out infinite}
+.brand .sep{display:none;width:1px;height:22px;background:#4a3726}
+.brand .sub{display:none;font-size:13px;color:var(--muted);white-space:nowrap}
+.hr{display:flex;align-items:center;gap:8px}
+.live{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;color:#cfe9d8;background:rgba(34,197,94,.10);border:1px solid rgba(74,222,128,.28);border-radius:999px;padding:5px 10px;white-space:nowrap}
+.live i{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:pulse 1.8s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.35}}
-.clock{font-variant-numeric:tabular-nums;font-size:13px;background:#21170f;border:1px solid #3d2d1f;border-radius:10px;padding:5px 11px;white-space:nowrap}
-.clock b{color:var(--gold);font-weight:700;margin-right:6px}
-main{max-width:1240px;margin:0 auto;padding:16px 12px 0}
-.stage-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
-.stage-head h1{font-size:20px;font-weight:750;color:#fff2de}
-.stage-head p{font-size:13px;color:var(--muted);margin-top:2px}
+.clock{font-variant-numeric:tabular-nums;font-size:12.5px;background:rgba(255,240,220,.05);border:1px solid rgba(255,220,170,.12);border-radius:999px;padding:5px 11px;white-space:nowrap}
+.clock b{display:none;color:var(--gold);font-weight:700;margin-right:6px}
+main{max-width:1240px;margin:0 auto;padding:18px 12px 0;display:grid;gap:28px}
+.stage-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.stage-head h1{font-size:20px;font-weight:750;letter-spacing:-.2px;line-height:1.2;color:#fff2de}
+.stage-head p{font-size:13px;line-height:1.45;color:var(--muted);margin-top:4px}
 .btn{font:600 13px system-ui,sans-serif;color:#1c130b;background:linear-gradient(180deg,#ffd48a,#e9a54b);border:0;border-radius:10px;padding:8px 14px;cursor:pointer;box-shadow:0 4px 14px rgba(233,165,75,.3);white-space:nowrap}
 .btn:active{transform:translateY(1px)}
-.fitwrap{position:relative;width:100%;overflow:hidden;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 0 1px #3a2a1c}
+.fitwrap{position:relative;width:100%;overflow:hidden;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,220,170,.10)}
 .fitwrap.zoomed{cursor:grab;touch-action:none}
 .fitwrap.dragging{cursor:grabbing}
 .scenebox{position:absolute;left:0;top:0;width:1200px;height:780px;transform-origin:0 0}
-.hint{font-size:12px;color:#8e7c69;text-align:center;margin:10px 0 0}
-.dash{margin:30px 0 0}
-.dash-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
-.dash-head h2{font-size:18px;color:#fff2de}
-.dash-head a{font-size:12px;color:var(--gold);text-decoration:none;border:1px solid #6b4f2c;border-radius:9px;padding:6px 11px;white-space:nowrap}
-.dash iframe{display:block;width:100%;height:900px;border:0;border-radius:16px;background:#15100b;box-shadow:0 16px 40px rgba(0,0,0,.45),0 0 0 1px #3a2a1c}
-@media(max-width:640px){.dash iframe{height:1100px}.brand .sep,.brand .sub{display:none}.top{padding:9px 12px}.stage-head h1{font-size:17px}}
-footer{max-width:1240px;margin:28px auto 0;padding:16px 12px 22px;border-top:1px solid #2a1f16;font-size:12px;color:#7d6c5b;text-align:center}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#d9c7b0;background:rgba(255,240,220,.04);border:1px solid rgba(255,220,170,.10);border-radius:999px;padding:5px 11px}
+.legend i{width:8px;height:8px;border-radius:50%;background:var(--k);box-shadow:0 0 8px var(--k)}
+.hint{font-size:12px;color:#8e7c69;text-align:center;margin-top:10px}
+.gcard{position:relative;padding:14px;border-radius:22px;background:linear-gradient(160deg,rgba(255,236,210,.08),rgba(255,236,210,.02) 45%,rgba(255,236,210,.05));border:1px solid rgba(255,220,170,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 24px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,240,220,.10)}
+.gcard-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:2px 2px 12px}
+.gcard-title{display:flex;align-items:center;gap:10px}
+.gcard h2{font-size:17px;font-weight:750;color:#fff2de}
+.badge-live{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.3px;color:#bbf7d0;background:rgba(34,197,94,.12);border:1px solid rgba(74,222,128,.3);border-radius:999px;padding:3px 9px}
+.badge-live i{position:relative;display:block;width:7px;height:7px;border-radius:50%;background:#4ade80}
+.badge-live i::after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border-radius:50%;background:#4ade80;animation:ping 1.6s cubic-bezier(0,0,.2,1) infinite}
+@keyframes ping{75%,100%{transform:scale(2.6);opacity:0}}
+.gcard-link{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--gold);text-decoration:none;padding:7px 12px;border-radius:10px;border:1px solid rgba(255,200,97,.28);background:rgba(255,200,97,.06);white-space:nowrap}
+.gcard-link:hover{background:rgba(255,200,97,.14)}
+.gcard-link svg{width:13px;height:13px}
+.gcard-frame{border-radius:16px;overflow:hidden;background:#0f0b08;border:1px solid rgba(255,220,170,.10)}
+.gcard iframe{display:block;width:100%;height:55vh;min-height:340px;border:0;background:#0f0b08}
+footer{max-width:1240px;margin:36px auto 0;padding:18px 12px 26px;border-top:1px solid rgba(255,220,170,.07);display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:#7d6c5b}
+footer .dot{width:3px;height:3px;border-radius:50%;background:#5a4a3b}
+@media(min-width:720px){
+ .top-in{padding:12px 20px}.wordmark{font-size:21px}
+ .brand .sep,.brand .sub{display:block}.clock b{display:inline}
+ main{padding:28px 20px 0;gap:38px}
+ .stage-head h1{font-size:24px}.stage-head p{font-size:14px}
+ .fitwrap{border-radius:22px}
+ .gcard{padding:20px}.gcard h2{font-size:19px}
+ .gcard iframe{height:65vh}
+}
 
 /* ---------- 3D scene ---------- */
 .viewport{position:absolute;left:0;top:0;width:1200px;height:780px;overflow:hidden;perspective:1600px;perspective-origin:50% 16%;background:linear-gradient(180deg,#120b07 0%,#24160d 40%,#2d1c10 100%)}
@@ -284,66 +306,86 @@ footer{max-width:1240px;margin:28px auto 0;padding:16px 12px 22px;border-top:1px
 .shelf>.f.t,.shelf>.f.w,.shelf>.f.s{background:#3e2716}
 .rug{border-radius:10px;background:repeating-linear-gradient(90deg,#0000 0 18px,rgba(255,255,255,.06) 18px 20px),radial-gradient(closest-side,#b3563a,#8a3b27);box-shadow:inset 0 0 0 6px #e5c38e,inset 0 0 0 9px #8a3b27}
 
-/* agents */
+/* agents: chibi figures, billboard facing the camera */
 .agent{left:0;top:0;width:0;height:0;transform-style:preserve-3d;will-change:transform}
-.agent .ash{left:-19px;top:-8px;width:38px;height:16px;border-radius:50%;background:radial-gradient(closest-side,rgba(30,14,4,.5),rgba(30,14,4,0))}
-.agent .fig{left:-24px;top:-96px;width:48px;height:96px;transform-origin:50% 100%;transform:rotateX(-90deg) scale(1.18);cursor:pointer}
-.fig .bw{left:0;top:0;width:100%;height:100%}
-.fig .leg{bottom:5px;width:9px;height:32px;background:var(--p);border-radius:3px 3px 1px 1px;transform-origin:50% 0;box-shadow:inset -3px 0 0 rgba(0,0,0,.18)}
-.fig .leg::after{content:"";position:absolute;left:-1px;bottom:-5px;width:12px;height:6px;border-radius:5px 6px 2px 2px;background:#211c18}
-.fig .leg.l{left:14px}.fig .leg.r{left:25px}
-.fig .torso{left:10px;bottom:34px;width:28px;height:30px;border-radius:11px 11px 5px 5px;background:var(--c);box-shadow:inset -5px 0 0 rgba(0,0,0,.16),inset 0 -4px 0 rgba(0,0,0,.12)}
-.fig .torso::before{content:"";position:absolute;left:9px;top:0;width:10px;height:7px;background:var(--sk);clip-path:polygon(0 0,100% 0,50% 100%)}
-.fig .arm{bottom:37px;width:7px;height:25px;background:var(--c);border-radius:4px;transform-origin:50% 3px;box-shadow:inset -2px 0 0 rgba(0,0,0,.15)}
-.fig .arm::after{content:"";position:absolute;left:0;bottom:-3px;width:7px;height:7px;border-radius:50%;background:var(--sk)}
-.fig .arm.l{left:5px}.fig .arm.r{left:36px}
-.fig .head{left:11px;bottom:61px;width:26px;height:27px;border-radius:12px 12px 11px 11px;background:var(--sk);box-shadow:inset -4px -2px 0 rgba(0,0,0,.1)}
-.fig .hair{left:-2px;top:-3px;width:30px;height:12px;background:var(--hc);border-radius:15px 15px 5px 5px}
-.fig .eye{top:13px;width:3px;height:4px;border-radius:2px;background:#271b15;animation:blink 5s infinite;animation-delay:var(--bd)}
-.fig .eye.l{left:7px}.fig .eye.r{left:16px}
-.fig .mouth{left:10px;top:20px;width:6px;height:2px;border-radius:0 0 3px 3px;background:#9a4a3a}
-.fig .blush{left:3px;top:17px;width:20px;height:3px;background:radial-gradient(circle at 10% 50%,rgba(240,110,100,.35) 0 2px,#0000 3px),radial-gradient(circle at 90% 50%,rgba(240,110,100,.35) 0 2px,#0000 3px)}
+.agent .ash{left:-22px;top:-9px;width:44px;height:18px;border-radius:50%;background:radial-gradient(closest-side,rgba(25,12,4,.62),rgba(25,12,4,.25) 60%,rgba(25,12,4,0));transform:translateZ(.4px)}
+.agent.sit .ash{left:-26px;width:52px}
+.agent.walk .ash{animation:shad .22s ease-in-out infinite alternate}
+@keyframes shad{to{transform:translateZ(.4px) scale(.84)}}
+.agent .ring{left:-30px;top:-15px;width:60px;height:30px;border-radius:50%;border:3px solid #ffd76a;box-shadow:0 0 16px 2px rgba(255,215,106,.85),inset 0 0 12px rgba(255,215,106,.55);opacity:0;transform:translateZ(.8px);transition:opacity .3s}
+.agent.sel .ring{opacity:1;animation:ring 1.3s ease-in-out infinite}
+@keyframes ring{50%{transform:translateZ(.8px) scale(1.14);box-shadow:0 0 26px 6px rgba(255,215,106,.9),inset 0 0 14px rgba(255,215,106,.6)}}
+.agent.sel .bw{filter:drop-shadow(0 0 3px rgba(255,225,130,1)) drop-shadow(0 0 9px rgba(255,190,80,.75))}
+.agent .fig{left:-28px;top:-100px;width:56px;height:100px;transform-origin:50% 100%;transform:rotateX(-90deg) scale(1.15);cursor:pointer}
+.fig .hit{left:-12px;top:-8px;width:80px;height:112px;border-radius:30px}
+.fig .bw,.fig .up{left:0;top:0;width:100%;height:100%}
+.fig .leg{bottom:4px;width:10px;height:21px;border-radius:4px 4px 2px 2px;transform-origin:50% 2px;background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(0,0,0,0) 40%,rgba(0,0,0,.24)),var(--p)}
+.fig .leg::after{content:"";position:absolute;left:-2px;bottom:-4px;width:14px;height:7px;border-radius:7px 7px 3px 3px;background:linear-gradient(#3a302a,#15110e);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.fig .leg.l{left:17px}.fig .leg.r{left:29px}
+.fig .torso{left:13px;bottom:21px;width:30px;height:28px;border-radius:13px 13px 7px 7px;background:linear-gradient(90deg,rgba(255,255,255,.16),rgba(255,255,255,0) 35%,rgba(0,0,0,0) 65%,rgba(0,0,0,.2)),var(--c);box-shadow:inset 0 -5px 0 rgba(0,0,0,.14)}
+.fig .torso::before{content:"";position:absolute;left:10px;top:0;width:10px;height:8px;background:var(--sk);clip-path:polygon(0 0,100% 0,50% 100%)}
+.fig .torso::after{content:"";position:absolute;left:14px;top:11px;width:2px;height:11px;border-radius:1px;background:rgba(0,0,0,.15)}
+.fig .arm{bottom:25px;width:9px;height:23px;border-radius:5px;transform-origin:50% 4px;background:linear-gradient(90deg,rgba(255,255,255,.12),rgba(0,0,0,.18)),var(--c)}
+.fig .arm::after{content:"";position:absolute;left:0;bottom:-4px;width:9px;height:9px;border-radius:50%;background:var(--sk);box-shadow:inset -1px -1px 0 rgba(0,0,0,.15)}
+.fig .arm.l{left:6px}.fig .arm.r{left:41px}
+.fig .neck{left:23px;bottom:46px;width:10px;height:6px;border-radius:3px;background:var(--sk);box-shadow:inset 0 2px 0 rgba(0,0,0,.14)}
+.fig .head{left:8px;bottom:49px;width:40px;height:38px;border-radius:50% 50% 46% 46%/54% 54% 46% 46%;background:radial-gradient(circle at 38% 34%,rgba(255,255,255,.22),rgba(255,255,255,0) 55%),var(--sk);box-shadow:inset -4px -3px 0 rgba(0,0,0,.08)}
+.fig .ear{top:16px;width:7px;height:10px;border-radius:50%;background:var(--sk);box-shadow:inset 0 0 0 2px rgba(0,0,0,.06)}
+.fig .ear.l{left:-3px}.fig .ear.r{right:-3px}
+.fig .hair{left:-2px;top:-4px;width:44px;height:17px;background:var(--hc);border-radius:22px 22px 8px 8px/20px 20px 8px 8px;box-shadow:inset 0 3px 0 rgba(255,255,255,.1)}
+.fig .brow{top:14px;width:8px;height:2px;border-radius:2px;background:var(--hc);opacity:.85}
+.fig .brow.l{left:9px}.fig .brow.r{left:23px}
+.fig .eye{top:18px;width:6px;height:7px;border-radius:3px;background:radial-gradient(circle at 35% 30%,#fff 0 1.1px,#241812 1.5px);animation:blink 5s infinite;animation-delay:var(--bd)}
+.fig .eye.l{left:10px}.fig .eye.r{left:24px}
+.fig .mouth{left:16px;top:27px;width:8px;height:4px;border-bottom:2px solid #8a3b2e;border-radius:0 0 8px 8px}
+.fig .blush{left:4px;top:25px;width:32px;height:5px;background:radial-gradient(circle at 8% 50%,rgba(240,110,100,.4) 0 2.5px,#0000 3.5px),radial-gradient(circle at 92% 50%,rgba(240,110,100,.4) 0 2.5px,#0000 3.5px)}
 @keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
-.h-long .hair::after{content:"";position:absolute;left:0;top:6px;width:30px;height:28px;border-radius:4px 4px 8px 8px;background:linear-gradient(90deg,var(--hc) 0 5px,#0000 5px 25px,var(--hc) 25px)}
-.h-bun .hair::before{content:"";position:absolute;left:9px;top:-8px;width:12px;height:11px;border-radius:50%;background:var(--hc)}
-.h-curly .hair{left:-4px;top:-6px;width:34px;height:17px;background:radial-gradient(circle at 18% 62%,var(--hc) 0 6px,#0000 6.5px),radial-gradient(circle at 50% 45%,var(--hc) 0 9px,#0000 9.5px),radial-gradient(circle at 82% 62%,var(--hc) 0 6px,#0000 6.5px)}
-.agent.back.h-curly .hair{background:var(--hc);left:-2px;width:30px}
-.h-pony .hair::after{content:"";position:absolute;right:-6px;top:4px;width:9px;height:22px;border-radius:5px 5px 9px 9px;background:var(--hc)}
-.h-bald .hair{height:5px;top:-1px;opacity:.7}
-.a-glasses .head::after{content:"";position:absolute;left:3px;top:10px;width:20px;height:9px;background:radial-gradient(circle at 25% 50%,#0000 0 2.6px,#1c1c1c 2.8px 3.8px,#0000 4px),radial-gradient(circle at 75% 50%,#0000 0 2.6px,#1c1c1c 2.8px 3.8px,#0000 4px),linear-gradient(#1c1c1c,#1c1c1c) 50% 45%/4px 1px no-repeat}
-.a-headset .head::before{content:"";position:absolute;left:-4px;top:-5px;width:34px;height:22px;border:3px solid #1f2937;border-bottom:0;border-radius:18px 18px 0 0;box-shadow:inset 0 0 0 0 #000}
-.a-headset .head::after{content:"";position:absolute;left:-5px;top:12px;width:7px;height:10px;border-radius:3px;background:#111827;box-shadow:29px 0 0 #111827}
-.a-beret .hair::before{content:"";position:absolute;left:-3px;top:-6px;width:32px;height:11px;border-radius:50% 60% 40% 40%;background:#b91c1c;transform:rotate(-8deg)}
-.a-cap .hair::before{content:"";position:absolute;left:-1px;top:-3px;width:28px;height:11px;border-radius:14px 14px 0 0;background:#1d4ed8}
-.a-cap .hair::after{content:"";position:absolute;left:18px;top:6px;width:16px;height:4px;border-radius:3px;background:#1e40af}
-.crown{left:13px;bottom:84px;width:22px;height:14px;background:linear-gradient(180deg,#fff2a8,#f5b82e 55%,#b7791f);clip-path:polygon(0 100%,0 25%,22% 60%,50% 0,78% 60%,100% 25%,100% 100%);filter:drop-shadow(0 0 3px rgba(255,200,60,.9))}
+.h-long .hair::after{content:"";position:absolute;left:0;top:8px;width:44px;height:34px;border-radius:6px 6px 12px 12px;background:linear-gradient(90deg,var(--hc) 0 7px,#0000 7px 37px,var(--hc) 37px)}
+.h-bun .hair::before{content:"";position:absolute;left:14px;top:-10px;width:16px;height:14px;border-radius:50%;background:var(--hc)}
+.h-curly .hair{left:-5px;top:-8px;width:50px;height:22px;background:radial-gradient(circle at 16% 64%,var(--hc) 0 8px,#0000 8.5px),radial-gradient(circle at 34% 40%,var(--hc) 0 9px,#0000 9.5px),radial-gradient(circle at 50% 46%,var(--hc) 0 11px,#0000 11.5px),radial-gradient(circle at 66% 40%,var(--hc) 0 9px,#0000 9.5px),radial-gradient(circle at 84% 64%,var(--hc) 0 8px,#0000 8.5px);box-shadow:none}
+.agent.back.h-curly .hair{background:var(--hc);left:-2px;width:44px}
+.h-pony .hair::after{content:"";position:absolute;right:-8px;top:6px;width:11px;height:26px;border-radius:6px 6px 11px 11px;background:var(--hc)}
+.h-bald .hair{left:6px;width:28px;height:7px;top:-1px;opacity:.7}
+.a-glasses .head::after{content:"";position:absolute;left:6px;top:15px;width:28px;height:13px;background:radial-gradient(circle at 25% 50%,#0000 0 4px,#1c1c1c 4.3px 5.5px,#0000 5.8px),radial-gradient(circle at 75% 50%,#0000 0 4px,#1c1c1c 4.3px 5.5px,#0000 5.8px),linear-gradient(#1c1c1c,#1c1c1c) 50% 45%/6px 1.5px no-repeat}
+.a-headset .head::before{content:"";position:absolute;left:-5px;top:-7px;width:50px;height:26px;border:3px solid #1f2937;border-bottom:0;border-radius:26px 26px 0 0;z-index:2}
+.a-headset .head::after{content:"";position:absolute;left:-6px;top:14px;width:8px;height:12px;border-radius:4px;background:#111827;box-shadow:44px 0 0 #111827;z-index:2}
+.a-beret .hair::before{content:"";position:absolute;left:-4px;top:-8px;width:48px;height:14px;border-radius:50% 60% 40% 40%;background:#b91c1c;transform:rotate(-8deg)}
+.a-cap .hair::before{content:"";position:absolute;left:-1px;top:-4px;width:46px;height:14px;border-radius:23px 23px 0 0;background:#1d4ed8}
+.a-cap .hair::after{content:"";position:absolute;left:28px;top:8px;width:24px;height:5px;border-radius:3px;background:#1e40af}
+.crown{left:17px;bottom:84px;width:22px;height:14px;background:linear-gradient(180deg,#fff2a8,#f5b82e 55%,#b7791f);clip-path:polygon(0 100%,0 25%,22% 60%,50% 0,78% 60%,100% 25%,100% 100%);filter:drop-shadow(0 0 3px rgba(255,200,60,.9))}
 .crown::after{content:"";position:absolute;left:9px;bottom:3px;width:4px;height:4px;border-radius:50%;background:#e11d48}
-.agent.back .eye,.agent.back .mouth,.agent.back .blush,.agent.back .head::after{display:none}
-.agent.back .hair{height:calc(100% + 3px);border-radius:13px 13px 10px 10px}
+.agent.back .eye,.agent.back .mouth,.agent.back .blush,.agent.back .brow,.agent.back .head::after{display:none}
+.agent.back .hair{height:calc(100% + 4px);border-radius:22px 22px 16px 16px}
 .agent.flip .bw{transform:scaleX(-1)}
-.agent.walk .leg.l{animation:swing .42s ease-in-out infinite}
-.agent.walk .leg.r{animation:swing .42s ease-in-out infinite reverse}
-.agent.walk .arm.l{animation:swing .42s ease-in-out infinite reverse}
-.agent.walk .arm.r{animation:swing .42s ease-in-out infinite}
-.agent.walk .bw{animation:bob .21s ease-in-out infinite alternate}
-.agent.walk.flip .bw{animation-name:bobf}
-@keyframes swing{0%,100%{transform:rotate(20deg)}50%{transform:rotate(-20deg)}}
+/* walking: alternate steps, foot lifts on the pass, arms counter swing */
+.agent.walk .leg.l{animation:stepL .44s linear infinite}
+.agent.walk .leg.r{animation:stepR .44s linear infinite}
+.agent.walk .arm.l{animation:armA .44s ease-in-out infinite}
+.agent.walk .arm.r{animation:armB .44s ease-in-out infinite}
+.agent.walk .up{animation:bob .22s ease-in-out infinite alternate}
+@keyframes stepL{0%,100%{transform:rotate(24deg)}25%{transform:translateY(-3px) rotate(0)}50%{transform:rotate(-24deg)}75%{transform:rotate(0)}}
+@keyframes stepR{0%,100%{transform:rotate(-24deg)}25%{transform:rotate(0)}50%{transform:rotate(24deg)}75%{transform:translateY(-3px) rotate(0)}}
+@keyframes armA{0%,100%{transform:rotate(-22deg)}50%{transform:rotate(22deg)}}
+@keyframes armB{0%,100%{transform:rotate(22deg)}50%{transform:rotate(-22deg)}}
 @keyframes bob{from{transform:translateY(0)}to{transform:translateY(-2px)}}
-@keyframes bobf{from{transform:scaleX(-1) translateY(0)}to{transform:scaleX(-1) translateY(-2px)}}
-.agent.idle .bw{animation:breathe 3s ease-in-out infinite}
+.agent.idle .up{animation:breathe 3s ease-in-out infinite}
 @keyframes breathe{50%{transform:translateY(-1px)}}
+/* working: seated, hands on the keyboard, gentle typing sway */
 .agent.sit .leg{display:none}
-.agent.sit .torso{bottom:30px}
-.agent.sit .arm{bottom:33px;height:22px}
-.agent.sit .head{bottom:57px}
-.agent.sit .crown{bottom:80px}
-.agent.sit .arm.l{animation:typeL .26s ease-in-out infinite alternate}
-.agent.sit .arm.r{animation:typeR .26s .13s ease-in-out infinite alternate}
+.agent.sit .up{top:6px;animation:typeSway 1.6s ease-in-out infinite}
+.agent.sit .arm{height:20px;bottom:24px;z-index:2}
+.agent.sit .arm.l{animation:typeL .24s ease-in-out infinite alternate}
+.agent.sit .arm.r{animation:typeR .24s .12s ease-in-out infinite alternate}
 .agent.sit .head{animation:nod 5s ease-in-out infinite}
-@keyframes typeL{from{transform:rotate(-24deg)}to{transform:rotate(-34deg)}}
-@keyframes typeR{from{transform:rotate(24deg)}to{transform:rotate(34deg)}}
+@keyframes typeSway{0%,50%,100%{transform:translate(0,0)}25%{transform:translate(.6px,.5px)}75%{transform:translate(-.6px,.5px)}}
+@keyframes typeL{from{transform:rotate(-30deg) scaleY(.9)}to{transform:rotate(-40deg) scaleY(.84) translateY(1px)}}
+@keyframes typeR{from{transform:rotate(30deg) scaleY(.9)}to{transform:rotate(40deg) scaleY(.84) translateY(1px)}}
 @keyframes nod{0%,86%,100%{transform:translateY(0)}90%{transform:translateY(1px) rotate(3deg)}}
-.hanc{left:23px;top:-6px;width:2px;height:2px}
+/* in a chat: stop and look at the visitor */
+.agent.chatting .up,.agent.chatting .head,.agent.chatting .arm{animation:none}
+.agent.chatting.sit .arm.l{transform:rotate(-16deg)}
+.agent.chatting.sit .arm.r{transform:rotate(16deg)}
+.hanc{left:27px;top:-6px;width:2px;height:2px}
 
 /* overlays */
 .grade{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 70% at 50% 45%,rgba(255,180,90,.06),rgba(10,5,2,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 18%)}
@@ -361,18 +403,65 @@ footer{max-width:1240px;margin:28px auto 0;padding:16px 12px 22px;border-top:1px
 .bub b{color:#9a5b12;margin-right:4px}
 .bub.on{opacity:1;transform:scale(1)}
 .bub::after{content:"";position:absolute;left:var(--tx,50%);bottom:-5px;width:10px;height:10px;margin-left:-5px;background:#fffdf7;transform:rotate(45deg)}
+
+/* ---------- chat ---------- */
+body.noscroll{overflow:hidden}
+.chat{position:fixed;left:0;top:0;width:100%;height:100%;z-index:100;display:none;align-items:flex-end;justify-content:center;padding:0 8px 8px;background:rgba(8,5,3,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.chat.open{display:flex;animation:fadeIn .2s ease-out}
+.chat-dlg{position:relative;width:100%;max-width:460px;height:min(640px,92%);display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:linear-gradient(180deg,#2b1e14,#17100a);border:1px solid rgba(255,220,170,.16);box-shadow:0 30px 80px rgba(0,0,0,.6);animation:popUp .3s cubic-bezier(.2,.9,.3,1.15)}
+@keyframes fadeIn{from{opacity:0}}
+@keyframes popUp{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.chat-head{display:flex;align-items:center;gap:12px;padding:14px 14px 12px 16px;background:linear-gradient(180deg,rgba(255,200,120,.10),rgba(255,200,120,0));border-bottom:1px solid rgba(255,220,170,.10)}
+.av{position:relative;flex:none;width:48px;height:48px;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 30%,#4a3524,#24180f);box-shadow:0 0 0 2px var(--c),0 0 18px rgba(255,200,120,.25)}
+.av i{position:absolute;display:block}
+.av .av-body{left:9px;width:30px;bottom:-10px;height:22px;border-radius:14px 14px 0 0;background:var(--c)}
+.av .av-head{left:12px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--sk)}
+.av .av-hair{left:-1px;top:-3px;width:26px;height:11px;border-radius:13px 13px 5px 5px;background:var(--hc)}
+.av .av-eye{top:11px;width:3px;height:4px;border-radius:2px;background:#271b15}
+.av .av-eye.l{left:7px}.av .av-eye.r{left:14px}
+.av .av-mouth{left:9px;top:16px;width:6px;height:3px;border-bottom:2px solid #8a3b2e;border-radius:0 0 6px 6px}
+.chat-who{flex:1;min-width:0}
+.chat-who b{display:block;font-size:16px;color:#fff2de}
+.chat-who span{display:block;font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-who em{display:flex;align-items:center;gap:6px;margin-top:3px;font-style:normal;font-size:11px;color:#86efac;white-space:nowrap;overflow:hidden}
+.chat-who em i{flex:none;width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80}
+.chat-who em span{font-size:11px;color:#86efac}
+.chat-x{flex:none;width:38px;height:38px;border-radius:12px;border:1px solid rgba(255,220,170,.16);background:rgba(255,255,255,.04);color:#f6ecdf;font-size:22px;line-height:1;cursor:pointer}
+.chat-x:hover{background:rgba(255,255,255,.1)}
+.chat-msgs{flex:1;min-height:0;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:8px;overscroll-behavior:contain}
+.msg{display:flex;max-width:84%;animation:msgIn .22s ease-out}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}}
+.msg p{padding:9px 13px;border-radius:16px;font-size:14px;line-height:1.42;overflow-wrap:anywhere}
+.msg.ag{align-self:flex-start}
+.msg.ag p{background:#3a2a1d;color:#f6ecdf;border:1px solid rgba(255,220,170,.10);border-bottom-left-radius:5px}
+.msg.me{align-self:flex-end}
+.msg.me p{background:linear-gradient(180deg,#ffd48a,#e9a54b);color:#1c130b;border-bottom-right-radius:5px}
+.typing p{display:flex;align-items:center;gap:4px;padding:10px 14px;color:#cdb89c;font-size:12.5px}
+.typing span{margin-right:4px}
+.typing i{display:block;width:6px;height:6px;border-radius:50%;background:#d9c3a5;animation:dot 1s ease-in-out infinite}
+.typing i:nth-of-type(2){animation-delay:.15s}.typing i:nth-of-type(3){animation-delay:.3s}
+@keyframes dot{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-4px);opacity:1}}
+.chat-form{display:flex;gap:8px;padding:10px 12px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(255,220,170,.1);background:rgba(0,0,0,.2)}
+.chat-form input{flex:1;min-width:0;font:16px/1.3 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#fff4e2;background:#120d09;border:1px solid #4a3726;border-radius:14px;padding:11px 14px;outline:none}
+.chat-form input::placeholder{color:#8e7c69}
+.chat-form input:focus{border-color:#e9a54b;box-shadow:0 0 0 3px rgba(233,165,75,.2)}
+.chat-form button{flex:none;width:48px;border:0;border-radius:14px;background:linear-gradient(180deg,#ffd48a,#e9a54b);color:#1c130b;cursor:pointer;display:grid;place-items:center}
+.chat-form button svg{width:20px;height:20px}
+@media(min-width:720px){.chat{align-items:center;padding:24px}.chat-dlg{height:min(620px,86%)}}
 </style>
 </head>
 <body>
 <header class="top">
- <div class="brand"><span class="logo" aria-hidden="true"><i></i></span><span class="wordmark">cuidar<b>.vc</b></span><span class="sep"></span><span class="sub">Escritório virtual</span></div>
- <div class="hr"><span class="live"><i></i>13 agentes ativos</span><span class="clock"><b id="dateTxt">hoje</b><span id="clock">--:--:--</span></span></div>
+ <div class="top-in">
+  <div class="brand"><span class="logo" aria-hidden="true"><i></i></span><span class="wordmark">cuidar<b>.vc</b></span><span class="sep"></span><span class="sub">Escritório virtual</span></div>
+  <div class="hr"><span class="live"><i></i><span id="liveTxt">13 agentes ativos</span></span><span class="clock"><b id="dateTxt">hoje</b><span id="clock">--:--:--</span></span></div>
+ </div>
 </header>
 
 <main>
  <section class="stage">
   <div class="stage-head">
-   <div><h1>Escritório virtual</h1><p>A equipe do cuidar.vc trabalhando ao vivo</p></div>
+   <div><span class="eyebrow">Ao vivo agora</span><h1>Escritório virtual</h1><p>A equipe do cuidar.vc trabalhando em tempo real. Toque em alguém para conversar.</p></div>
    <button class="btn" id="zoomBtn" type="button">Ampliar</button>
   </div>
   <div class="fitwrap" id="fitwrap">
@@ -385,16 +474,41 @@ footer{max-width:1240px;margin:28px auto 0;padding:16px 12px 22px;border-top:1px
     </div>
    </div>
   </div>
-  <p class="hint" id="hint">Toque em um agente para ver o que ele está fazendo</p>
+  <div class="legend" aria-label="Legenda da cena">
+   <span style="--k:#f5c451"><i></i>Sala do fundador</span>
+   <span style="--k:#14b8a6"><i></i>Tecnologia</span>
+   <span style="--k:#ec4899"><i></i>Marketing</span>
+   <span style="--k:#22c55e"><i></i>Produto</span>
+   <span style="--k:#f59e0b"><i></i>Mesa de conteúdo</span>
+  </div>
+  <p class="hint" id="hint">Toque em um agente para abrir a conversa</p>
  </section>
 
- <section class="dash">
-  <div class="dash-head"><h2>Painel do CMO</h2><a href="/dash/#hoje" target="_blank" rel="noopener">Abrir em tela cheia</a></div>
-  <iframe src="/dash/#hoje" title="Painel do CMO" loading="lazy"></iframe>
+ <section class="gcard">
+  <div class="gcard-head">
+   <div class="gcard-title"><h2>Painel do CMO</h2><span class="badge-live"><i></i>ao vivo</span></div>
+   <a class="gcard-link" href="/dash/#hoje" target="_blank" rel="noopener">abrir em tela cheia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h4v4M13 3L7.5 8.5M12 9.5V13H3V4h3.5"/></svg></a>
+  </div>
+  <div class="gcard-frame"><iframe src="/dash/#hoje" title="Painel do CMO" loading="lazy"></iframe></div>
  </section>
 </main>
 
-<footer>cuidar.vc · escritório virtual · horário de Brasília</footer>
+<footer><span>cuidar.vc</span><span class="dot"></span><span>escritório virtual</span><span class="dot"></span><span>horário de Brasília</span></footer>
+
+<div class="chat" id="chat">
+ <div class="chat-dlg" id="chatDlg" role="dialog" aria-modal="true" aria-labelledby="chatName">
+  <div class="chat-head">
+   <div class="av" id="chatAv" aria-hidden="true"><i class="av-body"></i><i class="av-head"><i class="av-hair"></i><i class="av-eye l"></i><i class="av-eye r"></i><i class="av-mouth"></i></i></div>
+   <div class="chat-who"><b id="chatName">Agente</b><span id="chatRole">Cargo</span><em><i></i><span id="chatSt">online</span></em></div>
+   <button class="chat-x" id="chatX" type="button" aria-label="Fechar conversa">&times;</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs" aria-live="polite"></div>
+  <form class="chat-form" id="chatForm" autocomplete="off">
+   <input id="chatIn" type="text" maxlength="300" enterkeyhint="send" aria-label="Mensagem">
+   <button type="submit" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7z"/></svg></button>
+  </form>
+ </div>
+</div>
 
 <script>
 (function(){
@@ -598,10 +712,10 @@ function lamp(x,y,z){plane(world,x,y,120,760,'lamp',{center:true,z:z-64}).innerH
 function buildAgent(a,i){
  var el=mk(world,'agent sit h-'+(a.hair||'short')+(a.acc?' a-'+a.acc:''));
  el.style.setProperty('--c',a.c);el.style.setProperty('--p',a.p);el.style.setProperty('--hc',a.hc);el.style.setProperty('--sk',a.sk);el.style.setProperty('--bd',(Math.random()*4).toFixed(2)+'s');
- el.innerHTML='<i class="ash"></i><div class="fig" title="'+a.n+'"><div class="bw"><i class="leg l"></i><i class="leg r"></i><i class="arm l"></i><i class="arm r"></i><i class="torso"></i><div class="head"><i class="hair"></i><i class="eye l"></i><i class="eye r"></i><i class="mouth"></i><i class="blush"></i></div>'+(a.acc==='crown'?'<i class="crown"></i>':'')+'<i class="hanc"></i></div></div>';
- a.el=el;a.anc=el.querySelector('.hanc');a.x=a.seat[0];a.y=a.seat[1];a.path=null;a.away=false;a.cur=a.work[0];
+ el.innerHTML='<i class="ash"></i><i class="ring"></i><div class="fig" title="Conversar com '+a.n+'"><i class="hit"></i><div class="bw"><i class="leg l"></i><i class="leg r"></i><div class="up"><i class="arm l"></i><i class="arm r"></i><i class="torso"></i><i class="neck"></i><div class="head"><i class="ear l"></i><i class="ear r"></i><i class="hair"></i><i class="brow l"></i><i class="brow r"></i><i class="eye l"></i><i class="eye r"></i><i class="mouth"></i><i class="blush"></i></div>'+(a.acc==='crown'?'<i class="crown"></i>':'')+'<i class="hanc"></i></div></div></div>';
+ a.el=el;a.anc=el.querySelector('.hanc');a.x=a.seat[0];a.y=a.seat[1];a.path=null;a.away=false;a.cur=a.work[0];a.st={k:'desk'};
  place(a);
- el.querySelector('.fig').addEventListener('click',function(ev){ev.stopPropagation();say(a,'agora: '+a.cur,4200)});
+ el.querySelector('.fig').addEventListener('click',function(ev){ev.stopPropagation();if(dragMoved){dragMoved=false;return}openChat(a)});
  var b=document.createElement('div');b.className='bub';hud.appendChild(b);a.bub=b;
 }
 function place(a){a.el.style.transform='translate3d('+a.x.toFixed(1)+'px,'+a.y.toFixed(1)+'px,0)'}
@@ -651,11 +765,14 @@ var plateBoxes=[];
 /* ---------------- speech ---------------- */
 var talking=[];
 function say(a,text,dur){
+ // fewer bubbles while a chat is open, and never over the agent in the chat
+ if(a.chat||(CHAT.a&&Math.random()<.7))return;
  a.bub.innerHTML='<b>'+a.n+'</b>'+text;a.bub.classList.add('on');
  if(talking.indexOf(a)<0)talking.push(a);
  posAll(vpRect());
  clearTimeout(a.bt);a.bt=setTimeout(function(){a.bub.classList.remove('on');setTimeout(function(){if(!a.bub.classList.contains('on')){var k=talking.indexOf(a);if(k>=0)talking.splice(k,1)}},320)},dur||3800);
 }
+function hush(a){clearTimeout(a.bt);a.bub.classList.remove('on');var k=talking.indexOf(a);if(k>=0)talking.splice(k,1)}
 // Bubbles are placed in order; each one avoids the plates and the bubbles placed before it
 function posAll(R){var taken=plateBoxes.slice();talking.forEach(function(a){taken.push(posBub(a,R,taken))})}
 function posBub(a,R,taken){
@@ -672,13 +789,13 @@ function posBub(a,R,taken){
 /* ---------------- movement engine ---------------- */
 var CORR=[322,610];
 var POI=[
- {pt:[92,548],aisle:575,ax:92,lines:['pausa pro café','esse café tá ótimo','alguém quer café?']},
- {pt:[322,76],aisle:300,ax:322,lines:['água gelada, que delícia','hidratar é importante']},
- {pt:[230,56],aisle:300,ax:322,pre:[[322,56]],lines:['que dia bonito lá fora','olhando o movimento da rua']},
- {pt:[852,124],aisle:300,ax:852,lines:['conferindo os servidores','tudo verde no rack']},
- {pt:[64,300],aisle:300,ax:64,lines:['procurando aquele livro','boa leitura essa']},
- {pt:[1078,690],aisle:575,ax:1078,lines:['pausa de cinco minutos','ideia boa surgindo aqui']},
- {pt:[1150,500],aisle:575,ax:1150,lines:['metas da semana conferidas','anotando no quadro']}
+ {pt:[92,548],aisle:575,ax:92,where:'no cantinho do café',go:'indo pegar um café',lines:['pausa pro café','esse café tá ótimo','alguém quer café?']},
+ {pt:[322,76],aisle:300,ax:322,where:'no bebedouro',go:'indo beber uma água',lines:['água gelada, que delícia','hidratar é importante']},
+ {pt:[230,56],aisle:300,ax:322,pre:[[322,56]],where:'na janela olhando a rua',go:'indo até a janela',lines:['que dia bonito lá fora','olhando o movimento da rua']},
+ {pt:[852,124],aisle:300,ax:852,where:'perto do rack de servidores',go:'indo conferir o rack',lines:['conferindo os servidores','tudo verde no rack']},
+ {pt:[64,300],aisle:300,ax:64,where:'na estante de livros',go:'indo até a estante',lines:['procurando aquele livro','boa leitura essa']},
+ {pt:[1078,690],aisle:575,ax:1078,where:'no sofá do descanso',go:'indo pro sofá',lines:['pausa de cinco minutos','ideia boa surgindo aqui']},
+ {pt:[1150,500],aisle:575,ax:1150,where:'no quadro de metas',go:'indo ver o quadro de metas',lines:['metas da semana conferidas','anotando no quadro']}
 ];
 var VISIT=['bora alinhar rapidinho?','me ajuda com isso?','olha esse resultado','tem um minuto?','ficou ótimo, viu?'];
 var REPLY=['claro, pode falar','boa ideia!','vou ver agora','combinado','te mando já já','bora!'];
@@ -703,7 +820,7 @@ var last=performance.now();
 function tick(now){
  var dt=Math.min(.05,(now-last)/1000);last=now;
  for(var i=0;i<TEAM.length;i++){
-  var a=TEAM[i];if(!a.path)continue;
+  var a=TEAM[i];if(!a.path||a.chat)continue;
   var t=a.path[0],dx=t[0]-a.x,dy=t[1]-a.y,dist=Math.hypot(dx,dy),step=a.spd*dt;
   if(dist<=step){a.x=t[0];a.y=t[1];a.path.shift();if(!a.path.length){a.path=null;var r=a.done;a.done=null;if(r)r()}}
   else{a.x+=dx/dist*step;a.y+=dy/dist*step;
@@ -715,14 +832,19 @@ function tick(now){
  if(talking.length)posAll(vpRect());
  requestAnimationFrame(tick);
 }
+// Like sleep, but the clock stops while this agent is in a chat
+async function wait(a,ms){
+ var end=performance.now()+ms;
+ while(a.chat||performance.now()<end)await sleep(a.chat?250:Math.max(16,Math.min(250,end-performance.now())));
+}
 var awayCount=0;
 async function life(a,delay){
- await sleep(delay);
+ await wait(a,delay);
  var eager=delay<3000;
  for(;;){
-  pose(a,'sit');
+  pose(a,'sit');a.st={k:'desk'};
   if(Math.random()<.6){a.cur=pick(a.work);say(a,a.cur)}
-  await sleep(eager?rand(900,2200):rand(6000,15000));
+  await wait(a,eager?rand(900,2200):rand(6000,15000));
   if(!eager&&(awayCount>=5||Math.random()<.3))continue;
   eager=false;
   awayCount++;a.away=true;
@@ -731,20 +853,261 @@ async function life(a,delay){
    var others=TEAM.filter(function(b){return b!==a&&!b.away});
    dest=visitSpot(pick(others));host=dest.host;
   }else dest=pick(POI);
+  var poi=host?null:dest;
   var jit=dest.host?0:rand(-12,12);dest={pt:[dest.pt[0]+jit,dest.pt[1]],aisle:dest.aisle,ax:dest.ax,pre:dest.pre,lines:dest.lines,host:dest.host};
   var pts=route(a,dest);
   a.cur=host?'conversando com '+host.n:'dando uma pausa';
+  a.st={k:'going',host:host,poi:poi};
   await walk(a,pts);
   pose(a,'idle');a.el.classList.remove('flip');
+  a.st={k:'there',host:host,poi:poi};
   if(host){say(a,pick(VISIT));if(!host.away)setTimeout(function(){say(host,pick(REPLY))},1600)}
   else say(a,pick(dest.lines));
-  await sleep(rand(3800,6500));
+  await wait(a,rand(3800,6500));
   var backPts=pts.slice(0,-1).reverse();backPts.push(a.seat.slice());
+  a.st={k:'back'};
   await walk(a,backPts);
   a.el.classList.remove('flip');
   a.away=false;awayCount--;
  }
 }
+
+/* ---------------- chat: local reply engine ---------------- */
+// Per agent repertoire. gen + gen2 are combined when nothing else matches.
+var REP={
+ rob:{
+  oi:['Oi! Que alegria ter você aqui no escritório.','Olá! Entra, a casa é sua.','E aí! Chegou numa hora ótima, o time está voando hoje.','Oi, oi! Senta aí, aceita um café?','Olá! Sempre bom receber gente nova por aqui.'],
+  faz:['Eu fundei o cuidar.vc e cuido para que cada agente saiba pra onde a gente vai.','Sou o fundador. Dou a direção e escalo o time: CTO na tecnologia, CMO no marketing, Claudete nas operações.','Meu trabalho é juntar as peças: Planejador faz a PAUTA, Copy escreve, Artes desenha, QC revisa e Agendador publica.','Eu decido prioridades e garanto que o cuidado esteja em tudo que a gente entrega.','Sou quem dá o sim final. Mas quem faz a mágica são esses 12 agentes.'],
+  agora:['A pauta da semana está redondinha, o Planejador caprichou.','Acabei de ver o relatório do Métricas e gostei muito.','Estou de olho na campanha nova que o CMO subiu.','Hoje o foco é crescer sem perder o carinho no atendimento.','Pedi pra Claudete organizar os pendentes e está tudo andando.'],
+  obg:['Eu que agradeço! Gente como você faz isso aqui valer a pena.','Imagina! Conta sempre comigo.','Agradeço de coração.','Por nada! Volta sempre que quiser.'],
+  tchau:['Até logo! A porta da sala está sempre aberta.','Tchau! Cuide bem de você também.','Até mais! Vou voltar pras aprovações.','Valeu pela visita, até a próxima!'],
+  cuidar:['O cuidar.vc nasceu pra cuidar de quem cuida. Esse é o nosso norte.','A gente cria conteúdo e ferramentas pra quem cuida de alguém se sentir menos só.','Somos um escritório de 13 agentes com uma missão: cuidado com quem cuida.','Aqui cada post, cada linha de código e cada número servem a quem cuida todo dia.'],
+  gen:['Boa pergunta, deixa eu pensar como fundador.','Anotei isso no meu caderno.','Gostei de você ter trazido isso.','Hmm, isso merece uma conversa com o time.'],
+  gen2:['Vou levar pra reunião das 15h.','Se precisar, o CTO e o CMO me ajudam a decidir.','O importante é que o cuidado venha primeiro.','Me conta mais, quero entender direitinho.']
+ },
+ cto:{
+  oi:['Oi! Pode chegar, estou entre um deploy e outro.','Olá! Bem na hora, acabei de fechar uma revisão de arquitetura.','E aí! Tudo em ordem por aqui na tecnologia.','Oi! Diz aí, em que posso ajudar?'],
+  faz:['Eu tomo as decisões técnicas: que tecnologia usar, como escalar e o que fica pra depois.','Coordeno Dev, QA e DevOps pra que o site rode liso e seguro.','Desenho a arquitetura e mando o status técnico todo dia às 07h15.','Meu papel é trocar risco por clareza: cada escolha técnica tem um porquê.'],
+  agora:['Decidi manter o banco atual e otimizar as consultas antes de trocar qualquer coisa.','O pipeline está verde, só falta o QA dar o ok.','Estou priorizando o novo fluxo de cadastro para esta semana.','Revisei o plano de backup com o DevOps e ficou sólido.','Dividi a tarefa do login em partes menores pro Dev.'],
+  obg:['Por nada! Tecnologia boa é a que ninguém percebe.','Imagina, estou aqui pra isso.','Valeu! Qualquer dúvida técnica, me chama.','Eu que agradeço a paciência.'],
+  tchau:['Até mais! Vou voltar pro quadro de arquitetura.','Tchau! Se algo cair, eu fico sabendo primeiro.','Até logo, bom trabalho pra você!','Falou! Volto pro code review.'],
+  cuidar:['Por trás do cuidar.vc tem um site leve e estável, pensado pra funcionar até em celular simples.','A tecnologia do cuidar.vc existe pra tirar peso de quem já cuida de muita coisa.','Escolhemos soluções simples e seguras: quem cuida não pode esperar tela carregando.','O cuidar.vc é cuidado em forma de produto, e eu garanto que ele fique no ar.'],
+  gen:['Tecnicamente, dá pra fazer.','Deixa eu avaliar os prós e contras.','Interessante, isso muda algumas prioridades.','Hmm, vou pensar na arquitetura disso.'],
+  gen2:['Primeiro valido com o QA, depois decido.','Prefiro começar simples e evoluir.','Vou registrar como decisão técnica da semana.','Se fizer sentido, o Dev pega amanhã.']
+ },
+ cmo:{
+  oi:['Oi! Chegou bem na hora do briefing.','Olá! Que energia boa, igual ao engajamento de hoje.','E aí! Senta, quero te mostrar uns números de alcance.','Oi! Adoro visita, rende até ideia de post.'],
+  faz:['Cuido do marketing: alcance, campanhas e a voz do cuidar.vc nas redes.','Eu lidero o time de conteúdo, do Planejador ao Agendador.','Meu trabalho é fazer a mensagem certa chegar em quem cuida de alguém.','Defino campanhas, testo criativos e acompanho o alcance todo dia.'],
+  agora:['O alcance da semana subiu e os salvamentos estão ótimos.','Estou testando dois criativos pra ver qual conversa melhor.','O briefing das 18h já está quase pronto.','Separei os posts com mais compartilhamentos pra repetir o formato.','Estou alinhando a próxima campanha com Copy e Artes.'],
+  obg:['Eu que agradeço! Isso vale mais que mil curtidas.','Valeu demais, de verdade.','Imagina! Compartilha a gente por aí, combinado?','Por nada, volta sempre!'],
+  tchau:['Até mais! Vou ver como o post das 19h performa.','Tchau! Segue a gente nas redes.','Até logo, foi ótimo conversar!','Um abraço, até a próxima!'],
+  cuidar:['O cuidar.vc fala com quem cuida de pai, mãe, filho ou paciente, e quer alcançar cada um.','Nossa missão nas redes é simples: quem cuida precisa se sentir visto.','O cuidar.vc é acolhimento com estratégia, cada post tem um propósito.','Queremos que o cuidar.vc seja o primeiro lugar lembrado por quem está cansado de cuidar sem apoio.'],
+  gen:['Adorei, isso dá um post!','Hmm, isso tem potencial de alcance.','Anotado no meu mural de ideias.','Interessante, quero ouvir mais.'],
+  gen2:['Vou pedir pro Métricas ver se o público reage bem.','Talvez vire um teste A/B semana que vem.','Posso levar pra pauta com o Planejador.','O importante é falar com carinho e chegar longe.']
+ },
+ devops:{
+  oi:['Oi! Todos os LEDs verdes, pode chegar.','Olá! Servidor estável e café quente, dia bom.','E aí! Estou de headset, mas estou te ouvindo.','Oi! Chegou numa hora tranquila, sem alerta nenhum.'],
+  faz:['Cuido da infraestrutura: servidores, deploy, backup e monitoramento.','Garanto que o cuidar.vc fique no ar 24 horas, sem susto.','Eu automatizo o caminho do código até produção.','Sou quem acorda se o servidor espirrar. Mas ele quase nunca espirra.'],
+  agora:['O backup das 04h rodou certinho.','Uptime de 100% nas últimas 24 horas.','Estou ajustando os alertas pra avisar antes do problema.','Deploy concluído e nenhum erro no log.','Estou de olho no uso de memória do rack, tudo tranquilo.'],
+  obg:['Por nada! Servidor feliz, time feliz.','Imagina, é só chamar.','Valeu! Isso aquece mais que o rack.','Eu que agradeço a visita.'],
+  tchau:['Até mais! Volto a vigiar os gráficos.','Tchau! Se piscar vermelho, eu resolvo.','Falou, bom resto de dia!','Até logo, que os LEDs fiquem verdes pra você.'],
+  cuidar:['O cuidar.vc precisa estar no ar sempre, porque quem cuida acessa de madrugada também.','Minha parte no cuidar.vc é invisível: estabilidade, velocidade e dados seguros.','Cuidar de quem cuida começa por um site que não cai.','O cuidar.vc roda numa infraestrutura enxuta e bem monitorada, feita com carinho.'],
+  gen:['Hmm, deixa eu checar os logs mentais.','Anotei no meu runbook.','Boa, isso dá pra automatizar.','Entendi, vou monitorar isso.'],
+  gen2:['Se precisar de servidor, eu provisiono.','Tudo que se repete vira script aqui.','Primeiro faço backup, depois mexo.','Qualquer coisa, abro um alerta pro CTO.']
+ },
+ dev:{
+  oi:['Oi! Só deixa eu salvar o arquivo... pronto, fala!','Olá! Estou no meio de um commit, mas sempre tem tempo.','E aí! Chega mais no cantinho do código.','Oi! O terminal pode esperar um minuto.'],
+  faz:['Eu escrevo o código do cuidar.vc: telas, login, cadastro e tudo mais.','Transformo as tarefas do CTO em funcionalidades que funcionam de verdade.','Sou dev: código, pull request, teste e mais código.','Construo as partes do site que você clica e usa.'],
+  agora:['Estou refatorando o login pra ficar mais rápido.','O PR do cadastro está quase pronto pra revisão do QA.','Achei uma função gigante e estou quebrando em pedaços menores.','Os testes passaram de primeira, raridade!','Estou corrigindo um detalhe de layout no celular.'],
+  obg:['Por nada! Bora codar.','Imagina, foi um prazer.','Valeu! Isso compila direto no coração.','Eu que agradeço, sério.'],
+  tchau:['Até mais! Vou dar push aqui.','Tchau! Sem bugs pra você.','Falou! Volto pro editor.','Até logo, bom deploy pra todos nós!'],
+  cuidar:['O cuidar.vc é o site que eu programo todo dia pensando em quem cuida de alguém.','No cuidar.vc cada botão precisa ser simples, quem cuida não tem tempo a perder.','Programar pro cuidar.vc é diferente, cada tela ajuda alguém de verdade.','O cuidar.vc é feito com código limpo e muito carinho.'],
+  gen:['Hmm, isso daria uma boa issue.','Interessante, deixa eu pensar na lógica.','Anotei no meu backlog.','Boa, dá pra implementar.'],
+  gen2:['Vou abrir um PR e o QA revisa.','Primeiro escrevo o teste, depois o código.','Talvez caiba numa função pequena.','Se o CTO aprovar, sai essa semana.']
+ },
+ qa:{
+  oi:['Oi! Pode falar, estou rodando uma bateria de testes.','Olá! Chegou sem bug nenhum, que ótimo.','E aí! Esse oi foi testado e aprovado.','Oi! Estava justamente testando no celular.'],
+  faz:['Eu testo tudo antes de chegar em você: telas, fluxos e casos estranhos.','Sou QA, meu trabalho é achar o bug antes do usuário.','Reviso os PRs do Dev e rodo testes de regressão.','Testo no celular, no computador e no pior cenário possível.'],
+  agora:['Rodando a regressão completa, 42 casos até agora.','Achei um bug no cadastro e já avisei o Dev.','Estou testando o site numa conexão bem lenta.','O PR do login passou em todos os testes.','Montando casos de teste pro novo fluxo de cadastro.'],
+  obg:['Por nada! Aprovado com louvor.','Imagina, foi um teste agradável.','Valeu! Zero bugs nessa conversa.','Eu que agradeço.'],
+  tchau:['Até mais! Volto pros testes.','Tchau! Se achar um bug, me conta.','Falou! Vou rodar mais uma regressão.','Até logo, caso de teste encerrado.'],
+  cuidar:['O cuidar.vc precisa funcionar de primeira, porque quem cuida já tem problema demais.','Testo o cuidar.vc pensando numa pessoa cansada usando o celular às 3h da manhã.','Qualidade no cuidar.vc é respeito com quem cuida.','Cada teste que eu faço protege a experiência de quem usa o cuidar.vc.'],
+  gen:['Hmm, vou escrever um caso de teste pra isso.','Interessante, e se der errado?','Anotei como cenário de teste.','Deixa eu reproduzir isso na cabeça.'],
+  gen2:['Testo e te conto o resultado.','Melhor prevenir que corrigir.','Vou validar no celular também.','Se passar na regressão, está valendo.']
+ },
+ claudete:{
+  oi:['Oi! Que bom, estava mesmo querendo uma pausa boa.','Olá! Senta, vou só fechar essa lista de pendentes.','E aí! Tudo organizado por aqui.','Oi! A agenda está cheia, mas sempre cabe uma conversa.'],
+  faz:['Cuido do produto e das operações: processos, prioridades e pendentes.','Organizo a semana do time e garanto que nada fique esquecido.','Sou a ponte entre o Rob e o time, transformo ideias em planos.','Documento processos pra que tudo rode mesmo quando alguém tira férias.'],
+  agora:['Atualizei a lista de pendentes, sobraram só três.','Estou organizando a semana com o Rob.','Documentei o processo de publicação de ponta a ponta.','Revisando o calendário pra ninguém ficar sobrecarregado.','Priorizei as melhorias pedidas pelos usuários.'],
+  obg:['Por nada! Organizar é comigo.','Imagina, foi um prazer.','Eu que agradeço a atenção.','Valeu! Anotado com carinho.'],
+  tchau:['Até mais! Vou voltar pros pendentes.','Tchau! Coloquei um lembrete pra gente conversar de novo.','Até logo, boa semana!','Tchau, tchau! Bom trabalho.'],
+  cuidar:['O cuidar.vc é um produto que organiza a vida de quem cuida, e eu organizo o cuidar.vc.','A gente constrói o cuidar.vc ouvindo quem cuida de verdade.','O cuidar.vc quer ser o apoio que falta na rotina de quem cuida.','Cada processo aqui dentro existe pro cuidar.vc chegar melhor em quem precisa.'],
+  gen:['Hmm, deixa eu anotar isso.','Boa, isso entra na lista.','Interessante, vou ver a prioridade.','Faz sentido, quero organizar isso.'],
+  gen2:['Coloco na pauta da semana.','Vou alinhar com o Rob.','Documento e compartilho com o time.','Prometo que não fica esquecido.']
+ },
+ plan:{
+  oi:['Oi! Estava fechando a pauta, chegou em boa hora.','Olá! Quer saber o tema de amanhã?','E aí! Calendário aberto e cabeça cheia de ideias.','Oi! Cuidado, toda conversa aqui pode virar pauta.'],
+  faz:['Eu monto a PAUTA: o que vai ao ar, em que dia e por quê.','Planejo o calendário de posts da semana inteira.','Escolho os temas e passo o briefing pro Copy e pro time de Artes.','Organizo a pauta pro cuidar.vc falar do assunto certo na hora certa.'],
+  agora:['A pauta da semana está fechada, só falta o tema de sexta.','Definindo o tema de amanhã: o descanso de quem cuida.','Atualizei o calendário com as datas especiais do mês.','Estou separando ideias que vieram dos comentários.','Mandei o briefing pro Copy agora há pouco.'],
+  obg:['Por nada! Já virou item de pauta.','Imagina, foi ótimo.','Eu que agradeço, rendeu ideia.','Valeu! Anotado no calendário.'],
+  tchau:['Até mais! Volto pro calendário.','Tchau! Amanhã tem post novo.','Até logo, fica de olho na pauta!','Falou! Boa semana.'],
+  cuidar:['O cuidar.vc tem pauta pensada pra quem cuida: dicas, acolhimento e informação.','No cuidar.vc a pauta nasce das dores reais de quem cuida.','Cada semana do cuidar.vc tem temas que abraçam quem cuida de alguém.','O cuidar.vc fala de cuidado, e minha pauta garante que fale todo dia.'],
+  gen:['Hmm, isso daria uma pauta boa.','Anotei na lista de temas.','Interessante, cabe numa série.','Boa, deixa eu olhar o calendário.'],
+  gen2:['Posso encaixar na semana que vem.','Passo pro Copy desenvolver.','Talvez vire um carrossel.','Vou checar se combina com a campanha do CMO.']
+ },
+ copy:{
+  oi:['Oi! Estava aqui procurando a palavra certa.','Olá! Chegou no meio de uma legenda, mas pode falar.','E aí! Palavras prontas pra você.','Oi! Que bom, uma conversa sem limite de caracteres.'],
+  faz:['Escrevo os textos e as legendas do cuidar.vc.','Cuido do tom de voz: acolhedor, claro e sem enrolação.','Transformo a pauta em frases que tocam quem cuida.','Escrevo títulos, legendas, chamadas e até os avisos do site.'],
+  agora:['Reescrevendo uma legenda pra ficar mais acolhedora.','Ajustando o título do post de amanhã.','Cortei duas frases, texto bom é texto enxuto.','Estou testando três chamadas diferentes pro mesmo post.','Revisando o tom de voz da campanha nova.'],
+  obg:['Por nada! Palavra dada é palavra cumprida.','Imagina, foi um prazer escrever essa conversa com você.','Eu que agradeço as boas palavras.','Valeu! Isso ainda vira legenda.'],
+  tchau:['Até mais! Ponto final por hoje.','Tchau! Volto pras legendas.','Até logo, com reticências...','Falou! Fica bem.'],
+  cuidar:['O cuidar.vc escreve pra quem cuida como quem senta do lado e escuta.','No cuidar.vc cada palavra tem que acolher antes de informar.','O cuidar.vc tem uma voz gentil, e eu cuido dela.','Escrever pro cuidar.vc é lembrar que do outro lado tem alguém cansado precisando de carinho.'],
+  gen:['Hmm, que frase boa essa sua.','Anotei, pode virar legenda.','Interessante, tem história aí.','Gostei do jeito que você falou.'],
+  gen2:['Deixa eu achar as palavras certas.','Vou lapidar isso num texto curto.','Com um bom título, isso voa.','Depois passo pro QC dar uma olhada.']
+ },
+ arte:{
+  oi:['Oi! Pode chegar, estou escolhendo uma paleta.','Olá! Bem na hora, acabei de exportar um card.','E aí! Cuidado com a tinta fresca.','Oi! Estava aqui ajustando um degradê.'],
+  faz:['Crio as peças visuais do cuidar.vc: cards, carrosséis e capas.','Cuido das cores, das fontes e da identidade visual.','Transformo o texto do Copy em imagem que para o scroll.','Desenho cada peça pensando em acolher só com o olhar.'],
+  agora:['Finalizei uma arte com efeito de vidro.','Testando outra paleta, mais quente.','Exportando um card novo pro Agendador.','Ajustando o espaçamento de um carrossel.','Estou alinhando os ícones da campanha nova.'],
+  obg:['Por nada! Ficou lindo esse agradecimento.','Imagina, foi um prazer.','Eu que agradeço, deu até inspiração.','Valeu! Isso colore meu dia.'],
+  tchau:['Até mais! Volto pro canvas.','Tchau! Leva essa paleta boa com você.','Até logo, um dia bem colorido pra você!','Falou! Vou exportar aqui.'],
+  cuidar:['O cuidar.vc tem cores quentes e acolhedoras, como um abraço.','No cuidar.vc o visual precisa ser calmo, quem cuida já vive muita correria.','Cada peça do cuidar.vc tenta dizer: você não precisa cuidar sem apoio.','A identidade do cuidar.vc mistura o laranja do afeto com a leveza do vidro.'],
+  gen:['Hmm, consigo visualizar isso.','Anotei no meu moodboard.','Interessante, dá uma peça bonita.','Boa, isso tem cor.'],
+  gen2:['Posso fazer um rascunho rapidinho.','Vou testar em duas paletas.','Passo pro QC revisar o visual.','Com um bom contraste, fica lindo.']
+ },
+ qc:{
+  oi:['Oi! Chegou revisado e aprovado.','Olá! Estava conferindo uma vírgula, pode falar.','E aí! Nada passa por aqui sem uma boa olhada.','Oi! Que bom, uma pausa entre revisões.'],
+  faz:['Faço a revisão final: texto, arte e contexto antes de publicar.','Sou o último olhar antes do post ir pro ar.','Confiro ortografia, tom, cores e se tudo combina com a pauta.','Garanto que nada sai com erro, nem uma vírgula fora do lugar.'],
+  agora:['Revisei texto e arte do post de amanhã.','Faltou uma vírgula aqui, já corrigi.','Aprovei dois posts pra publicar.','Voltei uma arte pro time de Artes com um ajuste pequeno.','Estou checando se a legenda combina com a imagem.'],
+  obg:['Por nada! Agradecimento aprovado.','Imagina, foi um prazer.','Eu que agradeço, e sem nenhuma correção.','Valeu! Isso passou na revisão.'],
+  tchau:['Até mais! Volto pra fila de revisão.','Tchau! Revisado e encerrado.','Até logo, cuidado com as vírgulas!','Falou! Boa sorte por aí.'],
+  cuidar:['O cuidar.vc só publica o que foi revisado com carinho.','Quem cuida merece informação certa, por isso reviso tudo no cuidar.vc.','O cuidar.vc tem padrão alto, e eu sou quem segura a régua.','No cuidar.vc qualidade é uma forma de cuidado.'],
+  gen:['Hmm, deixa eu revisar isso com calma.','Anotado, com pontuação e tudo.','Interessante, vou olhar com lupa.','Boa observação.'],
+  gen2:['Se estiver certo, eu aprovo.','Vale uma segunda leitura.','Te devolvo com sugestões.','Detalhe pequeno faz diferença grande.']
+ },
+ agend:{
+  oi:['Oi! A fila de publicação está em dia, pode falar.','Olá! Tenho um post saindo às 19h, mas dá tempo.','E aí! Relógio sincronizado e pronto.','Oi! Chegou pontual, gosto disso.'],
+  faz:['Agendo e publico os posts na hora certa.','Cuido da fila de publicação e confirmo se tudo foi ao ar.','Recebo a peça aprovada pelo QC e coloco no horário ideal.','Sou o dono do relógio: nada atrasa, nada sai antes.'],
+  agora:['Post agendado pras 19h.','A fila do Canva está em dia.','A publicação de hoje está confirmada.','Estou reorganizando os horários com base nos números do Métricas.','Tenho três posts na fila pra amanhã.'],
+  obg:['Por nada! Agradecimento entregue no horário.','Imagina, foi pontual e com carinho.','Eu que agradeço.','Valeu! Anotei na agenda.'],
+  tchau:['Até mais! Tenho um post pra soltar.','Tchau! Próxima publicação às 19h.','Até logo, no horário combinado!','Falou! Vou conferir a fila.'],
+  cuidar:['O cuidar.vc publica quando quem cuida consegue parar um pouquinho pra ver.','No cuidar.vc a hora do post importa, a gente respeita a rotina de quem cuida.','O cuidar.vc aparece todo dia no feed, com constância e carinho.','Minha parte no cuidar.vc é garantir que o cuidado chegue na hora.'],
+  gen:['Hmm, deixa eu ver a agenda.','Anotado com data e hora.','Interessante, tem um horário bom pra isso.','Boa, cabe na fila.'],
+  gen2:['Posso agendar pra amanhã cedo.','Confirmo depois que publicar.','Primeiro o QC aprova, depois eu solto.','Horário certo faz o alcance subir.']
+ },
+ metr:{
+  oi:['Oi! Alcance em alta e você por aqui, dia bom.','Olá! Estava olhando uma planilha linda.','E aí! Sua visita aumentou meu engajamento em 100%.','Oi! Pode falar, os números esperam.'],
+  faz:['Analiso os dados: alcance, salvamentos, cliques e crescimento.','Transformo números em decisões pro CMO e pro Rob.','Monto o relatório semanal e aponto o que funciona.','Sou quem diz se o post foi bem, com dados na mão.'],
+  agora:['O alcance subiu 12% essa semana.','Os salvamentos estão 30% acima da média.','Terminei o relatório semanal agora.','Carrossel está rendendo o dobro de imagem única.','O melhor horário de post essa semana foi 19h.'],
+  obg:['Por nada! Satisfação de 100%.','Imagina, foi um prazer estatisticamente significativo.','Eu que agradeço, esse dado vai pro relatório.','Valeu! Taxa de gentileza lá em cima.'],
+  tchau:['Até mais! Volto pras planilhas.','Tchau! Os números te mandam um abraço.','Até logo, que sua semana cresça 20%!','Falou! Vou atualizar o dashboard.'],
+  cuidar:['O cuidar.vc cresce toda semana, e cada número é uma pessoa que cuida.','Os dados do cuidar.vc mostram que conteúdo acolhedor é o mais salvo.','No cuidar.vc eu meço alcance, mas o que importa é quantas pessoas se sentiram ajudadas.','O cuidar.vc usa números pra cuidar melhor, não só pra crescer.'],
+  gen:['Hmm, precisaria de mais dados.','Anotei como hipótese.','Interessante, dá pra medir isso.','Boa, vou cruzar com a planilha.'],
+  gen2:['Em uma semana te trago o gráfico.','Correlação não é causa, mas é pista.','Mando pro CMO com os números.','Se o dado confirmar, a gente escala.']
+ }
+};
+var HELLO=['Oi!','Olá!','Opa, oi!','Oi, tudo bem por aqui!'];
+var GREET=['Oi! Agora estou {onde}, mas tenho um tempinho pra você.','Olá! Você me encontrou {onde}. Pode falar!','Oi, que bom te ver! Estou {onde} neste momento.','Olá! Chegou na hora certa, estou {onde}.'];
+var GREET_DESK=['Por aqui: {cur}.','O que rolou agora: {cur}.','Última novidade: {cur}.'];
+var NOW=['Neste momento estou {onde}.','Agora estou {onde}.','Você me pegou {onde}.','Por enquanto estou {onde}.'];
+var NOW_DESK=['Agora estou {onde}, e a última foi: {cur}.','Estou {onde}. Por aqui: {cur}.','Tudo andando {onde}. Na tela: {cur}.'];
+var ORDER=['tchau','obg','faz','agora','cuidar','oi'];
+var RX={
+ tchau:/(tchau|\bate (mais|logo|amanha|breve|a proxima|ja)\b|\bfalou\b|\bflw\b|\bbye\b|boa noite|\bfui\b|vou nessa|to indo embora)/,
+ obg:/(obrigad|brigad|valeu|\bvlw\b|agradec|gratidao|\bthanks?\b)/,
+ faz:/(o que (voce |vc |tu )?faz\b|qual (e )?(o |a )?(seu|sua) (papel|cargo|trabalho|funcao|servico)|sua funcao|seu papel|quem (e )?(voce|vc)|voce faz o que|pra que (voce|vc) serve|\bcargo\b|responsavel por)/,
+ agora:/(fazendo|como (esta|ta|anda|vai) (o |a )?(trabalho|dia|servico|projeto|semana)|trabalho|ocupad|\bagora\b|progresso|novidade|andamento|\bstatus\b)/,
+ cuidar:/(cuidar|empresa|startup|missao|proposito|plataforma|\bmarca\b|negocio|escritorio)/,
+ oi:/(^|\b)(oi+e?|ola|opa|e ?ai|bom dia|boa tarde|hey|salve|tudo (bem|bom|certo)|como vai|beleza|blz)\b/
+};
+var chatEl=$('chat'),chatMsgs=$('chatMsgs'),chatForm=$('chatForm'),chatIn=$('chatIn'),chatAv=$('chatAv');
+var CHAT={a:null,token:0,chain:Promise.resolve(),back:null};
+var HIST={};
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim()}
+function atDesk(a){return !a.st||a.st.k==='desk'}
+function estado(a){
+ var s=a.st||{k:'desk'};
+ if(s.k==='going')return s.host?'indo falar com '+s.host.n:s.poi.go;
+ if(s.k==='there')return s.host?'conversando com '+s.host.n:s.poi.where;
+ if(s.k==='back')return 'voltando pra minha mesa';
+ return a.boss?'aqui na minha sala':(a.desk?'aqui na minha mesa':'na mesa grande do conteúdo');
+}
+function fill(a,s){return s.replace(/\{onde\}/g,estado(a)).replace(/\{cur\}/g,a.cur)}
+// Random piece that is never the same as the previous one of that kind
+function fresh(a,key,arr){a.lp=a.lp||{};var s,n=0;do{s=pick(arr)}while(arr.length>1&&s===a.lp[key]&&++n<12);a.lp[key]=s;return s}
+function greet(a){
+ var out,n=0;
+ do{out=fill(a,fresh(a,'greet',GREET)+(atDesk(a)?' '+fresh(a,'greetd',GREET_DESK):''))}while(out===a.lastSaid&&++n<12);
+ return a.lastSaid=out;
+}
+function reply(a,text){
+ var t=norm(text),R=REP[a.id],cat='gen',out,n=0;
+ for(var i=0;i<ORDER.length;i++)if(RX[ORDER[i]].test(t)){cat=ORDER[i];break}
+ do{
+  if(cat==='gen')out=fresh(a,'gen',R.gen)+' '+fresh(a,'gen2',R.gen2);
+  else if(cat==='agora')out=fresh(a,'now',atDesk(a)?NOW_DESK:NOW)+' '+fresh(a,'agora',R.agora);
+  else{out=fresh(a,cat,R[cat]);if(cat!=='oi'&&RX.oi.test(t))out=fresh(a,'hello',HELLO)+' '+out}
+  out=fill(a,out);
+ }while(out===a.lastSaid&&++n<12);
+ return a.lastSaid=out;
+}
+function push(a,from,t){var h=HIST[a.id]=HIST[a.id]||[];h.push({f:from,t:t});if(h.length>6)h.splice(0,h.length-6)}
+function bubble(f,t){var d=document.createElement('div');d.className='msg '+f;var p=document.createElement('p');p.textContent=t;d.appendChild(p);return d}
+function scrollEnd(){requestAnimationFrame(function(){chatMsgs.scrollTop=chatMsgs.scrollHeight})}
+function vvFit(){
+ if(!CHAT.a||!window.visualViewport)return;
+ var v=window.visualViewport;chatEl.style.height=v.height+'px';chatEl.style.top=v.offsetTop+'px';scrollEnd();
+}
+function openChat(a){
+ if(CHAT.a===a)return;
+ if(CHAT.a)closeChat(true);
+ CHAT.a=a;CHAT.token++;
+ if(!chatEl.classList.contains('open'))CHAT.back=document.activeElement;
+ a.chat=true;a.el.classList.add('sel','chatting');
+ if(a.path)pose(a,'idle');
+ hush(a);
+ $('chatName').textContent=a.n;$('chatRole').textContent=a.r;$('chatSt').textContent='online, '+estado(a);
+ ['c','sk','hc'].forEach(function(k){chatAv.style.setProperty('--'+k,a[k])});
+ chatIn.placeholder='Fale com '+a.n+'...';chatIn.value='';
+ push(a,'ag',greet(a));
+ chatMsgs.innerHTML='';
+ HIST[a.id].forEach(function(m){chatMsgs.appendChild(bubble(m.f,m.t))});
+ chatEl.classList.add('open');document.body.classList.add('noscroll');
+ vvFit();scrollEnd();
+ if(window.matchMedia&&matchMedia('(hover:hover) and (pointer:fine)').matches)setTimeout(function(){chatIn.focus()},60);
+}
+function closeChat(keepOpen){
+ var a=CHAT.a;if(!a)return;
+ CHAT.a=null;CHAT.token++;
+ a.chat=false;a.el.classList.remove('sel','chatting');
+ if(a.path)pose(a,'walk');
+ if(keepOpen)return;
+ chatEl.classList.remove('open');document.body.classList.remove('noscroll');
+ chatEl.style.height='';chatEl.style.top='';
+ if(CHAT.back&&CHAT.back.focus){try{CHAT.back.focus()}catch(_){}}
+}
+chatForm.addEventListener('submit',function(e){
+ e.preventDefault();
+ var v=chatIn.value.trim(),a=CHAT.a,tok=CHAT.token;
+ if(!v||!a)return;
+ chatIn.value='';
+ push(a,'me',v);chatMsgs.appendChild(bubble('me',v));scrollEnd();
+ CHAT.chain=CHAT.chain.then(function(){
+  if(tok!==CHAT.token){push(a,'ag',reply(a,v));return}
+  var ty=document.createElement('div');ty.className='msg ag typing';
+  ty.innerHTML='<p><span>digitando</span><i></i><i></i><i></i></p>';
+  chatMsgs.appendChild(ty);scrollEnd();
+  return sleep(rand(800,1500)).then(function(){
+   if(ty.parentNode)ty.parentNode.removeChild(ty);
+   var r=reply(a,v);push(a,'ag',r);
+   if(tok===CHAT.token){chatMsgs.appendChild(bubble('ag',r));scrollEnd()}
+  });
+ }).catch(function(){});
+});
+$('chatX').addEventListener('click',function(){closeChat()});
+chatEl.addEventListener('click',function(e){if(e.target===chatEl)closeChat()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&CHAT.a)closeChat()});
+if(window.visualViewport){window.visualViewport.addEventListener('resize',vvFit);window.visualViewport.addEventListener('scroll',vvFit)}
 
 /* ---------------- clock ---------------- */
 var hh=wclock.querySelector('.hh'),mm=wclock.querySelector('.mm'),ss=wclock.querySelector('.ss');
@@ -775,13 +1138,18 @@ function fit(){
 zoomBtn.addEventListener('click',function(){
  zoomed=!zoomed;fitwrap.classList.toggle('zoomed',zoomed);
  zoomBtn.textContent=zoomed?'Ajustar à tela':'Ampliar';
- $('hint').textContent=zoomed?'Arraste a cena para navegar pelo escritório':'Toque em um agente para ver o que ele está fazendo';
+ $('hint').textContent=zoomed?'Arraste a cena para navegar e toque em um agente para conversar':'Toque em um agente para abrir a conversa';
  fit();
  if(zoomed){fitwrap.scrollLeft=(SW-fitwrap.clientWidth)/2;fitwrap.scrollTop=(SH-fitwrap.clientHeight)/2}
 });
-var drag=null;
-fitwrap.addEventListener('pointerdown',function(e){if(!zoomed)return;drag={x:e.clientX,y:e.clientY,l:fitwrap.scrollLeft,t:fitwrap.scrollTop,moved:false};fitwrap.classList.add('dragging');try{fitwrap.setPointerCapture(e.pointerId)}catch(_){}});
-fitwrap.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.abs(dx)+Math.abs(dy)>3)drag.moved=true;fitwrap.scrollLeft=drag.l-dx;fitwrap.scrollTop=drag.t-dy});
+// Pointer capture only starts once the finger really moves, so taps still reach the agents
+var drag=null,dragMoved=false;
+fitwrap.addEventListener('pointerdown',function(e){dragMoved=false;if(!zoomed)return;drag={x:e.clientX,y:e.clientY,l:fitwrap.scrollLeft,t:fitwrap.scrollTop,moved:false}});
+fitwrap.addEventListener('pointermove',function(e){
+ if(!drag)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+ if(!drag.moved&&Math.abs(dx)+Math.abs(dy)>4){drag.moved=dragMoved=true;fitwrap.classList.add('dragging');try{fitwrap.setPointerCapture(e.pointerId)}catch(_){}}
+ if(drag.moved){fitwrap.scrollLeft=drag.l-dx;fitwrap.scrollTop=drag.t-dy}
+});
 function endDrag(){if(!drag)return;drag=null;fitwrap.classList.remove('dragging')}
 fitwrap.addEventListener('pointerup',endDrag);fitwrap.addEventListener('pointercancel',endDrag);
 var rt;window.addEventListener('resize',function(){fit();clearTimeout(rt);rt=setTimeout(layoutPlates,150)});
@@ -789,6 +1157,7 @@ var rt;window.addEventListener('resize',function(){fit();clearTimeout(rt);rt=set
 /* ---------------- boot ---------------- */
 buildPlates();
 TEAM.forEach(buildAgent);
+$('liveTxt').textContent=TEAM.length+' agentes ativos';
 fit();clock();setInterval(clock,1000);
 requestAnimationFrame(function(){requestAnimationFrame(function(){layoutPlates();setTimeout(layoutPlates,600)})});
 requestAnimationFrame(tick);

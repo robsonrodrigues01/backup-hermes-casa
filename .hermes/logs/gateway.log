@@ -5454,3 +5454,7 @@ keep an umbrella stable: hermes curator pin hermes-profiles
 2026-09-15 03:04:24,441 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=34.5s api_calls=4 response=1450 chars
 2026-09-15 03:13:01,887 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (29 chars)
 2026-09-15 03:13:01,888 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='por enquanto vamos de sandbox'
+2026-09-15 03:14:21,055 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:14:21,055 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=79.2s api_calls=9 response=720 chars
+2026-09-15 03:19:05,679 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (665 chars)
+2026-09-15 03:19:05,680 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='coloque o agente de trade aqui: Done! Congratulations on your new bot. You will '

@@ -1,0 +1,50 @@
+2026-09-15 03:20:06,404 INFO hermes_cli.plugins: Plugin 'browser-browser-use' registered browser provider: browser-use
+2026-09-15 03:20:06,405 INFO hermes_cli.plugins: Plugin 'browser-browserbase' registered browser provider: browserbase
+2026-09-15 03:20:06,405 INFO hermes_cli.plugins: Plugin 'browser-firecrawl' registered browser provider: firecrawl
+2026-09-15 03:20:06,522 INFO hermes_plugins.dashboard_auth__basic: dashboard-auth-basic: hashed env-supplied password in-memory (overrides any config password_hash).
+2026-09-15 03:20:06,523 INFO hermes_cli.dashboard_auth.registry: dashboard-auth: registered provider 'basic' (Username & Password)
+2026-09-15 03:20:06,523 INFO hermes_cli.plugins: Plugin 'basic' registered dashboard-auth provider: basic (Username & Password)
+2026-09-15 03:20:06,523 INFO hermes_plugins.dashboard_auth__basic: dashboard-auth-basic: registered password provider (username=rob)
+2026-09-15 03:20:06,576 INFO hermes_cli.plugins: Plugin 'fal' registered image_gen provider: fal
+2026-09-15 03:20:06,577 INFO hermes_cli.plugins: Plugin 'krea' registered image_gen provider: krea
+2026-09-15 03:20:06,577 INFO hermes_cli.plugins: Plugin 'openai' registered image_gen provider: openai
+2026-09-15 03:20:06,577 INFO hermes_cli.plugins: Plugin 'openai-codex' registered image_gen provider: openai-codex
+2026-09-15 03:20:06,578 INFO hermes_cli.plugins: Plugin 'xai' registered image_gen provider: xai
+2026-09-15 03:20:06,622 INFO hermes_cli.plugins: Plugin 'fal' registered video_gen provider: fal
+2026-09-15 03:20:06,622 INFO hermes_cli.plugins: Plugin 'xai' registered video_gen provider: xai
+2026-09-15 03:20:06,624 INFO hermes_cli.plugins: Plugin 'web-brave-free' registered web provider: brave-free
+2026-09-15 03:20:06,625 INFO hermes_cli.plugins: Plugin 'web-ddgs' registered web provider: ddgs
+2026-09-15 03:20:06,625 INFO hermes_cli.plugins: Plugin 'web-exa' registered web provider: exa
+2026-09-15 03:20:06,627 INFO hermes_cli.plugins: Plugin 'web-firecrawl' registered web provider: firecrawl
+2026-09-15 03:20:06,628 INFO hermes_cli.plugins: Plugin 'web-parallel' registered web provider: parallel
+2026-09-15 03:20:06,628 INFO hermes_cli.plugins: Plugin 'web-searxng' registered web provider: searxng
+2026-09-15 03:20:06,629 INFO hermes_cli.plugins: Plugin 'web-tavily' registered web provider: tavily
+2026-09-15 03:20:06,629 INFO hermes_cli.plugins: Plugin 'web-xai' registered web provider: xai
+2026-09-15 03:20:06,760 INFO hermes_cli.plugins: Plugin discovery complete: 36 found, 31 enabled
+2026-09-15 03:20:07,028 INFO tools.lazy_deps: Lazy-installing discord.py[voice]==2.7.1 brotlicffi==1.2.0.1 for feature 'platform.discord'
+2026-09-15 03:20:07,196 INFO tools.lazy_deps: Lazy install complete for feature 'platform.discord'
+2026-09-15 03:20:07,771 INFO tools.tirith_security: tirith not found — downloading latest release for x86_64-unknown-linux-gnu...
+2026-09-15 03:20:08,106 INFO gateway.run: Starting Hermes Gateway...
+2026-09-15 03:20:08,106 INFO gateway.run: Session storage: /home/hermes/.hermes/profiles/trader/sessions
+2026-09-15 03:20:08,118 INFO gateway.run: Agent budget: max_iterations=90 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 90)
+2026-09-15 03:20:08,119 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-09-15 03:20:08,120 INFO gateway.run: Active profile: trader
+2026-09-15 03:20:08,130 INFO tools.lazy_deps: Lazy-installing python-telegram-bot[webhooks]==22.6 for feature 'platform.telegram'
+2026-09-15 03:20:08,471 INFO tools.lazy_deps: Lazy install complete for feature 'platform.telegram'
+2026-09-15 03:20:08,968 INFO gateway.run: Connecting to telegram...
+2026-09-15 03:20:09,045 INFO gateway.platforms.telegram: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-09-15 03:20:09,045 INFO gateway.platforms.telegram: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-09-15 03:20:11,173 INFO telegram.ext.Application: Application started
+2026-09-15 03:20:11,926 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (30 cmds)
+2026-09-15 03:20:12,235 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (30 cmds)
+2026-09-15 03:20:12,541 INFO gateway.platforms.telegram: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (30 cmds)
+2026-09-15 03:20:12,541 INFO gateway.platforms.telegram: [Telegram] Telegram menu: 30 commands registered, 75 hidden (over 30 limit). Use /commands for full list.
+2026-09-15 03:20:12,554 INFO gateway.platforms.telegram: [Telegram] Connected to Telegram (polling mode)
+2026-09-15 03:20:12,557 INFO gateway.run: ✓ telegram connected
+2026-09-15 03:20:12,558 INFO gateway.run: Gateway running with 1 platform(s)
+2026-09-15 03:20:12,563 INFO gateway.run: Channel directory built: 0 target(s)
+2026-09-15 03:20:13,565 INFO gateway.run: Press Ctrl+C to stop
+2026-09-15 03:20:13,655 INFO gateway.run: Cron ticker started (interval=60s)
+2026-09-15 03:20:18,607 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-09-15 03:20:21,476 INFO tools.tirith_security: cosign not on PATH — installing tirith with SHA-256 verification only (install cosign for full supply chain verification)
+2026-09-15 03:20:21,941 INFO tools.tirith_security: tirith installed to /home/hermes/.hermes/profiles/trader/bin/tirith (SHA-256 only)

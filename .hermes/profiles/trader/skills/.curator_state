@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/hermes/.hermes/logs/curator/20260910-045501",
+  "last_run_at": "2026-09-10T04:55:01.610378+00:00",
+  "last_run_duration_seconds": 126.560689,
+  "last_run_summary": "auto: no changes; llm: Memory store is disabled in this environment — noted, carrying the quirk into the report instead.\n\n---\n\n# Curation pass — umbrella consolidation report (2026-09-10)\n\n## Scan\n\nCandidate set contained exactly **4** agent-created skills (every…\narchived 1 skill(s):\n  • headroom-proxy-rollout → hermes-profiles\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-profiles",
+  "last_run_summary_shown_at": null,
+  "paused": false,
+  "run_count": 1
+}

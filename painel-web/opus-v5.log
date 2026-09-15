@@ -1,0 +1,10 @@
+I've created `/home/hermes/painel-web/escritorio-v5.html` and changed no other files. In headless Chromium the page ran with no JS errors: all 13 agents, 13 name plates and the desks load, and a test opened the chat with every agent and sent every message type.
+
+1. **Chat:** tapping an agent opens a chat window. It opens with a greeting based on what the agent is doing right then, shows "digitando" with animated dots for 0.8 to 1.5s, and ENTER, ESC, the X and a click outside all work.
+2. **Replies:** each agent has its own set of 4 to 5 lines for each of the 6 message types. Anything else gets a two-part answer in that agent's voice, the same line never comes up twice in a row, and the last 6 messages per agent are kept in memory.
+3. **Bonecos:** bigger head with ears, eyebrows, shining eyes, smile and blush; colored shirt, sleeves, hands, pants and shoes. Walking alternates the steps and swings the arms; working shows them seated, arms toward the keyboard, swaying a little as they type. Position logic and plate avoidance are unchanged from v4.
+4. **Destaque:** the chosen agent gets a pulsing gold ring and glow and stops moving while the chat is open, then carries on its route when you close it. Speech bubbles show up about 70% less while a chat is open.
+5. **Layout:** cleaner header (logo, agentes ativos badge, clock), the scene with shadow and a color legend below it, and a quieter footer. It's built mobile first.
+6. **Painel do CMO:** glass card with the title, an "ao vivo" badge with a pulsing dot and an "abrir em tela cheia" link. The iframe is 65vh on desktop and 55vh on mobile.
+7. **Fix:** in zoom mode, dragging the scene no longer blocks taps on the agents.
+8. **Not tested here:** on a real phone with the keyboard open, the chat should resize to fit, but I couldn't check it. Separately, the Canva, Typeform and Adspirer connectors need authorization in the claude.ai settings before they can be used.

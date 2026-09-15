@@ -374,3 +374,8 @@ UnicodeEncodeError: 'utf-8' codec can't encode character '\ud83e' in position 88
 2026-09-15 02:59:10,038 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 02:59:11,183 WARNING [20260914_233642_8cad0a] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 03:02:16,410 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:18:22,495 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:18:22,496 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:18:24,570 WARNING [20260914_231917_006def] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:19:25,192 WARNING [20260915_022520_d17c56] agent.tool_executor: Tool browser_console returned error (0.74s): {"success": false, "error": "Evaluation error: TypeError: Cannot read properties of null (reading 'textContent')\n    at <anonymous>:1:404\n    at <anonymous>:1:632"}
+2026-09-15 03:19:59,266 WARNING [20260915_022520_d17c56] hermes_cli.config: providers.vultr: unknown config keys ignored: auth

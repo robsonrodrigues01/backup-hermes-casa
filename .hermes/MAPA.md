@@ -38,3 +38,4 @@
 ## Contexto dos perfis
  Homes: default=~/.hermes · cuidar=~/.hermes/profiles/cuidar · era4=~/.hermes/profiles/era4 · lab=~/.hermes/profiles/lab
  SOUL.md de cada perfil traz identidade + a regra de checar PENDENTES.md antes de responder status.
+- trader = agente Trader, bot @traderera4bot (no ar 15/09/2026, hermes-gateway-trader.service), headroom 8791

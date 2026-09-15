@@ -1,0 +1,50 @@
+{
+  "jobs": [
+    {
+      "id": "841777c5fd35",
+      "name": "Conferencia paz martelada",
+      "prompt": "Voc\u00ea \u00e9 o Claudinho (perfil default). Confer\u00eancia matinal do caso da \"martelada\" de tombo (resolvido 10/09). Fa\u00e7a: (1) rode `date -u` e `journalctl --user -u hermes-gateway.service --since 'last 24 hours' --no-pager | grep -cE 'signal=SIGTERM|Scheduled restart|Failed with result'` (apenas leitura, nada de restart); (2) se o contador for 0, o(a) Rob quer receber: \"\u2705 Noite limpa \u2014 zero tombos em 24h. Caso da martelada ENCERRADO.\" Mais 2 linhas m\u00e1x: qtos minutos o gateway ficou vivo (per\u00edodos entre in\u00edcios no journal). (3) se >0, investigue s\u00f3 com leitura: ps da porta 8642, `ss -tlnp`, e se /etc/systemd/system/hermes-*.service voltou a existir (fantasma ressuscitado?); reporte em PT-BR simples para leigo, 6 linhas m\u00e1x, e atualize /home/hermes/.hermes/PENDENTES.md. Responda SEMPRE em portugu\u00eas do Brasil, curto, tom do Claudinho.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-11T12:00:00+00:00",
+        "display": "once at 2026-09-11 12:00"
+      },
+      "schedule_display": "once at 2026-09-11 12:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-10T03:55:24.098581+00:00",
+      "next_run_at": "2026-09-11T12:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8944451892",
+        "chat_name": "Rob",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-09-10T03:55:24.098840+00:00"
+}
