@@ -79,4 +79,4 @@ Objetivo: agente que opera Polymarket+# prosecutors e gera caixa p/ pagar servid
 Feasibilidade PROVADA: servidor alcança CLOB Polymarket (200) e Kraken (200); Binance bloqueado (IP datacenter US).
 Arquitetura: bot determinístico (código, estratégias + freios de risco) + Claudinho como supervisor (pesquisa/decisões agendadas, não roda trade a trade) — leitura: economiza tokens e evita decisão impulsiva de LLM.
 Fases: 1) PAPEL (simulado, 7 dias, nada real) 2) real com carteira pequena + freios (perda-dia-máx, sem alavancagem, sem saque nas chaves) 3) escalar certinho se bater meta.
-Falta do Rob: tamanho da carteira (pergunta aberta) e depois: chaves de API SEM permissão de saque / carteira nova só pra isso.
+15/09 Rob aprovou: FASE 1 SANDBOX no ar. Bot de papel virtual US$10k (BTC/Kraken; Polymarket entra depois). Cron tick 15min (silencioso) + relatório diário 9h Bsb neste chat. Regras no código: 20%/op, lucro +1.5%, corte -2%, freio se perder $150 no dia. Meta sandbox: 7 dias úteis de dados até 22/09 — depois apresento resultado e fase 2 (dinheiro real, carteira separada) SÓ com novo OK do Rob.

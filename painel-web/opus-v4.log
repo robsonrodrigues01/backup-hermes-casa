@@ -1,0 +1,27 @@
+O painel novo está pronto em `/home/hermes/painel-web/escritorio-v4.html`. É um arquivo único de 59 KB, feito só com CSS 3D, sem nenhuma dependência externa. Não mexi no `index.html`.
+
+**Como testei:** abri no Chrome headless servindo a pasta localmente, em 1280px e em 390px, e rodei um script que mede a página no browser:
+- **Console:** nenhum erro de JavaScript. O único erro que aparece é o 404 do `/dash-proxy/`, porque o servidor de teste não tem essa rota.
+- **Plaquinhas:** as 13 aparecem, nenhuma sobrepõe outra, nenhuma corta texto e todas ficam dentro da cena, nas duas larguras.
+- **Movimento:** aos 5s e aos 16s havia de 4 a 5 agentes andando ao mesmo tempo e os outros sentados digitando.
+- **Celular (390px):** a cena inteira cabe em 366px sem cortes e sem rolagem horizontal. O botão "Ampliar" mostra a cena em tamanho real, e arrastar move a vista (conferi pela mudança na rolagem).
+- **Travessão:** nenhum "—" nem "–" no arquivo nem no texto da página.
+- **Iframe:** `src="/dash-proxy/"` com o título "Painel do CMO" está presente.
+
+**O que tem na cena, seguindo a referência:**
+- **Cenário:** piso de tábuas claras com veios, paredes de tijolo com vigas escuras, janela grande de vários vidros na parede do fundo e outra na parede esquerda, com luz do sol no chão.
+- **Iluminação:** 7 lâmpadas pendentes em alturas diferentes, com halo amarelado, e o letreiro neon "CUIDAR.VC" dourado com a frase em ciano embaixo.
+- **Móveis e objetos:** rack preto com LEDs verdes piscando ao lado do DevOps, 10 plantas, estante de livros, cantinho do café, bebedouro, sofá, quadro de metas e relógio de parede com a hora real.
+- **Mesas:** cada uma é um móvel 3D com gavetas, cadeira, dois monitores com conteúdo animado (código, gráficos, grade de posts, agenda), teclado, papéis, caneca com vapor e livros.
+- **Rob:** fica numa sala de vidro no canto direito, com mesa executiva de madeira escura, cadeira de couro e coroa.
+- **Squad de conteúdo:** os 6 membros dividem uma mesa comprida na frente da sala.
+
+**Como funciona:**
+- **Plaquinhas:** ficam numa camada por cima da cena, presas à mesa por uma linha fina. Um passo de ajuste afasta qualquer uma que encoste em outra.
+- **Balões de fala:** também desviam das plaquinhas e dos outros balões.
+- **Rotas:** os agentes andam por corredores, então não atravessam mesas. Eles vão a pontos como café, janela, rack, estante e sofá, ou visitam a mesa de um colega, que responde.
+- **Clique:** tocar num agente mostra o que ele está fazendo.
+
+**Dois pontos para você decidir:**
+1. **Frase do neon:** usei o texto exatamente como veio, "cuidado com que cuida". Se a ideia era "cuidado com quem cuida", é só trocar essa frase no arquivo.
+2. **Iframe em produção:** o `server.py` atual trata tudo que começa com `/dash` como o proxy antigo. Com isso, `/dash-proxy/` vira um endereço inválido e o iframe mostraria erro 502 se a página for servida por ele. Se o Caddy já tem a rota `/dash-proxy/`, não precisa fazer nada. Senão, é preciso ajustar essa rota.

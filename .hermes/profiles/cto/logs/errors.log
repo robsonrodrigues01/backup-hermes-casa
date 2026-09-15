@@ -361,3 +361,16 @@ UnicodeEncodeError: 'utf-8' codec can't encode character '\ud83e' in position 88
 2026-09-15 02:30:24,102 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 02:30:25,180 WARNING [20260914_233642_8cad0a] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
 2026-09-15 02:30:54,564 WARNING [20260915_022520_d17c56] agent.tool_executor: Tool skill_manage returned error (0.01s): {"success": false, "error": "Skill 'dev-cuidarvc' not found in active profile 'cto'. A skill by that name exists in profile 'cuidar' (/home/hermes/.hermes/profiles/cuidar/skills/devops/dev-cuidarvc). 
+2026-09-15 02:54:16,853 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:54:16,854 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:54:18,482 WARNING [20260914_233642_8cad0a] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:54:18,541 WARNING [20260914_233642_8cad0a] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:54:18,574 WARNING [20260914_233642_8cad0a] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:54:18,680 WARNING [20260914_233642_8cad0a] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:55:37,000 WARNING [20260915_022520_d17c56] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:56:47,461 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:57:08,617 WARNING [20260915_022520_d17c56] agent.tool_executor: Tool patch returned error (0.00s): {"error": "Background review denied non-whitelisted tool: patch. Only memory/skill tools are allowed."}
+2026-09-15 02:59:10,037 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:59:10,038 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 02:59:11,183 WARNING [20260914_233642_8cad0a] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-15 03:02:16,410 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth

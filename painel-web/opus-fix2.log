@@ -1,0 +1,5 @@
+Troquei o link na linha 392 de `escritorio-v4.html`. Não mexi em mais nada. A linha alterada ficou assim:
+
+```html
+  <div class="dash-head"><h2>Painel do CMO</h2><a href="/dash/#hoje" target="_blank" rel="noopener">Abrir em tela cheia</a></div>
+```

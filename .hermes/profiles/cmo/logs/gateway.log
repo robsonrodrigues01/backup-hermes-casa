@@ -373,3 +373,15 @@ telegram.error.NetworkError: Bad Gateway
 2026-09-15 02:11:25,429 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=139.4s api_calls=7 response=730 chars
 2026-09-15 02:18:58,730 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (33 chars)
 2026-09-15 02:18:58,731 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='mas o website usa o lovable cloud'
+2026-09-15 02:53:57,542 INFO [20260914_235838_bde166] gateway.run: Session split detected: 20260914_235838_bde166 → 20260915_025328_3f9ab4 (compression)
+2026-09-15 02:53:58,520 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 02:53:58,520 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=2099.8s api_calls=54 response=1446 chars
+2026-09-15 02:54:37,833 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (57 chars)
+2026-09-15 02:54:37,834 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='faltou imagens na postagem e deixar bem legivel para llms'
+2026-09-15 02:59:46,256 INFO gateway.platforms.telegram: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-15 03:01:07,448 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[398315]
+2026-09-15 03:09:45,517 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=907.7s api_calls=90 response=0 chars
+2026-09-15 03:09:45,523 INFO gateway.platforms.base: [Telegram] Sending response (118 chars) to 8944451892
+2026-09-15 03:11:19,773 INFO gateway.platforms.telegram: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
+2026-09-15 03:11:32,081 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (2 chars)
+2026-09-15 03:11:32,082 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='ok'

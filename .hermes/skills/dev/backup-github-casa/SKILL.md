@@ -104,6 +104,10 @@ arquivo de verdade; lixo que se reinstala/baixa sozinho em minutos fica fora.
   `~/.hermes/scripts/backup-github.sh` (release mensal também aponta pro
   repo novo). O cron (no_agent) chama o script por nome, então só o
   conteúdo do .sh muda — não recriar o job.
+- **PENDENTES.md é quadro compartilhado entre agentes** — um irmão pode
+  tê-lo editado no meio da sessão (a ferramenta de edição alerta "modified
+  by sibling subagent"); ler sempre antes de editar pra não sobrescrever
+  a nota do irmão.
 
 ## Referências
 - templates/gitignore-casa.txt — starter do .gitignore da casa

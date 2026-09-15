@@ -1,0 +1,13 @@
+Fiz as duas trocas e não mexi em mais nada. Veja as linhas como ficaram:
+
+**Linha 393 (iframe do Painel do CMO):**
+```html
+  <iframe src="/dash/#hoje" title="Painel do CMO" loading="lazy"></iframe>
+```
+
+**Linha 450 (letreiro neon):**
+```js
+var neon=mk(back,'neon','left:376px;top:40px;width:430px','<div class="n1">CUIDAR.VC</div><div class="n2">cuidado com quem cuida</div>');
+```
+
+Na linha 392, o link "Abrir em tela cheia" ainda aponta para `href="/dash-proxy/"`. Não alterei porque você pediu só o `src` do iframe. Se essa rota não existe no server, o link também vai quebrar. Posso trocar para `/dash/#hoje` se quiser.

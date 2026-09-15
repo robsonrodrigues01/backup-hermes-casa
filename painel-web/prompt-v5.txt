@@ -1,0 +1,28 @@
+Tarefa: evoluir o painel do escritório virtual do cuidar.vc. Leia PRIMEIRO /home/hermes/painel-web/escritorio-v4.html (versão atual, funcionando, com motor de movimento e agendamentos). Crie a nova versão em /home/hermes/painel-web/escritorio-v5.html. NÃO edite index.html, server.py, dashboard-novo.py nem qualquer outro arquivo: só criar v5.
+
+MUDANÇAS PEDIDAS (na ordem de prioridade):
+
+1) CHAT COM OS AGENTES (feature nova, o dono pediu):
+- Agora clicar/tocar num agente abre um modal de conversa bonito e funcional.
+- Modal: cabeçalho com avatar do agente, nome, cargo e botão X para fechar (ESC e clique fora também fecham). Área de mensagens com bolhas (remetente agente à esquerda, mine à direita). Campo de texto com placeholder "Fale com Nome..." e botão enviar; ENTER envia.
+- A primeira mensagem do agente quando abre o chat: uma frase curta saudando com o que ele está fazendo agora (use o estado atual do agente no motor: andando, trabalhando, onde está).
+- Ao receber a mensagem da pessoa, mostrar bolha "digitando..." com três pontinhos animados por 800 a 1500ms, depois a resposta.
+- RESPOSTAS: motor local, no próprio arquivo, função que gera a resposta considerando (a) o papel do agente, (b) o texto da pessoa, (c) o estado atual do agente. Regras simples mas com resultado vivo: saudação, pergunta "o que você faz", pergunta "o que está fazendo / como está o trabalho", agradecimento, despedida, pergunta sobre o cuidar.vc, e generica. Cada agente precisa de um repertório próprio de 4 a 6 falas por categoria, com o sotaque do papel: Dev fala de código, QA de testes, CTO de decisões técnicas, Artes de peças visuais, Copy de textos, Métricas de números, CMO de alcance e rob nomeia as agencias, PAUTA etc. Se o texto não casa com nenhuma regra, responda algo coerente com o papel combinando duas pecas do repertorio. Nada metal: nunca repetir a mesma frase duas vezes seguidas na mesma sessão.
+- Guardar o historico das ultimas 6 mensagens por agente em memoria (objeto JS). Scroll da conversa acompanha a ultima bolha. Mobile: modal ocupa ate 92% da altura, bordas arredondadas, teclado ok (campo no fim).
+- Todo texto em PT-BR, tom acolhedor, NENHUM travessao (nem em em dash nem hyphen longo) separando frases.
+
+2) BONECOS MAIS REALISTAS:
+- Subir o nivel dos bonecos: cabeca com pele e cabelo (cores variadas), rosto simples com olhos, corpo com blusa colorida por agente (mesa/skin distintos por cargo), bracos e pernas. Enquanto ANDA, pernas e bracos alternam (CSS keyframes de caminhada, tipo passo esquerdo/direito). Enquanto TRABALHA, sentado na cadeira com bracos levemente inclinados ao teclado e leve balanco de digitacao. Sombra elipse no chao acompanhando o boneco.
+- Proporcao tipo personagem de jogo (cabeca maior, corpo compacto). Continuar billboard de frente (locais absolutos atuais, so trocar a pele do boneco, manter a logica de posicionamento e a exclusao mutua com placas).
+
+3) LAYOUT DA PAGINA E DA SECAO "PAINEL DO CMO":
+- A secao do Painel do CMO esta fraca: refazer como card de vidro elegante: header do card com titulo "Painel do CMO", badge "ao vivo" com bolinha pulsante verde, e a direita o link "abrir em tela cheia"; iframe com altura maior (65vh desktop, 55vh mobile), cantos arredondados, borda suave, fundo levemente contrastante. Zero dependencia externa.
+- Organizar a pagina em blocos com respiro: header do site mais limpo (logo, badge agentes ativos, relogio), cena com sombra e margem, legenda da cena embaixo, depois o card do CMO, footer discreto. Tipografia consistente, espacamentos regulares, mobile first.
+
+4) MELHORIAS RAPIDAS:
+- Ao abrir o chat, destacar o agente escolhido (anel brilhante) e pausar seu movimento enquanto o chat esta aberto; ao fechar, retomar.
+- Balao de fala ocasional continua, mas com menos frequencia quando um chat esta aberto.
+
+REGRAS GERAIS: arquivo unico HTML, zero dependencias externas, zero erro de JavaScript, PT-BR, NENHUM travessao em qualquer texto visivel, manter o motor de movimento, rotas por corredores e desvio de placas/baloes que ja funcionam no v4.
+
+CRITERIO DE PRONTO: /home/hermes/painel-web/escritorio-v5.html salvo e completo; 13 agentes com mesas e placas; chat abre em cada agente, responde de forma viva e varia as falas; bonecos andam com pernas animadas e trabalham sentados; secao do CMO bonita e responsiva; sem erro de console. No final, resuma o que mudou em 8 linhas no maximo.

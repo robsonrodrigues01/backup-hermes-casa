@@ -1,4 +1,17 @@
 {
+  "ai-seo": {
+    "archived_at": null,
+    "created_at": "2026-09-15T02:55:21.391526+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-09-15T02:55:21.397029+00:00",
+    "last_viewed_at": "2026-09-15T02:55:21.391540+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "caddy-exposicao-publica": {
     "archived_at": null,
     "created_at": "2026-09-11T21:57:20.397807+00:00",
@@ -134,12 +147,12 @@
     "created_at": "2026-09-10T08:00:34.639841+00:00",
     "created_by": null,
     "last_patched_at": "2026-09-11T17:05:10.325300+00:00",
-    "last_used_at": "2026-09-14T23:59:42.671989+00:00",
-    "last_viewed_at": "2026-09-14T23:59:42.670805+00:00",
+    "last_used_at": "2026-09-15T02:56:28.734120+00:00",
+    "last_viewed_at": "2026-09-15T02:56:28.730334+00:00",
     "patch_count": 60,
     "pinned": false,
     "state": "active",
-    "use_count": 80,
-    "view_count": 57
+    "use_count": 83,
+    "view_count": 60
   }
 }

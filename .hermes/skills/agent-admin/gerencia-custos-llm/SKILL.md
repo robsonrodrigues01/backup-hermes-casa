@@ -50,9 +50,22 @@ auditar, propor economia e migrar sem quebrar agentes.
 - Trocar `model.default` não cobre tudo: dar `grep -ri <modelo-velho>`
   no perfil (squads, cron prompt, config de subagentes) — tem referência
   espalhada e cada ponta solta continua pagando pelo caro.
-- Fallback silencioso: se o provedor retorna 404 e há fallback na Vicuña
-  config, o barulho só aparece no log — conferir PERF por modelo depois
+- Fallback silencioso: se o provedor retorna 404 e há fallback na config
+  do perfil, o barulho só aparece no log — conferir PERF por modelo depois
   da troca, não só "parece funcionar".
+- **Modelo "reasoning" retorna content=null e PARECE falha**: glm-5.3-flash
+  gasta o max_tokens pensando (`message.reasoning` preenchido, `content`
+  null). Com `max_tokens: 10` o teste "diga ok" volta vazio sem erro nenhum.
+  Prova correta: imprimir o JSON cru da resposta e usar max_tokens ≥ 300
+  (ou aceitar o `reasoning` como sinal de vida). Caso 15/09: dois testes
+  "None" antes de descobrir o campo `reasoning`.
+- **Testar a rota real do perfil exige o Bearer do PRÓPRIO perfil**:
+  chamar o proxy (ex.: 8789) sem `Authorization` devolve **401** — o proxy
+  autentica com a key declarada em `model.api_key` no config.yaml daquele
+  perfil (não é a mesma chamada request sem header). Teste fiel = ler a
+  key do config.yaml DO perfil alvo dentro do script e mandar Bearer.
+  Python heredoc (`python3 - <<'EOF'`) lendo a key do arquivo passou sem
+  retenção quando o segredo nunca aparece na linha de comando.
 
 ## Referências
 - scripts/uso-por-modelo.sh — agregação de uso por modelo (logs headroom)

@@ -5442,3 +5442,15 @@ keep an umbrella stable: hermes curator pin hermes-profiles
 2026-09-15 02:46:22,287 INFO gateway.platforms.telegram: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8944451892 (choice=always, user=Rob)
 2026-09-15 02:46:39,612 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (4 chars)
 2026-09-15 02:46:39,612 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='PODE'
+2026-09-15 02:53:29,855 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 02:53:29,855 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=410.2s api_calls=22 response=654 chars
+2026-09-15 03:00:15,154 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (3 chars)
+2026-09-15 03:00:15,155 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='sim'
+2026-09-15 03:01:08,197 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:01:08,197 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=53.0s api_calls=7 response=717 chars
+2026-09-15 03:03:49,900 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (180 chars)
+2026-09-15 03:03:49,901 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='crie um agente para fazer trade pra mim, tanto no polymarket quanto em crypto. v'
+2026-09-15 03:04:24,441 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:04:24,441 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=34.5s api_calls=4 response=1450 chars
+2026-09-15 03:13:01,887 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (29 chars)
+2026-09-15 03:13:01,888 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='por enquanto vamos de sandbox'

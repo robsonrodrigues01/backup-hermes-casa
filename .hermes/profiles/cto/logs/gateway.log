@@ -163,3 +163,11 @@
 2026-09-15 02:30:24,093 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='[IMPORTANT: Background process proc_56a7af885bbc completed (exit code 1). Comman'
 2026-09-15 02:33:16,540 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
 2026-09-15 02:33:16,540 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=172.4s api_calls=6 response=187 chars
+2026-09-15 02:54:16,822 INFO gateway.run: Process proc_4f1c923007cc finished — injecting agent notification for session agent:main:telegram:dm:8944451892 chat=8944451892 thread=None
+2026-09-15 02:54:16,823 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='[IMPORTANT: Background process proc_4f1c923007cc completed (exit code 0). Comman'
+2026-09-15 02:56:48,397 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 02:56:48,398 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=151.6s api_calls=22 response=1094 chars
+2026-09-15 02:59:10,027 INFO gateway.platforms.telegram: [Telegram] Flushing text batch agent:main:telegram:dm:8944451892 (238 chars)
+2026-09-15 02:59:10,028 INFO gateway.run: inbound message: platform=telegram user=Rob chat=8944451892 msg='melhore o layout e a disposicao do painel cmo, além disso, quando eu apero em "r'
+2026-09-15 03:02:17,253 INFO gateway.run: Suppressing normal final send for session agent:main:telegram:dm:8944451892: final delivery already confirmed (streamed=True previewed=False content_delivered=True).
+2026-09-15 03:02:17,254 INFO gateway.run: response ready: platform=telegram chat=8944451892 time=187.2s api_calls=23 response=207 chars
