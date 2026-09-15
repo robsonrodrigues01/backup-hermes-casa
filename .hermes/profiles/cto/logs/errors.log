@@ -311,3 +311,11 @@ UnicodeEncodeError: 'utf-8' codec can't encode character '\ud83e' in position 88
 2026-09-14 23:29:18,115 WARNING agent.message_sanitization: Unrepairable tool_call arguments for write_file — replaced with empty object (was: {"content": "const sleep=ms=>new Promise(r=>setTimeout(r,ms));\nconst rnd=n=>Mat)
 2026-09-14 23:30:00,907 WARNING [20260914_231917_006def] agent.tool_executor: Tool browser_console returned error (0.62s): {"success": false, "error": "Evaluation error: SyntaxError: await is only valid in async functions and the top level bodies of modules"}
 2026-09-14 23:30:15,758 WARNING [20260914_231917_006def] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:36:16,243 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:36:16,244 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:36:18,149 WARNING [20260914_215530_e513caae] hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:36:49,358 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:37:38,936 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:37:38,937 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:37:40,129 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:37:59,144 WARNING [20260914_215530_e513caae] hermes_cli.config: providers.vultr: unknown config keys ignored: auth

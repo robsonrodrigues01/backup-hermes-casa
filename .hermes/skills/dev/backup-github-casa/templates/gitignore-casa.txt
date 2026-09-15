@@ -10,19 +10,9 @@ headroom-test/
 nested-git-stash/
 .hermes/plugins/
 
-# --- segredos e tokens: NUNCA sobem ---
-secrets/
-.git-credentials
-.config/gh/
-.env*
-**/.env*
-**/mcp-tokens/
-.claude/
-.claude.json
-**/credentials*.json
-**/*token*.json
-**/*.pem
-**/*.key
+# --- segredos e tokens: SOBEM (cofre completo — flip do Rob 14/09,
+# 'sobe os tokens tb'). NADA a filtrar aqui; 2FA no GitHub é o cadeado.
+# Inclui: secrets/, .git-credentials, .env*, mcp-tokens/, .claude.json, *.key
 
 # --- logs de conversa / bancos pesados (vao no zip mensal do Release) ---
 **/state.db

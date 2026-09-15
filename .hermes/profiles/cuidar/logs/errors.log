@@ -1531,3 +1531,10 @@ Traceback (most recent call last):
   File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/cron/scheduler.py", line 1871, in _run_job_impl
     raise RuntimeError(_err_text)
 RuntimeError: Response remained truncated after 3 continuation attempts
+2026-09-14 23:55:13,002 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:55:13,043 WARNING hermes_cli.config: providers.vultr: unknown config keys ignored: auth
+2026-09-14 23:57:52,979 ERROR cron.scheduler: Job 'Agente 2 Copywriter — copys e estratégia' failed: RuntimeError: Response remained truncated after 3 continuation attempts
+Traceback (most recent call last):
+  File "/home/hermes/.local/share/uv/tools/hermes-agent/lib/python3.12/site-packages/cron/scheduler.py", line 1871, in _run_job_impl
+    raise RuntimeError(_err_text)
+RuntimeError: Response remained truncated after 3 continuation attempts

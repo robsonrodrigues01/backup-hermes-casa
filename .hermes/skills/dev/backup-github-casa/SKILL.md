@@ -1,6 +1,6 @@
 ---
 name: backup-github-casa
-description: "Colocar a casa Hermes (home inteira — perfis dos agentes, memórias, skills, projetos, ferramentas) num repo PRIVADO no GitHub — gitignore de lixo reinstalável, auditoria de blobs >100MB ANTES do push, zip grande como Release asset, cron de push diário. Dispara em 'quero tudo no meu GitHub', 'nunca perder', backup de desastre."
+description: "Colocar a casa Hermes (home inteira — perfis dos agentes, memórias, skills, projetos, ferramentas) num repo PRIVADO no GitHub — gitignore de lixo reinstalável, auditoria de blobs >100MB ANTES do push, zip grande como Release asset, push a cada 4h. Dispara em 'quero tudo no meu GitHub', 'nunca perder', backup de desastre."
 ---
 
 # Backup da casa no GitHub (disaster recovery)
@@ -48,14 +48,20 @@ arquivo de verdade; lixo que se reinstala/baixa sozinho em minutos fica fora.
    o literal dinamicamente; nunca colar o segredo direto no comando.
 6. Criar repo PRIVADO `backup-hermes` e push. Confirmação: `git log
    --oneline -1`, `git ls-files | wc -l`, `git count-objects -vH`,
-   `git status --porcelain | wc -l` = 0.
+   `git status --porcelain | wc -l` = 0, e local=remoto:
+   `[ "$(git rev-parse HEAD)" = "$(git ls-remote origin main | cut -f1)" ]`.
 7. Snapshot pesado (>100MB, ex.: zip de migração de 334MB) NÃO vai no git:
    anexar como **asset de Release** (limite ~2GB por asset lá).
    Roteiro comprovado: scripts/criar-release-zip.sh (cria e faz upload
    via API; leitura do token de arquivo externo; prova: 351MB ok em 14/09).
 8. Cron diário: `git add -A && git commit && push` no repo; quando não
-   muda nada, termina silencioso. Manter token fora do git (arquivo de
-   fora do backup ou credential store; nunca um `.env` commitado).
+   muda nada, termina silencioso. POLÍTICA DE SEGREDOS — flip do Rob
+   (14/09, 'sobe os tokens tb'): `.env` dos perfis, `mcp-tokens/`,
+   `secrets/gh-token`, `.git-credentials` e `.claude.json` SOBEM no cofre
+   privado (casa auto-suficiente: clone + tokens que estão no próprio
+   repo = pé de pé sem colar chave). Condição: 2FA no GitHub é o
+   cadeado de todas as fechaduras. Email do GitHub 'token detectado'
+   = normal, é o cofre dele — ignorar.
 ** Quando criar o cron com a ferramenta de agendamento: o script precisa
    estar dentro de `~/.hermes/scripts/` e referenciado RELATIVO a ela
    (ex.: `backup-github.sh`); (erro literal: "Script path must be relative"); no_agent=True
@@ -108,9 +114,12 @@ arquivo de verdade; lixo que se reinstala/baixa sozinho em minutos fica fora.
 /home/hermes → repo privado `robsoncoffy/backup-hermes-casa`, branch `main`:
 7.384 arquivos rastreados (~260MB), escopo casa-only conforme a regra acima
 (sem cuidarvc, plugins de terceiros, binários `tirith`, index-cache, logs
-.headroom). Zero token no git (scan `grep -lI` / token real: vazio). 1º push
+.headroom). Segredos DENTRO (flip do Rob 14/09): scan `grep -lI` = 23 arqs de
+segredos espelhados (.env ×6, mcp-tokens, gh-token, .git-credentials,
+.claude.json). 1º push
 408 → postBuffer 500MB → subiu; 2 pushes de teste ok com remote limpo.
-state.db/logs fora do git (zip mensal no Release do repo novo). Cron 17h Bsb
-no_agent chama `backup-github.sh`; README do repo traz o passo-a-passo de
+state.db/logs fora do git (zip mensal no Release do repo novo). Cron no_agent 0 */4 * * *
+chama `backup-github.sh` (6x/dia Bsb: 1h/5h/9h/13h/17h/21h, mudou de
+17h diário em 14/09); README do repo traz o passo-a-passo de
 restauração. Legado `backup-live-hermes` (16.318 arq, cofre-mistura) ficou
 congelado — histórico do caso anterior, CVE de escopo resolvida pelo Rob.

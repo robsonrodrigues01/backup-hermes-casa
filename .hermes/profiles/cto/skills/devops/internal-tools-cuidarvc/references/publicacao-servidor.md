@@ -26,6 +26,8 @@ O dash manda `x-frame-options: DENY` e exige ?k=CHAVE na URL. Pra embutir na mes
 5. Teste externo de verdade: check-host.net na URL pública (aguardar 200 de vários países). browser_console no contentDocument do iframe (mesma origem) valida DOM/embed, não acessibilidade externa; browser_navigate roda local e não prova nada pra fora.
 
 ## Armadilhas de descoberta nesta máquina
+- Probe direto no backend: server.py serve o painel em `/`, NÃO em `/painel` (o `/painel` é rota do Caddy, que remove o prefixo antes de repassar). `curl http://127.0.0.1:8643/painel` devolve 404 com tudo funcionando; testar backend direto com `/`. "local:404 externo:200" é estado NORMAL, não bug.
+- Health check em 1 linha quando o Rob perguntar "travou?" (responder SÓ depois de rodar): `curl -sk -o /dev/null -w "%{http_code}" https://DOMINIO/painel` + `ps aux | grep "[s]erver.py"`. 200 + processo vivo = painel ok; isso valida rota+server internamente, acesso EXTERNO continua sendo prova só via check-host.net.
 - `ss -tlnp` sem root oculta listeners de outros usuários; `ss -tln` (sem -p) mostra as portas.
 - `localhost` resolve ::1 primeiro em alguns casos: se connection refused, tentar `127.0.0.1` explícito.
 - Apps Python BaseHTTP devolvem 501 pra HEAD: usar GET com `curl -s -D /tmp/h.txt -o arquivo` e ler os headers do arquivo.

@@ -52,7 +52,7 @@
     {
       "id": "bcb204d240b2",
       "name": "Blog/SEO semanal \u2014 cuidar.vc",
-      "prompt": "Voc\u00ea \u00e9 o redator de blog/SEO do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais; site no ar, hospedado no Lovable \u2014 os artigos s\u00e3o entregues ao Rob para publicar/adaptar em Lovable/Claude Code). P\u00fablico-alvo inicial: fam\u00edlias de idosos e cuidadores de idosos; sem esquecer bab\u00e1s, enfermeiros e demais profissionais do hall. Tom: acolhedor e emocional, com dignidade e credibilidade, sem sensacionalismo.\n\nTAREFA \u2014 ARTIGO SEMANAL:\n1. Carregue as skills 'marca-cuidar-vc' e 'ai-seo' e siga as regras delas.\n2. Consulte a web para verificar inten\u00e7\u00e3o de busca em torno de keywords como \"como contratar cuidador de idoso\", \"quanto custa cuidador de idoso\", \"cuidador de idoso pre\u00e7o madre\", \"como contratar bab\u00e1 com seguran\u00e7a\" e receba o tema.\n3. Verifique /home/hermes/cuidarvc/blog/ (workspace; crie-o se n\u00e3o existir) para n\u00e3o repetir artigo j\u00e1 escrito.\n4. Escolha UMA keyword de alta inten\u00e7\u00e3o e produza o artigo: t\u00edtulo (m\u00e1x 60 caracteres), meta description (m\u00e1x 155), estrutura completa H2/H3, corpo 800\u20131200 palavras no tom da marca, FAQ 3\u20134 perguntas (otimizado para AI-SEO), CTA para o hall/cadastro de profissionais ou contrata\u00e7\u00e3o, e sugest\u00e3o de schema (Article + FAQPage).\n5. Salve em /home/hermes/cuidarvc/blog/artigo-YYYY-MM-DD-<slug>.md (data real de hoje).\n6. Mensagem final ao Rob: apenas o resumo executivo \u2014 t\u00edtulo, keyword, meta description, esqueleto de H2/H3 e caminho do arquivo completo \u2014 n\u00e3o o artigo inteiro.\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Se algo bloquear, entregue o melhor poss\u00edvel e note o bloqueio no fim.",
+      "prompt": "Voc\u00ea \u00e9 o Agente de SEO do blog do cuidar.vc \u2014 plataforma que conecta fam\u00edlias a profissionais de cuidado verificados (pagamento seguro, avalia\u00e7\u00f5es reais). Tom da marca: acolhedor, com dignidade e credibilidade, sem sensacionalismo. Portugu\u00eas do Brasil.\n\nTAREFA SEMANAL (segundas) \u2014 NUTRIR O BANCO DE PAUTAS DO BLOG:\n1. Carregue as skills 'marca-cuidar-vc' e 'ai-seo' e siga as regras delas.\n2. Consulte os DOIS registros para n\u00e3o propor tema repetido: https://cuidar.vc/sitemap.xml (artigos j\u00e1 publicados no site) e /home/hermes/cuidarvc/squad/blog/pautas-blog.md (temas pendentes e publicados no banco).\n3. Pesquise na web as d\u00favidas REAIS que fam\u00edlias brasileiras pesquisam no Google sobre: contratar cuidador de idosos, bab\u00e1 com seguran\u00e7a, enfermeiro em casa, home care, casa de repouso, creche, vagas de cuidado, direitos e pagamento do cuidador. Priorize keywords de alta inten\u00e7\u00e3o: perguntas \"como\", \"quanto\", \"quando\", \"quais\" e compara\u00e7\u00f5es \"X ou Y\".\n4. APPENDE de 5 a 7 temas NOVOS na tabela de pautas em /home/hermes/cuidarvc/squad/blog/pautas-blog.md, no formato EXATO das linhas existentes: | slug | keyword | inten\u00e7\u00e3o | \u00e2ngulo | pendente |. Regras: slug em min\u00fasculas sem acento, n\u00fameros e h\u00edfen, 3 a 120 caracteres, \u00fanico; \u00e2ngulo em 1-2 linhas; SEM n\u00famero inventado (fatores de varia\u00e7\u00e3o ou \"com fonte citada\"); SEM travess\u00e3o em nenhum texto.\n5. N\u00c3O escreva artigo completo: quem escreve e publica \u00e9 o Agente 9 Redator (di\u00e1rio). Sua entrega \u00e9 o banco nutrido com temas de alta inten\u00e7\u00e3o.\n6. Mensagem final: curto \u2014 quantos temas adicionou e os slugs. N\u00e3o o hist\u00f3rico.\n\nDecida sozinho; N\u00c3O fa\u00e7a perguntas. Se a web bloquear, entregue os melhores temas derivados do repert\u00f3rio da marca e note o bloqueio.",
       "skills": [
         "marca-cuidar-vc",
         "ai-seo"
@@ -223,7 +223,7 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
@@ -231,9 +231,9 @@
       "paused_reason": null,
       "created_at": "2026-09-10T03:59:46.675469+00:00",
       "next_run_at": "2026-09-15T09:00:00+00:00",
-      "last_run_at": "2026-09-14T23:13:55.677909+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "last_run_at": "2026-09-14T23:57:52.985977+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Response remained truncated after 3 continuation attempts",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": {
@@ -606,15 +606,15 @@
       "schedule_display": "*/15 * * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-14T22:58:23.759421+00:00",
-      "next_run_at": "2026-09-14T23:45:00+00:00",
-      "last_run_at": "2026-09-14T23:30:13.038972+00:00",
+      "next_run_at": "2026-09-15T00:15:00+00:00",
+      "last_run_at": "2026-09-15T00:00:13.847315+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -725,5 +725,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-09-14T23:32:09.074932+00:00"
+  "updated_at": "2026-09-15T00:00:13.847725+00:00"
 }

@@ -8,10 +8,10 @@ Canva: tokens em squad/canva-tokens.json; canva_publish.py = entrega padrão de 
 §
 Telegram DM do Rob = chat_id 8944451892 (TELEGRAM_HOME_CHANNEL no perfil cuidar; send_message com esse canal).
 §
-Peça especial (padrão validado 14/09): brief → cron edit via script python3 (execute_code barrado) → mover artefato antigo ANTES do redo (idempotência pula) → conferir disco mesmo se run truncar. pypdf: uv run --with pypdf. Doc na skill squad-postagens pendente.
+Peça especial (14/09): brief → cron edit via python3 → mover artefato antigo ANTES do redo → conferir disco mesmo se run truncar. pypdf: uv run --with pypdf.
 §
 Padrões CMO: skills externas = destilar em PT-BR em references/ da skill da squad (copy-ig-fb.md e metricas-framework.md hookados no SKILL.md; Rob OK 11/09). Clarify sem resposta ~10min = seguir padrão de baixo risco e registrar em PENDENTES. Path.home() no profile cmo = profiles/cmo/home: usar caminhos absolutos p/ dados do cuidar. Mudar rota no Caddy (admin 127.0.0.1:2019) = barrado pelo security scan: exige OK do Rob.
 §
 Agente 7 Community = job b1c27fe585a1 (every 15m, scheduler cmo com profile=cuidar; playbook e escalacoes em squad/community/). Gatilho webhook: receiver hook-zernio.py na 8805 + retrigger 150s (13/09, cobre msg que chega durante run); vigia d58dd88fe8d5; latencia medida 1-3 min; detalhes no playbook.
 §
-Agente 8 Radar (diário 13h UTC, cuidar, job a15db537de2d): fonte = Apify MCP; painel = squad/radar/perfis.json; receita e padrões cross na skill radar-cuidarvc.
+Agente 8 Radar (13h UTC, cuidar, a15db537de2d): Apify MCP; painel squad/radar/perfis.json; skill radar-cuidarvc. § Agente 9 Redator Blog (16h UTC, cuidar, 10f502a4aa15): publica DIRETO no site via RPC Supabase, sem revisão; publicar.py injeta CVBLOG_KEY do .env cuidar; pendia cvblog_ (painel Rob) + publishable key REAL (repo/bundle só placeholder mascarado).
